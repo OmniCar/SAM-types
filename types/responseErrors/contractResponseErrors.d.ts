@@ -1,0 +1,3 @@
+type PostContractResponseErrors = 'CONTRACT_MISSING_OR_INVALID_INFORMATION'
+
+export type ContractResponseErrors = PostContractResponseErrors
