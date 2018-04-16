@@ -1,4 +1,4 @@
-import {PriceSpecification} from "./priceSpecification";
+import { PriceSpecification } from './priceSpecification'
 
 export interface PaymentPlan {
   amountPrPayment: PriceSpecification

@@ -4,5 +4,9 @@
   "description":
     "Typescript interfaces for all types used to communicate between SAM client(s) and the SAM API",
   "author": "Erik Beuschau",
-  "types": "types/index.d.ts"
+  "types": "types/index.d.ts",
+  "files": [
+    "types"
+  ],
+  "main": "types/index.js"
 }

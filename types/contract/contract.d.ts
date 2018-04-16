@@ -4,8 +4,8 @@ import { Customer } from '../customer'
 import { Vehicle } from '../vehicle'
 import { ICalculationResponse } from '../priceCalculation'
 import { ContractState } from './contractState'
-import { ITermsOfServiceResponse } from '../termsOfService';
-import { IContractProviderResponse } from '../contractProvider';
+import { ITermsOfServiceResponse } from '../termsOfService'
+import { IContractProviderResponse } from '../contractProvider'
 
 export interface IContractResponse {
   id: number
