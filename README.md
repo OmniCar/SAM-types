@@ -12,6 +12,18 @@ We use standard [semantic versioning](https://semver.org/)
 
 ## Development
 
+### Adding new interfaces
+
+Write your interface like you normally would. In order to export it, you need to add it to the `index.d.ts` file which holds all exported interfaces.
+
+### Local development
+
+To use the types locally in an application, add the line below as a DevDependency in your `package.json` file:
+
+`"sam-types": "file:../SAM-types"`
+
+The path is the relative path to the SAM-types project.
+
 ## Releasing
 
 ### Using GitHub

@@ -13,4 +13,3 @@ var ContractState;
     ContractState[ContractState["Completed"] = 800] = "Completed";
     ContractState[ContractState["Settled"] = 900] = "Settled";
 })(ContractState = exports.ContractState || (exports.ContractState = {}));
-//# sourceMappingURL=contractState.js.map
