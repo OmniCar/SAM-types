@@ -1,12 +1,18 @@
 {
   "name": "sam-types",
   "version": "0.0.1",
-  "description":
-    "Typescript interfaces for all types used to communicate between SAM client(s) and the SAM API",
+  "description": "Typescript interfaces for all types used to communicate between SAM client(s) and the SAM API",
   "author": "Erik Beuschau",
   "types": "types/index.d.ts",
   "files": [
     "types"
   ],
-  "main": "types/index.js"
+  "main": "types/index.js",
+  "scripts": {
+    "clean-js": "/bin/bash tools/npm-scripts.sh cleanJS",
+    "tsc": "npm run clean-js && node node_modules/typescript/bin/tsc -p ./tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "2.8.1"
+  }
 }

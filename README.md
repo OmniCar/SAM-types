@@ -4,6 +4,7 @@ Typescript interfaces for all types used to communicate between SAM client(s) an
 
 ## Conventions
 
+### Request/Response interfaces
 TODO: Fill this out
 
 ### Versioning
@@ -11,18 +12,36 @@ TODO: Fill this out
 We use standard [semantic versioning](https://semver.org/)
 
 ## Development
+### Dependencies
+The project only has one dependency: `Typescript`
+
+This is to have `tsc` available.
+
+### Compiling
+
+To compile the `index.d.ts` file and the `index.js` file, run `npm run tsc` (or `yarn tsc`). This cleans all existing `.js` files and updates the `index.d.ts` file and the `index.js` file.
 
 ### Adding new interfaces
 
-Write your interface like you normally would. In order to export it, you need to add it to the `index.d.ts` file which holds all exported interfaces.
+Write your interface like you normally would. In order to export it, you need to add it to the `index.ts` file which holds all exported interfaces, types, and enums (yes we should get rid of the js files at some point).
 
 ### Local development
 
-To use the types locally in an application, add the line below as a DevDependency in your `package.json` file:
+To use the types locally in an application, add the line below as a dependency in your `package.json` file (once we get rid of js files and enums we can add it as a devdependency instead):
 
 `"sam-types": "file:../SAM-types"`
 
 The path is the relative path to the SAM-types project.
+
+### Regular dependency
+To use SAM-types in a project, add the line below as a dependency in your `package.json` file:
+
+`"sam-types": "OmniCar/SAM-types#0.0.1"`
+
+If you need to target something other than a specific release, consider targeting a branch or a commit as shown below:
+
+* `"sam-types": "OmniCar/SAM-types#4727d357ea"`
+* `"sam-types": "OmniCar/SAM-types#feature\/branch"`
 
 ## Releasing
 
