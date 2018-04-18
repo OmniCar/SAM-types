@@ -1,4 +1,5 @@
 import { ISearchQuery, OrderDirection } from '../searchQuery'
+import {IContractFilterOptions} from "./contractFilter";
 
 export type ContractOrderBy =
   | 'prettyIdentifier'
@@ -12,15 +13,14 @@ export type ContractOrderBy =
 
 export interface IContractQuery extends ISearchQuery {
   orderBy?: ContractOrderBy
-  status?: string
-  templateId?: number[]
-  sellerId?: number[]
   createdDateStart?: Date
   createdDateEnd?: Date
   expirationDateStart?: Date
   expirationDateEnd?: Date
   createdDate?: Date
   expirationDate?: Date
+  roles?: string
+  filtering?: IContractFilterOptions
 }
 
 export interface IMappedContractQuery extends IContractQuery {
