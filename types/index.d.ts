@@ -1,4 +1,15 @@
-export { ContractState } from './contract/contractState';
+export declare enum ContractState {
+    Draft = 1,
+    Offer = 100,
+    OfferExpired = 110,
+    OfferRevoked = 120,
+    OfferRejected = 130,
+    Active = 200,
+    Suspended = 400,
+    Terminated = 500,
+    Completed = 800,
+    Settled = 900,
+}
 export { IAddressRequest, IAddressResponse } from './address';
 export { App } from './app';
 export { Brand } from './brand';
