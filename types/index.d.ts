@@ -34,7 +34,7 @@ export { PaymentCard } from './paymentCard';
 export { PaymentPlan } from './paymentPlan';
 export { ICalculationRequest, ICalculationResponse } from './priceCalculation';
 export { PriceSpecification } from './priceSpecification';
-export { IBrandingPayloadResponse, IStripeInformationResponse, IProviderInformationResponse, IProviderBrandingResponse } from './providerBranding';
+export { IBrandingPayloadResponse, IStripeInformationResponse, IProviderInformationResponse, IProviderBrandingResponse, IProviderStylingResponse } from './providerBranding';
 export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErrors';
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors';
 export { GenericResponseErrors } from './responseErrors/genericResponseTypes';

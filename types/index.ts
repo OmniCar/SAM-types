@@ -46,6 +46,7 @@ export {
   IStripeInformationResponse,
   IProviderInformationResponse,
   IProviderBrandingResponse,
+  IProviderStylingResponse,
 } from './providerBranding'
 export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErrors'
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors'

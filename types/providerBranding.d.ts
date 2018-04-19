@@ -2,6 +2,7 @@ export interface IBrandingPayloadResponse {
   paymentInformation: IStripeInformationResponse
   providerInformation: IProviderInformationResponse
   providerBranding: IProviderBrandingResponse[]
+  providerStyling: IProviderStylingResponse
 }
 
 export interface IStripeInformationResponse {
@@ -21,4 +22,9 @@ export interface IProviderInformationResponse {
 
 export interface IProviderBrandingResponse {
   text: string
+}
+
+export interface IProviderStylingResponse {
+  brandingLogo: string
+  hasProviderStyling: boolean
 }
