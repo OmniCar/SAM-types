@@ -13,12 +13,12 @@ export type ContractOrderBy =
 
 export interface IContractQuery extends ISearchQuery {
   orderBy?: ContractOrderBy
-  createdDateStart?: Date
-  createdDateEnd?: Date
-  expirationDateStart?: Date
-  expirationDateEnd?: Date
-  createdDate?: Date
-  expirationDate?: Date
+  createdDateStart?: Date | string
+  createdDateEnd?: Date | string
+  expirationDateStart?: Date | string
+  expirationDateEnd?: Date | string
+  createdDate?: Date | string
+  expirationDate?: Date | string
   roles?: string
   filtering?: IContractFilterOptions
 }
@@ -28,6 +28,12 @@ export interface IMappedContractQuery extends IContractQuery {
   offset: number
   orderBy: ContractOrderBy
   orderDirection: OrderDirection
+  createdDateStart?: Date
+  createdDateEnd?: Date
+  expirationDateStart?: Date
+  expirationDateEnd?: Date
+  createdDate?: Date
+  expirationDate?: Date
 }
 
 export interface IContractSearchResult {
