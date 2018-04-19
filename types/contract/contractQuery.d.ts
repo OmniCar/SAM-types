@@ -19,7 +19,6 @@ export interface IContractQuery extends ISearchQuery {
   expirationDateEnd?: Date | string
   createdDate?: Date | string
   expirationDate?: Date | string
-  roles?: string
   filtering?: IContractFilterOptions
 }
 
