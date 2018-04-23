@@ -10,6 +10,7 @@ export type ContractOrderBy =
   | 'contractEndDate'
   | 'sellerName'
   | 'contractState'
+  | 'brand'
 
 export interface IContractQuery extends ISearchQuery {
   orderBy?: ContractOrderBy
