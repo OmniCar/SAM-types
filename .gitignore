@@ -1,4 +1,4 @@
 node_modules/
-*.d.ts
 !types/index.d.ts
 .vscode/
+.DS_Store
