@@ -55,3 +55,4 @@ export { Vehicle } from './vehicle';
 export { VehicleContracts } from './vehicleContracts';
 export { ILoginRequest, ILoginResponse } from './login';
 export { IEmailExistsRequest, IEmailExistsResponse } from './emailExists';
+export { IResetPasswordRequest } from './resetPassword';
