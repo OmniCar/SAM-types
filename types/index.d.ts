@@ -53,5 +53,9 @@ export { Translation } from './translation';
 export { ITableUserConfiguration, IColumnConfiguration, UserConfigurationType } from './userConfiguration/tableUserConfiguration';
 export { Vehicle } from './vehicle';
 export { VehicleContracts } from './vehicleContracts';
+<<<<<<< Updated upstream
 export { ILoginRequest, ILoginResponse } from './login';
 export { IEmailExistsRequest, IEmailExistsResponse } from './emailExists';
+=======
+export { IUserResponse } from './user';
+>>>>>>> Stashed changes
