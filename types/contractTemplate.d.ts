@@ -2,6 +2,12 @@ import { IContractOptionResponse } from './contractOption'
 import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfService'
 import { PriceSpecification } from './priceSpecification'
 
+export interface IContractTemplateCloneRequest {
+  templateIds: number[]
+  providerId: number
+  includePrices: boolean
+}
+
 export interface IContractTemplateRequest {
   providerId: number
   name: string
