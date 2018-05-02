@@ -28,7 +28,7 @@ export {
 } from './contract/contractQuery'
 export { IContractOptionRequest, IContractOptionResponse } from './contractOption'
 export { IContractProviderRequest, IContractProviderResponse } from './contractProvider'
-export { IContractTemplateRequest, IContractTemplateResponse } from './contractTemplate'
+export { IContractTemplateRequest, IContractTemplateResponse, IContractTemplateCloneRequest } from './contractTemplate'
 export { ICountryRequest, ICountryResponse } from './country'
 export { Customer } from './customer'
 export { DurationOptions } from './durationOptions'
