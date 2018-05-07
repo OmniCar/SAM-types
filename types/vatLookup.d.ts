@@ -1,10 +1,10 @@
 export interface IVatLookupRequest {
-  cvrCode: string,
+  vatId: string,
   country: string
 }
 
 export interface IVatLookupResponse {
-  cvrCode: string,
+  vatId: string,
   country: string,
   administrativeName: string,
   address1: string,
