@@ -1,4 +1,4 @@
 export interface FuelType {
   name: string
-  id: number
+  id?: number
 }
