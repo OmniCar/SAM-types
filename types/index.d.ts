@@ -18,7 +18,7 @@ export { IContractResponse } from './contract/contract';
 export { IContractActivationRequest } from './contract/contractActivation';
 export { IContractFilterOptions, IContractFilterOption } from './contract/contractFilter';
 export { IContractOfferRequest, IContractOfferResponse } from './contract/contractOffer';
-export { ContractOrderBy, IContractQuery, IMappedContractQuery, IContractSearchResult, IContractSearchResultInfo } from './contract/contractQuery';
+export { ContractOrderBy, IContractQuery, IMappedContractQuery, IContractSearchResult } from './contract/contractQuery';
 export { IContractOptionRequest, IContractOptionResponse } from './contractOption';
 export { IContractProviderRequest, IContractProviderResponse } from './contractProvider';
 export { IContractTemplateRequest, IContractTemplateResponse, IContractTemplateCloneRequest } from './contractTemplate';
@@ -39,7 +39,7 @@ export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErr
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors';
 export { GenericResponseErrors } from './responseErrors/genericResponseTypes';
 export { ResponseErrors } from './responseErrors/index';
-export { ISearchQuery, OrderDirection } from './searchQuery';
+export { ISearchQuery, OrderDirection, IPaginatedResult } from './searchQuery';
 export { StripeGenderType, StripeCountryType, StripeCurrencyType, StripeEntityType } from './stripe/stripe';
 export { IStripe, IStripeResponse, IStripeRequest } from './stripe/stripe';
 export { IStripeAddress } from './stripe/stripeAddress';
