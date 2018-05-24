@@ -19,13 +19,7 @@ export { IContractResponse } from './contract/contract'
 export { IContractActivationRequest } from './contract/contractActivation'
 export { IContractFilterOptions, IContractFilterOption } from './contract/contractFilter'
 export { IContractOfferRequest, IContractOfferResponse } from './contract/contractOffer'
-export {
-  ContractOrderBy,
-  IContractQuery,
-  IMappedContractQuery,
-  IContractSearchResult,
-  IContractSearchResultInfo,
-} from './contract/contractQuery'
+export { ContractOrderBy, IContractQuery, IMappedContractQuery, IContractSearchResult } from './contract/contractQuery'
 export { IContractOptionRequest, IContractOptionResponse } from './contractOption'
 export { IContractProviderRequest, IContractProviderResponse } from './contractProvider'
 export { IContractTemplateRequest, IContractTemplateResponse, IContractTemplateCloneRequest } from './contractTemplate'

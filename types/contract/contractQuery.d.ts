@@ -1,5 +1,5 @@
 import { ISearchQuery, OrderDirection } from '../searchQuery'
-import {IContractFilterOptions} from "./contractFilter";
+import { IContractFilterOptions } from './contractFilter'
 
 export type ContractOrderBy =
   | 'prettyIdentifier'
@@ -44,10 +44,4 @@ export interface IContractSearchResult {
   registrationNumber: string
   brand: string
   customerName: string
-}
-
-export interface IContractSearchResultInfo {
-  totalCount: number
-  resultCount: number
-  results: IContractSearchResult[]
 }
