@@ -10,6 +10,27 @@ export declare enum ContractState {
     Completed = 800,
     Settled = 900,
 }
+export declare enum ContractActionType {
+    create = 100,
+    sendDraft = 120,
+    sendOffer = 140,
+    sendOfferReminderMail = 150,
+    sendOfferReminderMail2 = 152,
+    sendOfferReminderMail3 = 154,
+    rejectOffer = 160,
+    acceptOffer = 180,
+    approveOffer = 200,
+    activate = 300,
+    expire = 400,
+    changeVehicleData = 420,
+    changeCustomerData = 440,
+    changePaymentData = 460,
+    modify = 500,
+    suspend = 600,
+    reactivate = 700,
+    terminate = 800,
+    settle = 900,
+}
 export { IAddressRequest, IAddressResponse } from './address';
 export { App } from './app';
 export { Brand } from './brand';
@@ -39,7 +60,7 @@ export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErr
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors';
 export { GenericResponseErrors } from './responseErrors/genericResponseTypes';
 export { ResponseErrors } from './responseErrors/index';
-export { ISearchQuery, OrderDirection, IPaginatedResult } from './searchQuery';
+export { ISearchQuery, IMappedSearchQuery, OrderDirection, IPaginatedResult } from './searchQuery';
 export { StripeGenderType, StripeCountryType, StripeCurrencyType, StripeEntityType } from './stripe/stripe';
 export { IStripe, IStripeResponse, IStripeRequest } from './stripe/stripe';
 export { IStripeAddress } from './stripe/stripeAddress';
@@ -58,3 +79,4 @@ export { IEmailExistsRequest, IEmailExistsResponse } from './emailExists';
 export { IResetPasswordRequest } from './resetPassword';
 export { IUserResponse } from './user';
 export { IVatLookupRequest, IVatLookupResponse } from './vatLookup';
+export { IContractActionResponse } from './contractAction';

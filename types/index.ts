@@ -11,6 +11,28 @@ export enum ContractState {
   Settled = 900,
 }
 
+export enum ContractActionType {
+  create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
+  sendDraft = 120, // A draft was sent to the customer
+  sendOffer = 140, // An offer was sent to the customer
+  sendOfferReminderMail = 150, // A reminder about offer was sent to the customer
+  sendOfferReminderMail2 = 152, // A reminder about offer was sent to the customer
+  sendOfferReminderMail3 = 154, // A reminder about offer was sent to the customer
+  rejectOffer = 160, // The customer rejected the offer
+  acceptOffer = 180, // The customer accepted the offer
+  approveOffer = 200, // Who approved it? that would be the customer
+  activate = 300, // The contract was activated by either the customer or the seller
+  expire = 400, // The contract expired
+  changeVehicleData = 420, // Meta data for the vehicle was changed
+  changeCustomerData = 440, // Meta data for the customer was changed
+  changePaymentData = 460, // Information about payment was changed
+  modify = 500, // (extended) The contract was changed in a way that changes the financial agreement, if a new contract was created as a sideeffect, information about the new contract is in the details
+  suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
+  reactivate = 700, // Who unsuspended the contract
+  terminate = 800, // Who terminated the contract
+  settle = 900, // Who Settled the contract, any settlement comments will be in the details
+}
+
 export { IAddressRequest, IAddressResponse } from './address'
 export { App } from './app'
 export { Brand } from './brand'
@@ -46,7 +68,7 @@ export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErr
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors'
 export { GenericResponseErrors } from './responseErrors/genericResponseTypes'
 export { ResponseErrors } from './responseErrors/index'
-export { ISearchQuery, OrderDirection, IPaginatedResult } from './searchQuery'
+export { ISearchQuery, IMappedSearchQuery, OrderDirection, IPaginatedResult } from './searchQuery'
 export { StripeGenderType, StripeCountryType, StripeCurrencyType, StripeEntityType } from './stripe/stripe'
 export { IStripe, IStripeResponse, IStripeRequest } from './stripe/stripe'
 export { IStripeAddress } from './stripe/stripeAddress'
@@ -69,3 +91,4 @@ export { IEmailExistsRequest, IEmailExistsResponse } from './emailExists'
 export { IResetPasswordRequest } from './resetPassword'
 export { IUserResponse } from './user'
 export { IVatLookupRequest, IVatLookupResponse } from './vatLookup'
+export { IContractActionResponse } from './contractAction'
