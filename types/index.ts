@@ -91,4 +91,5 @@ export { IEmailExistsRequest, IEmailExistsResponse } from './emailExists'
 export { IResetPasswordRequest } from './resetPassword'
 export { IUserResponse } from './user'
 export { IVatLookupRequest, IVatLookupResponse } from './vatLookup'
-export { IContractActionResponse } from './contractAction'
+export { IContractActionResponse, ActionOrderBy } from './contractAction'
+
