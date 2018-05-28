@@ -12,8 +12,7 @@ export type ContractOrderBy =
   | 'contractState'
   | 'brand'
 
-export interface IContractQuery extends ISearchQuery {
-  orderBy?: ContractOrderBy
+export interface IContractQuery extends ISearchQuery<ContractOrderBy> {
   createdDateStart?: Date | string
   createdDateEnd?: Date | string
   expirationDateStart?: Date | string
