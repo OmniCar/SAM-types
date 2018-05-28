@@ -12,7 +12,7 @@ export interface IMappedSearchQuery {
   limit: number
   offset: number
   query?: string
-  orderBy: string | ActionOrderBy
+  orderBy: ActionOrderBy
   orderDirection: OrderDirection
 }
 
