@@ -1,4 +1,4 @@
-import { PriceSpecification } from 'index'
+import { PriceSpecification } from './index'
 
 export type WorkshopOrderBy = 'id' | 'date'
 
