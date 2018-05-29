@@ -40,6 +40,7 @@ export { IContractActivationRequest } from './contract/contractActivation';
 export { IContractFilterOptions, IContractFilterOption } from './contract/contractFilter';
 export { IContractOfferRequest, IContractOfferResponse } from './contract/contractOffer';
 export { IContractDetailsResponse } from './contract/contractDetails';
+export { IIncludedContractOption } from './includedContractOption';
 export { ContractOrderBy, IContractQuery, IMappedContractQuery, IContractSearchResult } from './contract/contractQuery';
 export { IContractOptionRequest, IContractOptionResponse } from './contractOption';
 export { IContractProviderRequest, IContractProviderResponse } from './contractProvider';
