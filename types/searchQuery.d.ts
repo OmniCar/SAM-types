@@ -1,18 +1,16 @@
-import { ActionOrderBy } from './contractAction'
-
-export interface ISearchQuery {
+export interface ISearchQuery<O> {
   limit?: number
   offset?: number
   query?: string
-  orderBy?: string
+  orderBy?: O
   orderDirection?: OrderDirection
 }
 
-export interface IMappedSearchQuery {
+export interface IMappedSearchQuery<O> {
   limit: number
   offset: number
   query?: string
-  orderBy: string | ActionOrderBy
+  orderBy: O
   orderDirection: OrderDirection
 }
 
