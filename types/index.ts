@@ -48,6 +48,7 @@ export { IContractOptionRequest, IContractOptionResponse } from './contractOptio
 export { IContractProviderRequest, IContractProviderResponse } from './contractProvider'
 export { IContractTemplateRequest, IContractTemplateResponse, IContractTemplateCloneRequest } from './contractTemplate'
 export { ICountryRequest, ICountryResponse } from './country'
+export { IInvoice, InvoiceState, InvoiceOrderBy } from './invoice'
 export { Customer } from './customer'
 export { DurationOptions } from './durationOptions'
 export { ApiError } from './errorResponse'
