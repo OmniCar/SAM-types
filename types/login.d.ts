@@ -4,6 +4,8 @@ export interface ILoginRequest {
 }
 
 export interface ILoginResponse {
-  token: string
-  metadata: any
+  username: boolean
+  password: boolean
+  token?: string
+  metadata?: any
 }
