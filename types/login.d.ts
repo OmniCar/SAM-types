@@ -1,6 +1,6 @@
 export interface ILoginRequest {
   username: string
-  password: string
+  password?: string
 }
 
 export interface ILoginResponse {
