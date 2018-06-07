@@ -7,7 +7,10 @@ export interface IUserResponse {
 }
 
 export interface IUserTheme {
-  name: string
+  palette: {
+    primary: string // value is a hexcolor
+    secondary: string // value is a hexcolor
+  }
 }
 
 export interface IUserMetadata {
