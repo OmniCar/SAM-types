@@ -71,7 +71,7 @@ export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErr
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors'
 export { GenericResponseErrors } from './responseErrors/genericResponseTypes'
 export { ResponseErrors } from './responseErrors/index'
-export { ISearchQuery, IMappedSearchQuery, OrderDirection, IPaginatedResult } from './searchQuery'
+export { ISearchQuery, OrderDirection, IPaginatedResult } from './searchQuery'
 export { StripeGenderType, StripeCountryType, StripeCurrencyType, StripeEntityType } from './stripe/stripe'
 export { IStripe, IStripeResponse, IStripeRequest } from './stripe/stripe'
 export { IStripeAddress } from './stripe/stripeAddress'

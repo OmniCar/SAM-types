@@ -3,6 +3,7 @@ export interface IBrandingPayloadResponse {
   providerInformation: IProviderInformationResponse
   providerBranding: IProviderBrandingResponse[]
   providerStyling: IProviderStylingResponse
+  locale: string
 }
 
 export interface IStripeInformationResponse {
