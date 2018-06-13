@@ -1,6 +1,7 @@
 import { IStripeDeclineChargeOn } from './stripeDeclineChargeOn'
 import { IStripeExternalAccountResponse } from './stripeExternalAccount'
 import { IStripeLegalEntity } from './stripeLegalEntity'
+import { IStripeVerification } from './stripeVerification'
 
 // @TODO - Export these out into some more generic place for others to use!!
 export type StripeGenderType = 'male' | 'female'
@@ -20,6 +21,7 @@ export interface IStripe {
   supportEmail: string
   supportPhone: string
   supportUrl: string
+  verification: IStripeVerification
 }
 
 export interface IStripeResponse extends IStripe {
