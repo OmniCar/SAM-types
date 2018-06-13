@@ -1,3 +1,24 @@
+export type StripeVerificationReason =
+  | 'rejected.fraud'
+  | 'rejected.terms_of_service'
+  | 'rejected.listed'
+  | 'rejected.other'
+  | 'fields_needed'
+  | 'listed'
+  | 'under_review'
+  | 'other'
+
+export enum StripeVerificationReasonEnum {
+  'rejected.fraud' = 'Rejected on suspicion of fraud',
+  'rejected.terms_of_service' = 'Rejected due to Terms of Service violation',
+  'rejected.listed' = 'Rejected due to reason listed',
+  'rejected.other' = 'Rejected for other reason',
+  'fields_needed' = 'Fields are needed',
+  'listed' = 'Listed',
+  'under_review' = 'Under Review',
+  'other' = 'Other',
+}
+
 export type StripeVerificationField =
   | 'business_url'
   | 'external_account'
@@ -15,17 +36,6 @@ export type StripeVerificationField =
   | 'support_phone'
   | 'tos_acceptance.date'
   | 'tos_acceptance.ip'
-
-export enum StripeVerificationReasonEnum {
-  'rejected.fraud' = 'Rejected on suspicion of fraud',
-  'rejected.terms_of_service' = 'Rejected due to Terms of Service violation',
-  'rejected.listed' = 'Rejected due to reason listed',
-  'rejected.other' = 'Rejected for other reason',
-  'fields_needed' = 'Fields are needed',
-  'listed' = 'Listed',
-  'under_review' = 'Under Review',
-  'other' = 'Other',
-}
 
 export enum StripeVerificationFieldEnum {
   'business_url' = 'Business URL is missing',
@@ -47,7 +57,7 @@ export enum StripeVerificationFieldEnum {
 }
 
 export interface IStripeVerification {
-  disabled_reason: string | null
+  disabled_reason: StripeVerificationReason | null
   due_by: string | null
   fields_needed: StripeVerificationField[]
 }
