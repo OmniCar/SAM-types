@@ -16,7 +16,18 @@ export type StripeVerificationField =
   | 'tos_acceptance.date'
   | 'tos_acceptance.ip'
 
-export enum StripeVerificationEnum {
+export enum StripeVerificationReasonEnum {
+  'rejected.fraud' = 'Rejected on suspicion of fraud',
+  'rejected.terms_of_service' = 'Rejected due to Terms of Service violation',
+  'rejected.listed' = 'Rejected due to reason listed',
+  'rejected.other' = 'Rejected for other reason',
+  'fields_needed' = 'Fields are needed',
+  'listed' = 'Listed',
+  'under_review' = 'Under Review',
+  'other' = 'Other',
+}
+
+export enum StripeVerificationFieldEnum {
   'business_url' = 'Business URL is missing',
   'external_account' = 'No External Accounts created',
   'legal_entity.address.city' = 'City in address for Legal Entity is missing',
