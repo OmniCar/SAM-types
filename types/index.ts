@@ -60,13 +60,7 @@ export { PaymentCard } from './paymentCard'
 export { PaymentPlan } from './paymentPlan'
 export { ICalculationRequest, ICalculationResponse } from './priceCalculation'
 export { PriceSpecification } from './priceSpecification'
-export {
-  IBrandingPayloadResponse,
-  IStripeInformationResponse,
-  IProviderInformationResponse,
-  IProviderBrandingResponse,
-  IProviderStylingResponse,
-} from './providerBranding'
+export { IBrandingPayloadResponse, IStripeInformationResponse, IProviderInformationResponse, IProviderBrandingResponse, IProviderStylingResponse } from './providerBranding'
 export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErrors'
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors'
 export { GenericResponseErrors } from './responseErrors/genericResponseTypes'
@@ -75,6 +69,7 @@ export { ISearchQuery, OrderDirection, IPaginatedResult } from './searchQuery'
 export { StripeGenderType, StripeCountryType, StripeCurrencyType, StripeEntityType } from './stripe/stripe'
 export { IStripe, IStripeResponse, IStripeRequest } from './stripe/stripe'
 export { IStripeAddress } from './stripe/stripeAddress'
+export { IStripeVerification, StripeVerificationEnum, StripeVerificationField } from './stripe/stripeVerification'
 export { IStripeDateOfBirth } from './stripe/stripeDateOfBirth'
 export { IStripeDeclineChargeOn } from './stripe/stripeDeclineChargeOn'
 export { IStripeExternalAccount, IStripeExternalAccountResponse } from './stripe/stripeExternalAccount'
@@ -82,11 +77,7 @@ export { IStripeLegalEntity } from './stripe/stripeLegalEntity'
 export { IStripeOwner } from './stripe/stripeOwner'
 export { ITermsOfServiceRequest, ITermsOfServiceResponse } from './termsOfService'
 export { Translation } from './translation'
-export {
-  ITableUserConfiguration,
-  IColumnConfiguration,
-  UserConfigurationType,
-} from './userConfiguration/tableUserConfiguration'
+export { ITableUserConfiguration, IColumnConfiguration, UserConfigurationType } from './userConfiguration/tableUserConfiguration'
 export { Vehicle } from './vehicle'
 export { VehicleContracts } from './vehicleContracts'
 export { ILoginRequest, ILoginResponse } from './login'
