@@ -1,8 +1,10 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
+import { ICountryResponse, ICountryRequest } from './country'
 
 export interface IContractProviderRequest {
   administrativeName: string
   cvrCode: string
+  country: ICountryRequest
   postmarkFromEmail: string
   omnicarFee: number
   hoursToReminder1: number
@@ -22,6 +24,7 @@ export interface IContractProviderResponse {
   contractProviderId: number
   administrativeName: string
   cvrCode: string
+  country: ICountryResponse
   postmarkFromEmail: string
   omnicarFee: number
   hoursToReminder1: number
