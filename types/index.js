@@ -35,34 +35,4 @@ var ContractActionType;
     ContractActionType[ContractActionType["terminate"] = 800] = "terminate";
     ContractActionType[ContractActionType["settle"] = 900] = "settle";
 })(ContractActionType = exports.ContractActionType || (exports.ContractActionType = {}));
-var StripeVerificationReasonEnum;
-(function (StripeVerificationReasonEnum) {
-    StripeVerificationReasonEnum["rejected.fraud"] = "Rejected on suspicion of fraud";
-    StripeVerificationReasonEnum["rejected.terms_of_service"] = "Rejected due to Terms of Service violation";
-    StripeVerificationReasonEnum["rejected.listed"] = "Rejected due to reason listed";
-    StripeVerificationReasonEnum["rejected.other"] = "Rejected for other reason";
-    StripeVerificationReasonEnum["fields_needed"] = "Fields are needed";
-    StripeVerificationReasonEnum["listed"] = "Listed";
-    StripeVerificationReasonEnum["under_review"] = "Under Review";
-    StripeVerificationReasonEnum["other"] = "Other";
-})(StripeVerificationReasonEnum = exports.StripeVerificationReasonEnum || (exports.StripeVerificationReasonEnum = {}));
-var StripeVerificationFieldEnum;
-(function (StripeVerificationFieldEnum) {
-    StripeVerificationFieldEnum["business_url"] = "Business URL is missing";
-    StripeVerificationFieldEnum["external_account"] = "No External Accounts created";
-    StripeVerificationFieldEnum["legal_entity.address.city"] = "City in address for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.address.line1"] = "First line in address for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.address.postal_code"] = "Postal code in address for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.address.state"] = "State in address for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.dob.day"] = "Day in Date of Birth for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.dob.month"] = "Month in Date of Birth for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.dob.year"] = "Year in Date of Birth for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.first_name"] = "First Name for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.last_name"] = "Last Name for Legal Entity is missing";
-    StripeVerificationFieldEnum["legal_entity.type"] = "Type for Legal Entity is missing";
-    StripeVerificationFieldEnum["product_description"] = "Product Description is missing";
-    StripeVerificationFieldEnum["support_phone"] = "Support Phone number is missing";
-    StripeVerificationFieldEnum["tos_acceptance.date"] = "Terms of Service Acceptance Date is missing";
-    StripeVerificationFieldEnum["tos_acceptance.ip"] = "Terms of Service Acceptance IP is missing";
-})(StripeVerificationFieldEnum = exports.StripeVerificationFieldEnum || (exports.StripeVerificationFieldEnum = {}));
 //# sourceMappingURL=index.js.map
