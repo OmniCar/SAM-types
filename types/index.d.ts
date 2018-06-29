@@ -37,7 +37,7 @@ export { Brand } from './brand';
 export { IContactPersonRequest, IContactPersonResponse } from './contactPerson';
 export { IContractResponse } from './contract/contract';
 export { IContractActivationRequest } from './contract/contractActivation';
-export { IContractFilterOptions, IContractFilterOption } from './contract/contractFilter';
+export { IContractFilterDate, IContractFilterOption, IContractFilterOptions } from './contract/contractFilter';
 export { IContractOfferRequest, IContractOfferResponse } from './contract/contractOffer';
 export { IContractDetailsResponse } from './contract/contractDetails';
 export { IIncludedContractOption } from './includedContractOption';
