@@ -4,12 +4,12 @@ export interface IContractFilterDate {
 }
 
 export interface IContractFilterOptions {
-  contractStates: IContractFilterOption[]
-  templates: IContractFilterOption[]
-  options: IContractFilterOption[]
-  sellers: IContractFilterOption[]
-  creation: IContractFilterDate
-  expiration: IContractFilterDate
+  contractStates?: IContractFilterOption[]
+  templates?: IContractFilterOption[]
+  options?: IContractFilterOption[]
+  sellers?: IContractFilterOption[]
+  creation?: IContractFilterDate
+  expiration?: IContractFilterDate
 }
 
 export interface IContractFilterOption {

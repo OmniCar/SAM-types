@@ -19,7 +19,7 @@ export interface IContractQuery extends ISearchQuery<ContractOrderBy> {
   expirationDateEnd?: Date | string
   createdDate?: Date | string
   expirationDate?: Date | string
-  filtering?: Partial<IContractFilterOptions>
+  filtering?: IContractFilterOptions
 }
 
 export interface IMappedContractQuery extends IContractQuery {
