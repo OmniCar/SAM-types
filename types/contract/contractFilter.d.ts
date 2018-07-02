@@ -13,6 +13,6 @@ export interface IContractFilterOptions {
   templates: IContractFilterOption[]
   options: IContractFilterOption[]
   sellers: IContractFilterOption[]
-  createds: IContractFilterDate
-  expireds: IContractFilterDate
+  created: IContractFilterDate
+  expired: IContractFilterDate
 }
