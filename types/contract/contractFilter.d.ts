@@ -1,6 +1,6 @@
 export interface IContractFilterDate {
-  min: string
-  max: string
+  start: string
+  end: string
 }
 
 export interface IContractFilterOptions {
