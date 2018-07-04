@@ -8,10 +8,14 @@ export interface ISearchQuery<O> {
 
 export type OrderDirection = 'ASC' | 'DESC'
 
-export interface IPaginatedResult<T> {
+export interface IPaginatedResult<T, O> {
   totalCount: number
   resultCount: number
   currentPage: number
-  pageCount: number
+  pages: number
+  offset: number
+  limit: number
+  orderBy: O
+  orderDirection: OrderDirection
   results: T
 }
