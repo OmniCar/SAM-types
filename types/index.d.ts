@@ -65,7 +65,6 @@ export { CalculatorResponseErrors } from './responseErrors/calculatorResponseErr
 export { ContractResponseErrors } from './responseErrors/contractResponseErrors';
 export { GenericResponseErrors } from './responseErrors/genericResponseTypes';
 export { ResponseErrors } from './responseErrors/index';
-export { IPaginatedResult, ISearchQuery, OrderDirection } from './searchQuery';
 export { IStripe, IStripeRequest, IStripeResponse, StripeCountryType, StripeCurrencyType, StripeEntityType, StripeGenderType } from './stripe/stripe';
 export { IStripeAddress } from './stripe/stripeAddress';
 export { IStripeDateOfBirth } from './stripe/stripeDateOfBirth';
@@ -77,6 +76,7 @@ export { IStripeVerification, StripeVerificationField, StripeVerificationReason 
 export { ITermsOfServiceRequest, ITermsOfServiceResponse } from './termsOfService';
 export { Translation } from './translation';
 export { IUserResponse } from './user';
+export * from './searchQuery';
 export * from './userConfiguration/tableUserConfiguration';
 export * from './userConfiguration/userConfiguration';
 export { IVatLookupRequest, IVatLookupResponse } from './vatLookup';
