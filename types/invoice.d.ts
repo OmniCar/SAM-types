@@ -6,7 +6,7 @@ export type InvoiceOrderBy = 'invoice_id' | 'dateIssuedAt' | 'state' | 'amount' 
 export type InvoiceState = 'Pending' | 'Paid' | 'Canceled'
 
 export interface IInvoice {
-  invoice_id: number
+  invoiceId: number
   dateIssuedAt: Date
   state: InvoiceState
   amount: PriceSpecification
