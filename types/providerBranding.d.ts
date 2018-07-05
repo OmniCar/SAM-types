@@ -1,9 +1,11 @@
+import { IsoLocale } from 'locale'
+
 export interface IBrandingPayloadResponse {
   paymentInformation: IStripeInformationResponse
   providerInformation: IProviderInformationResponse
   providerBranding: IProviderBrandingResponse[]
   providerStyling: IProviderStylingResponse
-  locale: string
+  locale: IsoLocale
 }
 
 export interface IStripeInformationResponse {
