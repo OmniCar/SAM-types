@@ -1,21 +1,25 @@
-export interface ISearchQuery<O> {
+export interface ISearchQuery<OrderBy> {
   limit?: number
   offset?: number
   query?: string
-  orderBy?: O
+  orderBy?: OrderBy
   orderDirection?: OrderDirection
 }
 
 export type OrderDirection = 'ASC' | 'DESC'
 
-export interface IPaginatedResult<T, O> {
+export interface IPagination<PaginationOrderBy> {
   totalCount: number
   resultCount: number
   currentPage: number
   pages: number
   offset: number
   limit: number
-  orderBy: O
+  orderBy: PaginationOrderBy
   orderDirection: OrderDirection
-  results: T
+}
+
+export interface IPaginatedResult<ResultType, PaginationOrderBy> {
+  pagination: IPagination<PaginationOrderBy>
+  result: ResultType
 }
