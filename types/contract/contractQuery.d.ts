@@ -22,19 +22,6 @@ export interface IContractQuery extends ISearchQuery<ContractOrderBy> {
   filtering?: IContractFilterOptions
 }
 
-export interface IMappedContractQuery extends IContractQuery {
-  limit: number
-  offset: number
-  orderBy: ContractOrderBy
-  orderDirection: OrderDirection
-  createdDateStart?: Date
-  createdDateEnd?: Date
-  expirationDateStart?: Date
-  expirationDateEnd?: Date
-  createdDate?: Date
-  expirationDate?: Date
-}
-
 export interface IContractSearchResult {
   prettyIdentifier: string
   contractStartDate: Date
