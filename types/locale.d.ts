@@ -7,3 +7,5 @@ export interface Locale {
   dateDefaultFormat: string
   vatPct: number
 }
+
+export type IsoLocale = 'da-DK' | 'sv-SE'
