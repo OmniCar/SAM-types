@@ -1,4 +1,4 @@
-import { IsoLocale } from 'locale'
+import { IsoLocale } from './locale'
 
 export interface IBrandingPayloadResponse {
   paymentInformation: IStripeInformationResponse
