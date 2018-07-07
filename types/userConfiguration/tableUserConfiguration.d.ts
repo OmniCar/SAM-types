@@ -5,10 +5,10 @@ export interface IColumnUserConfiguration {
   name: string
 }
 
-export interface ITableUserConfiguration {
+export interface ITableUserConfiguration<OrderBy> {
   columns: IColumnUserConfiguration[]
-  sortBy: string
-  sortDirection: OrderDirection
+  orderBy: OrderBy
+  orderDirection: OrderDirection
 }
 
 export type TableConfigurationType = 'serviceContract'
