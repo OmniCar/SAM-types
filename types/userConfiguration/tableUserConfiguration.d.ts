@@ -5,9 +5,9 @@ export interface IColumnUserConfiguration {
   name: string
 }
 
-export interface ITableUserConfiguration<OrderBy> {
+export interface ITableUserConfiguration {
   columns: IColumnUserConfiguration[]
-  orderBy: OrderBy
+  orderBy: string
   orderDirection: OrderDirection
 }
 
