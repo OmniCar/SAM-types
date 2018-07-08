@@ -11,6 +11,8 @@ export interface ISearchQuery<OrderBy> {
 // @NOTE - Deprecate this
 export type OrderDirection = 'ASC' | 'DESC'
 
+
+// @NOTE - Use this
 export type OrderDirectionType = 'ASC' | 'DESC'
 
 export interface IQueryParams<Filtering = undefined, Fields = string[]> {

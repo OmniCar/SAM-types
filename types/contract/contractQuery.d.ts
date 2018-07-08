@@ -1,6 +1,7 @@
 import { ISearchQuery, OrderDirection } from '../queryParams'
 import { IContractFilterOptions } from './contractFilter'
 
+// @NOTE - Deprecate down to where it says to use the below instead of the above
 export type ContractOrderBy =
   | 'prettyIdentifier'
   | 'contractTemplateName'
@@ -22,12 +23,25 @@ export interface IContractQuery extends ISearchQuery<ContractOrderBy> {
   filtering?: IContractFilterOptions
 }
 
-export interface IContractSearchResults {
-  prettyIdentifier: string
-  contractStartDate: Date
-  contractEndDate: Date
-  sellerName: string
-  registrationNumber: string
-  brand: string
-  customerName: string
-}
+// @NOTE - Use this instead of the above
+export type ContractOrderByType =
+  | 'prettyIdentifier'
+  | 'contractTemplateName'
+  | 'registrationNumber'
+  | 'customerName'
+  | 'contractStartDate'
+  | 'contractEndDate'
+  | 'sellerName'
+  | 'contractState'
+  | 'brand'
+
+export type ContractFieldType =
+| 'prettyIdentifier'
+| 'contractTemplateName'
+| 'registrationNumber'
+| 'customerName'
+| 'contractStartDate'
+| 'contractEndDate'
+| 'sellerName'
+| 'contractState'
+| 'brand'
