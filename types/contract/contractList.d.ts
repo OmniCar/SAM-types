@@ -23,12 +23,3 @@ export type ContractListOrderByType =
   | 'customerName'
   | 'registrationNumber'
   | 'sellerName'
-
-  export interface IContractListFiltering {
-    contractStates: IContractFilterOption[]
-    templates: IContractFilterOption[]
-    options: IContractFilterOption[]
-    sellers: IContractFilterOption[]
-    created: IContractFilterDate
-    expired: IContractFilterDate
-  }
