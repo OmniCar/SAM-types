@@ -8,6 +8,7 @@ export interface IContractFilterOption {
   id: number
 }
 
+// @NOTE - Deprecate this
 export interface IContractFilterOptions {
   contractStates: IContractFilterOption[]
   templates: IContractFilterOption[]
