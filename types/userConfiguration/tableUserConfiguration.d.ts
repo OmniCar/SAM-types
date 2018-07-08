@@ -1,4 +1,4 @@
-import { OrderDirection } from './../searchQuery.d'
+import { OrderDirection } from '../queryParams'
 
 export interface IColumnUserConfiguration {
   enabled: boolean

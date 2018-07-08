@@ -80,6 +80,6 @@ export * from './vehicleContracts';
 export * from './workshopOperation';
 export * from './locale';
 export * from './contract/contractQuery';
-export * from './searchQuery';
+export * from './queryParams';
 export * from './userConfiguration/tableUserConfiguration';
 export * from './userConfiguration/userConfiguration';

@@ -1,4 +1,4 @@
-import { ISearchQuery, OrderDirection } from '../searchQuery'
+import { ISearchQuery, OrderDirection } from '../queryParams'
 import { IContractFilterOptions } from './contractFilter'
 
 export type ContractOrderBy =
