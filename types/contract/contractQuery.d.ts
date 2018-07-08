@@ -22,7 +22,7 @@ export interface IContractQuery extends ISearchQuery<ContractOrderBy> {
   filtering?: IContractFilterOptions
 }
 
-export interface IContractSearchResult {
+export interface IContractSearchResults {
   prettyIdentifier: string
   contractStartDate: Date
   contractEndDate: Date
