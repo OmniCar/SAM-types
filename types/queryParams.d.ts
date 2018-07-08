@@ -21,10 +21,10 @@ export interface IQueryParams<Filtering = undefined> {
 }
 
 export interface IPaginatedQueryParams<OrderBy, Filtering = undefined> extends IQueryParams<Filtering>{
-  limit?: number
-  offset?: number
-  orderBy?: OrderBy
-  orderDirection?: OrderDirectionType
+  limit: number
+  offset: number
+  orderBy: OrderBy
+  orderDirection: OrderDirectionType
 }
 
 export interface IPagination<PaginationOrderBy> {
