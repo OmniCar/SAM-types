@@ -12,17 +12,6 @@ export interface IContractListRecord {
   sellerName: string
 }
 
-export type ContractListFieldType =
-  | 'prettyIdentifier'
-  | 'brand'
-  | 'contractEndDate'
-  | 'contractStartDate'
-  | 'contractState'
-  | 'contractTemplateName'
-  | 'customerName'
-  | 'registrationNumber'
-  | 'sellerName'
-
 export type ContractListOrderByType =
   | 'prettyIdentifier'
   | 'brand'

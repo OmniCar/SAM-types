@@ -15,13 +15,12 @@ export type OrderDirection = 'ASC' | 'DESC'
 // @NOTE - Use this
 export type OrderDirectionType = 'ASC' | 'DESC'
 
-export interface IQueryParams<Filtering = undefined, Fields = string[]> {
+export interface IQueryParams<Filtering = undefined> {
   filtering?: Filtering
   search?: string
-  fields?: Fields
 }
 
-export interface IPaginatedQueryParams<OrderBy, Filtering = undefined, Fields = string[]> extends IQueryParams<Filtering>{
+export interface IPaginatedQueryParams<OrderBy, Filtering = undefined> extends IQueryParams<Filtering>{
   limit?: number
   offset?: number
   orderBy?: OrderBy
