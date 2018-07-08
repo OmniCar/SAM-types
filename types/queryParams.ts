@@ -21,7 +21,6 @@ export interface IQueryParams<Filtering = undefined> {
 export interface IPaginationQueryParams<OrderBy, Filtering = undefined> extends IQueryParams<Filtering>{
   limit?: number
   offset?: number
-  query?: string
   orderBy?: OrderBy
   orderDirection?: OrderDirectionType
 }
