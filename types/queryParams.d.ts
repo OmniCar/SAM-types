@@ -15,16 +15,24 @@ export type OrderDirection = 'ASC' | 'DESC'
 // @NOTE - Use this
 export type OrderDirectionType = 'ASC' | 'DESC'
 
+export interface IPaginationParams<OrderBy> {
+  limit: number
+  offset: number
+  orderBy: OrderBy
+  orderDirection: OrderDirectionType
+}
+
 export interface IQueryParams<Filtering = undefined> {
   filtering?: Filtering
   search?: string
 }
 
 export interface IPaginatedQueryParams<OrderBy, Filtering = undefined> extends IQueryParams<Filtering>{
-  limit: number
-  offset: number
-  orderBy: OrderBy
-  orderDirection: OrderDirectionType
+  pagination: IPaginationParams<OrderBy>
+}
+
+export interface IPaginatedQuery<OrderByType, Filtering = undefined> {
+  params: IPaginatedQueryParams<OrderByType, Filtering>
 }
 
 export interface IPagination<PaginationOrderBy> {
