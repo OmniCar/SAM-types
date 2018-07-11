@@ -31,3 +31,17 @@ export interface IContractSearchResult {
   brand: string
   customerName: string
 }
+
+export interface IMappedContractQuery extends IContractQuery {
+  limit: number
+  offset: number
+  orderBy: ContractOrderBy
+  orderDirection: OrderDirection
+  createdDateStart?: Date
+  createdDateEnd?: Date
+  expirationDateStart?: Date
+  expirationDateEnd?: Date
+  createdDate?: Date
+  expirationDate?: Date
+}
+
