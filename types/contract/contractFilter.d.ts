@@ -16,3 +16,12 @@ export interface IContractFilterOptions {
   created: IContractFilterDate
   expired: IContractFilterDate
 }
+
+export interface IContractFilterParams {
+  contractStates: number[]
+  templates: number[]
+  options: number[]
+  sellers: number[]
+  created: IContractFilterDate
+  expired: IContractFilterDate
+}
