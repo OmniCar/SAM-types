@@ -35,18 +35,18 @@ export interface IPaginatedQuery<OrderByType, Filtering = undefined> {
   params: IPaginatedQueryParams<OrderByType, Filtering>
 }
 
-export interface IPagination<PaginationOrderBy> {
+export interface IPagination<OrderByType> {
   totalCount: number
   resultCount: number
   currentPage: number
   pages: number
   offset: number
   limit: number
-  orderBy: PaginationOrderBy
+  orderBy: OrderByType
   orderDirection: OrderDirectionType
 }
 
-export interface IPaginatedResult<ResultType, PaginationOrderBy> {
-  pagination: IPagination<PaginationOrderBy>
-  result: ResultType
+export interface IPaginatedResponse<Result, OrderByType> {
+  pagination: IPagination<OrderByType>
+  result: Result
 }
