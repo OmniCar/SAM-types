@@ -7,6 +7,7 @@ export interface IContractOptionRequest {
   price: PriceSpecification
   contractProviderId: number
   archived?: boolean
+  abbreviation?: string
 }
 
 export interface IContractOptionResponse {
@@ -16,4 +17,5 @@ export interface IContractOptionResponse {
   conditionText: string
   weight: number
   contractProviderId: number | null
+  abbreviation: string
 }
