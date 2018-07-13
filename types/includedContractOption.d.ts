@@ -9,4 +9,5 @@ export interface IIncludedContractOption {
   weight: number
   price: PriceSpecification
   assoc: 'PROPERTY' | 'ADDITIONAL'
+  abbreviation: string
 }
