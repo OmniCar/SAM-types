@@ -7,7 +7,7 @@ export interface IContractOptionRequest {
   price: PriceSpecification
   contractProviderId: number
   archived?: boolean
-  abbreviation?: string
+  abbreviation: string
 }
 
 export interface IContractOptionResponse {
