@@ -2,3 +2,4 @@ tools/
 .prettierrc
 tsconfig.json
 package-lock.json
+.circleci/
