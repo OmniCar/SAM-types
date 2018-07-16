@@ -14,9 +14,8 @@ export interface IContractDetailsRecord {
   totalPrice: PriceSpecification
   monthlyPrice: PriceSpecification
   providerShare: PriceSpecification
-  seller: IContactPersonResponse
+  seller?: IContactPersonResponse
   endMileage: number
   extendedFrom: IContractResponse | null
   includedOptions: IIncludedContractOption[] | null
 }
-

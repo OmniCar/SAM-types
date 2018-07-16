@@ -5,7 +5,7 @@ export type ActionOrderBy = 'id' | 'created' | 'type' | 'userName' | 'comment'
 
 export interface IContractActionResponse {
   id?: number
-  created: Date
+  created: Date | string
   type: ContractActionType
   userName: string
   comment: string
