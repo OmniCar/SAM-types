@@ -6,6 +6,6 @@ export interface IWorkshopOperation {
   id?: number
   price: PriceSpecification
   mileage: number
-  date: Date
+  date: Date | string
   description: string
 }
