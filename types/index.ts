@@ -34,6 +34,7 @@ export enum ContractActionType {
 }
 
 export * from './address'
+export * from './admin'
 export * from './app'
 export * from './brand'
 export * from './contactPerson'
@@ -86,4 +87,3 @@ export * from './vatLookup'
 export * from './vehicle'
 export * from './vehicleContracts'
 export * from './workshopOperation'
-

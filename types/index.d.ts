@@ -32,6 +32,7 @@ export declare enum ContractActionType {
     settle = 900,
 }
 export * from './address';
+export * from './admin';
 export * from './app';
 export * from './brand';
 export * from './contactPerson';
