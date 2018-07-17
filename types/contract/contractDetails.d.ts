@@ -1,9 +1,9 @@
-import { IQueryParams } from './../queryParams';
+import { IQueryParams } from './../queryParams'
 import { PriceSpecification } from '../priceSpecification'
 import { IContactPersonResponse } from '../contactPerson'
 import { IContractResponse } from './contract'
 import { IContractOptionResponse } from '../contractOption'
-import { IIncludedContractOption } from '../includedContractOption';
+import { IIncludedContractOption } from '../includedContractOption'
 
 export interface IContractDetailsRecord {
   type: string
@@ -18,4 +18,7 @@ export interface IContractDetailsRecord {
   endMileage: number
   extendedFrom: IContractResponse | null
   includedOptions: IIncludedContractOption[] | null
+  prettyIdentifierShort: string
+  termsPdfUrl: string
+  contractPdfUrl: string
 }
