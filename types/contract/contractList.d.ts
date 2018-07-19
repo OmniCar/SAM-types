@@ -1,6 +1,6 @@
 import { ContractState } from './../index'
 import { IContractFilterOption, IContractFilterDate } from './contractFilter'
-import { IContractHealth } from 'admin'
+import { IContractHealth } from './../admin/contract/health'
 
 export interface IContractListRecord {
   prettyIdentifier: string
