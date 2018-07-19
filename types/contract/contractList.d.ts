@@ -1,5 +1,6 @@
-import { ContractState } from './../index';
-import { IContractFilterOption, IContractFilterDate } from './contractFilter';
+import { ContractState } from './../index'
+import { IContractFilterOption, IContractFilterDate } from './contractFilter'
+import { IContractHealth } from './../admin/contract/health'
 
 export interface IContractListRecord {
   prettyIdentifier: string
@@ -11,6 +12,7 @@ export interface IContractListRecord {
   customerName: string
   registrationNumber: string
   sellerName: string
+  health: IContractHealth[]
 }
 
 export type ContractListOrderByType =
