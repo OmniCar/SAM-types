@@ -7,19 +7,18 @@ export interface ISearchQuery<OrderBy> {
   orderBy?: OrderBy
   orderDirection?: OrderDirection
 }
-  
+
 // @NOTE - Deprecate this
 export type OrderDirection = 'ASC' | 'DESC'
-
 
 // @NOTE - Use this
 export type OrderDirectionType = 'ASC' | 'DESC'
 
 export interface IPaginationParams<OrderBy> {
-  limit: number
-  offset: number
-  orderBy: OrderBy
-  orderDirection: OrderDirectionType
+  limit?: number
+  offset?: number
+  orderBy?: OrderBy
+  orderDirection?: OrderDirectionType
 }
 
 export interface IQueryParams<Filtering = undefined> {
@@ -27,12 +26,12 @@ export interface IQueryParams<Filtering = undefined> {
   search?: string
 }
 
-export interface IPaginatedQueryParams<OrderBy, Filtering = undefined> extends IQueryParams<Filtering>{
-  pagination: IPaginationParams<OrderBy>
+export interface IPaginatedQueryParams<OrderBy, Filtering = undefined> extends IQueryParams<Filtering> {
+  pagination?: IPaginationParams<OrderBy>
 }
 
 export interface IPaginatedQuery<OrderByType, Filtering = undefined> {
-  params: IPaginatedQueryParams<OrderByType, Filtering>
+  params?: IPaginatedQueryParams<OrderByType, Filtering>
 }
 
 export interface IPagination<OrderByType> {
