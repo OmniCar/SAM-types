@@ -11,13 +11,9 @@ export interface IWorkshopOperationListRecord {
 }
 
 export interface IWorkshopOperationDetailsRecord {
-  id: number
-  date: Date | string
+  id?: number
   price: PriceSpecification
-  mileage: string
+  date: Date | string
+  mileage: number
   description: string
-  userId: string
-  userName: string
-  vehicleId: string
-  contractId: string
 }
