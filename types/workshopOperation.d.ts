@@ -2,7 +2,7 @@ import { PriceSpecification } from './index'
 
 export type WorkshopOrderBy = 'id' | 'date'
 
-export interface IWorkshopOperationRecord {
+export interface IWorkshopOperation {
   id?: number
   price: PriceSpecification
   mileage: number
