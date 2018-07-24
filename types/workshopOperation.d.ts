@@ -4,7 +4,7 @@ export type WorkshopOrderBy = 'id' | 'date'
 
 export interface IWorkshopOperation {
   id?: number
-  price: PriceSpecification
+  price: PriceSpecification | number
   mileage: number
   date: Date | string
   description: string
