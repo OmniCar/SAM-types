@@ -1,6 +1,12 @@
 import { GenericResponseErrors } from './genericResponseTypes'
 import { CalculatorResponseErrors } from './calculatorResponseErrors'
 import { ContractResponseErrors } from './contractResponseErrors'
-import { VatLookupResponseErrors } from './vatLookupResponseErrors';
+import { VatLookupResponseErrors } from './vatLookupResponseErrors'
+import { WorkshopImportErrors } from './workshopResponseErrors'
 
-export type ResponseErrors = GenericResponseErrors | CalculatorResponseErrors | ContractResponseErrors | VatLookupResponseErrors
+export type ResponseErrors =
+  | GenericResponseErrors
+  | CalculatorResponseErrors
+  | ContractResponseErrors
+  | VatLookupResponseErrors
+  | WorkshopImportErrors
