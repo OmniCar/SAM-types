@@ -1,9 +1,10 @@
-import { IQueryParams } from './../queryParams'
-import { PriceSpecification } from '../priceSpecification'
-import { IContactPersonResponse } from '../contactPerson'
-import { IContractResponse } from './contract'
-import { IContractOptionResponse } from '../contractOption'
-import { IIncludedContractOption } from '../includedContractOption'
+import { IQueryParams } from './../../queryParams'
+import { PriceSpecification } from './../../priceSpecification'
+import { IContactPersonResponse } from './../../contactPerson'
+import { IContractResponse } from './../../contract/contract'
+import { IContractOptionResponse } from './../../contractOption'
+import { IIncludedContractOption } from './../../includedContractOption'
+import { PaymentGateway } from './../../payment'
 
 export interface IContractDetailsRecord {
   type: string
@@ -21,4 +22,5 @@ export interface IContractDetailsRecord {
   prettyIdentifierShort: string
   termsPdfUrl: string
   contractPdfUrl: string
+  paymentMethod: PaymentGateway
 }

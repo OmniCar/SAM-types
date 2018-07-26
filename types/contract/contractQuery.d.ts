@@ -1,6 +1,7 @@
 // @NOTE - Deprecate this file
 import { ISearchQuery, OrderDirection } from '../queryParams'
 import { IContractFilterOptions } from './contractFilter'
+import { PaymentGateway } from './../payment'
 
 export type ContractOrderBy =
   | 'prettyIdentifier'
@@ -31,6 +32,7 @@ export interface IContractSearchResult {
   registrationNumber: string
   brand: string
   customerName: string
+  paymentMethod: PaymentGateway
 }
 
 export interface IMappedContractQuery extends IContractQuery {
@@ -45,4 +47,3 @@ export interface IMappedContractQuery extends IContractQuery {
   createdDate?: Date
   expirationDate?: Date
 }
-
