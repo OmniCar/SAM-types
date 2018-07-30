@@ -38,7 +38,6 @@ export * from './brand';
 export * from './contactPerson';
 export * from './contract/contract';
 export * from './contract/contractActivation';
-export * from './contract/contractDetails';
 export * from './contract/contractFilter';
 export * from './contract/contractList';
 export * from './contract/contractOffer';
