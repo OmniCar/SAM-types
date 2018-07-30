@@ -58,7 +58,6 @@ export * from './localizationData';
 export * from './login';
 export * from './model';
 export * from './payment';
-export * from './priceCalculation';
 export * from './priceSpecification';
 export * from './providerBranding';
 export * from './queryParams';
