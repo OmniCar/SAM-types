@@ -20,6 +20,7 @@ export interface IStandardContractCalculationRequest extends IContractCalculatio
 }
 
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
+  amountPerPayment: number
   brandName: string
   vehicleModelName: string
   fuelTypeName: string
