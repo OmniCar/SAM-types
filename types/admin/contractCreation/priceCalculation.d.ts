@@ -2,7 +2,7 @@ import { PriceSpecification } from '../../priceSpecification'
 
 export type ContractType = 'STANDARD' | 'CUSTOM'
 
-export interface ICalculationRequest {
+export interface IContractCalculationRequest {
   type: ContractType
   contractTemplateId: number
   duration: number
@@ -13,13 +13,13 @@ export interface ICalculationRequest {
   providerShare: number
 }
 
-export interface IStandardContractCalculationRequest extends ICalculationRequest {
+export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
   brandId: number
   vehicleModelId: number
   fuelTypeId: number
 }
 
-export interface ICustomContractCalculationRequest extends ICalculationRequest {
+export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   brandName: string
   vehicleModelName: string
   fuelTypeName: string
@@ -28,7 +28,7 @@ export interface ICustomContractCalculationRequest extends ICalculationRequest {
 /**
  * The type returned by a price calculation
  */
-export interface ICalculationResponse {
+export interface IContractCalculationResponse {
   amountPrPayment: PriceSpecification
   downpayment: PriceSpecification
   firstPaymentDate: string
