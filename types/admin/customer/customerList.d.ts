@@ -1,4 +1,12 @@
-export type CustomerListOrderByType = 'prettyIdentifier' | 'name' | 'address' | 'zip' | 'city' | 'phone' | 'email'
+export type CustomerListOrderByType =
+  | 'prettyIdentifier'
+  | 'name'
+  | 'address'
+  | 'zip'
+  | 'city'
+  | 'phone'
+  | 'email'
+  | 'cvr'
 
 export interface ICustomerListRecord {
   id?: number
@@ -9,4 +17,5 @@ export interface ICustomerListRecord {
   address: string
   city: string
   zip: string | number
+  cvr?: string
 }
