@@ -1,4 +1,5 @@
 import { UserRole } from './roles'
+import { IUserInfo } from '../user/user'
 
 export interface ILoginRequest {
   username: string
@@ -10,5 +11,5 @@ export interface ILoginResponse {
   password: boolean
   role?: UserRole
   token?: string
-  metadata?: any
+  userInfo?: IUserInfo
 }
