@@ -13,17 +13,6 @@ export interface IApiVehicleWithContracts {
   contracts: IApiVehicleContract[]
 }
 
-export interface IVehicleCreationRequest {
-  modelId?: number
-  registrationDate: Date | string
-  vin: string
-  registrationNumber: string
-  mileage: number
-  brandName?: string
-  modelName?: string
-  fuelTypeName?: string
-}
-
 export interface IApiVehicleContract {
   serviceContractId: number
   amount: PriceSpecification
