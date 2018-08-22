@@ -1,6 +1,6 @@
-import { PriceSpecification } from './../../priceSpecification'
 import { ContractState } from './../../index'
 import { PaymentGateway } from './../../payment'
+import { PriceSpecification } from './../../priceSpecification'
 
 export interface IApiVehicleWithContracts {
   vehicleId: number
