@@ -1,4 +1,4 @@
-import { IUserInfo } from 'admin/user/user'
+import { IUserInfo } from '../user/user'
 import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway } from '../../payment'
 import { Vehicle } from '../../vehicle'
