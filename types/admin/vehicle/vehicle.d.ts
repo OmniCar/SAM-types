@@ -26,8 +26,9 @@ export interface IApiVehicleContract {
   contractTemplateName: string
   duration: number
   mileage: number
-  paymentGateway: PaymentGateway | null
-  reference: string | null
+  paymentGateway?: PaymentGateway
+  reference?: string
+  activationUrl?: string
 }
 
 export interface IApiVehicleIncludedContractOption {
