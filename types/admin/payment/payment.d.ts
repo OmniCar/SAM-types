@@ -1,6 +1,5 @@
 export interface ICreditCard {
-  stripeToken?: string
-  cardId: string
+  cardToken: string
   isDefault: boolean
 }
 
