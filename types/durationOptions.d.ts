@@ -1,12 +1,14 @@
 import { PriceSpecification } from './priceSpecification'
 
-export interface DurationOptions {
-  options: {
-    mileage: number
-    prices: {
-      contractId: number
-      price: PriceSpecification
-    }[]
+export interface DurationOptionsOptions {
+  mileage: number
+  prices: {
+    contractId: number
+    price: PriceSpecification
   }[]
+}
+
+export interface DurationOptions {
+  options: DurationOptionsOptions[]
   duration: number
 }
