@@ -40,4 +40,17 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
   type: 'STANDARD'
 }
 
+export enum ContractCreationActiveEnum {
+  vehicle = 1,
+  templates = 2,
+  durations = 3,
+  options = 4,
+}
+
+export enum ContractCreationStepEnum {
+  details = 1,
+  payment = 2,
+  send = 3,
+}
+
 // Note: there is currently no need for a IContractCreationResponse, just a 200 OK is sufficient.

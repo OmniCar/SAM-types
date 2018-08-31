@@ -1,6 +1,6 @@
 import { PriceSpecification } from '../../priceSpecification'
 
-export type ContractType = 'STANDARD' | 'CUSTOM' | 'OFFER'
+export type ContractType = 'STANDARD' | 'CUSTOM'
 
 export interface IContractCalculationRequest {
   type: ContractType
