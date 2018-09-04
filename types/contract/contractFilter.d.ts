@@ -1,3 +1,5 @@
+import { ContractState } from 'index'
+
 export interface IContractFilterDate {
   min: string
   max: string
@@ -5,7 +7,7 @@ export interface IContractFilterDate {
 
 export interface IContractFilterOption {
   title: string
-  id: number
+  id: ContractState
 }
 
 export interface IContractFilterOptions {
@@ -18,7 +20,7 @@ export interface IContractFilterOptions {
 }
 
 export interface IContractFilterParams {
-  contractStates: number[]
+  contractStates: ContractState[]
   templates: number[]
   options: number[]
   sellers: number[]
