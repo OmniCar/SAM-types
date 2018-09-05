@@ -15,4 +15,5 @@ export interface ILoginResponse {
   token?: string
   userInfo?: IUserInfo
   providerInfo?: IContractProvider
+  stripePublicKey?: string
 }
