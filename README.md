@@ -1,5 +1,7 @@
 # SAM-types
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/OmniCar/SAM-types.svg)](https://greenkeeper.io/)
+
 Typescript interfaces for all types used to communicate between SAM client(s) and the SAM API
 
 ## Conventions
