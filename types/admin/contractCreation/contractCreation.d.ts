@@ -1,7 +1,7 @@
-import { IUserInfo } from '../user/user'
 import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway } from '../../payment'
 import { Vehicle } from '../../vehicle'
+import { IUserInfo } from '../user/user'
 import { ICarCollection } from './carData'
 import { ContractType } from './priceCalculation'
 
@@ -40,4 +40,7 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
   type: 'STANDARD'
 }
 
-// Note: there is currently no need for a IContractCreationResponse, just a 200 OK is sufficient.
+export interface IContractCreationResponse {
+  serviceContractId: number
+  prettyIdentifier: string
+}
