@@ -23,7 +23,7 @@ interface ICommonContractCreationRequest {
   duration: number
   mileage: number
   vehicle: Vehicle
-  additionalOptionIds: number[]
+  optionIds: number[]
   providerPayments: number
   providerShare: number
   customerId?: number
