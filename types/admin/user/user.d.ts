@@ -5,7 +5,7 @@ export interface IUserInfo {
   zip: string
   city: string
   email: string
-  cvr: string | null
-  ean: string | null
-  companyName: string | null
+  cvr?: string
+  ean?: string
+  companyName?: string
 }
