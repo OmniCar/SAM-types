@@ -52,6 +52,6 @@ export interface IAdminContractActivationRequest {
   creditCardToken?: string
 }
 
-export interface IAdminsContractActivationResponse {
+export interface IAdminContractActivationResponse {
   serviceContract: IContractDetailsRecord
 }
