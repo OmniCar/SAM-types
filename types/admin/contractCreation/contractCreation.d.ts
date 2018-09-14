@@ -1,5 +1,6 @@
+import { IContractDetailsRecord } from '..'
 import { IContractTemplateResponse } from '../../contractTemplate'
-import { PaymentGateway } from '../../payment'
+import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle } from '../../vehicle'
 import { IUserInfo } from '../user/user'
 import { ICarCollection } from './carData'
@@ -43,4 +44,14 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
 export interface IContractCreationResponse {
   serviceContractId: number
   prettyIdentifier: string
+}
+
+export interface IAdminContractActivationRequest {
+  paymentGateway: PaymentGateway
+  paymentType: PaymentType
+  creditCardToken?: string
+}
+
+export interface IAdminContractActivationResponse {
+  serviceContract: IContractDetailsRecord
 }
