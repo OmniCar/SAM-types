@@ -46,12 +46,12 @@ export interface IContractCreationResponse {
   prettyIdentifier: string
 }
 
-export interface IContractActivationRequest {
+export interface IAdminContractActivationRequest {
   paymentGateway: PaymentGateway
   paymentType: PaymentType
   creditCardToken?: string
 }
 
-export interface IContractActivationResponse {
+export interface IAdminsContractActivationResponse {
   serviceContract: IContractDetailsRecord
 }
