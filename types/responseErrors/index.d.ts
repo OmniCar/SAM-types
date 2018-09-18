@@ -3,10 +3,12 @@ import { CalculatorResponseErrors } from './calculatorResponseErrors'
 import { ContractResponseErrors } from './contractResponseErrors'
 import { VatLookupResponseErrors } from './vatLookupResponseErrors'
 import { WorkshopImportErrors } from './workshopResponseErrors'
+import { AdminPaymentErrors } from './adminPaymentErrors'
 
 export type ResponseErrors =
-  | GenericResponseErrors
+  | AdminPaymentErrors
   | CalculatorResponseErrors
   | ContractResponseErrors
+  | GenericResponseErrors
   | VatLookupResponseErrors
   | WorkshopImportErrors

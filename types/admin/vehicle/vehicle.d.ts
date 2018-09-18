@@ -1,6 +1,6 @@
-import { PriceSpecification } from './../../priceSpecification'
 import { ContractState } from './../../index'
 import { PaymentGateway } from './../../payment'
+import { PriceSpecification } from './../../priceSpecification'
 
 export interface IApiVehicleWithContracts {
   vehicleId: number
@@ -26,8 +26,9 @@ export interface IApiVehicleContract {
   contractTemplateName: string
   duration: number
   mileage: number
-  paymentGateway: PaymentGateway | null
-  reference: string | null
+  paymentGateway?: PaymentGateway
+  reference?: string
+  activationUrl?: string
 }
 
 export interface IApiVehicleIncludedContractOption {
