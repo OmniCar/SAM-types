@@ -1,4 +1,4 @@
-import { ContractState } from 'index'
+import { ContractState } from '../index'
 
 export interface IContractFilterDate {
   min: string
