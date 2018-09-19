@@ -17,20 +17,25 @@ export interface IContractCreationPayment {
   paymentGateways: PaymentGateway[]
 }
 
-interface ICommonContractCreationRequest {
+interface ICommonContractUpdateRequest {
   type: ContractType
-  contractTemplateId: number
   duration: number
   mileage: number
-  vehicle: Vehicle
   optionIds: number[]
   providerPayments: number
   providerShare: number
+}
+
+interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
+  contractTemplateId: number
+  vehicle: Vehicle
   customerId?: number
   customer?: IUserInfo
   invoiceCustomerId?: number
   invoiceCustomer?: IUserInfo
 }
+
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
