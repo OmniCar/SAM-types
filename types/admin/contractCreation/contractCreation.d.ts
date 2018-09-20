@@ -1,7 +1,8 @@
-import { IUserInfo } from '../user/user'
+import { IContractDetailsRecord } from '..'
 import { IContractTemplateResponse } from '../../contractTemplate'
-import { PaymentGateway } from '../../payment'
+import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle } from '../../vehicle'
+import { IUserInfo } from '../user/user'
 import { ICarCollection } from './carData'
 import { ContractType } from './priceCalculation'
 
@@ -16,20 +17,25 @@ export interface IContractCreationPayment {
   paymentGateways: PaymentGateway[]
 }
 
-interface ICommonContractCreationRequest {
+interface ICommonContractUpdateRequest {
   type: ContractType
-  contractTemplateId: number
   duration: number
   mileage: number
-  vehicle: Vehicle
-  additionalOptionIds: number[]
+  optionIds: number[]
   providerPayments: number
   providerShare: number
+}
+
+interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
+  contractTemplateId: number
+  vehicle: Vehicle
   customerId?: number
   customer?: IUserInfo
   invoiceCustomerId?: number
   invoiceCustomer?: IUserInfo
 }
+
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
@@ -40,4 +46,17 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
   type: 'STANDARD'
 }
 
-// Note: there is currently no need for a IContractCreationResponse, just a 200 OK is sufficient.
+export interface IContractCreationResponse {
+  serviceContractId: number
+  prettyIdentifier: string
+}
+
+export interface IAdminContractActivationRequest {
+  paymentGateway: PaymentGateway
+  paymentType: PaymentType
+  creditCardToken?: string
+}
+
+export interface IAdminContractActivationResponse {
+  serviceContract: IContractDetailsRecord
+}
