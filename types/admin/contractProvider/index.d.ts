@@ -1,3 +1,5 @@
+import { IsoLocale } from '../../locale'
+
 export interface IContractProvider {
   administrativeName: string
   logo: string
@@ -7,4 +9,5 @@ export interface IContractProvider {
   address2?: string
   city: string
   zipcode: string
+  locale: IsoLocale
 }
