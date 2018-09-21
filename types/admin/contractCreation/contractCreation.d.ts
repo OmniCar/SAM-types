@@ -18,12 +18,14 @@ export interface IContractCreationPayment {
 }
 
 interface ICommonContractUpdateRequest {
-  type: ContractType
   duration: number
   mileage: number
   optionIds: number[]
   providerPayments: number
   providerShare: number
+  reference?: string
+  startMileage?: number
+  type: ContractType
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {

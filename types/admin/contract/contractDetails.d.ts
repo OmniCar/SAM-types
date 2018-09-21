@@ -7,20 +7,22 @@ import { IIncludedContractOption } from './../../includedContractOption'
 import { PaymentGateway } from './../../payment'
 
 export interface IContractDetailsRecord {
-  type: string
-  duration: number | string
-  mileage: number | string
-  startDate: Date | string
-  expirationDate: Date | string
-  totalPrice: PriceSpecification
-  monthlyPrice: PriceSpecification
-  providerShare: PriceSpecification
-  seller?: IContactPersonResponse
+  contractPdfUrl: string
+  duration: number
   endMileage: number
+  expirationDate: Date | string
   extendedFrom: IContractResponse | null
   includedOptions: IIncludedContractOption[] | null
-  prettyIdentifierShort: string
-  termsPdfUrl: string
-  contractPdfUrl: string
+  mileage: number
+  monthlyPrice: PriceSpecification
   paymentMethod: PaymentGateway
+  prettyIdentifierShort: string
+  providerShare: PriceSpecification
+  reference: string
+  seller?: IContactPersonResponse
+  startDate: Date | string
+  startMileage: number
+  termsPdfUrl: string
+  totalPrice: PriceSpecification
+  type: string
 }
