@@ -65,28 +65,26 @@ export interface IAdminContractActivationResponse {
 }
 
 export interface IAdminContractAdjustmentResponse {
-  serviceContract: {
-    type: ContractType
-    vehicle: Vehicle
-    contractTemplate: IContractTemplateResponse
-    additionalOptions: IContractOptionResponse[]
-    includedAdditionalOptions: IContractOptionResponse[]
-    durations: DurationOptions
-    duration: number
-    mileage: number
-    payments: {
-      amountPerPayment: PriceSpecification
-      downPayment: PriceSpecification
-      firstPaymentDate: Date | string
-      contractStartDate: Date | string
-      contractEndDate: Date | string
-      providerPayments: number
-      providerShare: number
-    }
-    paymentGateway: PaymentGateway
-    customerId: number
-    customer: IUserInfo
-    invoiceCustomerId: number
-    invoiceCustomer: IUserInfo
+  type: ContractType
+  vehicle: Vehicle
+  contractTemplate: IContractTemplateResponse
+  additionalOptions: IContractOptionResponse[]
+  includedAdditionalOptions: IContractOptionResponse[]
+  durations: DurationOptions
+  duration: number
+  mileage: number
+  payments: {
+    amountPerPayment: PriceSpecification
+    downPayment: PriceSpecification
+    firstPaymentDate: Date | string
+    contractStartDate: Date | string
+    contractEndDate: Date | string
+    providerPayments: number
+    providerShare: number
   }
+  paymentGateway: PaymentGateway
+  customerId: number
+  customer: IUserInfo
+  invoiceCustomerId: number
+  invoiceCustomer: IUserInfo
 }
