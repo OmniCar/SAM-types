@@ -1,4 +1,5 @@
 import { IContractDetailsRecord } from '..'
+import { DurationOptions, IContractOptionResponse, PriceSpecification } from '../..'
 import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle } from '../../vehicle'
@@ -61,4 +62,29 @@ export interface IAdminContractActivationRequest {
 
 export interface IAdminContractActivationResponse {
   serviceContract: IContractDetailsRecord
+}
+
+export interface IAdminContractAdjustmentResponse {
+  type: ContractType
+  vehicle: Vehicle
+  contractTemplate: IContractTemplateResponse
+  additionalOptions: IContractOptionResponse[]
+  includedAdditionalOptions: IContractOptionResponse[]
+  durations: DurationOptions
+  duration: number
+  mileage: number
+  payments: {
+    amountPerPayment: PriceSpecification
+    downPayment: PriceSpecification
+    firstPaymentDate: Date | string
+    contractStartDate: Date | string
+    contractEndDate: Date | string
+    providerPayments: number
+    providerShare: number
+  }
+  paymentGateway: PaymentGateway
+  customerId: number
+  customer: IUserInfo
+  invoiceCustomerId: number
+  invoiceCustomer: IUserInfo
 }
