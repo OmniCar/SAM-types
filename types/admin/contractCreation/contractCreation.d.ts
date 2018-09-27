@@ -84,9 +84,9 @@ export interface IAdminContractAdjustmentResponse {
       providerShare: number
     }
     paymentGateway: PaymentGateway
-    customerId?: number
-    customer?: IUserInfo
-    invoiceCustomerId?: number
-    invoiceCustomer?: IUserInfo
+    customerId: number
+    customer: IUserInfo
+    invoiceCustomerId: number
+    invoiceCustomer: IUserInfo
   }
 }
