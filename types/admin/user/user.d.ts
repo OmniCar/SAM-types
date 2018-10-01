@@ -1,11 +1,8 @@
-export interface IUserInfo {
+export interface IAdminUserInfo {
   name: string
   phone: string
   address: string
   zip: string
   city: string
   email: string
-  cvr?: string
-  ean?: string
-  companyName?: string
 }

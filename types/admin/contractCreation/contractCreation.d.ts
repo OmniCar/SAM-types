@@ -3,7 +3,7 @@ import { DurationOptions, IContractOptionResponse, PriceSpecification } from '..
 import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle } from '../../vehicle'
-import { IUserInfo } from '../user/user'
+import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { ContractType } from './priceCalculation'
 
@@ -33,9 +33,9 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   contractTemplateId: number
   vehicle: Vehicle
   customerId?: number
-  customer?: IUserInfo
+  customer?: IAdminCustomer
   invoiceCustomerId?: number
-  invoiceCustomer?: IUserInfo
+  invoiceCustomer?: IAdminCustomer
 }
 
 export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
@@ -84,7 +84,7 @@ export interface IAdminContractAdjustmentResponse {
   }
   paymentGateway: PaymentGateway
   customerId: number
-  customer: IUserInfo
+  customer: IAdminCustomer
   invoiceCustomerId: number
-  invoiceCustomer: IUserInfo
+  invoiceCustomer: IAdminCustomer
 }
