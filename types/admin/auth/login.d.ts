@@ -1,5 +1,5 @@
 import { UserRole } from './roles'
-import { IUserInfo } from '../user/user'
+import { IAdminUserInfo } from '../user/user'
 import { IContractProviderResponse } from '../../contractProvider'
 import { IContractProvider } from '../contractProvider'
 
@@ -13,7 +13,7 @@ export interface ILoginResponse {
   password: boolean
   role?: UserRole
   token?: string
-  userInfo?: IUserInfo
+  userInfo?: IAdminUserInfo
   providerInfo?: IContractProvider
   stripePublicKey?: string
 }

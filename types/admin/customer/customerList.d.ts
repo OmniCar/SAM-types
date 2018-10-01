@@ -7,15 +7,3 @@ export type CustomerListOrderByType =
   | 'phone'
   | 'email'
   | 'cvr'
-
-export interface ICustomerListRecord {
-  id?: number
-  prettyIdentifier?: string
-  name: string
-  email: string
-  phone: string
-  address: string
-  city: string
-  zip: string | number
-  cvr?: string
-}
