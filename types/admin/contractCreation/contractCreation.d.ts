@@ -42,7 +42,7 @@ export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
-  amountPrPayment: number
+  amountPerPayment: number
 }
 
 export interface IStandardContractCreationRequest extends ICommonContractCreationRequest {
@@ -74,7 +74,7 @@ export interface IAdminContractAdjustmentResponse {
   duration: number
   mileage: number
   payments: {
-    amountPrPayment: PriceSpecification
+    amountPerPayment: PriceSpecification
     downPayment: PriceSpecification
     firstPaymentDate: Date | string
     contractStartDate: Date | string

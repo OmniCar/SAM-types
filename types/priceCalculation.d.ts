@@ -15,7 +15,7 @@ export interface ICalculationRequest {
  * The type returned by a price calculation
  */
 export interface ICalculationResponse {
-  amountPrPayment: PriceSpecification
+  amountPerPayment: PriceSpecification
   downpayment: PriceSpecification
   firstPaymentDate: string
   contractStartDate: string
