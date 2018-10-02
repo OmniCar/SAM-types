@@ -20,7 +20,7 @@ export interface IStandardContractCalculationRequest extends IContractCalculatio
 }
 
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
-  amountPerPayment: number
+  amountPrPayment: number
 }
 
 /**
