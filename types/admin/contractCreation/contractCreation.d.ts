@@ -76,9 +76,9 @@ export interface IAdminContractAdjustmentResponse {
   payments: {
     amountPerPayment: PriceSpecification
     downPayment: PriceSpecification
-    firstPaymentDate: Date | string
-    contractStartDate: Date | string
-    contractEndDate: Date | string
+    firstPaymentDate: string
+    contractStartDate: string
+    contractEndDate: string
     providerPayments: number
     providerShare: number
   }
