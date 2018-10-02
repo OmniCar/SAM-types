@@ -27,7 +27,7 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
  * The type returned by a price calculation
  */
 export interface IContractCalculationResponse {
-  amountPrPayment: PriceSpecification
+  amountPerPayment: PriceSpecification
   downpayment: PriceSpecification
   firstPaymentDate: string
   contractStartDate: string

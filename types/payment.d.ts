@@ -16,7 +16,7 @@ export interface PaymentCard {
 
 /** payment plan */
 export interface PaymentPlan {
-  amountPrPayment: PriceSpecification
+  amountPerPayment: PriceSpecification
   downpayment: PriceSpecification
   totalCost: PriceSpecification
 }
