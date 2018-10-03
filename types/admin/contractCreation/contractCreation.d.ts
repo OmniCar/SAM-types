@@ -70,9 +70,10 @@ export interface IAdminContractAdjustmentResponse {
   contractTemplate: IContractTemplateResponse
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]
-  durations: DurationOptions
+  durations: DurationOptions[]
   duration: number
   mileage: number
+  startMileage: number
   payments: {
     amountPerPayment: PriceSpecification
     downPayment: PriceSpecification
