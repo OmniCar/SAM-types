@@ -29,6 +29,13 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
 export interface IContractCalculationResponse {
   amountPrPayment: PriceSpecification
   downpayment: PriceSpecification
+  providerShare: PriceSpecification
+  customerShare: PriceSpecification
+  providerPayments: number
+  customerPayments: number
+  providerCost: PriceSpecification
+  customerCost: PriceSpecification
+  contractCost: PriceSpecification
   firstPaymentDate: string
   contractStartDate: string
   contractEndDate: string
