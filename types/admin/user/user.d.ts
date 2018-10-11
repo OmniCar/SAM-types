@@ -6,3 +6,8 @@ export interface IAdminUserInfo {
   city: string
   email: string
 }
+
+export interface IUserPasswordChangeRequest {
+  password: string
+  newPassword: string
+}
