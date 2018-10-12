@@ -1,0 +1,1 @@
+export type PasswordErrors = 'PASSWORD_MISMATCH' | 'PASSWORD_VALIDATION_ERROR'

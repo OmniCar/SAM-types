@@ -1,9 +1,10 @@
-import { GenericResponseErrors } from './genericResponseTypes'
+import { AdminPaymentErrors } from './adminPaymentErrors'
 import { CalculatorResponseErrors } from './calculatorResponseErrors'
 import { ContractResponseErrors } from './contractResponseErrors'
+import { GenericResponseErrors } from './genericResponseTypes'
+import { PasswordErrors } from './passwordResponseErrors'
 import { VatLookupResponseErrors } from './vatLookupResponseErrors'
 import { WorkshopImportErrors } from './workshopResponseErrors'
-import { AdminPaymentErrors } from './adminPaymentErrors'
 
 export type ResponseErrors =
   | AdminPaymentErrors
@@ -12,3 +13,4 @@ export type ResponseErrors =
   | GenericResponseErrors
   | VatLookupResponseErrors
   | WorkshopImportErrors
+  | PasswordErrors
