@@ -5,7 +5,7 @@ import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
-import { ContractType } from './priceCalculation'
+import { ContractType, IContractCalculationResponse } from './priceCalculation'
 
 export interface IContractCreationData {
   payment: IContractCreationPayment
@@ -74,16 +74,7 @@ export interface IAdminContractAdjustmentResponse {
   duration: number
   mileage: number
   startMileage: number
-  payments: {
-    amountPerPayment: PriceSpecification
-    downPayment: PriceSpecification
-    firstPaymentDate: string
-    contractStartDate: string
-    contractEndDate: string
-    providerPayments: number
-    providerShare: PriceSpecification
-    customerShare: PriceSpecification
-  }
+  payments: IContractCalculationResponse
   paymentGateway: PaymentGateway
   customerId: number
   customer: IAdminCustomer
