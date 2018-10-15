@@ -81,7 +81,8 @@ export interface IAdminContractAdjustmentResponse {
     contractStartDate: string
     contractEndDate: string
     providerPayments: number
-    providerShare: number
+    providerShare: PriceSpecification
+    customerShare: PriceSpecification
   }
   paymentGateway: PaymentGateway
   customerId: number
