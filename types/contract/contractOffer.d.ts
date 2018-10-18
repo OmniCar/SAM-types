@@ -21,11 +21,3 @@ export interface IContractOfferResponse {
   token: string
   paymentGateway: PaymentGateway
 }
-
-export interface IContractOfferPrintRequest {
-  token: string
-}
-
-export interface IContractOfferPrintResponse {
-  token: string
-}
