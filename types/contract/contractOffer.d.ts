@@ -1,7 +1,7 @@
 import { Customer } from '../customer'
 import { Vehicle } from '../vehicle'
-import { IContractTemplateResponse } from './../contractTemplate'
 import { IContractOptionResponse } from './../contractOption'
+import { IContractTemplateResponse } from './../contractTemplate'
 import { PaymentGateway } from './../payment'
 
 export interface IContractOfferRequest {
@@ -20,4 +20,12 @@ export interface IContractOfferResponse {
   contractId: number
   token: string
   paymentGateway: PaymentGateway
+}
+
+export interface IContractOfferPrintRequest {
+  token: string
+}
+
+export interface IContractOfferPrintResponse {
+  token: string
 }
