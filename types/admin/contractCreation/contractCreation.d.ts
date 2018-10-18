@@ -1,5 +1,5 @@
 import { IContractDetailsRecord } from '..'
-import { DurationOptions, IContractOptionResponse, PriceSpecification } from '../..'
+import { DurationOptions, IContractOptionResponse } from '../..'
 import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle } from '../../vehicle'
@@ -80,4 +80,8 @@ export interface IAdminContractAdjustmentResponse {
   customer: IAdminCustomer
   invoiceCustomerId: number
   invoiceCustomer: IAdminCustomer
+}
+
+export interface IContractOfferPrintData {
+  token: string
 }
