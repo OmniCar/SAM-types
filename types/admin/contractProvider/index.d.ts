@@ -1,6 +1,7 @@
 import { IsoLocale } from '../../locale'
 
 export interface IContractProvider {
+  providerId: number
   administrativeName: string
   logo: string
   email: string
