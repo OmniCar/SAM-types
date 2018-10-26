@@ -9,6 +9,7 @@ import { ContractType, IContractCalculationResponse } from './priceCalculation'
 
 export interface IContractCreationData {
   payment: IContractCreationPayment
+  termsOfTradeRef?: string
   cars: ICarCollection
   templates: IContractTemplateResponse[]
 }
