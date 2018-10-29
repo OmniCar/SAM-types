@@ -1,6 +1,6 @@
 import { PriceSpecification } from '../../priceSpecification'
 
-export type ContractType = 'STANDARD' | 'CUSTOM'
+export type ContractType = 'STANDARD' | 'CUSTOM' | 'ADJUST'
 
 export interface IContractCalculationRequest {
   type: ContractType
@@ -19,14 +19,17 @@ export interface IStandardContractCalculationRequest extends IContractCalculatio
   fuelTypeId: number
 }
 
+export interface IAdjustContractCalculationRequest extends IStandardContractCalculationRequest {
+  adjustedFrom: number
+}
+
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   amountPerPayment: number
 }
 
 /**
  * The type returned by a price calculation
- */
-export interface IContractCalculationResponse {
+ */ export interface IContractCalculationResponse {
   amountPrPayment: PriceSpecification
   downpayment: PriceSpecification
   providerShare: PriceSpecification
@@ -39,4 +42,7 @@ export interface IContractCalculationResponse {
   firstPaymentDate: string
   contractStartDate: string
   contractEndDate: string
+  totalPriceNewContract?: PriceSpecification
+  paidInTotalOnPreviousContract?: PriceSpecification
+  paymentsLeftOnNewContract?: number
 }
