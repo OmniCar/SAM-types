@@ -29,7 +29,8 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
 
 /**
  * The type returned by a price calculation
- */ export interface IContractCalculationResponse {
+ */
+export interface IContractCalculationResponse {
   amountPrPayment: PriceSpecification
   downpayment: PriceSpecification
   providerShare: PriceSpecification
