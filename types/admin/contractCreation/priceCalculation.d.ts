@@ -1,6 +1,6 @@
 import { PriceSpecification } from '../../priceSpecification'
 
-export type ContractType = 'STANDARD' | 'CUSTOM'
+export type ContractType = 'STANDARD' | 'CUSTOM' | 'ADJUST'
 
 export interface IContractCalculationRequest {
   type: ContractType
@@ -17,6 +17,10 @@ export interface IStandardContractCalculationRequest extends IContractCalculatio
   brandId: number
   vehicleModelId: number
   fuelTypeId: number
+}
+
+export interface IAdjustContractCalculationRequest extends IStandardContractCalculationRequest {
+  adjustedFrom: number
 }
 
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
@@ -39,4 +43,7 @@ export interface IContractCalculationResponse {
   firstPaymentDate: string
   contractStartDate: string
   contractEndDate: string
+  totalPriceNewContract?: PriceSpecification
+  paidInTotalOnPreviousContract?: PriceSpecification
+  paymentsLeftOnNewContract?: number
 }
