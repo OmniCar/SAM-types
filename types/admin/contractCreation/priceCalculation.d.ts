@@ -43,7 +43,5 @@ export interface IContractCalculationResponse {
   firstPaymentDate: string
   contractStartDate: string
   contractEndDate: string
-  totalPriceNewContract?: PriceSpecification
-  paidInTotalOnPreviousContract?: PriceSpecification
-  paymentsLeftOnNewContract?: number
+  transferredAmount?: PriceSpecification
 }
