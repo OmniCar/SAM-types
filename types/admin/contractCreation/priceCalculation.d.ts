@@ -11,16 +11,14 @@ export interface IContractCalculationRequest {
   optionIds: number[]
   providerPayments: number
   providerShare: number
+  isAdjustment: boolean
+  adjustedFrom?: number
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
   brandId: number
   vehicleModelId: number
   fuelTypeId: number
-}
-
-export interface IAdjustContractCalculationRequest extends IStandardContractCalculationRequest {
-  adjustedFrom: number
 }
 
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
