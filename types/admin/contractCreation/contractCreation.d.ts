@@ -33,6 +33,7 @@ interface ICommonContractUpdateRequest {
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   contractTemplateId: number
   vehicle: Vehicle
+  paymentGateway: PaymentGateway
   customerId?: number
   customer?: IAdminCustomer
   invoiceCustomerId?: number
