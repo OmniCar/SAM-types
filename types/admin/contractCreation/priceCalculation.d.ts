@@ -43,4 +43,5 @@ export interface IContractCalculationResponse {
   contractEndDate: string
   adjustedAmount?: PriceSpecification
   adjustedContractFullCost?: PriceSpecification
+  adjustedPaymentsLeft?: number
 }
