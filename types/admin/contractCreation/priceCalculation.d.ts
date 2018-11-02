@@ -12,7 +12,7 @@ export interface IContractCalculationRequest {
   providerPayments: number
   providerShare: number
   isAdjustment: boolean
-  adjustedFrom?: number
+  adjustedFrom?: string
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
