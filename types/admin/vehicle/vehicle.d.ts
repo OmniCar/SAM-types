@@ -16,6 +16,7 @@ export interface IApiVehicleWithContracts {
 export interface IApiVehicleContract {
   serviceContractId: number
   amount: PriceSpecification
+  contractCreationDate: Date | string
   contractStartDate: Date | string
   contractEndDate: Date | string
   tosUrl: string
@@ -33,5 +34,5 @@ export interface IApiVehicleContract {
 
 export interface IApiVehicleIncludedContractOption {
   description: string
-  assoc: 'PROPERTY' | 'ADDITIONAL'
+  assoc?: 'PROPERTY' | 'ADDITIONAL'
 }
