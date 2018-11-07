@@ -5,6 +5,7 @@ import { IContractHealth } from './../admin/contract/health'
 export interface IContractListRecord {
   prettyIdentifier: string
   brand: string
+  contractEndDate: Date | string
   contractCreationDate: Date | string
   contractStartDate: Date | string
   contractState: ContractState
@@ -18,6 +19,7 @@ export interface IContractListRecord {
 export type ContractListOrderByType =
   | 'prettyIdentifier'
   | 'brand'
+  | 'contractEndDate'
   | 'contractCreationDate'
   | 'contractStartDate'
   | 'contractState'
