@@ -9,7 +9,6 @@ export type ContractOrderBy =
   | 'registrationNumber'
   | 'customerName'
   | 'contractCreationDate'
-  | 'contractStartDate'
   | 'contractEndDate'
   | 'sellerName'
   | 'contractState'
@@ -27,7 +26,6 @@ export interface IContractQuery extends ISearchQuery<ContractOrderBy> {
 
 export interface IContractSearchResult {
   prettyIdentifier: string
-  contractStartDate: Date
   contractCreationDate: Date
   contractEndDate: Date
   sellerName: string
