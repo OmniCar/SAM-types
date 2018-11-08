@@ -6,7 +6,7 @@ export interface IContractListRecord {
   prettyIdentifier: string
   brand: string
   contractEndDate: Date | string
-  contractStartDate: Date | string
+  contractCreationDate: Date | string
   contractState: ContractState
   contractTemplateName: string
   customerName: string
@@ -19,7 +19,7 @@ export type ContractListOrderByType =
   | 'prettyIdentifier'
   | 'brand'
   | 'contractEndDate'
-  | 'contractStartDate'
+  | 'contractCreationDate'
   | 'contractState'
   | 'contractTemplateName'
   | 'customerName'

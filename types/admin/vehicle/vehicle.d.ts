@@ -16,7 +16,7 @@ export interface IApiVehicleWithContracts {
 export interface IApiVehicleContract {
   serviceContractId: number
   amount: PriceSpecification
-  contractStartDate: Date | string
+  contractCreationDate: Date | string
   contractEndDate: Date | string
   tosUrl: string
   contractState: ContractState
