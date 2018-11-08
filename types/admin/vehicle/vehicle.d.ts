@@ -33,5 +33,5 @@ export interface IApiVehicleContract {
 
 export interface IApiVehicleIncludedContractOption {
   description: string
-  assoc?: 'PROPERTY' | 'ADDITIONAL'
+  assoc: 'PROPERTY' | 'ADDITIONAL'
 }
