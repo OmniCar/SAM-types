@@ -29,6 +29,7 @@ export interface IApiVehicleContract {
   paymentGateway?: PaymentGateway
   reference?: string
   activationUrl?: string
+  extendedFrom?: number
 }
 
 export interface IApiVehicleIncludedContractOption {
