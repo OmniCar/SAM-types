@@ -9,7 +9,7 @@ export interface ITableUserConfiguration<OrderBy> {
   columns: IColumnUserConfiguration[]
   orderBy: OrderBy
   orderDirection: OrderDirection
-  rows: number
+  rowCount: number
 }
 
 export type TableConfigurationType = 'serviceContract'
