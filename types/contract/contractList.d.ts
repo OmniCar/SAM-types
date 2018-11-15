@@ -22,6 +22,7 @@ export type ContractListOrderByType =
   | 'contractEndDate'
   | 'contractCreationDate'
   | 'contractState'
+  | 'customerCompanyName'
   | 'contractTemplateName'
   | 'customerName'
   | 'registrationNumber'
