@@ -10,6 +10,7 @@ export interface IContractListRecord {
   contractState: ContractState
   contractTemplateName: string
   customerName: string
+  customerCompanyName: string
   registrationNumber: string
   sellerName: string
   health: IContractHealth[]
