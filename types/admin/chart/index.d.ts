@@ -1,1 +1,1 @@
-export { IPaymentChart } from './contractCharts'
+export { IPaymentChart, IMileageChart, IPaymentMileageCharts } from './contractCharts'

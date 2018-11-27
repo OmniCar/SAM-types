@@ -17,3 +17,23 @@ export interface IPaymentChart {
     current: number
   }
 }
+
+export interface IMileageChart {
+  seriesExpectedMileage: IChartDateValue[] // chart series.
+  seriesMileage: IChartDateValue[] // chart series.
+  totalExpectedMileage: number // summary.
+  totalMileage: number // summary.
+  totalBalance: number // summary.
+  contractStartDate: Date | string // chart legend.
+  contractEndDate: Date | string // chart legend.
+  duration: {
+    // chart legend.
+    total: number
+    current: number
+  }
+}
+
+export interface IPaymentMileageCharts {
+  paymentChart: IPaymentChart
+  mileageChart: IMileageChart
+}
