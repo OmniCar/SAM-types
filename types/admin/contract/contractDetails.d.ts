@@ -17,6 +17,7 @@ export interface IContractDetailsRecord {
   monthlyPrice: PriceSpecification
   paymentMethod: PaymentGateway
   prettyIdentifierShort: string
+  prettyIdentifier: string
   providerShare: PriceSpecification
   reference: string
   seller?: IContactPersonResponse
