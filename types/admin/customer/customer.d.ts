@@ -11,6 +11,9 @@ export interface IAdminCustomer {
   cvr?: string
   ean?: string
   companyName?: string
+  vatLookup?: VatLookup
 }
 
 export type CustomerType = 'PRIVATE' | 'BUSINESS'
+
+export type VatLookup = 'INTERNAL' | 'REMOTE'
