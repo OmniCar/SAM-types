@@ -1,7 +1,7 @@
 import { PriceSpecification } from './priceSpecification'
 
 /** supported payment gateways */
-export type PaymentGateway = 'Stripe' | 'B2B'
+export type PaymentGateway = 'Stripe' | 'B2B' | 'NONE'
 
 /** supported payment types */
 export type PaymentType = 'automatic' | 'manual'
