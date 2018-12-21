@@ -1,4 +1,4 @@
-import { IChartDateValue, ITopSellerChart } from 'chart'
+import { IChartDateValue, ITopSellerChart } from '../../chart'
 
 export interface IChartCollection {
   name: string
