@@ -14,8 +14,8 @@ export interface IProviderStats {
   offers: number
   created: number
   expiring: number
-  duration: number
-  mileage: number
+  avgDuration: number
+  avgMileage: number
 }
 
 export interface ITopSellerChart {
