@@ -9,7 +9,7 @@ export interface IChartCollection {
 export interface IBalanceChart {
   seriesInvoiced: IChartCollection
   seriesCosts: IChartCollection
-  seriesInvoicedExpected: IChartCollection
+  valuation: { totalContractValue: number; date: Date | string }
 }
 
 export interface IDashboardCharts {
