@@ -11,4 +11,5 @@ export interface IContractProvider {
   city: string
   zipcode: string
   locale: IsoLocale
+  currency: string
 }
