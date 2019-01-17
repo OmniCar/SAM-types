@@ -38,6 +38,7 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   customer?: IAdminCustomer
   invoiceCustomerId?: number
   invoiceCustomer?: IAdminCustomer
+  isDownpaymentDistributed: boolean
 }
 
 export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}

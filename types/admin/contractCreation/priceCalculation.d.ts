@@ -13,6 +13,7 @@ export interface IContractCalculationRequest {
   providerShare: number
   isAdjustment: boolean
   adjustedFrom?: string
+  isDownpaymentDistributed: boolean
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
