@@ -26,12 +26,11 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
   amountPerPayment: number
 }
 
-/**
- * The type returned by a price calculation
- */
+// The type returned by a price calculation
 export interface IContractCalculationResponse {
   amountPrPayment: PriceSpecification
   downpayment: PriceSpecification
+  isDownpaymentDistributed: boolean
   providerShare: PriceSpecification
   customerShare: PriceSpecification
   providerPayments: number
