@@ -23,6 +23,7 @@ export interface IContractTemplateRequest {
   termsOfService: ITermsOfServiceRequest
   archived?: boolean
   formattedDescription: string | null
+  weight: number
 }
 
 export interface IContractTemplateResponse {
@@ -40,4 +41,5 @@ export interface IContractTemplateResponse {
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
   formattedDescription: string | null
+  weight: number
 }
