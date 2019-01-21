@@ -31,6 +31,7 @@ export interface IContractCalculationResponse {
   amountPrPayment: PriceSpecification
   downpayment: PriceSpecification
   isDownpaymentDistributed: boolean
+  distributedAmount: PriceSpecification
   providerShare: PriceSpecification
   customerShare: PriceSpecification
   providerPayments: number
