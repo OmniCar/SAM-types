@@ -54,6 +54,7 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
 
 export interface IContractPrintCreationRequest extends ICommonContractCreationRequest {
   type: 'STANDARD' | 'CUSTOM'
+  amountPerPayment?: number
   adjustedFrom?: string
   isAdjustment?: boolean
 }
