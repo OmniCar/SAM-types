@@ -52,7 +52,7 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
   type: 'STANDARD'
 }
 
-export interface IContractPrintCreationRequest extends ICommonContractUpdateRequest {
+export interface IContractPrintCreationRequest extends ICommonContractCreationRequest {
   type: 'STANDARD' | 'CUSTOM'
   adjustedFrom?: string
   isAdjustment?: boolean
