@@ -52,6 +52,13 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
   type: 'STANDARD'
 }
 
+export interface IContractPrintCreationRequest extends ICommonContractCreationRequest {
+  type: 'STANDARD' | 'CUSTOM'
+  amountPerPayment?: number
+  adjustedFrom?: string
+  isAdjustment?: boolean
+}
+
 export interface IContractCreationResponse {
   serviceContractId: number
   prettyIdentifier: string
