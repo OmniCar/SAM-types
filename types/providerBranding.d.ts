@@ -21,6 +21,7 @@ export interface IProviderInformationResponse {
   showRegistrationSelectionPage: boolean
   email: string
   termsOfTradeRef: string
+  webCalcEnabled: boolean
 }
 
 export interface IProviderBrandingResponse {
