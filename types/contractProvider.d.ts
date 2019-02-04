@@ -18,6 +18,7 @@ export interface IContractProviderRequest {
   providerIdentifier: string
   contactPerson: IContactPersonRequest
   termsOfTradeRef: string
+  webCalcEnabled: boolean
 }
 
 export interface IContractProviderResponse {
@@ -38,4 +39,5 @@ export interface IContractProviderResponse {
   providerIdentifier: string
   contactPerson: IContactPersonResponse
   termsOfTradeRef: string
+  webCalcEnabled: boolean
 }
