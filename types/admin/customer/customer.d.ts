@@ -1,3 +1,8 @@
+// Note: response is handled as 200 OK or 500 Internal Server Error.
+export interface IAdminCustomerLoginRequest {
+  prettyIdentifier: string
+}
+
 export interface IAdminCustomer {
   id?: number
   prettyIdentifier?: string
