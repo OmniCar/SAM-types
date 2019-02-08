@@ -24,6 +24,7 @@ export interface IContractDetailsRecord {
   termsPdfUrl: string
   totalPrice: PriceSpecification
   type: string
+  customTerms?: string
 }
 
 export interface IAdminCustomTermsRecord {
