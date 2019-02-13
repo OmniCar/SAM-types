@@ -1,11 +1,4 @@
-import { IContactPersonResponse, PriceSpecification } from '../..'
-
-export enum OfferRequestState {
-  Pending = 100,
-  Approved = 200,
-  Rejected = 300,
-  Expired = 400,
-}
+import { IContactPersonResponse, OfferRequestState, PriceSpecification } from '../..'
 
 export interface IOfferRequestRecord {
   offerRequestId: number

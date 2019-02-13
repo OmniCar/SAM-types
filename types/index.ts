@@ -33,6 +33,13 @@ export enum ContractActionType {
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
 }
 
+export enum OfferRequestState {
+  Pending = 100,
+  Approved = 200,
+  Rejected = 300,
+  Expired = 400,
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'
