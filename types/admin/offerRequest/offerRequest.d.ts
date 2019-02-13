@@ -11,3 +11,8 @@ export interface IOfferRequestRecord {
   responseText: string
   nrAttachments: number
 }
+
+export interface IOfferRequestTransitionRecord {
+  responseText: string
+  price?: number
+}
