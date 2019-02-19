@@ -14,5 +14,6 @@ export interface IOfferRequestRecord {
 
 export interface IOfferRequestTransitionRecord {
   responseText: string
+  serviceContractId?: number
   price?: number
 }
