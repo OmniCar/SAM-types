@@ -5,4 +5,7 @@ export {
   IDashboardCharts,
   IDashboardQueryParams,
   IDashboardContractChartsResponse,
+  ICellDataPoint,
+  ICellCut,
+  IDashboardContractChartViews,
 } from './dashboardCharts'
