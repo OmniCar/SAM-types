@@ -1,4 +1,4 @@
-export { IPaymentChart, IMileageChart, IPaymentMileageCharts } from './contractCharts'
+export { IPaymentChart, IMileageChart, IPaymentMileageCharts, IContractChartsFilterParams } from './contractCharts'
 export {
   IChartCollection,
   IBalanceChart,
