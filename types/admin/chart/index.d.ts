@@ -8,4 +8,5 @@ export {
   ICellDataPoint,
   ICellCut,
   IDashboardContractChartViews,
+  IContractChartView,
 } from './dashboardCharts'
