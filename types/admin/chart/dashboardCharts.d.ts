@@ -17,3 +17,35 @@ export interface IDashboardCharts {
   sellerChart: ITopSellerChart
   balanceChart: IBalanceChart
 }
+
+export interface IDashboardQueryParams<Filtering = undefined> {
+  filtering?: Filtering
+}
+
+export interface IDashboardContractChartsResponse<Result, Filtering> {
+  result: Result
+  filtering?: Filtering
+}
+
+export interface ICellDataPoint {
+  x: Date
+  y: number
+}
+
+export interface ICellCut {
+  dimension: string
+  paths: number[]
+}
+
+export interface IContractChartView {
+  contractType: number
+  chartName: string
+  cellCut?: ICellCut[]
+  levels: string[]
+  cells: ICellDataPoint[]
+  totalCellCount: number
+}
+
+export interface IDashboardContractChartViews {
+  contract: IContractChartView[]
+}
