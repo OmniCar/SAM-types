@@ -1,5 +1,6 @@
 import { PriceSpecification } from '../..'
 import { IChartDateValue } from '../../chart'
+import { ContractState } from '../../index'
 
 export interface IPaymentChart {
   seriesExpectedEarnings: IChartDateValue[] // chart series.
@@ -36,4 +37,10 @@ export interface IMileageChart {
 export interface IPaymentMileageCharts {
   paymentChart: IPaymentChart
   mileageChart: IMileageChart
+}
+
+export interface IContractChartsFilterParams {
+  contractStates: ContractState[]
+  templates: number[]
+  sellers: number[]
 }
