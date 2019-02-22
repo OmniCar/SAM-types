@@ -32,20 +32,18 @@ export interface ICellDataPoint {
   y: number
 }
 
-export interface ICellCut {
-  dimension: string
-  paths: number[]
+export interface IContractCharts {
+  seller_id?: string | number
+  seller_name?: string
+  chartsData: ICellDataPoint[]
 }
 
-export interface IContractChartView {
-  contractType: number
-  chartName: string
-  cellCut?: ICellCut[]
-  levels: string[]
-  cells: ICellDataPoint[]
-  totalCellCount: number
+export interface IDashboardContractCharts {
+  charType: string
+  charName: string
+  charts: IContractCharts[]
 }
 
 export interface IDashboardContractChartViews {
-  contract: IContractChartView[]
+  contract: IDashboardContractCharts[]
 }
