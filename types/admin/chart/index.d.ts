@@ -6,7 +6,7 @@ export {
   IDashboardQueryParams,
   IDashboardContractChartsResponse,
   ICellDataPoint,
-  ICellCut,
   IDashboardContractChartViews,
-  IContractChartView,
+  IDashboardContractCharts,
+  IContractCharts,
 } from './dashboardCharts'
