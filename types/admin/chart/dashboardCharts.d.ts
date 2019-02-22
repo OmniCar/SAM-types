@@ -33,8 +33,10 @@ export interface ICellDataPoint {
 }
 
 export interface IContractCharts {
-  seller_id?: string | number
-  seller_name?: string
+  seller_id?: string
+  seller_name?: string | any
+  startDate: Date
+  endDate: Date
   chartsData: ICellDataPoint[]
 }
 
