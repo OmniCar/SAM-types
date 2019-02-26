@@ -12,6 +12,6 @@
     "tsc": "npm run clean-js && npx tsc -p ./tsconfig.json"
   },
   "devDependencies": {
-    "typescript": "3.2.2"
+    "typescript": "3.3.3"
   }
 }
