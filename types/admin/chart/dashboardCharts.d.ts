@@ -33,7 +33,7 @@ export interface ICellDataPoint {
 }
 
 export interface IContractCharts {
-  sellerId?: string
+  sellerId?: number
   sellerName?: string | any
   startDate: Date
   endDate: Date
