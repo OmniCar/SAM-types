@@ -12,6 +12,16 @@ export interface IOfferRequestRecord {
   nrAttachments: number
 }
 
+export interface IFileAttachment {
+  filename: string
+  location: string
+  mimeType?: string
+}
+
+export interface IExtendedOfferRequestRecord extends IOfferRequestRecord {
+  attachments: IFileAttachment[]
+}
+
 export interface IOfferRequestTransitionRecord {
   responseText: string
   serviceContractId?: number
