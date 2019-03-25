@@ -2,6 +2,7 @@ import { IContactPersonResponse, OfferRequestState, PriceSpecification } from '.
 
 export interface IOfferRequestRecord {
   offerRequestId: number
+  prettyIdentifier: string
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
   regNr: string
