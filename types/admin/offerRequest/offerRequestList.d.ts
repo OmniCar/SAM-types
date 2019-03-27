@@ -5,7 +5,7 @@ export interface IOfferRequestListRecord {
   registrationNumber: string
   customerName: string
   customerEmail: string
-  customerPhone: string | number
+  customerPhone: string
   offerCreationDate: Date | string
   state: OfferRequestState
 }
