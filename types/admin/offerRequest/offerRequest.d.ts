@@ -28,3 +28,7 @@ export interface IOfferRequestTransitionRecord {
   serviceContractId?: number
   price?: number
 }
+
+export interface IOfferRequestCount {
+  offerRequestCount: number
+}
