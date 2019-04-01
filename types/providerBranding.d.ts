@@ -22,6 +22,7 @@ export interface IProviderInformationResponse {
   email: string
   termsOfTradeRef: string
   webCalcEnabled: boolean
+  offerRequestsEnabled: boolean
 }
 
 export interface IProviderBrandingResponse {
