@@ -30,5 +30,6 @@ export interface IOfferRequestTransitionRecord {
 }
 
 export interface IOfferRequestCount {
+  latestPrettyIndentifier?: string
   offerRequestCount: number
 }
