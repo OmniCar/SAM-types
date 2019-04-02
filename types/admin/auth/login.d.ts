@@ -1,8 +1,7 @@
-import { UserRole } from './roles'
-import { IAdminUserInfo } from '../user/user'
-import { IContractProviderResponse } from '../../contractProvider'
 import { IContractProvider } from '../contractProvider'
-import { IAdminCustomer } from '../customer';
+import { IAdminCustomer } from '../customer'
+import { IAdminUserInfo } from '../user/user'
+import { UserRole } from './roles'
 
 export interface ILoginRequest {
   username: string
@@ -18,4 +17,6 @@ export interface ILoginResponse {
   customerInfo?: IAdminCustomer
   providerInfo?: IContractProvider
   stripePublicKey?: string
+  webCalcEnabled?: boolean
+  offerRequestsEnabled?: boolean
 }
