@@ -30,6 +30,13 @@ export interface IOfferRequestTransitionRecord {
 }
 
 export interface IOfferRequestCount {
+<<<<<<< HEAD
   latestPrettyIndentifier?: string
   offerRequestCount?: number
+||||||| merged common ancestors
+  offerRequestCount: number
+=======
+  latestPrettyIndentifier?: string
+  offerRequestCount: number
+>>>>>>> master
 }
