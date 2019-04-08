@@ -1,8 +1,6 @@
 import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
 export interface IOfferRequestRequest {
-  offerRequestId: number
-  prettyIdentifier: string
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
   vehicle: {
@@ -16,11 +14,7 @@ export interface IOfferRequestRequest {
   duration?: number
   mileage?: number
   contractTemplateId?: number
-  state: OfferRequestState
-  stateChanged: Date | string
   requestText: string
-  responseText: string
-  nrAttachments: number
 }
 
 export interface IOfferRequestResponse {
