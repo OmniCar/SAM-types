@@ -11,7 +11,13 @@ export interface IOfferRequestRequest {
   prettyIdentifier: string
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
-  vehicleId?: number
+  vehicle: {
+    vehicleModelId?: number
+    fuelTypeId?: number
+    vin: string
+    registrationNumber: string
+    dateVehicleFirstRegistered: string
+  }
   duration?: number
   mileage?: number
   contractTemplateId?: number
