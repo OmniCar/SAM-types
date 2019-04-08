@@ -1,11 +1,36 @@
-import { IContactPersonResponse, OfferRequestState, PriceSpecification } from '../..'
+import {
+  IContactPersonResponse,
+  IContractTemplateResponse,
+  OfferRequestState,
+  PriceSpecification,
+  Vehicle,
+} from '../..'
 
-export interface IOfferRequestRecord {
+export interface IOfferRequestRequest {
   offerRequestId: number
   prettyIdentifier: string
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
-  regNr: string
+  vehicleId?: number
+  duration?: number
+  mileage?: number
+  contractTemplateId?: number
+  state: OfferRequestState
+  stateChanged: Date | string
+  requestText: string
+  responseText: string
+  nrAttachments: number
+}
+
+export interface IOfferRequestResponse {
+  offerRequestId: number
+  prettyIdentifier: string
+  contactPerson: IContactPersonResponse
+  requestPrice: PriceSpecification
+  vehicle?: Vehicle
+  duration?: number
+  mileage?: number
+  contractTemplate?: IContractTemplateResponse
   state: OfferRequestState
   stateChanged: Date | string
   requestText: string
@@ -19,7 +44,7 @@ export interface IFileAttachment {
   mimeType?: string
 }
 
-export interface IExtendedOfferRequestRecord extends IOfferRequestRecord {
+export interface IExtendedOfferRequestRecord extends IOfferRequestResponse {
   attachments: IFileAttachment[]
 }
 
