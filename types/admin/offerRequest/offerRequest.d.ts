@@ -1,22 +1,5 @@
 import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
-export interface IOfferRequestRequest {
-  contactPerson: IContactPersonResponse
-  requestPrice: PriceSpecification
-  vehicle: {
-    brandName?: string
-    modelName?: string
-    fuelTypeName?: string
-    vin?: string
-    registrationNumber?: string
-    dateVehicleFirstRegistered?: string
-  }
-  duration?: number
-  mileage?: number
-  contractTemplateId?: number
-  requestText: string
-}
-
 export interface IOfferRequestResponse {
   offerRequestId: number
   prettyIdentifier: string
@@ -46,7 +29,7 @@ export interface IFileAttachment {
   mimeType?: string
 }
 
-export interface IExtendedOfferRequestRecord extends IOfferRequestResponse {
+export interface IExtendedOfferRequestResponse extends IOfferRequestResponse {
   attachments: IFileAttachment[]
 }
 
