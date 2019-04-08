@@ -1,10 +1,4 @@
-import {
-  IContactPersonResponse,
-  IContractTemplateResponse,
-  OfferRequestState,
-  PriceSpecification,
-  Vehicle,
-} from '../..'
+import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
 export interface IOfferRequestRequest {
   offerRequestId: number
@@ -12,11 +6,12 @@ export interface IOfferRequestRequest {
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
   vehicle: {
-    vehicleModelId?: number
-    fuelTypeId?: number
-    vin: string
-    registrationNumber: string
-    dateVehicleFirstRegistered: string
+    brandName?: string
+    modelName?: string
+    fuelTypeName?: string
+    vin?: string
+    registrationNumber?: string
+    dateVehicleFirstRegistered?: string
   }
   duration?: number
   mileage?: number
@@ -33,7 +28,14 @@ export interface IOfferRequestResponse {
   prettyIdentifier: string
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
-  vehicle?: Vehicle
+  vehicle: {
+    brandName?: string
+    modelName?: string
+    fuelTypeName?: string
+    vin?: string
+    registrationNumber?: string
+    dateVehicleFirstRegistered?: string
+  }
   duration?: number
   mileage?: number
   contractTemplate?: IContractTemplateResponse
