@@ -46,6 +46,7 @@ export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
   amountPerPayment: number
+  offerRequestId?: number
 }
 
 export interface IStandardContractCreationRequest extends ICommonContractCreationRequest {
