@@ -92,6 +92,8 @@ export interface IAdminContractAdjustmentResponse {
   customer: IAdminCustomer
   invoiceCustomerId: number
   invoiceCustomer: IAdminCustomer
+  aviableTemplatesExtension?: IContractTemplateResponse[]
+  availableDurationsExtension?: DurationOptions[]
 }
 
 export interface IContractOfferPrintData {
