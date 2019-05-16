@@ -5,7 +5,11 @@ import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
-import { ContractType, IContractCalculationResponse } from './priceCalculation'
+import { IContractCalculationResponse } from './priceCalculation'
+
+export type ContractType = 'STANDARD' | 'CUSTOM'
+
+export type ServiceContractFlag = 'DISTRIBUTE_DOWNPAYMENT' | 'NULLIFY_DOWNPAYMENT'
 
 export interface IContractCreationData {
   payment: IContractCreationPayment
