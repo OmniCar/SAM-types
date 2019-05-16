@@ -28,6 +28,7 @@ export interface IContractDetailsRecord {
   contractType: ContractType
   contractTemplateId: number
   contractTemplateName: string
+  contractTemplateIsArchived: boolean
   flags: ServiceContractFlag[]
   customTerms?: string
   adjustedFrom?: string
