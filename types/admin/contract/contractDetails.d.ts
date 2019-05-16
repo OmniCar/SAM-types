@@ -3,6 +3,7 @@ import { IContractResponse } from './../../contract/contract'
 import { IIncludedContractOption } from './../../includedContractOption'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
+import { ContractType, ServiceContractFlag } from 'admin/contractCreation'
 
 export interface IContractDetailsRecord {
   contractPdfUrl: string
@@ -16,6 +17,7 @@ export interface IContractDetailsRecord {
   paymentMethod: PaymentGateway
   prettyIdentifierShort: string
   prettyIdentifier: string
+  providerPayments: number
   providerShare: PriceSpecification
   reference: string
   seller?: IContactPersonResponse
@@ -23,8 +25,12 @@ export interface IContractDetailsRecord {
   startMileage: number
   termsPdfUrl: string
   totalPrice: PriceSpecification
-  type: string
+  contractType: ContractType
+  contractTemplateId: number
+  contractTemplateName: string
+  flags: ServiceContractFlag[]
   customTerms?: string
+  adjustedFrom?: string
 }
 
 export interface IAdminCustomTermsRecord {

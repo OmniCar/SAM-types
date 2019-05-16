@@ -2,6 +2,8 @@ import { PriceSpecification } from '../../priceSpecification'
 
 export type ContractType = 'STANDARD' | 'CUSTOM'
 
+export type ServiceContractFlag = 'DISTRIBUTE_DOWNPAYMENT' | 'NULLIFY_DOWNPAYMENT'
+
 export interface IContractCalculationRequest {
   type: ContractType
   contractTemplateId: number
