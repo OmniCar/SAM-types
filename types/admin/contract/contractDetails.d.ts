@@ -3,7 +3,7 @@ import { IContractResponse } from './../../contract/contract'
 import { IIncludedContractOption } from './../../includedContractOption'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
-import { ServiceContractFlag, ContractType } from 'admin/contractCreation'
+import { ServiceContractFlag, ContractType } from './../../admin/contractCreation'
 
 export interface IContractDetailsRecord {
   contractPdfUrl: string
