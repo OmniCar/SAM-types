@@ -13,6 +13,7 @@ export interface IContractDetailsRecord {
   extendedFrom: IContractResponse | null
   includedOptions: IIncludedContractOption[] | null
   mileage: number
+  monthlyTemplatePrice: PriceSpecification
   monthlyPrice: PriceSpecification
   paymentMethod: PaymentGateway
   prettyIdentifierShort: string
