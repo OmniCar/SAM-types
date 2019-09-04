@@ -6,6 +6,7 @@ import { OfferRequestResponseErrors } from './offerRequestResponseErrors'
 import { PasswordErrors } from './passwordResponseErrors'
 import { VatLookupResponseErrors } from './vatLookupResponseErrors'
 import { WorkshopImportErrors } from './workshopResponseErrors'
+import { paymentResponseErrors } from './paymentResponseErrors'
 
 export type ResponseErrors =
   | AdminPaymentErrors
@@ -16,3 +17,4 @@ export type ResponseErrors =
   | WorkshopImportErrors
   | PasswordErrors
   | OfferRequestResponseErrors
+  | paymentResponseErrors
