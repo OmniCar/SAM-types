@@ -1,4 +1,4 @@
-import { PaymentGateway } from 'payment'
+import { PaymentGateway } from './../payment'
 
 export interface IPreparePaymentResponse {
   contractId: number
