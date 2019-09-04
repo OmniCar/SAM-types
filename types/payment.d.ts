@@ -20,3 +20,10 @@ export interface PaymentPlan {
   downpayment: PriceSpecification
   totalCost: PriceSpecification
 }
+
+export interface IPreparePaymentResponse {
+  contractId: number
+  paymentGateway: PaymentGateway
+  checkoutSessionId?: string
+  stripePublicKey?: string
+}
