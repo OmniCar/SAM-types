@@ -18,6 +18,6 @@ export interface IContractOfferRequest {
 
 export interface IContractOfferResponse {
   contractId: number
-  token: string
+  checkoutSessionId?: string
   paymentGateway: PaymentGateway
 }
