@@ -26,4 +26,5 @@ export interface IPreparePaymentResponse {
   paymentGateway: PaymentGateway
   checkoutSessionId?: string
   stripePublicKey?: string
+  stripeAccount?: string
 }
