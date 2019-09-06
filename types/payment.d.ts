@@ -21,6 +21,18 @@ export interface PaymentPlan {
   totalCost: PriceSpecification
 }
 
+/**
+ * Payload to Initialize a Stripe Checkout Session
+ */
+export interface IPreparePaymentRequest {
+  contractId: number
+  cancel_url: string
+  success_url: string
+}
+
+/**
+ * Response payload from from a Stripe Checkout Session initialization request
+ */
 export interface IPreparePaymentResponse {
   contractId: number
   paymentGateway: PaymentGateway
