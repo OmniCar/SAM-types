@@ -25,7 +25,8 @@ export interface PaymentPlan {
  * Payload to Initialize a Stripe Checkout Session
  */
 export interface IPreparePaymentRequest {
-  contractId: number
+  contractId?: number
+  prettyIdentifier?: string
   cancel_url: string
   success_url: string
 }
@@ -35,6 +36,7 @@ export interface IPreparePaymentRequest {
  */
 export interface IPreparePaymentResponse {
   contractId: number
+  prettyIdentifier: string
   paymentGateway: PaymentGateway
   checkoutSessionId?: string
   stripePublicKey?: string
