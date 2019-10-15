@@ -10,7 +10,7 @@ export interface IContractOptionRequest {
   contractProviderId: number
   archived?: boolean
   abbreviation: string
-  optionGroup?: boolean
+  optionGroup?: number
   internalName?: string
   showOnWebcalc?: boolean
   warrantyID?: number | null
@@ -25,7 +25,7 @@ export interface IContractOptionResponse {
   weight: number
   contractProviderId: number | null
   abbreviation: string
-  optionGroup: boolean
+  optionGroup: number
   internalName: string
   showOnWebcalc: boolean
   warranty: IWarrantyResponse | null
