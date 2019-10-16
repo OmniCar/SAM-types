@@ -1,6 +1,6 @@
 import { PriceSpecification } from './priceSpecification'
 import { IContractResponse } from './contract/contract'
-import { ITermsOfServiceResponse } from 'termsOfService'
+import { ITermsOfServiceResponse } from './termsOfService'
 
 export interface IIncludedContractOption {
   id: number
