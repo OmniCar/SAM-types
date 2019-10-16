@@ -1,13 +1,13 @@
-import { ICountryRequest, ICountryResponse } from "country";
-import { ITermsOfServiceRequest, ITermsOfServiceResponse } from "termsOfService";
+import { ICountryRequest, ICountryResponse } from "./country";
+import { ITermsOfServiceRequest, ITermsOfServiceResponse } from "./termsOfService";
 
 
 
 export interface IWarrantyRequest {
-     warrantyId: number
+     warrantyId?: number
      warrantyType: string
      applicationFee : number
-     country: ICountryRequest
+     countryId: number
      termsOfService: ITermsOfServiceRequest
 }
 

@@ -1,6 +1,6 @@
 import { PriceSpecification } from './priceSpecification'
-import { IWarrantyRequest, IWarrantyResponse } from 'warranty';
-import { ICalculationRequest } from 'priceCalculation';
+import { IWarrantyRequest, IWarrantyResponse } from './warranty';
+import { ICalculationRequest } from './priceCalculation';
 
 export interface IContractOptionRequest {
   description: string
