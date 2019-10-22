@@ -1,6 +1,7 @@
 import { PriceSpecification } from './priceSpecification'
 import { IWarrantyRequest, IWarrantyResponse } from './warranty';
 import { ICalculationRequest } from './priceCalculation';
+import { ITermsOfServiceResponse } from './termsOfService';
 
 export interface IContractOptionRequest {
   description: string
@@ -30,4 +31,5 @@ export interface IContractOptionResponse {
   showOnWebcalc: boolean
   warranty: number | null | undefined
   calculationMethod: number | null
+  termsOfService?: ITermsOfServiceResponse | null
 }
