@@ -1,6 +1,7 @@
 import { ContractState } from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
+import { ITermsOfServiceResponse } from './../../termsOfService'
 
 export interface IApiVehicleWithContracts {
   vehicleId: number
@@ -35,4 +36,5 @@ export interface IApiVehicleContract {
 export interface IApiVehicleIncludedContractOption {
   description: string
   assoc: 'PROPERTY' | 'ADDITIONAL'
+  termsOfService: ITermsOfServiceResponse | null
 }
