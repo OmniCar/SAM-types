@@ -6,6 +6,7 @@ import { ITermsOfServiceResponse } from './../../termsOfService'
 export interface IApiVehicleWithContracts {
   vehicleId: number
   registrationDate: Date | string
+  modelYear: number
   vin: string
   registrationNumber: string
   brandName: string
