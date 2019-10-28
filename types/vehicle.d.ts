@@ -12,4 +12,5 @@ export interface Vehicle {
   model: Model
   fuelType: FuelType
   contracts?: VehicleContracts
+  modelYear: number
 }
