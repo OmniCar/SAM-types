@@ -4,18 +4,18 @@ import { ITermsOfServiceRequest, ITermsOfServiceResponse } from "./termsOfServic
 
 
 export interface IWarrantyRequest {
-     warrantyId?: number
-     warrantyType: string
-     applicationFee : number
-     countryId: number
-     termsOfService: ITermsOfServiceRequest
+  warrantyId: number
+  warrantyType: string
+  applicationFee: number
+  countryId: number
+  termsOfService: ITermsOfServiceRequest
 }
 
 export interface IWarrantyResponse {
-    warrantyId: number
-    warrantyType: string
-    archived: Date
-    applicationFee : number
-    country: ICountryResponse
-    termsOfService: ITermsOfServiceResponse
+  archived?: Date
+  warrantyId: number
+  warrantyType: string
+  applicationFee: number
+  country?: ICountryResponse
+  termsOfService?: ITermsOfServiceResponse
 }
