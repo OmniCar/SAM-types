@@ -11,5 +11,7 @@ export interface IIncludedContractOption {
   price: PriceSpecification
   assoc: 'PROPERTY' | 'ADDITIONAL'
   abbreviation: string
-  termsOfService?: ITermsOfServiceResponse
+  termsOfService?: ITermsOfServiceResponse | null
+  application_fee: number
+  calculation_method: number | null
 }
