@@ -4,3 +4,4 @@ types/index.d.ts
 *.js.map
 .vscode/
 .DS_Store
+gitignore/

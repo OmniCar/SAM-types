@@ -1,4 +1,7 @@
 import { PriceSpecification } from './priceSpecification'
+import { IWarrantyRequest, IWarrantyResponse } from './warranty';
+import { ICalculationRequest } from './priceCalculation';
+import { ITermsOfServiceResponse } from './termsOfService';
 
 export interface IContractOptionRequest {
   description: string
@@ -8,6 +11,11 @@ export interface IContractOptionRequest {
   contractProviderId: number
   archived?: boolean
   abbreviation: string
+  optionGroup: number | null
+  internalName: string
+  showOnWebcalc: boolean
+  warranty: number | null
+  calculationMethod: number | null
 }
 
 export interface IContractOptionResponse {
@@ -18,4 +26,10 @@ export interface IContractOptionResponse {
   weight: number
   contractProviderId: number | null
   abbreviation: string
+  optionGroup: number | null
+  internalName: string
+  showOnWebcalc: boolean
+  warranty: number | null | undefined
+  calculationMethod: number | null
+  termsOfService?: ITermsOfServiceResponse | null
 }

@@ -24,6 +24,7 @@ export interface IContractTemplateRequest {
   archived?: boolean
   formattedDescription: string | null
   weight: number
+  showOnWebcalc: boolean  
 }
 
 export interface IContractTemplateResponse {
@@ -42,4 +43,5 @@ export interface IContractTemplateResponse {
   providerId: number | null
   formattedDescription: string | null
   weight: number
+  showOnWebcalc: boolean  
 }
