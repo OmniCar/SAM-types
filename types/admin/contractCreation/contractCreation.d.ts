@@ -45,7 +45,9 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {
+  contractTemplateId: number
+}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
