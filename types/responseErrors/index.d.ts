@@ -18,3 +18,7 @@ export type ResponseErrors =
   | PasswordErrors
   | OfferRequestResponseErrors
   | paymentResponseErrors
+
+export const enum ResponseWarnings {
+  GenericWarning = 499,
+}
