@@ -40,6 +40,10 @@ export enum OfferRequestState {
   Expired = 400,
 }
 
+export const enum ResponseWarnings {
+  GenericWarning = 499,
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'

@@ -1,4 +1,4 @@
-import { ResponseErrors, ResponseWarnings } from './responseErrors'
+import { ResponseErrors } from './responseErrors'
 
 export interface ApiError {
   message: ResponseErrors
