@@ -11,6 +11,9 @@ export type StripeEntityType = 'company' | 'individual'
 
 export interface IStripe {
   businessName: string
+  icon?: string
+  logo?: string
+  primary_color?: string
   businessUrl: string
   debitNegativeBalances: boolean // default is true
   declineChargeOn: IStripeDeclineChargeOn
