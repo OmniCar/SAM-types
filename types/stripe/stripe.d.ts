@@ -13,7 +13,7 @@ export interface IStripe {
   businessName: string
   icon?: string
   logo?: string
-  primary_color?: string
+  primaryColor?: string
   businessUrl: string
   debitNegativeBalances: boolean // default is true
   declineChargeOn: IStripeDeclineChargeOn
