@@ -27,7 +27,7 @@ export interface IStripe {
   verification: IStripeVerification
 }
 
-interface IStripeFile {
+export interface IStripeFile {
   id: string
   linkUrl?: string
   fileName: string
