@@ -11,8 +11,8 @@ export type StripeEntityType = 'company' | 'individual'
 
 export interface IStripe {
   businessName: string
-  icon?: string
-  logo?: string
+  icon?: IStripeFile
+  logo?: IStripeFile
   primaryColor?: string
   businessUrl: string
   debitNegativeBalances: boolean // default is true
@@ -25,6 +25,12 @@ export interface IStripe {
   supportPhone: string
   supportUrl: string
   verification: IStripeVerification
+}
+
+interface IStripeFile {
+  id: string
+  linkUrl?: string
+  fileName: string
 }
 
 export interface IStripeResponse extends IStripe {
