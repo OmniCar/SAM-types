@@ -8,4 +8,5 @@ export interface IUserListRecord {
   email: string
   phone: string
   role: UserRole
+  localeCode?: string
 }
