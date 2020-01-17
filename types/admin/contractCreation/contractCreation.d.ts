@@ -67,6 +67,42 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   isAdjustment?: boolean
 }
 
+export interface ICreateFreeWarrantyRequest extends ICommonContractCreationRequest {
+  warrantyId: number
+  warrantyLengthMonths: number
+}
+
+export interface ICreateFreeWarrantyResponse {
+  req: ICreateFreeWarrantyRequest
+  success: boolean
+  error: string
+  startDate: Date
+  endDate: Date
+  warrantyType: string
+}
+
+export interface IAvailableFreeWarrantyRequest {
+  vin: string
+  regNumber: string
+  regDate: string
+  brandName: string
+  modelName: string
+  fuelTypeName: string
+  startMileage: number
+}
+
+export const CalculationMethod_FirstRegDate = 100
+export const CalculationMethod_ContractCreationDate = 200
+
+export interface IAvailableFreeWarranty {
+  warrantyId: number
+  warrantyName: string
+  maxYears: number
+  oneTimeFeeYear: number
+  externalId: number
+  calculationMethod: 100 | 200
+}
+
 export interface IContractCreationResponse {
   serviceContractId: number
   prettyIdentifier: string
