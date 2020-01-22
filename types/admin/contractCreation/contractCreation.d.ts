@@ -6,6 +6,7 @@ import { Vehicle } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
+import { PriceSpecification } from './../../priceSpecification'
 
 export type ContractType = 'STANDARD' | 'CUSTOM'
 
@@ -98,7 +99,7 @@ export interface IAvailableFreeWarranty {
   warrantyId: number
   warrantyName: string
   maxYears: number
-  oneTimeFeeYear: number
+  oneTimeFeeYear: PriceSpecification
   externalId: number
   calculationMethod: 100 | 200
 }
