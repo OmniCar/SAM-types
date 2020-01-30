@@ -68,9 +68,13 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   isAdjustment?: boolean
 }
 
-export interface ICreateFreeWarrantyRequest extends ICommonContractCreationRequest {
+export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
+  vehicle: Vehicle
+  startMileage: number
+  customerId?: number
+  customer?: IAdminCustomer
 }
 
 export interface ICreateFreeWarrantyResponse {
