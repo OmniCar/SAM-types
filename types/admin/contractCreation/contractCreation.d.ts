@@ -8,7 +8,7 @@ import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
 import { PriceSpecification } from './../../priceSpecification'
 
-export type ContractType = 'STANDARD' | 'CUSTOM'
+export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
 export type ServiceContractFlag = 'DISTRIBUTE_DOWNPAYMENT' | 'NULLIFY_DOWNPAYMENT'
 
