@@ -5,6 +5,7 @@ export enum ContractState {
   OfferRevoked = 120,
   OfferRejected = 130, // not used
   Active = 200,
+  ActiveExternalWarranty = 210,
   Suspended = 400,
   Terminated = 500,
   Completed = 800, // not used
