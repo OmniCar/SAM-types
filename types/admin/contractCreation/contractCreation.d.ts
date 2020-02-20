@@ -96,6 +96,12 @@ export interface IAvailableFreeWarrantyRequest {
   startMileage: number
 }
 
+export interface IAvailableFreeWarrantyResponse {
+  vehicleHasActiveWarranty: boolean
+  minMilageDiffPerYear: number
+  availableWarranties: IAvailableFreeWarranty[]
+}
+
 export const CalculationMethod_FirstRegDate = 100
 export const CalculationMethod_ContractCreationDate = 200
 
@@ -106,6 +112,10 @@ export interface IAvailableFreeWarranty {
   oneTimeFeeYear: PriceSpecification
   externalId: number
   calculationMethod: 100 | 200
+  maxStartMileage: number
+  maxEndMileage: number
+  warrantyTermsRef: string
+  contractStartDate: Date
 }
 
 export interface IContractCreationResponse {
