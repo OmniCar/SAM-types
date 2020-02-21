@@ -1,7 +1,7 @@
 import { PriceSpecification } from './priceSpecification'
-import { IWarrantyRequest, IWarrantyResponse } from './warranty';
-import { ICalculationRequest } from './priceCalculation';
-import { ITermsOfServiceResponse } from './termsOfService';
+import { IWarrantyRequest, IWarrantyResponse } from './warranty'
+import { ICalculationRequest } from './priceCalculation'
+import { ITermsOfServiceResponse } from './termsOfService'
 
 export interface IContractOptionRequest {
   description: string
@@ -32,4 +32,6 @@ export interface IContractOptionResponse {
   warranty: number | null | undefined
   calculationMethod: number | null
   termsOfService?: ITermsOfServiceResponse | null
+  maxEndMileage?: number
+  maxEndAge?: number
 }
