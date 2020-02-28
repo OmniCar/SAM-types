@@ -17,5 +17,5 @@ export interface IContractProvider {
   isUseWhiteBGOnWeb?: boolean
   isShowLogoOnWeb?: boolean
   webLogoBanner?: string
-  webLogoSquared?: string
+  webLogoSquare?: string
 }
