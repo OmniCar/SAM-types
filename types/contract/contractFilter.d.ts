@@ -1,4 +1,5 @@
-import { ContractState, WarrantyState } from '../index'
+// import { ContractState, WarrantyState } from '../index'
+import { ContractState } from '../index'
 
 export interface IContractFilterDate {
   min: string
@@ -10,10 +11,10 @@ export interface IContractFilterOption {
   id: ContractState
 }
 
-export interface IWarrantyFilterOption {
-  title: string
-  id: WarrantyState
-}
+// export interface IWarrantyFilterOption {
+//   title: string
+//   id: WarrantyState
+// }
 
 export interface IContractFilterOptions {
   contractStates: IContractFilterOption[]
