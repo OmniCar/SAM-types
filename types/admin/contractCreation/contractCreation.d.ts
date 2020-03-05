@@ -6,8 +6,9 @@ import { Vehicle } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
+import { PriceSpecification } from './../../priceSpecification'
 
-export type ContractType = 'STANDARD' | 'CUSTOM'
+export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
 export type ServiceContractFlag = 'DISTRIBUTE_DOWNPAYMENT' | 'NULLIFY_DOWNPAYMENT'
 
@@ -65,6 +66,56 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   amountPerPayment?: number
   adjustedFrom?: string
   isAdjustment?: boolean
+}
+
+export interface ICreateFreeWarrantyRequest {
+  warrantyId: number
+  warrantyLengthMonths: number
+  vehicle: Vehicle
+  startMileage: number
+  customerId?: number
+  customer?: IAdminCustomer
+}
+
+export interface ICreateFreeWarrantyResponse {
+  req: ICreateFreeWarrantyRequest
+  success: boolean
+  error: string
+  startDate: Date
+  endDate: Date
+  warrantyType: string
+}
+
+export interface IAvailableFreeWarrantyRequest {
+  vin: string
+  regNumber: string
+  regDate: string
+  brandName: string
+  modelName: string
+  fuelTypeName: string
+  startMileage: number
+}
+
+export interface IAvailableFreeWarrantyResponse {
+  vehicleHasActiveWarranty: boolean
+  minMilageDiffPerYear: number
+  availableWarranties: IAvailableFreeWarranty[]
+}
+
+export const CalculationMethod_FirstRegDate = 100
+export const CalculationMethod_ContractCreationDate = 200
+
+export interface IAvailableFreeWarranty {
+  warrantyId: number
+  warrantyName: string
+  maxYears: number
+  oneTimeFeeYear: PriceSpecification
+  externalId: number
+  calculationMethod: 100 | 200
+  maxStartMileage: number
+  maxEndMileage: number
+  warrantyTermsRef: string
+  contractStartDate: Date
 }
 
 export interface IContractCreationResponse {
