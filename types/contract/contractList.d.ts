@@ -27,16 +27,3 @@ export type ContractListOrderByType =
   | 'customerName'
   | 'registrationNumber'
   | 'sellerName'
-
-export interface IWarrantyListRecord {
-  prettyIdentifier: string
-  brand: string
-  warrantyEndDate: Date | string
-  warrantyCreationDate: Date | string
-  warrantyState: ContractState
-  warrantyeName: string
-  customerName: string
-  customerCompanyName: string
-  registrationNumber: string
-  sellerName: string
-}

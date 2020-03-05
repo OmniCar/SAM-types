@@ -12,12 +12,6 @@ export enum ContractState {
   Settled = 900,
 }
 
-// export enum WarrantyState {
-//   Active = 200,
-//   Rejected = 300,
-//   Terminated = 500,
-// }
-
 export enum ContractActionType {
   create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
   sendDraft = 120, // A draft was sent to the customer

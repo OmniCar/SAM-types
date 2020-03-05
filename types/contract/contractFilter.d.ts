@@ -1,4 +1,3 @@
-// import { ContractState, WarrantyState } from '../index'
 import { ContractState } from '../index'
 
 export interface IContractFilterDate {
@@ -11,11 +10,6 @@ export interface IContractFilterOption {
   id: ContractState
 }
 
-// export interface IWarrantyFilterOption {
-//   title: string
-//   id: WarrantyState
-// }
-
 export interface IContractFilterOptions {
   contractStates: IContractFilterOption[]
   templates: IContractFilterOption[]
@@ -26,14 +20,6 @@ export interface IContractFilterOptions {
 }
 
 export interface IContractFilterParams {
-  contractStates: ContractState[]
-  templates: number[]
-  options: number[]
-  sellers: number[]
-  created: IContractFilterDate
-  expired: IContractFilterDate
-}
-export interface IWarrantyFilterParams {
   contractStates: ContractState[]
   templates: number[]
   options: number[]

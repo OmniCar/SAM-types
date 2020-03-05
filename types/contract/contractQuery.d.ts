@@ -14,17 +14,6 @@ export type ContractOrderBy =
   | 'contractState'
   | 'brand'
 
-export type WarrantyOrderBy =
-  | 'prettyIdentifier'
-  | 'contractTemplateName'
-  | 'registrationNumber'
-  | 'customerName'
-  | 'contractCreationDate'
-  | 'contractEndDate'
-  | 'sellerName'
-  | 'contractState'
-  | 'brand'
-
 export interface IContractQuery extends ISearchQuery<ContractOrderBy> {
   createdDateStart?: Date | string
   createdDateEnd?: Date | string
