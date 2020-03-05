@@ -1,9 +1,4 @@
-
-export type ContractResponseErrors =
-  | ContractUpdateErrors
-  | PostContractResponseErrors
-  | WarrantyCheckErrors
-
+export type ContractResponseErrors = ContractUpdateErrors | PostContractResponseErrors | WarrantyCheckErrors
 
 type ContractUpdateErrors = 'CONTRACT_TRANSITION_INVALID_OR_ILLEGAL'
 type PostContractResponseErrors = 'CONTRACT_MISSING_OR_INVALID_INFORMATION'
@@ -14,3 +9,6 @@ type WarrantyCheckErrors =
   | 'WARRANTY_START_MILAGE_MISSING'
   | 'WARRANTY_START_MILAGE_EXCEEDS_WARRANTY_MAX_MILAGE'
   | 'WARRANTY_END_MILAGE_EXCEEDS_WARRANTY_MAX_MILAGE'
+  | 'WARRANTY_ALREADY_EXISTS_FOR_VEHICLE'
+  | 'WARRANTY_MODEL_NOT_FOUND'
+  | 'WARRANTY_NOT_AVAILABLE_FOR_VEHICLE'
