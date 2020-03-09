@@ -102,9 +102,6 @@ export interface IAvailableFreeWarrantyResponse {
   availableWarranties: IAvailableFreeWarranty[]
 }
 
-export const CalculationMethod_FirstRegDate = 100
-export const CalculationMethod_ContractCreationDate = 200
-
 export interface IAvailableFreeWarranty {
   warrantyId: number
   warrantyName: string
