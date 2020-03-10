@@ -11,3 +11,7 @@ export interface IUserPasswordChangeRequest {
   password: string
   newPassword: string
 }
+
+export interface IUserRoleChangeRequest {
+  roleId: number
+}
