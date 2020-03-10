@@ -4,7 +4,6 @@ import { Customer } from '../customer'
 import { Vehicle } from '../vehicle'
 import { ICalculationResponse } from '../priceCalculation'
 import { ContractState, PaymentGateway } from '../index'
-import { ITermsOfServiceResponse } from '../termsOfService'
 import { IContractProviderResponse } from '../contractProvider'
 
 export interface IContractResponse {
@@ -17,7 +16,6 @@ export interface IContractResponse {
   template: IContractTemplateResponse
   options: IContractOptionResponse[]
   payment: ICalculationResponse
-  // planCalculationDate: string
   prettyIdentifier: string
   startDate: string
   endDate: string
@@ -25,6 +23,6 @@ export interface IContractResponse {
   state: ContractState
   contractProvider: IContractProviderResponse
   templateImage: string
-  termsOfService: ITermsOfServiceResponse
+  termsRef: string
   paymentGateway: PaymentGateway
 }
