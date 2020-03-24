@@ -12,6 +12,7 @@ export interface ILoginResponse {
   username: boolean
   password: boolean
   role?: UserRole
+  roles?: UserRole[]
   token?: string
   userInfo?: IAdminUserInfo
   customerInfo?: IAdminCustomer
