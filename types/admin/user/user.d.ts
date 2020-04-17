@@ -14,4 +14,5 @@ export interface IUserPasswordChangeRequest {
 
 export interface IUserRoleChangeRequest {
   roleId: number
+  contractProviderId: number
 }
