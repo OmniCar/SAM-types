@@ -15,6 +15,9 @@ export type ServiceContractFlag = 'DISTRIBUTE_DOWNPAYMENT' | 'NULLIFY_DOWNPAYMEN
 export interface IContractCreationData {
   payment: IContractCreationPayment
   termsOfTradeRef?: string
+  externalWarrantiesEnabled?: boolean
+  externalWarrantiesShowComponent?: boolean
+  externalWarrantiesShowButton?: boolean
   cars: ICarCollection
   templates: IContractTemplateResponse[]
 }
