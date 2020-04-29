@@ -74,6 +74,7 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
 export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
+  modelModelId?: number
   vehicle: Vehicle
   startMileage: number
   customerId?: number
@@ -90,12 +91,17 @@ export interface ICreateFreeWarrantyResponse {
 }
 
 export interface IAvailableFreeWarrantyRequest {
+  vehicleId?: number
   vin: string
   regNumber: string
   regDate: string
+  modelModelId?: number
   brandName: string
-  modelName: string
+  brandId?: number
+  vehicleModelName: string
+  vehicleModelId?: number
   fuelTypeName: string
+  fuelTypeId?: number
   startMileage: number
 }
 
