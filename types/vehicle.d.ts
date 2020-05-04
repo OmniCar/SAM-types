@@ -13,4 +13,5 @@ export interface Vehicle {
   fuelType: FuelType
   contracts?: VehicleContracts
   modelYear: number
+  hasActiveWarranty?: boolean
 }
