@@ -88,6 +88,7 @@ export interface ICreateFreeWarrantyResponse {
   startDate: Date
   endDate: Date
   warrantyType: string
+  customerId: number
 }
 
 export interface IAvailableFreeWarrantyRequest {

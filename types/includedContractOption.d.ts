@@ -14,4 +14,5 @@ export interface IIncludedContractOption {
   termsOfService?: ITermsOfServiceResponse | null
   application_fee: number
   calculation_method: number | null
+  warrantyId: number | null
 }

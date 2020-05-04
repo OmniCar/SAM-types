@@ -3,4 +3,5 @@ export interface ITemplateLookupRequest {
   model: string
   fuelType: string
   regDate: string
+  vin?: string
 }
