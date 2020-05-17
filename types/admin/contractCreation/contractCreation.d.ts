@@ -112,9 +112,15 @@ export interface IAvailableFreeWarrantyResponse {
   availableWarranties: IAvailableFreeWarranty[]
 }
 
+export interface IAvailableFreeWarrantyDurationPrice {
+  durationMonths: number
+  totalPrice: PriceSpecification
+}
+
 export interface IAvailableFreeWarranty {
   warrantyId: number
   warrantyName: string
+  description: string
   maxYears: number
   oneTimeFeeYear: PriceSpecification
   externalId: number
@@ -123,6 +129,8 @@ export interface IAvailableFreeWarranty {
   maxEndMileage: number
   warrantyTermsRef: string
   contractStartDate: Date
+  durationsPrices: IAvailableFreeWarrantyDurationPrice[]
+  weight: number
 }
 
 export interface IContractCreationResponse {
