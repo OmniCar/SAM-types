@@ -9,6 +9,7 @@ export interface IContractListRecord {
   contractCreationDate: Date | string
   contractState: ContractState
   contractTemplateName: string
+  contractTemplateDescription: string
   customerName: string
   customerCompanyName: string
   registrationNumber: string
@@ -23,6 +24,7 @@ export type ContractListOrderByType =
   | 'contractCreationDate'
   | 'contractState'
   | 'customerCompanyName'
+  | 'contractTemplateDescription'
   | 'contractTemplateName'
   | 'customerName'
   | 'registrationNumber'
