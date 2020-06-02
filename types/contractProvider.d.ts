@@ -40,4 +40,9 @@ export interface IContractProviderResponse {
   contactPerson: IContactPersonResponse
   termsOfTradeRef: string
   webCalcEnabled: boolean
+  webTitle: string | null
+  isUseWhiteBGOnWeb: boolean
+  isShowLogoOnWeb: boolean
+  webLogoBanner: string | null
+  webLogoSquare: string | null
 }
