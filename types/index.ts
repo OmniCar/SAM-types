@@ -18,6 +18,20 @@ export enum WarrantyState {
   Terminated = 500,
 }
 
+export enum DbType {
+  int = 1,
+  text,
+  date,
+  monetary,
+  mileage,
+}
+
+export enum AggregateType {
+  sum = 1,
+  concat,
+  count,
+}
+
 export enum ContractActionType {
   create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
   sendDraft = 120, // A draft was sent to the customer
@@ -84,6 +98,7 @@ export * from './priceCalculation'
 export * from './priceSpecification'
 export * from './providerBranding'
 export * from './queryParams'
+export * from './reports/reports'
 export * from './resetPassword'
 export * from './responseErrors/calculatorResponseErrors'
 export * from './responseErrors/contractResponseErrors'
