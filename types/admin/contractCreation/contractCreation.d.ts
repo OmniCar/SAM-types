@@ -74,6 +74,10 @@ interface IPaymentInformationResponse {
   subscriptions: ISubscription[]
 }
 
+interface ISetupIntentResponse {
+  secretKey: string
+}
+
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   contractTemplateId: number
   vehicle: Vehicle
