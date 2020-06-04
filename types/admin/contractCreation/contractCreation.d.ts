@@ -38,6 +38,42 @@ interface ICommonContractUpdateRequest {
   type: ContractType
 }
 
+interface ISubscription {
+  amountPrPayment: PriceSpecification
+  firstPaymentDate: Date
+  lastPaymentDate: Date
+  numberOfPayments: number
+}
+
+interface IOptionInfo {
+  name: string
+  description: string
+  termsUrl: string
+}
+interface IContractInfo {
+  templateName: string
+  termsUrl: string
+  includedOptions: IOptionInfo[]
+  additionalOptions: IOptionInfo[]
+}
+
+interface IContractProviderInfo {
+  administrativeName: string
+  address: string
+  postal_code: string
+  city: string
+  phone: string
+  termsUrl: string
+}
+interface IPaymentInformationResponse {
+  contractProvider: IContractProviderInfo
+  customer: IAdminCustomer
+  vehicle: Vehicle
+  contract: IContractInfo
+  downpayment: PriceSpecification
+  subscriptions: ISubscription[]
+}
+
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   contractTemplateId: number
   vehicle: Vehicle
