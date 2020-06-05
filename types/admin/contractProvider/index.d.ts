@@ -13,9 +13,9 @@ export interface IContractProvider {
   locale: IsoLocale
   country: string
   currency: string
-  webTitle?: string
+  webTitle?: string | null
   isUseWhiteBGOnWeb?: boolean
   isShowLogoOnWeb?: boolean
-  webLogoBanner?: string
-  webLogoSquare?: string
+  webLogoBanner?: string | null
+  webLogoSquare?: string | null
 }

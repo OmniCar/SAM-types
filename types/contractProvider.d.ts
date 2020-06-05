@@ -19,6 +19,12 @@ export interface IContractProviderRequest {
   contactPerson: IContactPersonRequest
   termsOfTradeRef: string
   webCalcEnabled: boolean
+  webTitle: string | null
+  isUseWhiteBGOnWeb: boolean
+  isShowLogoOnWeb: boolean
+  webLogoBanner: string | null
+  webLogoSquare: string | null
+  freeWarrantiesButton: boolean
 }
 
 export interface IContractProviderResponse {
@@ -45,4 +51,5 @@ export interface IContractProviderResponse {
   isShowLogoOnWeb: boolean
   webLogoBanner: string | null
   webLogoSquare: string | null
+  freeWarrantiesButton: boolean
 }
