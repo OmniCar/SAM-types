@@ -66,6 +66,7 @@ interface IContractProviderInfo {
   termsUrl: string
 }
 interface IPaymentInformationResponse {
+  publicKey: string
   contractProvider: IContractProviderInfo
   customer: IAdminCustomer
   vehicle: Vehicle
@@ -75,7 +76,17 @@ interface IPaymentInformationResponse {
 }
 
 interface ISetupIntentResponse {
-  secretKey: string
+  clientSecret: string
+  stripeCustomerId: string
+}
+
+interface ISetPaymentMethodRequest {
+  contractIdentifier: string
+  paymentMethodId: string
+  stripeCustomerId: string
+}
+interface ISetPaymentMethodResponse {
+  errorMessage: string
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
