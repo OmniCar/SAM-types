@@ -77,13 +77,11 @@ interface IPaymentInformationResponse {
 
 interface ISetupIntentResponse {
   clientSecret: string
-  stripeCustomerId: string
 }
 
 interface ISetPaymentMethodRequest {
   contractIdentifier: string
   paymentMethodId: string
-  stripeCustomerId: string
 }
 interface ISetPaymentMethodResponse {
   errorMessage: string
