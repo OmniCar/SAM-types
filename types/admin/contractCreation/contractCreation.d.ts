@@ -65,6 +65,11 @@ interface IContractProviderInfo {
   phone: string
   termsUrl: string
 }
+
+interface IPublicKeyResponse {
+  publicKey: string
+  stripeAccount: string
+}
 interface IPaymentInformationResponse {
   publicKey: string
   contractProvider: IContractProviderInfo
