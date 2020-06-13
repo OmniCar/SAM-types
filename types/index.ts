@@ -51,6 +51,12 @@ export const enum ResponseWarnings {
   GenericWarning = 499,
 }
 
+export declare const enum FileUploadToStorageType {
+  General = 'General-Storage',
+  LogoBanner = 'Logo-Banner-Storage',
+  LogoSquare = 'Logo-Square-Storage'
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'
