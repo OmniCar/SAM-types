@@ -65,7 +65,6 @@ interface IContractProviderInfo {
   phone: string
   termsUrl: string
 }
-
 interface IPublicKeyResponse {
   publicKey: string
   stripeAccount: string
@@ -85,7 +84,7 @@ interface ISetupIntentResponse {
 }
 
 interface ISetPaymentMethodRequest {
-  contractIdentifier: string
+  contractId: string | number
   paymentMethodId: string
 }
 interface ISetPaymentMethodResponse {
