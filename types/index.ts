@@ -47,11 +47,11 @@ export enum OfferRequestState {
   Expired = 400,
 }
 
-export const enum ResponseWarnings {
+export enum ResponseWarnings {
   GenericWarning = 499,
 }
 
-export declare const enum FileUploadToStorageType {
+export declare enum FileUploadToStorageType {
   General = 'General-Storage',
   LogoBanner = 'Logo-Banner-Storage',
   LogoSquare = 'Logo-Square-Storage'
