@@ -51,11 +51,7 @@ export enum ResponseWarnings {
   GenericWarning = 499,
 }
 
-export declare enum FileUploadToStorageType {
-  General = 'General-Storage',
-  LogoBanner = 'Logo-Banner-Storage',
-  LogoSquare = 'Logo-Square-Storage'
-}
+export type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage'
 
 export * from './address'
 export * from './admin'
