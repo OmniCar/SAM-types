@@ -1,4 +1,4 @@
-export type UserRole = 'admin' | 'system' | 'customer' | 'seller'
+export type UserRole = 'admin' | 'system' | 'customer' | 'seller' | 'reports'
 
 export interface UserRoleRecord {
   role: UserRole
