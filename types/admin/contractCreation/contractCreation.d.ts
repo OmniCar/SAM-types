@@ -53,6 +53,11 @@ interface IOptionInfo {
 interface IContractInfo {
   templateName: string
   termsUrl: string
+  duration: number
+  mileage: number
+  startMileage: number
+  startDate: Date,
+  endDate: Date,
   includedOptions: IOptionInfo[]
   additionalOptions: IOptionInfo[]
 }
