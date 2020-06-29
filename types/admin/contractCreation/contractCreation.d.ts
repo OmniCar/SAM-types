@@ -93,7 +93,7 @@ interface ISetPaymentMethodRequest {
   paymentMethodId: string
 }
 interface ISetPaymentMethodResponse {
-  errorMessage: string
+  status: "processing" | "succeeded"
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
