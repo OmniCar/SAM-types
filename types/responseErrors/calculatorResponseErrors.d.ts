@@ -1,4 +1,4 @@
-type LicensePlateLookupResponseErrors =
+export type LicensePlateLookupResponseErrors =
   | 'REGNO_VEHICLE_NOT_FOUND'
   | 'REGNO_ACTIVE_CONTRACT_EXISTS'
   | 'REGNO_NO_CONTRACTS_AVAILABLE'

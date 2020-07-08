@@ -29,9 +29,10 @@ export interface IContractTemplateRequest {
 
 export interface IContractTemplateResponse {
   id: number
-  name: string          // Internal name (used in price files etc)
+  name: string // Internal name (used in price files etc)
   image: string
-  description: string   // External name (shown to customer)
+  imageUrl?: string | null
+  description: string // External name (shown to customer)
   properties: IContractOptionResponse[]
   options: IContractOptionResponse[]
   calculationMethod: number

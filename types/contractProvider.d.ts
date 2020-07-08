@@ -19,6 +19,12 @@ export interface IContractProviderRequest {
   contactPerson: IContactPersonRequest
   termsOfTradeRef: string
   webCalcEnabled: boolean
+  webTitle: string | null
+  isUseWhiteBGOnWeb: boolean
+  isShowLogoOnWeb: boolean
+  webLogoBanner: string | null
+  webLogoSquare: string | null
+  freeWarrantiesButton: boolean
 }
 
 export interface IContractProviderResponse {
@@ -32,6 +38,7 @@ export interface IContractProviderResponse {
   hoursToReminder2: number
   hoursToReminder3: number
   logo: string
+  logoUrl?: string | null
   contactFormUrl: string
   showRegistrationSelectionPage: boolean
   sendWelcomeLetter: boolean
@@ -44,5 +51,8 @@ export interface IContractProviderResponse {
   isUseWhiteBGOnWeb: boolean
   isShowLogoOnWeb: boolean
   webLogoBanner: string | null
+  webLogoBannerUrl?: string | null
   webLogoSquare: string | null
+  webLogoSquareUrl?: string | null
+  freeWarrantiesButton: boolean
 }
