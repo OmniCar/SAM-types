@@ -15,6 +15,8 @@ export interface IContractTemplateRequest {
   image: string
   minAge: number
   maxAge: number
+  defaultDuration: number
+  defaultMileage: number
   properties: IContractOptionResponse[]
   options: IContractOptionResponse[]
   underDrivenCharge: PriceSpecification
@@ -38,6 +40,8 @@ export interface IContractTemplateResponse {
   calculationMethod: number
   minAge: number
   maxAge: number
+  defaultDuration: number
+  defaultMileage: number
   underDrivenCharge: PriceSpecification
   overDrivenCharge: PriceSpecification
   termsOfService: ITermsOfServiceResponse
