@@ -20,4 +20,5 @@ export interface ILoginResponse {
   stripePublicKey?: string
   webCalcEnabled?: boolean
   offerRequestsEnabled?: boolean
+  isSuperAdmin?: boolean
 }
