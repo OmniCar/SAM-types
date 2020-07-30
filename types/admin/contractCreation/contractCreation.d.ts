@@ -168,6 +168,26 @@ export interface IAdminContractAdjustmentResponse {
   availableDurationsExtension?: DurationOptions[]
 }
 
+export interface IAdminContractOfferCopyResponse {
+  type: ContractType
+  vehicle: Vehicle
+  contractTemplate: IContractTemplateResponse
+  additionalOptions: IContractOptionResponse[]
+  includedAdditionalOptions: IContractOptionResponse[]
+  durations: DurationOptions[]
+  duration: number
+  mileage: number
+  startMileage: number
+  payments: Partial<IContractCalculationResponse>
+  paymentGateway: PaymentGateway
+  customerId: number
+  customer: IAdminCustomer
+  availableTemplatesExtension?: IContractTemplateResponse[]
+  availableDurationsExtension?: DurationOptions[]
+  reference: string
+  customTerms: string
+}
+
 export interface IContractOfferPrintData {
   token: string
 }
