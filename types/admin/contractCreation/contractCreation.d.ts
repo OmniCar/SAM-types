@@ -148,7 +148,7 @@ export interface IAdminContractActivationResponse {
   serviceContract: IContractDetailsRecord
 }
 
-export interface IAdminContractAdjustmentResponse {
+export interface IAdminContractResponse {
   type: ContractType
   vehicle: Vehicle
   contractTemplate: IContractTemplateResponse
@@ -158,32 +158,21 @@ export interface IAdminContractAdjustmentResponse {
   duration: number
   mileage: number
   startMileage: number
-  payments: IContractCalculationResponse
   paymentGateway: PaymentGateway
   customerId: number
   customer: IAdminCustomer
-  invoiceCustomerId: number
-  invoiceCustomer: IAdminCustomer
   availableTemplatesExtension?: IContractTemplateResponse[]
   availableDurationsExtension?: DurationOptions[]
 }
 
-export interface IAdminContractOfferCopyResponse {
-  type: ContractType
-  vehicle: Vehicle
-  contractTemplate: IContractTemplateResponse
-  additionalOptions: IContractOptionResponse[]
-  includedAdditionalOptions: IContractOptionResponse[]
-  durations: DurationOptions[]
-  duration: number
-  mileage: number
-  startMileage: number
+export interface IAdminContractAdjustmentResponse extends IAdminContractResponse {
+  payments: IContractCalculationResponse
+  invoiceCustomerId: number
+  invoiceCustomer: IAdminCustomer
+}
+
+export interface IAdminContractOfferCopyResponse extends IAdminContractResponse {
   payments: Partial<IContractCalculationResponse>
-  paymentGateway: PaymentGateway
-  customerId: number
-  customer: IAdminCustomer
-  availableTemplatesExtension?: IContractTemplateResponse[]
-  availableDurationsExtension?: DurationOptions[]
   reference: string
   customTerms: string
 }
