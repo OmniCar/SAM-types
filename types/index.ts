@@ -32,6 +32,10 @@ export enum AggregateType {
   count,
 }
 
+export enum FormattingLocale {
+  'sv-SE', 'uk-UA', 'da-DK', 'en-GB', 'fi-FI', 'en-US'
+}
+
 export enum ContractActionType {
   create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
   sendDraft = 120, // A draft was sent to the customer

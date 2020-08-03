@@ -29,9 +29,9 @@ export interface IColDefResponse {
 }
 
 export type ColData = { [colName in string]: IColDefResponse }
-export type CellData = string | number | Date | null
+export type CellData = string | number | Date | null | RowData[]
 export type RowData = { [colName in string]: CellData }
-export interface IReportSearchResponse3 {
+export interface IReportSearchResponse {
   name: string
   cols: ColData
   data: RowData[]
