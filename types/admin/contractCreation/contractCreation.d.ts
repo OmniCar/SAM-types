@@ -115,6 +115,7 @@ export interface IAvailableFreeWarrantyResponse {
 export interface IAvailableFreeWarrantyDurationPrice {
   durationMonths: number
   totalPrice: PriceSpecification
+  customerPrice: PriceSpecification | null
 }
 
 export interface IAvailableFreeWarranty {
