@@ -7,6 +7,7 @@ import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
 import { PriceSpecification } from './../../priceSpecification'
+import { ITermsOfServiceResponse } from '../../termsOfService'
 
 export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
@@ -47,9 +48,11 @@ interface ISubscription {
 
 interface IOptionInfo {
   name: string
+  abbreviation: string
   description: string
-  termsUrl: string
+  termsOfService?: ITermsOfServiceResponse | null
 }
+
 interface IContractInfo {
   templateName: string
   termsUrl: string
