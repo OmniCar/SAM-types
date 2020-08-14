@@ -96,11 +96,7 @@ interface ISetPaymentMethodRequest {
   paymentMethodId: string
 }
 interface ISetPaymentMethodResponse {
-  status: 'processing' | 'succeeded' | 'authentication_required' | 'requires_action'
-  nextActionType?: string | null // `redirect_to_url` or `use_stripe_sdk`
-  clientSecret?: string | null
-  nextActionRedirectUrl?: string | null // is set if nextActionType === `redirect_to_url`
-  useStripeSdk?: {} // Uhm... not sure about this, might be filled with some unspecified data if nextActionType === `use_stripe_sdk` ???
+  status: 'processing' | 'succeeded'
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
