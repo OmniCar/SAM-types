@@ -7,6 +7,7 @@ import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
 import { PriceSpecification } from './../../priceSpecification'
+import { ITermsOfServiceResponse } from '../../termsOfService'
 
 export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
@@ -36,6 +37,66 @@ interface ICommonContractUpdateRequest {
   reference?: string
   startMileage?: number
   type: ContractType
+}
+
+interface ISubscription {
+  amountPrPayment: PriceSpecification
+  firstPaymentDate: Date
+  lastPaymentDate: Date
+  numberOfPayments: number
+}
+
+interface IOptionInfo {
+  name: string
+  abbreviation: string
+  description: string
+  termsOfService?: ITermsOfServiceResponse | null
+}
+
+interface IContractInfo {
+  templateName: string
+  termsUrl: string
+  duration: number
+  mileage: number
+  startMileage: number
+  startDate: Date
+  endDate: Date
+  includedOptions: IOptionInfo[]
+  additionalOptions: IOptionInfo[]
+}
+
+interface IContractProviderInfo {
+  administrativeName: string
+  address: string
+  postal_code: string
+  city: string
+  phone: string
+  termsUrl: string
+}
+interface IPublicKeyResponse {
+  publicKey: string
+  stripeAccount: string
+}
+interface IPaymentInformationResponse {
+  publicKey: string
+  contractProvider: IContractProviderInfo
+  customer: IAdminCustomer
+  vehicle: Vehicle
+  contract: IContractInfo
+  downpayment: PriceSpecification
+  subscriptions: ISubscription[]
+}
+
+interface ISetupIntentResponse {
+  clientSecret: string
+}
+
+interface ISetPaymentMethodRequest {
+  contractId: string | number
+  paymentMethodId: string
+}
+interface ISetPaymentMethodResponse {
+  status: 'processing' | 'succeeded'
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
