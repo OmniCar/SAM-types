@@ -1,6 +1,6 @@
 import { UserRole } from '../auth'
 
-export type UserListOrderByType = 'name' | 'role' | 'email' | 'phone'
+export type UserListOrderByType = 'name' | 'role' | 'email' | 'phone' | 'providerId'
 
 interface INullableRole {
   providerId: number
