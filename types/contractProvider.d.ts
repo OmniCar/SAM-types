@@ -28,7 +28,6 @@ export interface IContractProviderRequest {
   parentProviderId: number | null
 }
 
-
 export interface IContractProviderResponse {
   contractProviderId: number
   administrativeName: string
