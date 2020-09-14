@@ -16,6 +16,7 @@ export interface IContractTemplateRequest {
   minAge: number
   maxAge: number
   defaultDuration: number
+  minimumPaymentsCount: number | null
   defaultMileage: number
   properties: IContractOptionResponse[]
   options: IContractOptionResponse[]
@@ -41,6 +42,7 @@ export interface IContractTemplateResponse {
   minAge: number
   maxAge: number
   defaultDuration: number
+  minimumPaymentsCount: number | null
   defaultMileage: number
   underDrivenCharge: PriceSpecification
   overDrivenCharge: PriceSpecification

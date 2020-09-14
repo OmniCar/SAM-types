@@ -56,6 +56,7 @@ interface IOptionInfo {
 interface IContractInfo {
   templateName: string
   prettyIdentifier: string
+  minimumPaymentsCount: null | number
   termsUrl: string
   duration: number
   mileage: number
