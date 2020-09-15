@@ -85,6 +85,8 @@ interface IPaymentInformationResponse {
   customer: IAdminCustomer
   vehicle: Vehicle
   contract: IContractInfo
+  totalAmount: PriceSpecification | null
+  minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
   subscriptions: ISubscription[]
 }
