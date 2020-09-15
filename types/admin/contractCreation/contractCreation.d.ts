@@ -56,6 +56,7 @@ interface IOptionInfo {
 interface IContractInfo {
   templateName: string
   prettyIdentifier: string
+  minimumPaymentsCount: null | number
   termsUrl: string
   duration: number
   mileage: number
@@ -84,6 +85,8 @@ interface IPaymentInformationResponse {
   customer: IAdminCustomer
   vehicle: Vehicle
   contract: IContractInfo
+  totalAmount: PriceSpecification | null
+  minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
   subscriptions: ISubscription[]
 }
