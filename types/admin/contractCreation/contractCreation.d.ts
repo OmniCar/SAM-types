@@ -197,6 +197,7 @@ export interface IAvailableFreeWarranty {
   contractStartDate: Date
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
   weight: number
+  warrantyColor: string
 }
 
 export interface IContractCreationResponse {
