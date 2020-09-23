@@ -39,10 +39,12 @@ export enum FormattingLocale {
 export enum ContractActionType {
   create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
   sendDraft = 120, // A draft was sent to the customer
-  sendOffer = 140, // An offer was sent to the customer
+  buyNow = 130, // Customer visited payment page
+  createOffer = 140, // An offer was created
   sendOfferReminderMail = 150, // A reminder about offer was sent to the customer
   sendOfferReminderMail2 = 152, // A reminder about offer was sent to the customer
   sendOfferReminderMail3 = 154, // A reminder about offer was sent to the customer
+  sendContractOfferMail = 156, // A contract offer was sent to the customer
   rejectOffer = 160, // The customer rejected the offer
   acceptOffer = 180, // The customer accepted the offer
   approveOffer = 200, // Who approved it? that would be the customer
