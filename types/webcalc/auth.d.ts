@@ -10,10 +10,6 @@ export interface IWebcalcCustomerIdResponse {
   id: number
 }
 
-export interface IWebcalcUserRoleResponse {
-  role: UserRole | undefined
-}
-
 export interface IWebcalcLoginResponse {
   id: number
   username: string
