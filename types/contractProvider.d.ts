@@ -1,5 +1,6 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryResponse, ICountryRequest } from './country'
+import { WarrantyOnboardingConfig } from './index'
 
 export interface IContractProviderRequest {
   administrativeName: string
@@ -26,6 +27,7 @@ export interface IContractProviderRequest {
   webLogoSquare: string | null
   freeWarrantiesButton: boolean
   parentProviderId: number | null
+  warrantyOnboardingConfig: WarrantyOnboardingConfig | null
 }
 
 export interface IContractProviderResponse {
@@ -57,4 +59,5 @@ export interface IContractProviderResponse {
   webLogoSquareUrl?: string | null
   freeWarrantiesButton: boolean
   parentProviderId: number | null
+  warrantyOnboardingConfig: WarrantyOnboardingConfig | null
 }
