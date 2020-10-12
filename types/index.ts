@@ -73,6 +73,10 @@ export enum ResponseWarnings {
 
 export type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage'
 
+export enum WarrantyOnboardingConfig {
+  interdan = "Interdan"
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'
