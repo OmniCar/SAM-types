@@ -19,3 +19,8 @@ export interface IContractProvider {
   webLogoBanner?: string | null
   webLogoSquare?: string | null
 }
+
+export interface ICreateTestContractProvider {
+  administrativeName: string
+  countryIsoCode: string
+}
