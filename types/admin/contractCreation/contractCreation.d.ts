@@ -166,6 +166,7 @@ export interface IAvailableFreeWarrantyRequest {
   brandId?: number
   vehicleModelName: string
   vehicleModelId?: number
+  modelYear: number
   fuelTypeName: string
   fuelTypeId?: number
   startMileage: number
