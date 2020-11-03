@@ -4,4 +4,5 @@ export interface ITemplateLookupRequest {
   fuelType: string
   regDate: string
   vin?: string
+  modelYear?: number
 }
