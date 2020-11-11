@@ -144,6 +144,7 @@ export interface ICreateFreeWarrantyRequest {
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
+  startDate?: Date
 }
 
 export interface ICreateFreeWarrantyResponse {
