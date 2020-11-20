@@ -13,4 +13,5 @@ export interface IWorkshopOperation {
   mileage: number
   date: Date | string
   description: string
+  contractPrettyIdentifier?: string
 }
