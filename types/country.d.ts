@@ -6,4 +6,5 @@ export interface ICountryResponse {
   countryId: number
   isoName: string
   countryName?: string
+  localeName?: string
 }
