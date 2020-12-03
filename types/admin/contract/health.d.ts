@@ -1,1 +1,1 @@
-export type IContractHealth = 'RISK_OF_OVERMILEAGE' | 'NEGATIVE_BALANCE'
+export type IContractHealth = 'RISK_OF_OVERMILEAGE' | 'NEGATIVE_BALANCE' | 'OVERPAID'

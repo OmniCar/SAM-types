@@ -58,6 +58,7 @@ export enum ContractActionType {
   activate = 300, // The contract was activated by either the customer or the seller
   expire = 400, // The contract offer expired and archived
   expireContract = 410, // The contract expired
+  sendContractExpiredMail = 411, // A expired mail was sent to the customer
   changeVehicleData = 420, // Meta data for the vehicle was changed
   changeCustomerData = 440, // Meta data for the customer was changed
   changePaymentData = 460, // Information about payment was changed
