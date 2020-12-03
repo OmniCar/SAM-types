@@ -56,7 +56,8 @@ export enum ContractActionType {
   acceptOffer = 180, // The customer accepted the offer
   approveOffer = 200, // Who approved it? that would be the customer
   activate = 300, // The contract was activated by either the customer or the seller
-  expire = 400, // The contract expired
+  expire = 400, // The contract offer expired and archived
+  expireContract = 410, // The contract expired
   changeVehicleData = 420, // Meta data for the vehicle was changed
   changeCustomerData = 440, // Meta data for the customer was changed
   changePaymentData = 460, // Information about payment was changed
