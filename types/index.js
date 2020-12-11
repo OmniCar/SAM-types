@@ -73,6 +73,7 @@ var ContractActionType;
     ContractActionType[ContractActionType["modify"] = 500] = "modify";
     ContractActionType[ContractActionType["suspend"] = 600] = "suspend";
     ContractActionType[ContractActionType["reactivate"] = 700] = "reactivate";
+    ContractActionType[ContractActionType["pauseSubscription"] = 720] = "pauseSubscription";
     ContractActionType[ContractActionType["terminate"] = 800] = "terminate";
     ContractActionType[ContractActionType["settle"] = 900] = "settle";
     ContractActionType[ContractActionType["archive"] = 1000] = "archive";
