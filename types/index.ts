@@ -65,6 +65,7 @@ export enum ContractActionType {
   modify = 500, // (extended) The contract was changed in a way that changes the financial agreement, if a new contract was created as a sideeffect, information about the new contract is in the details
   suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
   reactivate = 700, // Who unsuspended the contract
+  pauseSubscription = 720, // The subscription is paused because of contract paid off
   terminate = 800, // Who terminated the contract
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
   archive = 1000, // Archive contract
