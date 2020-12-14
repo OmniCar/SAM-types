@@ -66,7 +66,7 @@ export enum ContractActionType {
   changePaymentData = 460, // Information about payment was changed
   modify = 500, // (extended) The contract was changed in a way that changes the financial agreement, if a new contract was created as a sideeffect, information about the new contract is in the details
   suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
-  successfulInvoicePayment = 690, // Successful invoice pending. Contract soo to be re-activated.
+  successfulInvoicePayment = 690, // Successful invoice payment. Contract soon to be re-activated.
   reactivate = 700, // Who unsuspended the contract
   terminate = 800, // Who terminated the contract
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
