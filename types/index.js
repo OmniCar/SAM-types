@@ -75,6 +75,8 @@ var ContractActionType;
     ContractActionType[ContractActionType["reactivate"] = 700] = "reactivate";
     ContractActionType[ContractActionType["pauseSubscription"] = 720] = "pauseSubscription";
     ContractActionType[ContractActionType["terminate"] = 800] = "terminate";
+    ContractActionType[ContractActionType["registerCashPayment"] = 810] = "registerCashPayment";
+    ContractActionType[ContractActionType["registerCashPayout"] = 820] = "registerCashPayout";
     ContractActionType[ContractActionType["settle"] = 900] = "settle";
     ContractActionType[ContractActionType["archive"] = 1000] = "archive";
 })(ContractActionType = exports.ContractActionType || (exports.ContractActionType = {}));
