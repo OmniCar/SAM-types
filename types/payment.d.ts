@@ -42,3 +42,20 @@ export interface IPreparePaymentResponse {
   stripePublicKey?: string
   stripeAccount?: string
 }
+
+/**
+ * Payload to create cash payment & cash payout invoices
+ */
+export interface ICashPaymentRequest {
+  paymentAmount: number
+  withVat: boolean
+  isPayout: boolean
+}
+
+/**
+ * Payload to create provider payment invoices
+ */
+export interface IProviderPaymentRequest {
+  paymentAmount: number
+  withVat: boolean
+}
