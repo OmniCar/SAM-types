@@ -1,4 +1,4 @@
-export interface ISettlementInvoices {
+export interface ISettlementInvoicesBalance {
   regularPayments: number
   cashPayments: number
   providerPayments: number
@@ -8,6 +8,6 @@ export interface IContractBalanceStatistics {
   workshopBalance: number
   paymentBalance: number
   invoicesTotalSum: number
-  settlementInvoices: ISettlementInvoices
+  settlementInvoices: ISettlementInvoicesBalance
   providerTotalCost: number
 }
