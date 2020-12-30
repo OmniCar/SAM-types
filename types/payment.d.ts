@@ -51,3 +51,11 @@ export interface ICashPaymentRequest {
   withVat: boolean
   isPayout: boolean
 }
+
+/**
+ * Payload to create provider payment invoices
+ */
+export interface IProviderPaymentRequest {
+  paymentAmount: number
+  withVat: boolean
+}

@@ -69,6 +69,7 @@ export enum ContractActionType {
   terminate = 800, // Who terminated the contract
   registerCashPayment = 810, // Registered cash payment. Helps to solve balance issues on a contract
   registerCashPayout = 820, // Registered cash payout. Helps to solve balance issues on a contract
+  registerProviderPayment = 830, // Registered provider payment. It means that provider forgive some amount. Helps to solve balance issues on a contract
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
   archive = 1000, // Archive contract
 }
