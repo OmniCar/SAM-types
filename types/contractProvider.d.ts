@@ -26,6 +26,7 @@ export interface IContractProviderRequest {
   webLogoSquare: string | null
   freeWarrantiesButton: boolean
   parentProviderId: number | null
+  autoSettlement: boolean
 }
 
 export interface IContractProviderResponse {
@@ -57,4 +58,5 @@ export interface IContractProviderResponse {
   webLogoSquareUrl?: string | null
   freeWarrantiesButton: boolean
   parentProviderId: number | null
+  autoSettlement: boolean
 }
