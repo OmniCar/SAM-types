@@ -1,4 +1,5 @@
 export interface ITemplateLookupRequest {
+  regNo?: string
   brand: string
   model: string
   fuelType: string
