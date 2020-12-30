@@ -67,6 +67,9 @@ export declare enum ContractActionType {
     reactivate = 700,
     pauseSubscription = 720,
     terminate = 800,
+    registerCashPayment = 810,
+    registerCashPayout = 820,
+    registerProviderPayment = 830,
     settle = 900,
     archive = 1000
 }
