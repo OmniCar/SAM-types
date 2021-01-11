@@ -35,6 +35,8 @@ export interface IContractDetailsRecord {
   flags: ServiceContractFlag[]
   customTerms?: string
   adjustedFrom?: string
+  createdByProvider?: string
+  provider?: string
 }
 
 export interface IAdminCustomTermsRecord {
