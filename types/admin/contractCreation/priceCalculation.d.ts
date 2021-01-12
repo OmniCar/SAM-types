@@ -4,6 +4,9 @@ import { ContractType } from './contractCreation'
 export interface IContractCalculationRequest {
   type: ContractType
   contractTemplateId: number
+  registrationNumber: string
+  modelYear: number
+  serviceVariantId: string
   duration: number
   mileage: number
   registrationDate: string
@@ -13,6 +16,7 @@ export interface IContractCalculationRequest {
   isAdjustment: boolean
   adjustedFrom?: string
   isDownpaymentDistributed: boolean
+  startMileage?: number
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
@@ -25,7 +29,7 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
   amountPerPayment: number
   brandName: string
   vehicleModelName: string
-  fuelTypeName: string    
+  fuelTypeName: string
 }
 
 // The type returned by a price calculation
