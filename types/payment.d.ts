@@ -50,6 +50,8 @@ export interface ICashPaymentRequest {
   paymentAmount: number
   withVat: boolean
   isPayout: boolean
+  comment?: string
+  shareWithCustomer?: boolean
 }
 
 /**
@@ -58,4 +60,6 @@ export interface ICashPaymentRequest {
 export interface IProviderPaymentRequest {
   paymentAmount: number
   withVat: boolean
+  comment?: string
+  shareWithCustomer?: boolean
 }
