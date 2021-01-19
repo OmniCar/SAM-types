@@ -1,13 +1,15 @@
+import { PriceSpecification } from 'index'
+
 export interface ISettlementInvoicesBalance {
-  regularPayments: number
-  cashPayments: number
-  providerPayments: number
+  regularPayments: PriceSpecification
+  cashPayments: PriceSpecification
+  providerPayments: PriceSpecification
 }
 
 export interface IContractBalanceStatistics {
-  workshopBalance: number
-  paymentBalance: number
-  invoicesTotalSum: number
+  workshopBalance: PriceSpecification
+  paymentBalance: PriceSpecification
+  invoicesTotalSum: PriceSpecification
   settlementInvoices: ISettlementInvoicesBalance
-  providerTotalCost: number
+  providerTotalCost: PriceSpecification
 }
