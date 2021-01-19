@@ -1,4 +1,4 @@
-import { PriceSpecification } from 'index'
+import { PriceSpecification } from '../../index'
 
 export interface ISettlementInvoicesBalance {
   regularPayments: PriceSpecification
