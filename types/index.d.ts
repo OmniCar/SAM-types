@@ -70,6 +70,8 @@ export declare enum ContractActionType {
     registerCashPayment = 810,
     registerCashPayout = 820,
     registerProviderPayment = 830,
+    createStripeRefund = 840,
+    registerRefundedCharge = 850,
     settle = 900,
     archive = 1000
 }

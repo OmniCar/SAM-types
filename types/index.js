@@ -78,6 +78,8 @@ var ContractActionType;
     ContractActionType[ContractActionType["registerCashPayment"] = 810] = "registerCashPayment";
     ContractActionType[ContractActionType["registerCashPayout"] = 820] = "registerCashPayout";
     ContractActionType[ContractActionType["registerProviderPayment"] = 830] = "registerProviderPayment";
+    ContractActionType[ContractActionType["createStripeRefund"] = 840] = "createStripeRefund";
+    ContractActionType[ContractActionType["registerRefundedCharge"] = 850] = "registerRefundedCharge";
     ContractActionType[ContractActionType["settle"] = 900] = "settle";
     ContractActionType[ContractActionType["archive"] = 1000] = "archive";
 })(ContractActionType = exports.ContractActionType || (exports.ContractActionType = {}));
