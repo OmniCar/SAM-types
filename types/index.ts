@@ -94,6 +94,14 @@ export enum ResponseWarnings {
 
 export type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage'
 
+export enum SettlementPaymentType {
+  cashPayout = 1,
+  cashPayment,
+  stripeRefund,
+  stripePayment,
+  providerPayment,
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'

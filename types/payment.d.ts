@@ -1,4 +1,5 @@
 import { PriceSpecification } from './priceSpecification'
+import { SettlementPaymentType } from './index'
 
 /** supported payment gateways */
 export type PaymentGateway = 'Stripe' | 'B2B' | 'NONE' | 'Mock'
@@ -44,22 +45,12 @@ export interface IPreparePaymentResponse {
 }
 
 /**
- * Payload to create cash payment & cash payout invoices
+ * Payload to create settlement payments
  */
-export interface ICashPaymentRequest {
+export interface ISettlementPaymentRequest {
   paymentAmount: number
   withVat: boolean
-  isPayout: boolean
-  comment?: string
-  shareWithCustomer?: boolean
-}
-
-/**
- * Payload to create provider payment invoices
- */
-export interface IProviderPaymentRequest {
-  paymentAmount: number
-  withVat: boolean
+  type: SettlementPaymentType
   comment?: string
   shareWithCustomer?: boolean
 }
