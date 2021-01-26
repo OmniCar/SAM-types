@@ -94,4 +94,12 @@ var ResponseWarnings;
 (function (ResponseWarnings) {
     ResponseWarnings[ResponseWarnings["GenericWarning"] = 499] = "GenericWarning";
 })(ResponseWarnings = exports.ResponseWarnings || (exports.ResponseWarnings = {}));
+var SettlementPaymentType;
+(function (SettlementPaymentType) {
+    SettlementPaymentType[SettlementPaymentType["cashPayout"] = 1] = "cashPayout";
+    SettlementPaymentType[SettlementPaymentType["cashPayment"] = 2] = "cashPayment";
+    SettlementPaymentType[SettlementPaymentType["stripeRefund"] = 3] = "stripeRefund";
+    SettlementPaymentType[SettlementPaymentType["stripePayment"] = 4] = "stripePayment";
+    SettlementPaymentType[SettlementPaymentType["providerPayment"] = 5] = "providerPayment";
+})(SettlementPaymentType = exports.SettlementPaymentType || (exports.SettlementPaymentType = {}));
 //# sourceMappingURL=index.js.map

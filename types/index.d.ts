@@ -85,6 +85,13 @@ export declare enum ResponseWarnings {
     GenericWarning = 499
 }
 export declare type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage';
+export declare enum SettlementPaymentType {
+    cashPayout = 1,
+    cashPayment = 2,
+    stripeRefund = 3,
+    stripePayment = 4,
+    providerPayment = 5
+}
 export * from './address';
 export * from './admin';
 export * from './app';
