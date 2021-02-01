@@ -10,3 +10,13 @@ export interface IContractActionResponse {
   userName: string
   comment: string
 }
+
+export interface ISettlementActionResponse {
+  id: number
+  created: Date | string
+  type: ContractActionType
+  userName: string
+  settlementComment?: string
+  shareComment?: boolean
+  amount?: number
+}
