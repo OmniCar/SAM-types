@@ -16,7 +16,7 @@ export interface ISettlementActionResponse {
   created: Date | string
   type: ContractActionType
   userName: string
-  settlementComment?: string
-  shareComment?: boolean
-  amount?: number
+  settlementComment: string
+  shareComment: boolean
+  amount: number
 }
