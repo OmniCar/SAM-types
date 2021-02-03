@@ -11,6 +11,12 @@ export interface IContractActionResponse {
   comment: string
 }
 
+export interface ISettlementActionRequest {
+  id: number
+  settlementComment: string
+  shareComment: boolean
+}
+
 export interface ISettlementActionResponse {
   id: number
   created: Date | string
