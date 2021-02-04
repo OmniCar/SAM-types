@@ -49,8 +49,7 @@ export interface IPreparePaymentResponse {
  */
 export interface ISettlementPaymentRequest {
   paymentAmount: number
-  withVat: boolean
   type: SettlementPaymentType
   comment?: string
-  shareWithCustomer?: boolean
+  shareComment?: boolean
 }
