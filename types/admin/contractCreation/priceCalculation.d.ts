@@ -25,6 +25,11 @@ export interface IStandardContractCalculationRequest extends IContractCalculatio
   fuelTypeId: number
 }
 
+export interface IStandardAxContractCalculationRequest extends IContractCalculationRequest {
+  brandName: string
+  vehicleModelName: string
+  fuelTypeName: string
+}
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   amountPerPayment: number
   brandName: string
