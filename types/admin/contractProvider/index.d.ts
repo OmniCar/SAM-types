@@ -18,4 +18,5 @@ export interface IContractProvider {
   isShowLogoOnWeb?: boolean
   webLogoBanner?: string | null
   webLogoSquare?: string | null
+  vatPct: number
 }
