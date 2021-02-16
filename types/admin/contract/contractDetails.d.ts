@@ -34,6 +34,10 @@ export interface IContractDetailsRecord {
   flags: ServiceContractFlag[]
   customTerms?: string
   adjustedFrom?: string
+  settledMileage?: number | null
+  overDrivenCharge?: number
+  underDrivenCharge?: number
+  calculationMethod?: number
 }
 
 export interface IAdminCustomTermsRecord {
