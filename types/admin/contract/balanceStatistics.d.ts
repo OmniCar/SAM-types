@@ -17,9 +17,8 @@ export interface IContractBalanceStatistics {
   providerTotalCost: PriceSpecification
   settlementInfo: ISettlementInfo
 }
-
 export interface ISettlementInfo {
   settlementDate?: Date
-  username?: string
+  userName?: string
   autoSettlement?: boolean
 }
