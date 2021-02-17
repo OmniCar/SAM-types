@@ -1,7 +1,6 @@
 import { PriceSpecification } from '../../index'
 
 export interface ISettlementInvoicesBalance {
-  totalInvoicesSum: PriceSpecification
   stripePayment: PriceSpecification
   stripeRefund: PriceSpecification
   cashPayment: PriceSpecification
@@ -16,6 +15,7 @@ export interface IContractBalanceStatistics {
   invoicesTotalSum: PriceSpecification
   settlementInvoices: ISettlementInvoicesBalance
   providerTotalCost: PriceSpecification
+  settlementInvoicesTotalSum: PriceSpecification
   settlementInfo?: ISettlementInfo
 }
 export interface ISettlementInfo {
