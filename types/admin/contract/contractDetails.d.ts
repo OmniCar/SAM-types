@@ -43,3 +43,8 @@ export interface IContractDetailsRecord {
 export interface IAdminCustomTermsRecord {
   customTerms: string
 }
+
+export interface IMileageListResponse {
+  mileage: number
+  date: Date | string
+}
