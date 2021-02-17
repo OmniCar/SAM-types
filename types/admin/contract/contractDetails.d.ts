@@ -33,6 +33,8 @@ export interface IContractDetailsRecord {
   contractTemplateIsArchived: boolean
   serviceVariantId: string
   flags: ServiceContractFlag[]
+  stripeCustomerLink: string | null
+  stripeSubscriptionLink: string | null
   customTerms?: string
   adjustedFrom?: string
   createdByProvider?: string
