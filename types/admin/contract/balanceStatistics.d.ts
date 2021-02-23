@@ -17,7 +17,15 @@ export interface IContractBalanceStatistics {
   providerTotalCost: PriceSpecification
   settlementInvoicesTotalSum: PriceSpecification
   settlementInfo?: ISettlementInfo
+  subscriptionPaidTotalSum: PriceSpecification
+  underOverMileage?: IUnderOverMileageInfo
 }
+
+export interface IUnderOverMileageInfo {
+  mileage: number
+  cost: PriceSpecification
+}
+
 export interface ISettlementInfo {
   settlementDate: Date
   userName: string
