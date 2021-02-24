@@ -18,6 +18,7 @@ export interface IContractBalanceStatistics {
   settlementInvoicesTotalSum: PriceSpecification
   settlementInfo?: ISettlementInfo
   subscriptionPaidTotalSum: PriceSpecification
+  shouldPaid: PriceSpecification
   underOverMileage?: IUnderOverMileageInfo
 }
 
