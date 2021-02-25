@@ -12,7 +12,7 @@ export interface IContractBalanceStatistics {
   workshopBalance: PriceSpecification
   workshopCosts: PriceSpecification
   paymentBalance: PriceSpecification
-  invoicesTotalSum: PriceSpecification
+  paidInvoicesTotalSum: PriceSpecification
   settlementInvoices: ISettlementInvoicesBalance
   providerTotalCost: PriceSpecification
   settlementInvoicesTotalSum: PriceSpecification
