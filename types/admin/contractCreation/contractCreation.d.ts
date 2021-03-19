@@ -21,6 +21,7 @@ export interface IContractCreationData {
   externalWarrantiesShowButton?: boolean
   cars: ICarCollection
   templates: IContractTemplateResponse[]
+  templatesDissableAll?: boolean
 }
 
 export interface IContractCreationPayment {
