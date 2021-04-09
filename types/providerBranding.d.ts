@@ -22,6 +22,8 @@ export interface IProviderInformationResponse {
   email: string
   termsOfTradeRef: string
   webCalcEnabled: boolean
+  webCalcTrackingPixelOrderConfirmationUrl: string
+  webCalcTrackingPixelOrderConfirmationLastUpdated: string
   offerRequestsEnabled: boolean
 }
 
