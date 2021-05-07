@@ -1,4 +1,4 @@
-import { ContractState } from './../../index'
+import { ContractState, IIncludedContractOption } from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
@@ -23,7 +23,7 @@ export interface IApiVehicleContract {
   contractState: ContractState
   prettyIdentifier: string
   pdfUrl: string
-  includedOptions: IApiVehicleIncludedContractOption[]
+  includedOptions: IIncludedContractOption[]
   contractTemplateName: string
   duration: number
   mileage: number

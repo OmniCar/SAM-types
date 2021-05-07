@@ -145,6 +145,7 @@ export interface ICreateFreeWarrantyRequest {
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
+  startDate?: Date
 }
 
 export interface ICreateFreeWarrantyResponse {
@@ -167,6 +168,7 @@ export interface IAvailableFreeWarrantyRequest {
   brandId?: number
   vehicleModelName: string
   vehicleModelId?: number
+  modelYear: number
   fuelTypeName: string
   fuelTypeId?: number
   startMileage: number

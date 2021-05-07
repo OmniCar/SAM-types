@@ -5,7 +5,7 @@ export enum ContractState {
   OfferRevoked = 120,
   OfferRejected = 130, // not used
   Active = 200,
-  ExternalWarranty = 210,
+  ActivePrePaid = 210,
   Suspended = 400,
   Terminated = 500,
   Completed = 800, // not used
@@ -33,7 +33,12 @@ export enum AggregateType {
 }
 
 export enum FormattingLocale {
-  'sv-SE', 'uk-UA', 'da-DK', 'en-GB', 'fi-FI', 'en-US'
+  'sv-SE',
+  'uk-UA',
+  'da-DK',
+  'en-GB',
+  'fi-FI',
+  'en-US',
 }
 
 export enum ContractActionType {
@@ -42,9 +47,15 @@ export enum ContractActionType {
   buyNow = 130, // Customer visited payment page
   createOffer = 140, // An offer was created
   sendOfferReminderMail = 150, // A reminder about offer was sent to the customer
+  sendContractTerminationMail = 151, // A termination mail was sent to the customer
   sendOfferReminderMail2 = 152, // A reminder about offer was sent to the customer
+  sendContractActivationMail = 153, // A contract activation mail was sent to the customer
   sendOfferReminderMail3 = 154, // A reminder about offer was sent to the customer
+  sendContractSuspendedMail = 155, // A suspended mail was sent to the customer
   sendContractOfferMail = 156, // A contract offer was sent to the customer
+  sendContractReactivationMail = 157, // A contract reactivation mail was sent to the customer
+  sendContractAdjustmentMail = 158, // A contract adjustment mail was sent to the customer
+  sendContractSettlementMail = 159, // A contract settlement mail was sent to the customer
   rejectOffer = 160, // The customer rejected the offer
   acceptOffer = 180, // The customer accepted the offer
   approveOffer = 200, // Who approved it? that would be the customer
@@ -55,9 +66,11 @@ export enum ContractActionType {
   changePaymentData = 460, // Information about payment was changed
   modify = 500, // (extended) The contract was changed in a way that changes the financial agreement, if a new contract was created as a sideeffect, information about the new contract is in the details
   suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
+  successfulInvoicePayment = 690, // Successful invoice payment. Contract soon to be re-activated.
   reactivate = 700, // Who unsuspended the contract
   terminate = 800, // Who terminated the contract
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
+  archive = 1000, // Archive contract
 }
 
 export enum OfferRequestState {
@@ -74,7 +87,7 @@ export enum ResponseWarnings {
 export type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage'
 
 export enum WarrantyOnboardingConfig {
-  interdan = "Interdan"
+  interdan = 'Interdan',
 }
 
 export * from './address'
