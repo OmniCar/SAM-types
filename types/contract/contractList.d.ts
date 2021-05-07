@@ -29,7 +29,6 @@ export type ContractListOrderByType =
   | 'customerName'
   | 'registrationNumber'
   | 'sellerName'
-  | 'createdByProvider'
 
 export interface IWarrantyListRecord {
   prettyIdentifier: string

@@ -31,10 +31,10 @@ export interface IContractDetailsRecord {
   contractTemplateName: string
   contractTemplateDescription: string
   contractTemplateIsArchived: boolean
-  serviceVariantId: string
+  // serviceVariantId: string
   flags: ServiceContractFlag[]
-  stripeCustomerLink: string | null
-  stripeSubscriptionLink: string | null
+  // stripeCustomerLink: string | null
+  // stripeSubscriptionLink: string | null
   customTerms?: string
   adjustedFrom?: string
   createdByProvider?: string

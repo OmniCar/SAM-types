@@ -20,5 +20,5 @@ export interface IContractOfferResponse {
   contractId: number
   token: string
   paymentGateway: PaymentGateway
-  prettyIdentifier: string
+  // prettyIdentifier: string
 }

@@ -2,7 +2,7 @@ import { IsoLocale } from '../../locale'
 
 export interface IContractProvider {
   providerId: number
-  parentProviderId: number | null
+  // parentProviderId: number | null
   administrativeName: string
   logo: string
   email: string

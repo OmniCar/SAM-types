@@ -1,11 +1,9 @@
-import { IsoLocale } from '../locale'
 import { DbType, AggregateType } from '../index'
 
 export interface IDbColumn {
   name: string
   dbName?: string
   description: string
-  descriptionMap?: TTranslationMap
   dbType: DbType
   isCalculatedColumn?: boolean
   isGroupBy?: boolean
@@ -15,10 +13,8 @@ export interface IDbColumn {
 
 export interface IReportDefinition {
   name: string
-  defaultDescription: string
   columns: IDbColumn[]
   groupByColumns: string[]
-  descriptionMap?: TTranslationMap
 }
 
 export interface IReportSearchRequest {
@@ -26,8 +22,6 @@ export interface IReportSearchRequest {
   search: { col: string; search: string }[]
   groupBy: string[]
 }
-
-export type TTranslationMap = { [key in IsoLocale]?: string }
 
 export interface IColDefResponse {
   header: string
