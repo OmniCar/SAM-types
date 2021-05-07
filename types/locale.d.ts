@@ -8,4 +8,4 @@ export interface Locale {
   vatPct: number
 }
 
-export type IsoLocale = 'da-DK' | 'sv-SE' | 'en-GB' | 'fi-FI'
+export type IsoLocale = 'da-DK' | 'sv-SE' | 'fi-FI' | 'nb-NO' | 'en-GB'
