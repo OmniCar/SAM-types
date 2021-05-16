@@ -20,6 +20,7 @@ export interface IReportDefinition {
   groupByColumns: string[]
   descriptionMap?: TTranslationMap
 }
+export type IReportDefinitionsResponse = { [key in string]?: IReportDefinition[] }
 
 export interface IReportSearchRequest {
   name: string
