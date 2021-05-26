@@ -52,7 +52,9 @@ export enum ContractActionType {
   sendContractActivationMail = 153, // A contract activation mail was sent to the customer
   sendOfferReminderMail3 = 154, // A reminder about offer was sent to the customer
   sendContractSuspendedMail = 155, // A suspended mail was sent to the customer
-  sendContractOfferMail = 156, // A contract offer was sent to the customer
+  sendContractOfferCreatedMail = 156, // Email sent to the customer informing offer has been created.
+  resendContractOfferMail = 1565, // Resent offer to the customer via "Resend Offer" action.
+  sendOfferToOneselfMail = 1566, // End-user sent the offer to oneself (via Webcalc).
   sendContractReactivationMail = 157, // A contract reactivation mail was sent to the customer
   sendContractAdjustmentMail = 158, // A contract adjustment mail was sent to the customer
   sendContractSettlementMail = 159, // A contract settlement mail was sent to the customer
