@@ -24,7 +24,7 @@ export type TVehicleType =
   | 'Bus'
   | 'Truck' // sv: Lastbil.
   | 'Special vehicle'
-  | 'Van'
+  | 'Van' // sv: Skåpbil/Paketbil/Varubil.
   | 'Car'
   | 'Tractor'
   | 'Mobile machinery'
