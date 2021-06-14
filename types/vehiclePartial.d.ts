@@ -1,6 +1,7 @@
 import { Model } from './model'
 import { Brand } from './brand'
 import { FuelType } from './fuelType'
+import { TVehicleType } from './vehicle'
 
 // Note: Only vin is required, rest are optional.
 export interface VehiclePartial {
@@ -12,4 +13,6 @@ export interface VehiclePartial {
   model?: Model
   fuelType?: FuelType
   modelYear?: number
+  engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
+  vehicleType?: TVehicleType
 }
