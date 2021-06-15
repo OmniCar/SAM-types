@@ -169,6 +169,7 @@ export interface IAvailableFreeWarrantyRequest {
   vehicleModelName: string
   vehicleModelId?: number
   modelYear: number
+  engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
   fuelTypeName: string
   fuelTypeId?: number
   startMileage: number
