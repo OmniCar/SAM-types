@@ -49,3 +49,12 @@ export interface IReportSearchResponseArrays {
   types: DbType[]
   rows: CellData[][]
 }
+
+export interface ICheckTranslationsRequest {
+  url: string
+  keys: string[]
+}
+
+export interface ICheckTranslationsResponse {
+  missingTranslations: { [locale in IsoLocale | '']?: string[] }
+}

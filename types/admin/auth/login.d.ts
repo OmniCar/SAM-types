@@ -22,4 +22,5 @@ export interface ILoginResponse {
   offerRequestsEnabled?: boolean
   disableContractTemplates?: boolean
   isSuperAdmin?: boolean
+  isDev?: boolean
 }
