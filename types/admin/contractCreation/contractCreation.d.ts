@@ -2,7 +2,7 @@ import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
 import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
-import { Vehicle } from '../../vehicle'
+import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
@@ -141,7 +141,8 @@ export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
   modelModelId?: number
-  vehicle: Vehicle
+  // vehicle: Vehicle
+  vehicleAlongItsContracts: VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
@@ -222,6 +223,7 @@ export interface IAdminContractActivationResponse {
 export interface IAdminContractResponse {
   type: ContractType
   vehicle: Vehicle
+  vehicleAlongItsContracts: VehicleAlongItsContracts //NEW
   contractTemplate: IContractTemplateResponse
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]
