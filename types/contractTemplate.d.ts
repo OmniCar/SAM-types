@@ -2,6 +2,8 @@ import { IContractOptionResponse } from './contractOption'
 import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfService'
 import { PriceSpecification } from './priceSpecification'
 
+export type PriceSource = 'Pricelist' | 'Autoexperten'
+
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
   providerId: number
@@ -23,6 +25,7 @@ export interface IContractTemplateRequest {
   underDrivenCharge: PriceSpecification
   overDrivenCharge: PriceSpecification
   calculationMethod: number
+  priceSource: PriceSource
   termsOfService: ITermsOfServiceRequest
   archived?: boolean
   formattedDescription: string | null
@@ -39,6 +42,7 @@ export interface IContractTemplateResponse {
   properties: IContractOptionResponse[]
   options: IContractOptionResponse[]
   calculationMethod: number
+  priceSource: PriceSource
   minAge: number
   maxAge: number
   defaultDuration: number
