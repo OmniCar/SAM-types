@@ -141,7 +141,6 @@ export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
   modelModelId?: number
-  // vehicle: Vehicle
   vehicleAlongItsContracts: VehicleAlongItsContracts
   startMileage: number
   customerId?: number
@@ -223,7 +222,6 @@ export interface IAdminContractActivationResponse {
 export interface IAdminContractResponse {
   type: ContractType
   vehicle: Vehicle
-  // vehicleAlongItsContracts: VehicleAlongItsContracts //NEW!!might not be needed
   contractTemplate: IContractTemplateResponse
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]

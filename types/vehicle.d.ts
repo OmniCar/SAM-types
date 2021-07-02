@@ -17,8 +17,6 @@ export interface Vehicle {
   modelYear: number
   engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
   vehicleType?: TVehicleType
-  // contracts?: VehicleContracts    //tillfälligt aktiverad
-  // hasActiveWarranty?: boolean  //tillfälligt aktiverad
 }
 
 export interface IRegistrationNumberResponse {
@@ -40,8 +38,6 @@ export interface IRegistrationNumberResponse {
  * and hasActiveWarranty added.
  */
 export interface VehicleAlongItsContracts extends Vehicle {
-  // contracts?: VehicleContracts
-  // hasActiveWarranty?: boolean
   contracts: VehicleContracts | undefined
   hasActiveWarranty: boolean | undefined
 }
