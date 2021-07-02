@@ -223,7 +223,7 @@ export interface IAdminContractActivationResponse {
 export interface IAdminContractResponse {
   type: ContractType
   vehicle: Vehicle
-  vehicleAlongItsContracts: VehicleAlongItsContracts //NEW
+  // vehicleAlongItsContracts: VehicleAlongItsContracts //NEW!!might not be needed
   contractTemplate: IContractTemplateResponse
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]

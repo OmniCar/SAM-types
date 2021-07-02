@@ -25,7 +25,7 @@ export interface IRegistrationNumberResponse {
   lookup: {
     vehicle: Vehicle
     debug?: {
-      lookupCacheStatus?: string // Free text.
+      lookupCacheStatus?: string // Free text, for debugging purposes - Hint with info if vehicle was fetched from cache or via fresh lookup.
     }
   }
   contracts?: VehicleContracts
