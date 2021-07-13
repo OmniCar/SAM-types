@@ -30,6 +30,9 @@ export interface IContractCreationPayment {
 }
 
 interface ICommonContractUpdateRequest {
+  contractTemplateId: number
+  serviceVariantId: string
+  serviceVariantName: string
   duration: number
   mileage: number
   optionIds: number[]
@@ -105,7 +108,6 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
-  contractTemplateId: number
   vehicle: Vehicle
   paymentGateway: PaymentGateway
   customerId?: number
@@ -115,9 +117,7 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {
-  contractTemplateId: number
-}
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'

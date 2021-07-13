@@ -57,4 +57,6 @@ export interface IContractTemplateResponse {
   showOnWebcalc: boolean
   maxEndMileage?: number
   maxEndAge?: number
+  serviceVariantId: string
+  serviceVariantName: string
 }
