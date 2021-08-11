@@ -6,6 +6,7 @@ import { PriceSpecification } from './../../priceSpecification'
 import { ServiceContractFlag, ContractType } from './../../admin/contractCreation'
 
 export interface IContractDetailsRecord {
+  serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
   contractPdfUrl: string
   duration: number
   endMileage: number
