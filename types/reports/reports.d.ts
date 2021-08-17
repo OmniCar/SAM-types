@@ -3,14 +3,10 @@ import { DbType, AggregateType } from '../index'
 
 export interface IDbColumn {
   name: string
-  dbName?: string
   description: string
   descriptionMap?: TTranslationMap
   dbType: DbType
-  isCalculatedColumn?: boolean
-  isGroupBy?: boolean
-  aggregate?: AggregateType
-  resultingDbType?: DbType
+  groupOnly?: true
 }
 
 export interface IReportDefinition {
@@ -42,6 +38,7 @@ export interface IReportSearchResponse {
   name: string
   cols: ColData
   data: RowData[]
+  links?: { [colName in string]: string }[]
 }
 
 export interface IReportSearchResponseArrays {
