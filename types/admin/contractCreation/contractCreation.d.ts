@@ -146,6 +146,7 @@ export interface ICreateFreeWarrantyRequest {
   customerId?: number
   customer?: IAdminCustomer
   startDate?: Date
+  finlandPriceId?: number
 }
 
 export interface ICreateFreeWarrantyResponse {
@@ -185,6 +186,7 @@ export interface IAvailableFreeWarrantyDurationPrice {
   durationMonths: number
   totalPrice: PriceSpecification
   customerPrice: PriceSpecification | null
+  finlandPriceId?: number
 }
 
 export interface IAvailableFreeWarranty {
