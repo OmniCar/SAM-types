@@ -43,15 +43,5 @@ export interface IContractChartsFilterParams {
   contractStates: ContractState[]
   templates: number[]
   sellers: number[]
-}
-
-export interface IContractChartsFilterParams {
-  contractStates: ContractState[]
-  templates: number[]
-  sellers: number[]
   created: IContractFilterDate
-}
-
-export interface IDashboardFilterParams {
-  dateRange: IContractFilterDate
 }

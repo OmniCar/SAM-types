@@ -1,3 +1,4 @@
+import { IContractFilterDate } from '../..';
 import { IChartDateValue, ITopSellerChart } from '../../chart'
 
 export interface IChartCollection {
@@ -48,4 +49,8 @@ export interface IDashboardContractCharts {
 
 export interface IDashboardContractChartViews {
   contract: IDashboardContractCharts[]
+}
+
+export interface IDashboardFilterParams {
+  dateRange: IContractFilterDate
 }
