@@ -43,6 +43,7 @@ export interface IContractChartsFilterParams {
   contractStates: ContractState[]
   templates: number[]
   sellers: number[]
+<<<<<<< master-for-releasetest
   created: IContractFilterDate
 }
 
@@ -50,9 +51,7 @@ export interface IContractChartsFilterParams {
   contractStates: ContractState[]
   templates: number[]
   sellers: number[]
+=======
+>>>>>>> moved IDashboardFilterParams to correct file
   created: IContractFilterDate
-}
-
-export interface IDashboardFilterParams {
-  dateRange: IContractFilterDate
 }
