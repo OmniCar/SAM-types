@@ -49,3 +49,7 @@ export interface IDashboardContractCharts {
 export interface IDashboardContractChartViews {
   contract: IDashboardContractCharts[]
 }
+
+export interface IDashboardFilterParams{
+  dateRange: { min: string; max: string }
+}
