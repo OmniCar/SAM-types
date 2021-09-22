@@ -17,6 +17,7 @@ export interface IDashboardCharts {
   activeContractsChartCollection: IChartCollection[]
   sellerChart: ITopSellerChart
   balanceChart: IBalanceChart
+  monthlyBalanceChart: IBalanceChart
 }
 
 export interface IDashboardQueryParams<Filtering = undefined> {
