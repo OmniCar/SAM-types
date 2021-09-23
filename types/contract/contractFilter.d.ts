@@ -24,6 +24,11 @@ export interface IContractFilterOptions {
   expired: IContractFilterDate
 }
 
+export interface IContractStatusCount {
+  contractState: ContractState
+  count: number
+}
+
 export interface IContractFilterParams {
   contractStates: ContractState[]
   templates: number[]

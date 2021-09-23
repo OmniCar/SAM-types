@@ -2,7 +2,7 @@ import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
 import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
-import { Vehicle } from '../../vehicle'
+import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
@@ -21,6 +21,7 @@ export interface IContractCreationData {
   externalWarrantiesShowButton?: boolean
   cars: ICarCollection
   templates: IContractTemplateResponse[]
+  templatesAllDisabled?: boolean
 }
 
 export interface IContractCreationPayment {
@@ -29,6 +30,9 @@ export interface IContractCreationPayment {
 }
 
 interface ICommonContractUpdateRequest {
+  contractTemplateId: number
+  serviceVariantId: string
+  serviceVariantName: string
   duration: number
   mileage: number
   optionIds: number[]
@@ -104,7 +108,6 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
-  contractTemplateId: number
   vehicle: Vehicle
   paymentGateway: PaymentGateway
   customerId?: number
@@ -114,9 +117,7 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {
-  contractTemplateId: number
-}
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
@@ -140,10 +141,11 @@ export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
   modelModelId?: number
-  vehicle: Vehicle
+  vehicleAlongItsContracts: VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
+  startDate?: Date
 }
 
 export interface ICreateFreeWarrantyResponse {
@@ -166,6 +168,8 @@ export interface IAvailableFreeWarrantyRequest {
   brandId?: number
   vehicleModelName: string
   vehicleModelId?: number
+  modelYear: number
+  engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
   fuelTypeName: string
   fuelTypeId?: number
   startMileage: number

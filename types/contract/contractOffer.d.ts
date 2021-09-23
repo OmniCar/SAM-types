@@ -1,5 +1,5 @@
 import { Customer } from '../customer'
-import { Vehicle } from '../vehicle'
+import { VehicleAlongItsContracts } from '../vehicle'
 import { IContractOptionResponse } from './../contractOption'
 import { IContractTemplateResponse } from './../contractTemplate'
 import { PaymentGateway } from './../payment'
@@ -7,7 +7,7 @@ import { PaymentGateway } from './../payment'
 export interface IContractOfferRequest {
   userId?: number
   customer?: Customer
-  vehicle?: Vehicle
+  vehicle?: VehicleAlongItsContracts
   duration: number
   mileage: number
   startMileage: number
@@ -20,4 +20,5 @@ export interface IContractOfferResponse {
   contractId: number
   token: string
   paymentGateway: PaymentGateway
+  prettyIdentifier: string
 }

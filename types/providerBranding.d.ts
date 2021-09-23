@@ -1,11 +1,12 @@
 import { IsoLocale } from './locale'
 
 export interface IBrandingPayloadResponse {
+  locale: IsoLocale
   paymentInformation: IStripeInformationResponse
   providerInformation: IProviderInformationResponse
   providerBranding: IProviderBrandingResponse[]
   providerStyling: IProviderStylingResponse
-  locale: IsoLocale
+  providerCustomization?: IProviderCustomizationResponse
 }
 
 export interface IStripeInformationResponse {
@@ -32,4 +33,10 @@ export interface IProviderBrandingResponse {
 export interface IProviderStylingResponse {
   brandingLogo: string
   hasProviderStyling: boolean
+}
+
+export interface IProviderCustomizationResponse {
+  applyWebcalcSkorstensgaardFix: boolean
+  webCalcTrackingPixelOrderConfirmationUrl: string
+  webCalcTrackingPixelOrderConfirmationLastUpdated: string
 }
