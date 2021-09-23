@@ -26,3 +26,8 @@ export interface ICreateTestContractProvider {
   administrativeName: string
   countryIsoCode: string
 }
+
+export interface ICreateTestContractProvider {
+  administrativeName: string
+  countryIsoCode: string
+}
