@@ -213,6 +213,7 @@ export interface IAvailableFreeWarranty {
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
   weight: number
   warrantyColor: string
+  fuelTypes: null | string[]
 }
 
 export interface IContractCreationResponse {
