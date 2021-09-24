@@ -8,12 +8,14 @@ import { ServiceContractFlag, ContractType } from './../../admin/contractCreatio
 export interface IContractDetailsRecord {
   serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
   contractPdfUrl: string
-  duration: number
-  endMileage: number
+  duration: number // Duration [months].
+  startMileage: number // Current meter/odometer-reading [km].
+  mileage: number // Allowed mileage/distance [km] to drive during contract duration [months].
+  endMileage: number // End-mileage [km] at end of duration [months].
+  maxEndMileage?: number // Absolute maximum end-mileage [km] for product - Hard mileage cap/limit.
   expirationDate: Date | string
   extendedFrom: IContractResponse | null
   includedOptions: IIncludedContractOption[] | null
-  mileage: number
   monthlyTemplatePrice: PriceSpecification
   monthlyPrice: PriceSpecification
   paymentMethod: PaymentGateway
@@ -24,7 +26,6 @@ export interface IContractDetailsRecord {
   reference: string
   seller?: IContactPersonResponse
   startDate: Date | string
-  startMileage: number
   termsPdfUrl: string
   totalPrice: PriceSpecification
   contractType: ContractType
