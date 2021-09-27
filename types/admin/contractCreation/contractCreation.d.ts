@@ -213,7 +213,7 @@ export interface IAvailableFreeWarranty {
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
   weight: number
   warrantyColor: string
-  fuelTypes: null | string[]
+  fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
 }
 
 export interface IContractCreationResponse {
