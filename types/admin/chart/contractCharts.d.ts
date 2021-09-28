@@ -45,7 +45,3 @@ export interface IContractChartsFilterParams {
   sellers: number[]
   created: IContractFilterDate
 }
-
-export interface IDashboardFilterParams {
-  dateRange: IContractFilterDate
-}
