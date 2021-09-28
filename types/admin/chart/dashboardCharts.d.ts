@@ -1,3 +1,4 @@
+import { IContractFilterDate } from '../..';
 import { IChartDateValue, ITopSellerChart } from '../../chart'
 
 export interface IChartCollection {
@@ -16,6 +17,7 @@ export interface IDashboardCharts {
   activeContractsChartCollection: IChartCollection[]
   sellerChart: ITopSellerChart
   balanceChart: IBalanceChart
+  monthlyBalanceChart: IBalanceChart
 }
 
 export interface IDashboardQueryParams<Filtering = undefined> {
@@ -50,6 +52,6 @@ export interface IDashboardContractChartViews {
   contract: IDashboardContractCharts[]
 }
 
-export interface IDashboardFilterParams{
-  dateRange: { min: string; max: string }
+export interface IDashboardFilterParams {
+  dateRange: IContractFilterDate
 }
