@@ -17,6 +17,7 @@ export interface IContractListRecord {
   health: IContractHealth[]
 }
 
+// **TODO: identifingNumber for reg and item num?
 export type ContractListOrderByType =
   | 'prettyIdentifier'
   | 'brand'
@@ -27,7 +28,7 @@ export type ContractListOrderByType =
   | 'contractTemplateDescription'
   | 'contractTemplateName'
   | 'customerName'
-  | 'registrationNumber'
+  | 'identifingNumber'
   | 'sellerName'
   | 'createdByProvider'
 
