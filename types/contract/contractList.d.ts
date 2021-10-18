@@ -12,7 +12,7 @@ export interface IContractListRecord {
   contractTemplateDescription: string
   customerName: string
   customerCompanyName: string
-  registrationNumber: string
+  productId: number
   sellerName: string
   health: IContractHealth[]
 }
@@ -31,6 +31,7 @@ export type ContractListOrderByType =
   | 'identifingNumber'
   | 'sellerName'
   | 'createdByProvider'
+  | 'productId'
 
 export interface IWarrantyListRecord {
   prettyIdentifier: string

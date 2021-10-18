@@ -2,6 +2,7 @@ import { IContractTemplateResponse } from '../contractTemplate'
 import { IContractOptionResponse } from '../contractOption'
 import { Customer } from '../customer'
 import { Vehicle } from '../vehicle'
+import { Product } from '../product'
 import { ICalculationResponse } from '../priceCalculation'
 import { ContractState, PaymentGateway } from '../index'
 import { IContractProviderResponse } from '../contractProvider'
@@ -9,7 +10,7 @@ import { IContractProviderResponse } from '../contractProvider'
 export interface IContractResponse {
   id: number
   customer: Customer
-  vehicle: Vehicle
+  product: Vehicle | Product
   duration: string
   mileage: string
   startMileage: number
