@@ -2,7 +2,7 @@ import { Brand } from "./brand";
 import { Model } from "./model";
 import { FuelType } from "./fuelType";
 
-export interface Product {
+export interface Other {
     id?: number
     serialNumber?: string
     serialNumber2?: string
