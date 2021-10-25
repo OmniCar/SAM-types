@@ -8,7 +8,7 @@ import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
 import { PriceSpecification } from './../../priceSpecification'
 import { ITermsOfServiceResponse } from '../../termsOfService'
-import { Other } from 'product'
+import { Other } from '../../product'
 
 export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
