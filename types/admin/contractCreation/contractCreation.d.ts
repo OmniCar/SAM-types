@@ -109,8 +109,7 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
-  product: Other
-  vehicle: Vehicle
+  product: Vehicle | Other
   paymentGateway: PaymentGateway
   customerId?: number
   customer?: IAdminCustomer
