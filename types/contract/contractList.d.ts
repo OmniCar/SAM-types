@@ -29,7 +29,6 @@ export type ContractListOrderByType =
   | 'contractTemplateDescription'
   | 'contractTemplateName'
   | 'customerName'
-  | 'productId'
   | 'registrationNumber'
   | 'serialNumber'
   | 'sellerName'
