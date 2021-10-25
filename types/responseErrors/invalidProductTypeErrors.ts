@@ -1,1 +1,1 @@
-type InvalidProductTypeErrors = 'INVALID_PRODUCT_TYPE'
+export type InvalidProductTypeErrors = 'INVALID_PRODUCT_TYPE'
