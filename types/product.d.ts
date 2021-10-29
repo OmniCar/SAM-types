@@ -1,7 +1,7 @@
 import { Brand } from "./brand";
 import { Model } from "./model";
 import { FuelType } from "./fuelType";
-import { VehicleContracts as ProductContracts } from "vehicleContracts";
+import { VehicleContracts as ProductContracts } from "./vehicleContracts";
 
 export interface Other {
     id?: number

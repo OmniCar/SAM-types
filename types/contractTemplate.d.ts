@@ -61,6 +61,8 @@ export interface IGenericContractTemplateResponse {
   formattedDescription: string | null
   weight: number
   maxEndAge?: number
+  serviceVariantName: string
+  serviceVariantId: string
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
