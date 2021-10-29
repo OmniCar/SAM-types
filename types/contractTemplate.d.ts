@@ -10,7 +10,7 @@ export interface IContractTemplateCloneRequest {
   includePrices: boolean
 }
 
-export interface IContractTemplateRequest {
+export interface IGenericContractTemplateRequest {
   providerId: number
   name: string
   description: string
@@ -19,21 +19,30 @@ export interface IContractTemplateRequest {
   maxAge: number
   defaultDuration: number
   minimumPaymentsCount: number | null
-  defaultMileage: number
   properties: IContractOptionResponse[]
   options: IContractOptionResponse[]
-  underDrivenCharge: PriceSpecification
-  overDrivenCharge: PriceSpecification
   calculationMethod: number
   priceSource: PriceSource
   termsOfService: ITermsOfServiceRequest
   archived?: boolean
   formattedDescription: string | null
   weight: number
+}
+
+export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
+  defaultMileage: number
+  underDrivenCharge: PriceSpecification
+  overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean
 }
 
-export interface IContractTemplateResponse {
+export interface IProductContractTemplateRequest extends IGenericContractTemplateRequest {
+  defaultHours: number
+  defaultYearlyServices: number
+}
+
+
+export interface IGenericContractTemplateResponse {
   id: number
   name: string // Internal name (used in price files etc)
   image: string
@@ -47,16 +56,24 @@ export interface IContractTemplateResponse {
   maxAge: number
   defaultDuration: number
   minimumPaymentsCount: number | null
-  defaultMileage: number
-  underDrivenCharge: PriceSpecification
-  overDrivenCharge: PriceSpecification
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
   formattedDescription: string | null
   weight: number
+  maxEndAge?: number
+}
+
+export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
+  defaultMileage: number
+  underDrivenCharge: PriceSpecification
+  overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean
   maxEndMileage?: number
-  maxEndAge?: number
-  serviceVariantId: string
-  serviceVariantName: string
+}
+
+export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
+  defaultHours: number
+  defaultYearlyServices: number
+  maxEndHours?: number
+  maxEndServices?: number
 }
