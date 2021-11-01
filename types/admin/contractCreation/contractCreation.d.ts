@@ -1,6 +1,6 @@
 import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
-import { IContractTemplateResponse } from '../../contractTemplate'
+import { IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
@@ -21,7 +21,7 @@ export interface IContractCreationData {
   externalWarrantiesShowComponent?: boolean
   externalWarrantiesShowButton?: boolean
   cars: ICarCollection
-  templates: IContractTemplateResponse[]
+  templates: IGenericContractTemplateResponse[]
   templatesAllDisabled?: boolean
 }
 
