@@ -60,6 +60,7 @@ export interface IContractProviderResponse {
   webLogoSquareUrl?: string | null
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
+  productContracts: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
 }
