@@ -8,6 +8,7 @@ export enum ContractState {
   ActivePrePaid = 210,
   Suspended = 400,
   Terminated = 500,
+  Extended = 510,
   Expired = 600,
   Completed = 800, // not used
   Settled = 900,
