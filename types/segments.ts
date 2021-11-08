@@ -1,5 +1,13 @@
+/**
+ * @deprecated Since 2021 Nov - This whole file is to be made obsolete. Due to segments seems only be used in the api
+ * and some functionality seems crippeled when used in sam-types.
+ */
+
+/** @deprecated Use the one in sam-api/types/ */
 export type TSAMBaseSegment = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'LT' | 'LV' | 'MT' | 'S' | 'ST' | 'SV'
+/** @deprecated Use the one in sam-api/types/ */
 export type TWarrantySegment = 'WS' | 'WSS' | 'WUS'
+/** @deprecated Use the one in sam-api/types/ */
 export type TExtraSegment =
   | TSegmentA
   | TSegmentB
@@ -13,6 +21,7 @@ export type TExtraSegment =
   | TSegmentJ
   | TSegmentK
 
+/** @deprecated Use the one in sam-api/types/ */
 export type TSAMSegment = TSAMBaseSegment | TExtraSegment
 
 // NOTE: For this TExtraSegment to work properly, it is required that the array(s)
@@ -29,6 +38,7 @@ const segmentI = ['I', 'I1', 'I2', 'I3', 'I4', 'I5', 'I6', 'I7', 'I8', 'I9'] as 
 const segmentJ = ['J', 'J1', 'J2', 'J3', 'J4', 'J5', 'J6', 'J7', 'J8', 'J9'] as const
 const segmentK = ['K', 'K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9'] as const
 
+/** @deprecated Use the one in sam-api/types/ */
 export const validExtraSegments = [
   ...segmentA,
   ...segmentB,
