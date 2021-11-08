@@ -25,22 +25,34 @@ export interface IContractCreationData {
   templatesAllDisabled?: boolean
 }
 
+export interface IProviderHasAccessToProductsRequest {
+  providerId: number | string
+}
+
+export interface IProviderHasAccessToProductsResponse {
+  hasAccess: boolean
+}
+
 export interface IContractCreationPayment {
   stripeToken: string
   paymentGateways: PaymentGateway[]
 }
 
+export type ConditionalOptions = 'Hours' | 'Services' | 'Mileage'
+
 interface ICommonContractUpdateRequest {
   contractTemplateId: number
   serviceVariantId: string
   serviceVariantName: string
-  duration: number
-  mileage: number
+  durationValues?: { duration: number, selectedValue: number, valueType: ConditionalOptions} | undefined
+  duration?: number
+  mileage?: number
   optionIds: number[]
   providerPayments: number
   providerShare: number
   reference?: string
   startMileage?: number
+  startConditions?: { value: number, condition: ConditionalOptions } | undefined
   type: ContractType
 }
 
@@ -58,6 +70,7 @@ interface IOptionInfo {
   termsOfService?: ITermsOfServiceResponse | null
 }
 
+// **TODO: Update!
 interface IContractInfo {
   templateName: string
   prettyIdentifier: string

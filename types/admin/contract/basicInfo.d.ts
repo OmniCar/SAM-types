@@ -11,4 +11,5 @@ export interface IBasicContractInfo {
   health: IContractHealth[]
   productCanAddWarranty: boolean
   productHasWarranty: boolean
+  productContract: boolean
 }

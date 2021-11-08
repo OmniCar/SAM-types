@@ -7,6 +7,7 @@ export interface IContractCalculationRequest {
   registrationNumber: string
   modelYear: number
   serviceVariantId: string
+  durationValues: { duration: number, selectedValue: number, valueType: 'Hours' | 'Services' | 'Mileage'}
   duration: number
   mileage: number
   registrationDate: string

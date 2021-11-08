@@ -13,6 +13,7 @@ export interface IOfferRequestResponse {
     registrationNumber?: string
     dateProductFirstRegistered?: string
   }
+  // **TODO: Add products prop
   duration?: number
   mileage?: number
   contractTemplate?: IContractTemplateResponse
