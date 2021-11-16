@@ -5,9 +5,10 @@ export declare enum ContractState {
     OfferRevoked = 120,
     OfferRejected = 130,
     Active = 200,
-    ExternalWarranty = 210,
+    ActivePrePaid = 210,
     Suspended = 400,
     Terminated = 500,
+    Extended = 510,
     Expired = 600,
     Completed = 800,
     Settled = 900
@@ -48,7 +49,9 @@ export declare enum ContractActionType {
     sendContractActivationMail = 153,
     sendOfferReminderMail3 = 154,
     sendContractSuspendedMail = 155,
-    sendContractOfferMail = 156,
+    sendContractOfferCreatedMail = 156,
+    resendContractOfferMail = 1565,
+    sendOfferToOneselfMail = 1566,
     sendContractReactivationMail = 157,
     sendContractAdjustmentMail = 158,
     sendContractSettlementMail = 159,
@@ -64,6 +67,7 @@ export declare enum ContractActionType {
     changePaymentData = 460,
     modify = 500,
     suspend = 600,
+    successfulInvoicePayment = 690,
     reactivate = 700,
     pauseSubscription = 720,
     terminate = 800,
@@ -87,6 +91,9 @@ export declare enum ResponseWarnings {
     GenericWarning = 499
 }
 export declare type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage';
+export declare enum WarrantyOnboardingConfig {
+    interdan = "Interdan"
+}
 export declare enum SettlementPaymentType {
     cashPayout = 1,
     cashPayment = 2,
@@ -150,4 +157,3 @@ export * from './vehiclePartial';
 export * from './vehicleContracts';
 export * from './webcalc';
 export * from './workshopOperation';
-export * from './segments';
