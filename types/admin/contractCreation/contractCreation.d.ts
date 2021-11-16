@@ -147,6 +147,7 @@ export interface ICreateFreeWarrantyRequest {
   customer?: IAdminCustomer
   startDate?: Date
   finlandPriceId?: number
+  endMileage?: number // For debugging.
 }
 
 export interface ICreateFreeWarrantyResponse {
@@ -183,10 +184,18 @@ export interface IAvailableFreeWarrantyResponse {
 }
 
 export interface IAvailableFreeWarrantyDurationPrice {
-  durationMonths: number
-  totalPrice: PriceSpecification
+  allowedDistanceMileage: undefined | number // Allowed driving limit/distance during this Warranty duration.
+  allowedPowerV4Interval:
+    | undefined
+    | {
+        lookedUpEngineMaxPower: number
+        minEngineMaxPower: number
+        maxEngineMaxPower: number
+      }
   customerPrice: PriceSpecification | null
+  durationMonths: number
   finlandPriceId?: number
+  totalPrice: PriceSpecification
 }
 
 export interface IAvailableFreeWarranty {
@@ -198,12 +207,13 @@ export interface IAvailableFreeWarranty {
   externalId: number
   calculationMethod: 100 | 200
   maxStartMileage: number
-  maxEndMileage: number
+  maxEndMileage: number // The absolute maximum End-Mileage Odometer reading for this product.
   warrantyTermsRef: string
   contractStartDate: Date
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
   weight: number
   warrantyColor: string
+  fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
 }
 
 export interface IContractCreationResponse {

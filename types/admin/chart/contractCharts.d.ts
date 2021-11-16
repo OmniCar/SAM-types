@@ -1,4 +1,4 @@
-import { PriceSpecification } from '../..'
+import { IContractFilterDate, PriceSpecification } from '../..'
 import { IChartDateValue } from '../../chart'
 import { ContractState } from '../../index'
 
@@ -43,4 +43,5 @@ export interface IContractChartsFilterParams {
   contractStates: ContractState[]
   templates: number[]
   sellers: number[]
+  created: IContractFilterDate
 }
