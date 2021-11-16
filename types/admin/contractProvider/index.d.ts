@@ -2,6 +2,7 @@ import { IsoLocale } from '../../locale'
 
 export interface IContractProvider {
   providerId: number
+  parentProviderId: number | null
   administrativeName: string
   logo: string
   email: string
@@ -19,4 +20,14 @@ export interface IContractProvider {
   webLogoBanner?: string | null
   webLogoSquare?: string | null
   vatPct: number
+}
+
+export interface ICreateTestContractProvider {
+  administrativeName: string
+  countryIsoCode: string
+}
+
+export interface ICreateTestContractProvider {
+  administrativeName: string
+  countryIsoCode: string
 }
