@@ -1,3 +1,4 @@
+import { ProductType } from 'admin/product/product'
 import { ContractState, WarrantyState } from '../index'
 
 export interface IContractFilterDate {
@@ -29,14 +30,24 @@ export interface IContractStatusCount {
   count: number
 }
 
+export interface IContractProductTypeCount {
+  type: ProductType
+  count: number
+}
+
+export type ContractProductType = ProductType
+
 export interface IContractFilterParams {
   contractStates: ContractState[]
+  contractProduct: ContractProductType
   templates: number[]
   options: number[]
   sellers: number[]
   created: IContractFilterDate
   expired: IContractFilterDate
+  activeTypes: ContractProductType[]
 }
+
 export interface IWarrantyFilterParams {
   contractStates: ContractState[]
   templates: number[]

@@ -38,7 +38,7 @@ export interface IContractCreationPayment {
   paymentGateways: PaymentGateway[]
 }
 
-export type ConditionalOptions = 'Hours' | 'Services' | 'Mileage'
+export type ConditionalOptions = 'Hours' | 'Services' | 'Mileage' | undefined
 
 interface ICommonContractUpdateRequest {
   contractTemplateId: number
@@ -53,6 +53,8 @@ interface ICommonContractUpdateRequest {
   reference?: string
   startMileage?: number
   startConditions?: { value: number, condition: ConditionalOptions } | undefined
+  startValue?: number
+  startValueType?: ConditionalOptions
   type: ContractType
 }
 
@@ -70,7 +72,6 @@ interface IOptionInfo {
   termsOfService?: ITermsOfServiceResponse | null
 }
 
-// **TODO: Update!
 interface IContractInfo {
   templateName: string
   prettyIdentifier: string
@@ -78,11 +79,14 @@ interface IContractInfo {
   termsUrl: string
   duration: number
   mileage: number
+  value: number
   startMileage: number
   startDate: Date
   endDate: Date
   includedOptions: IOptionInfo[]
   additionalOptions: IOptionInfo[]
+  startValue: number | undefined
+  startValueType: ConditionalOptions | '' | undefined
 }
 
 interface IContractProviderInfo {
@@ -155,7 +159,7 @@ export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
   modelModelId?: number
-  vehicleAlongItsContracts: VehicleAlongItsContracts
+  productAlongItsContracts: VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
@@ -175,15 +179,15 @@ export interface ICreateFreeWarrantyResponse {
 }
 
 export interface IAvailableFreeWarrantyRequest {
-  vehicleId?: number
+  productId?: number // Vehicle or OtherProduct id
   vin: string
   regNumber: string
   regDate: string
   modelModelId?: number
   brandName: string
   brandId?: number
-  vehicleModelName: string
-  vehicleModelId?: number
+  productModelName: string
+  productModelId?: number
   modelYear: number
   engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
   fuelTypeName: string
@@ -192,7 +196,7 @@ export interface IAvailableFreeWarrantyRequest {
 }
 
 export interface IAvailableFreeWarrantyResponse {
-  vehicleHasActiveWarranty: boolean
+  productHasActiveWarranty: boolean
   minMilageDiffPerYear: number
   availableWarranties: IAvailableFreeWarranty[]
 }
@@ -222,6 +226,10 @@ export interface IAvailableFreeWarranty {
   calculationMethod: 100 | 200
   maxStartMileage: number
   maxEndMileage: number // The absolute maximum End-Mileage Odometer reading for this product.
+  maxStartHours: number
+  maxEndHours: number
+  maxStartServices: number
+  maxEndServices: number
   warrantyTermsRef: string
   contractStartDate: Date
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]

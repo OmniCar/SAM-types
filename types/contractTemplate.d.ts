@@ -41,7 +41,6 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
   defaultYearlyServices: number
 }
 
-
 export interface IGenericContractTemplateResponse {
   id: number
   name: string // Internal name (used in price files etc)
@@ -63,6 +62,7 @@ export interface IGenericContractTemplateResponse {
   maxEndAge?: number
   serviceVariantName: string
   serviceVariantId: string
+  forProduct?: boolean
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
