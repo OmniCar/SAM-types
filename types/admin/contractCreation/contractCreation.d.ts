@@ -46,7 +46,7 @@ interface ICommonContractUpdateRequest {
   serviceVariantName: string
   value?: number
   valueType: ConditionalOptions
-  duration?: number
+  duration: number
   mileage?: number
   optionIds: number[]
   providerPayments: number

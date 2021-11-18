@@ -1,4 +1,4 @@
-import { ConditionalOptions } from 'admin';
+import { ConditionalOptions } from '../../admin';
 import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
 export interface IOfferRequestResponse {

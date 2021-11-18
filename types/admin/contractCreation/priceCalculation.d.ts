@@ -9,7 +9,7 @@ export interface IContractCalculationRequest {
   serviceVariantId: string
   duration: number
   mileage: number
-  value: number
+  value?: number
   valueType: ConditionalOptions
   registrationDate: string
   optionIds: number[]
