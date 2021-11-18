@@ -262,11 +262,15 @@ export interface IAdminContractResponse {
   duration: number
   mileage: number
   startMileage: number
+  value: number | undefined
+  valueType: ConditionalOptions
+  startValue: number | undefined
   paymentGateway: PaymentGateway
   customerId: number
   customer: IAdminCustomer
   availableTemplatesExtension?: IContractTemplateResponse[]
   availableDurationsExtension?: DurationOptions[]
+  productContract: boolean
 }
 
 export interface IAdminContractAdjustmentResponse extends IAdminContractResponse {
