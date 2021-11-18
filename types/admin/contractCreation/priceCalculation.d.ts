@@ -1,5 +1,5 @@
 import { PriceSpecification } from '../../priceSpecification'
-import { ContractType } from './contractCreation'
+import { ConditionalOptions, ContractType } from './contractCreation'
 
 export interface IContractCalculationRequest {
   type: ContractType
@@ -7,9 +7,10 @@ export interface IContractCalculationRequest {
   registrationNumber: string
   modelYear: number
   serviceVariantId: string
-  durationValues: { duration: number, selectedValue: number, valueType: 'Hours' | 'Services' | 'Mileage'}
   duration: number
   mileage: number
+  value: number
+  valueType: ConditionalOptions
   registrationDate: string
   optionIds: number[]
   providerPayments: number
@@ -18,6 +19,7 @@ export interface IContractCalculationRequest {
   adjustedFrom?: string
   isDownpaymentDistributed: boolean
   startMileage?: number
+  startValue?: number
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {

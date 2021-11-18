@@ -3,23 +3,24 @@ import { IContractResponse } from './../../contract/contract'
 import { IIncludedContractOption } from './../../includedContractOption'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
-import { ServiceContractFlag, ContractType } from './../../admin/contractCreation'
+import { ServiceContractFlag, ContractType, ConditionalOptions } from './../../admin/contractCreation'
 
 export interface IContractDetailsRecord {
   serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
   contractPdfUrl: string
   duration: number // Duration [months].
   startMileage?: number // Current meter/odometer-reading [km].
-  startHours?: number
-  startServices?: number
   mileage: number // Allowed mileage/distance [km] to drive during contract duration [months].
-  startCondition?: { value?: number; condition?: string }
+  startValue?: number
+  endValue?: number
+  maxEndValue?: number
   endMileage: number // End-mileage [km] at end of duration [months].
   maxEndMileage?: number // Absolute maximum end-mileage [km] for product - Hard mileage cap/limit.
   expirationDate: Date | string
   extendedFrom: IContractResponse | null
   includedOptions: IIncludedContractOption[] | null
-  durationValues: { duration: number, selectedValue: number | undefined, valueType: 'Hours' | 'Services' | 'Mileage' | undefined} | undefined
+  value?: number
+  valueType: ConditionalOptions
   monthlyTemplatePrice: PriceSpecification
   monthlyPrice: PriceSpecification
   paymentMethod: PaymentGateway
@@ -42,8 +43,6 @@ export interface IContractDetailsRecord {
   flags: ServiceContractFlag[]
   stripeCustomerLink: string | null
   stripeSubscriptionLink: string | null
-  startValue?: number | undefined
-  startValueType?: 'Hours' | 'Services' | 'Mileage' | undefined
   customTerms?: string
   adjustedFrom?: string
   createdByProvider?: string

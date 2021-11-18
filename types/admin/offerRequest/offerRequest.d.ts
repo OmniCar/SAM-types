@@ -1,32 +1,23 @@
 import { ConditionalOptions } from 'admin';
 import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
-interface IOfferProductInfo {
-  brandName?: string
-  modelName?: string
-  fuelTypeName?: string
-  serialNumber?: string
-  serialNumber2?: string
-  itemNumber?: string
-  itemNumber2?: string
-  dateProductFirstRegistered?: string
-}
-
-interface IOfferVehicleInfo {
-  brandName?: string
-  modelName?: string
-  fuelTypeName?: string
-  vin?: string
-  registrationNumber?: string
-  dateProductFirstRegistered?: string
-}
-
 export interface IOfferRequestResponse {
   offerRequestId: number
   prettyIdentifier: string
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
-  product: IOfferVehicleInfo | IOfferProductInfo
+  product: {
+    brandName?: string
+    modelName?: string
+    fuelTypeName?: string
+    vin?: string
+    serialNumber?: string
+    serialNumber2?: string
+    itemNumber?: string
+    itemNumber2?: string
+    registrationNumber?: string
+    dateProductFirstRegistered?: string
+  }
   duration?: number
   mileage?: number
   value?: { val: number, type: ConditionalOptions}

@@ -44,7 +44,8 @@ interface ICommonContractUpdateRequest {
   contractTemplateId: number
   serviceVariantId: string
   serviceVariantName: string
-  durationValues?: { duration: number, selectedValue: number, valueType: ConditionalOptions} | undefined
+  value?: number
+  valueType: ConditionalOptions
   duration?: number
   mileage?: number
   optionIds: number[]
@@ -52,9 +53,7 @@ interface ICommonContractUpdateRequest {
   providerShare: number
   reference?: string
   startMileage?: number
-  startConditions?: { value: number, condition: ConditionalOptions } | undefined
   startValue?: number
-  startValueType?: ConditionalOptions
   type: ContractType
 }
 
@@ -159,7 +158,7 @@ export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
   modelModelId?: number
-  productAlongItsContracts: VehicleAlongItsContracts
+  vehicleAlongItsContracts: VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
@@ -179,15 +178,15 @@ export interface ICreateFreeWarrantyResponse {
 }
 
 export interface IAvailableFreeWarrantyRequest {
-  productId?: number // Vehicle or OtherProduct id
+  vehicleId?: number // Vehicle or OtherProduct id
   vin: string
   regNumber: string
   regDate: string
   modelModelId?: number
   brandName: string
   brandId?: number
-  productModelName: string
-  productModelId?: number
+  vehicleModelName: string
+  vehicleModelId?: number
   modelYear: number
   engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
   fuelTypeName: string
@@ -196,7 +195,7 @@ export interface IAvailableFreeWarrantyRequest {
 }
 
 export interface IAvailableFreeWarrantyResponse {
-  productHasActiveWarranty: boolean
+  vehicleHasActiveWarranty: boolean
   minMilageDiffPerYear: number
   availableWarranties: IAvailableFreeWarranty[]
 }

@@ -13,9 +13,10 @@ export interface IContractResponse {
   product: Vehicle | Other
   duration: string
   mileage: string
-  value: string
+  value?: string
+  valueType?: ConditionalOptions
   startMileage: number
-  startValue: { value: number, valueType: ConditionalOptions}
+  startValue?: number
   template: IContractTemplateResponse
   options: IContractOptionResponse[]
   payment: ICalculationResponse
