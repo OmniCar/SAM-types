@@ -1,4 +1,4 @@
-import { ProductType } from 'admin/product'
+import { ProductType } from '../admin/product'
 import { ContractState, WarrantyState } from '../index'
 
 export interface IContractFilterDate {
