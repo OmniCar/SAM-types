@@ -15,8 +15,13 @@ export interface Vehicle {
   model: Model
   fuelType: FuelType
   modelYear: number
-  engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
-  vehicleType?: TVehicleType
+  versionModelType?: string
+  vehicleType?: TVehicleType // Note: Not same as type (now versionModelType).
+  engineMaxPower?: number // Maximum power in kW, integer or decimal number like 115.5 or 132. NOTE: For now, engineMaxPower is the highest power of any of the engines on a multi-engine vehicle.
+  cylinderVolume?: number // Engine size in cc or cm3.
+  transmissionType?: TVehicleTransmissionType
+  driveType?: TVehicleDriveType // Front, rear, or all wheel drive.
+  hasFourWheelDrive?: boolean // Aka 4x4 ("four by four" or 4WD).
 }
 
 export interface IRegistrationNumberResponse {
@@ -47,14 +52,26 @@ export type TVehicleType =
   | 'Trailer' // sv: Släp.
   | 'Bus'
   | 'Truck' // sv: Lastbil.
-  | 'Special vehicle'
+  | 'Special Vehicle'
   | 'Van' // sv: Skåpbil/Paketbil/Varubil.
   | 'Car'
   | 'Tractor'
-  | 'Mobile machinery'
-  | 'Off-road vehicle'
+  | 'Mobile Machinery'
+  | 'Off-road Vehicle'
   | 'Motorcycle'
   | 'L5' // Motor-vehicle with three wheels, sv: Trehjuligt motorfordon.
   | 'Moped'
   | 'Forklift' // sv: Truck.
   | 'Other'
+
+export type TVehicleTransmissionType =
+  | '' // Unknown transmission type.
+  | 'Manual'
+  | 'Automatic'
+  | 'Continuously Variable' // Variomatic transmission type.
+
+export type TVehicleDriveType =
+  | '' // Unknown drive type.
+  | 'Front Wheel Drive'
+  | 'Rear Wheel Drive'
+  | 'All Wheel Drive'
