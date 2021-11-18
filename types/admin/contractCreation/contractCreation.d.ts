@@ -223,8 +223,8 @@ export interface IAvailableFreeWarranty {
   oneTimeFeeYear: PriceSpecification
   externalId: number
   calculationMethod: 100 | 200
-  maxStartMileage?: number
-  maxEndMileage?: number // The absolute maximum End-Mileage Odometer reading for this product.
+  maxStartMileage: number
+  maxEndMileage: number // The absolute maximum End-Mileage Odometer reading for this product.
   maxStartHours?: number
   maxEndHours?: number
   maxStartServices?: number
