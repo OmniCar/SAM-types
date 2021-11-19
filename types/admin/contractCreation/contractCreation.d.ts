@@ -85,7 +85,7 @@ interface IContractInfo {
   includedOptions: IOptionInfo[]
   additionalOptions: IOptionInfo[]
   startValue: number | undefined
-  startValueType: ConditionalOptions | '' | undefined
+  valueType: ConditionalOptions | undefined
 }
 
 interface IContractProviderInfo {
@@ -270,7 +270,6 @@ export interface IAdminContractResponse {
   customer: IAdminCustomer
   availableTemplatesExtension?: IContractTemplateResponse[]
   availableDurationsExtension?: DurationOptions[]
-  productContract: boolean
 }
 
 export interface IAdminContractAdjustmentResponse extends IAdminContractResponse {
