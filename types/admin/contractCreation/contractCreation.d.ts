@@ -78,7 +78,7 @@ interface IContractInfo {
   termsUrl: string
   duration: number
   mileage: number
-  value: number
+  value: number | undefined
   startMileage: number
   startDate: Date
   endDate: Date
