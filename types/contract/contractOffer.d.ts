@@ -5,10 +5,10 @@ import { IContractOptionResponse } from './../contractOption'
 import { IContractTemplateResponse } from './../contractTemplate'
 import { PaymentGateway } from './../payment'
 
-export interface IContractOfferRequest<TProductType = VehicleAlongItsContracts> {
+export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
   userId?: number
   customer?: Customer
-  product?: TProductType
+  product?: TProduct
   duration: number
   mileage: number
   startMileage: number
