@@ -47,17 +47,8 @@ export interface IContractDetailsRecord {
   adjustedFrom?: string
   createdByProvider?: string
   provider?: string
-  settledMileage?: number | null
-  overDrivenCharge?: number
-  underDrivenCharge?: number
-  calculationMethod?: number
 }
 
 export interface IAdminCustomTermsRecord {
   customTerms: string
-}
-
-export interface IMileageListResponse {
-  mileage: number
-  date: Date | string
 }
