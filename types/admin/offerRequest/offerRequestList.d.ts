@@ -15,8 +15,10 @@ export interface IOfferRequestListRecord {
 export type OfferRequestListOrderByType =
   | 'prettyIdentifier'
   | 'registrationNumber'
-  | 'itemNumber'
   | 'serialNumber'
+  | 'serialNumber2'
+  | 'itemNumber'
+  | 'itemNumber2'
   | 'name'
   | 'email'
   | 'phone'

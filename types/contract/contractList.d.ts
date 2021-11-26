@@ -23,6 +23,7 @@ export interface IContractListRecord {
 export type ContractListOrderByType =
 | 'prettyIdentifier'
 | 'brand'
+| 'productBrand'
 | 'contractEndDate'
 | 'contractCreationDate'
 | 'contractState'
@@ -31,8 +32,9 @@ export type ContractListOrderByType =
 | 'contractTemplateName'
 | 'customerName'
 | 'registrationNumber'
-| 'serialNumber'
 | 'sellerName'
+| 'serialNumber'
+| 'serialNumber2'
 | 'itemNumber'
 | 'itemNumber2'
 | 'createdByProvider'
