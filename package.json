@@ -1,4 +1,5 @@
 {
+  "version": "0.0.250",
   "name": "@omnicar/sam-types",
   "description": "Typescript interfaces for all types used to communicate between SAM client(s) and the SAM API",
   "author": "Omnicar A/S",
