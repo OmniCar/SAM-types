@@ -1,5 +1,5 @@
 import { PriceSpecification } from '../../priceSpecification'
-import { ValueType, ContractType } from './contractCreation'
+import { ContractValueType, ContractType } from './contractCreation'
 
 export interface IContractCalculationRequest {
   type: ContractType
@@ -10,7 +10,7 @@ export interface IContractCalculationRequest {
   duration: number
   mileage: number
   value?: number
-  valueType: ValueType
+  valueType: ContractValueType
   registrationDate: string
   optionIds: number[]
   providerPayments: number

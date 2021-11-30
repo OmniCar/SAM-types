@@ -1,4 +1,4 @@
-import { ValueType } from '../../admin';
+import { ContractValueType } from '../../admin';
 import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
 export interface IOfferRequestResponse {
@@ -20,7 +20,7 @@ export interface IOfferRequestResponse {
   }
   duration?: number
   mileage?: number
-  value?: { val: number, type: ValueType}
+  value?: { val: number, type: ContractValueType}
   contractTemplate?: IContractTemplateResponse
   state: OfferRequestState
   stateChanged: Date | string

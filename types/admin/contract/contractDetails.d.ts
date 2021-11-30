@@ -3,7 +3,7 @@ import { IContractResponse } from './../../contract/contract'
 import { IIncludedContractOption } from './../../includedContractOption'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
-import { ServiceContractFlag, ContractType, ValueType } from './../../admin/contractCreation'
+import { ServiceContractFlag, ContractType, ContractValueType } from './../../admin/contractCreation'
 
 export interface IContractDetailsRecord {
   serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
@@ -20,7 +20,7 @@ export interface IContractDetailsRecord {
   extendedFrom: IContractResponse | null
   includedOptions: IIncludedContractOption[] | null
   value?: number
-  valueType: ValueType
+  valueType: ContractValueType
   monthlyTemplatePrice: PriceSpecification
   monthlyPrice: PriceSpecification
   paymentMethod: PaymentGateway
