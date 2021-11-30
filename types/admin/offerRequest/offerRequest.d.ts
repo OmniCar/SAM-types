@@ -1,4 +1,4 @@
-import { ConditionalOptions } from '../../admin';
+import { ValueType } from '../../admin';
 import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
 export interface IOfferRequestResponse {
@@ -20,7 +20,7 @@ export interface IOfferRequestResponse {
   }
   duration?: number
   mileage?: number
-  value?: { val: number, type: ConditionalOptions}
+  value?: { val: number, type: ValueType}
   contractTemplate?: IContractTemplateResponse
   state: OfferRequestState
   stateChanged: Date | string

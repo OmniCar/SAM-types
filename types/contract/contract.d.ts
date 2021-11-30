@@ -4,7 +4,7 @@ import { Customer } from '../customer'
 import { Vehicle } from '../vehicle'
 import { Other } from '../product'
 import { ICalculationResponse } from '../priceCalculation'
-import { ConditionalOptions, ContractState, PaymentGateway } from '../index'
+import { ValueType, ContractState, PaymentGateway } from '../index'
 import { IContractProviderResponse } from '../contractProvider'
 
 export interface IContractResponse {
@@ -14,7 +14,7 @@ export interface IContractResponse {
   duration: string
   mileage: string
   value?: string
-  valueType?: ConditionalOptions
+  valueType?: ValueType
   startMileage: number
   startValue?: number
   template: IContractTemplateResponse
