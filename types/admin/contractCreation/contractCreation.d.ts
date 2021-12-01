@@ -38,14 +38,16 @@ export interface IContractCreationPayment {
   paymentGateways: PaymentGateway[]
 }
 
-export type ConditionalOptions = 'Hours' | 'Services' | 'Mileage' | undefined
+export enum ContractValueTypeEnum { Mileage = 'Mileage', Hours = 'Hours', Services = 'Services', None = 'None' }
+type VTKeys = keyof typeof ContractValueTypeEnum
+export type ContractValueType = Exclude<VTKeys, 'None'> | undefined;
 
 interface ICommonContractUpdateRequest {
   contractTemplateId: number
   serviceVariantId: string
   serviceVariantName: string
   value?: number
-  valueType: ConditionalOptions
+  valueType: ContractValueType
   duration: number
   mileage?: number
   optionIds: number[]
@@ -85,7 +87,7 @@ interface IContractInfo {
   includedOptions: IOptionInfo[]
   additionalOptions: IOptionInfo[]
   startValue: number | undefined
-  valueType: ConditionalOptions | undefined
+  valueType: ContractValueType | undefined
 }
 
 interface IContractProviderInfo {
@@ -263,7 +265,7 @@ export interface IAdminContractResponse {
   mileage: number
   startMileage: number
   value: number | undefined
-  valueType: ConditionalOptions
+  valueType: ContractValueType
   startValue: number | undefined
   paymentGateway: PaymentGateway
   customerId: number

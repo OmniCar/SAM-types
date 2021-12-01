@@ -4,7 +4,7 @@ import { VehicleAlongItsContracts } from '../vehicle'
 import { IContractOptionResponse } from './../contractOption'
 import { IContractTemplateResponse } from './../contractTemplate'
 import { PaymentGateway } from './../payment'
-import { ConditionalOptions } from '../admin'
+import { ContractValueType } from '../admin'
 
 export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
   userId?: number
@@ -15,7 +15,7 @@ export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
   startMileage: number
   value?: number
   startValue?: number
-  valueType?: ConditionalOptions
+  valueType?: ContractValueType
   template?: IContractTemplateResponse
   options: IContractOptionResponse[]
   paymentGateway: PaymentGateway
