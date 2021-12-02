@@ -39,7 +39,7 @@ export interface IContractCreationPayment {
 }
 
 export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
-export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'>  | undefined
+export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefined
 
 interface ICommonContractUpdateRequest {
   contractTemplateId: number
