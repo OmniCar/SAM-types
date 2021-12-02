@@ -38,9 +38,8 @@ export interface IContractCreationPayment {
   paymentGateways: PaymentGateway[]
 }
 
-export enum ContractValueTypeEnum { Mileage = 'Mileage', Hours = 'Hours', Services = 'Services', None = 'None' }
-type VTKeys = keyof typeof ContractValueTypeEnum
-export type ContractValueType = Exclude<VTKeys, 'None'> | undefined;
+export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
+export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'>
 
 interface ICommonContractUpdateRequest {
   contractTemplateId: number
