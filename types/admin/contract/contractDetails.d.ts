@@ -38,7 +38,7 @@ export interface IContractDetailsRecord {
   contractTemplateName: string
   contractTemplateDescription: string
   contractTemplateIsArchived: boolean
-  forProduct: boolean
+  isProduct: boolean
   serviceVariantId: string
   flags: ServiceContractFlag[]
   stripeCustomerLink: string | null
