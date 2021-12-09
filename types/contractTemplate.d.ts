@@ -62,7 +62,7 @@ export interface IGenericContractTemplateResponse {
   maxEndAge?: number
   serviceVariantName: string
   serviceVariantId: string
-  productsEnabled?: boolean
+  isProductTemplate?: boolean
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
