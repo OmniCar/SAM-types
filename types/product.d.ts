@@ -12,7 +12,7 @@ export interface Other {
     regDate?: string
     brand: Brand
     model: Model
-    fuelType: FuelType
+    fuelType: FuelType | undefined
     modelYear: number
     typeName: string
 }
