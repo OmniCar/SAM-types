@@ -12,4 +12,4 @@ export interface ITableUserConfiguration<OrderBy> {
   rowCount: number
 }
 
-export type TableConfigurationType = 'serviceContract' | 'warranty'
+export type TableConfigurationType = 'serviceContract' | 'productServiceContract' | 'warranty' 
