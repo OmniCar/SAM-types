@@ -215,6 +215,7 @@ export interface IAvailableFreeWarranty {
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
   weight: number
   warrantyColor: string
+  warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
 }
 
