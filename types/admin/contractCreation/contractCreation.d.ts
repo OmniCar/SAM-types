@@ -214,6 +214,8 @@ export interface IAvailableFreeWarrantyDurationPrice {
   durationMonths: number
   finlandPriceId?: number
   totalPrice: PriceSpecification
+  isEnabledAndAvailable?: boolean | null // Dependent of optional user setting for this DurationPrice-group or default setting in WarrantyData.
+  debug?: any // For debugging purposes.
 }
 
 export interface IAvailableFreeWarranty {
@@ -235,6 +237,7 @@ export interface IAvailableFreeWarranty {
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
   weight: number
   warrantyColor: string
+  warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
 }
 
