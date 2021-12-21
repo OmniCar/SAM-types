@@ -1,4 +1,5 @@
 import { PriceSpecification } from './priceSpecification'
+import { SettlementPaymentType } from './index'
 
 /** supported payment gateways */
 export type PaymentGateway = 'Stripe' | 'B2B' | 'NONE' | 'Mock'
@@ -41,4 +42,14 @@ export interface IPreparePaymentResponse {
   checkoutSessionId?: string
   stripePublicKey?: string
   stripeAccount?: string
+}
+
+/**
+ * Payload to create settlement payments
+ */
+export interface ISettlementPaymentRequest {
+  paymentAmount: number
+  type: SettlementPaymentType
+  comment?: string
+  shareComment?: boolean
 }

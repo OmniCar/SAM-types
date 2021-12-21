@@ -216,6 +216,8 @@ export interface IAvailableFreeWarrantyDurationPrice {
   durationMonths: number
   finlandPriceId?: number
   totalPrice: PriceSpecification
+  isEnabledAndAvailable?: boolean | null // Dependent of optional user setting for this DurationPrice-group or default setting in WarrantyData.
+  debug?: any // For debugging purposes.
 }
 
 export interface IAvailableFreeWarranty {
