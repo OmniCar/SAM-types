@@ -15,6 +15,7 @@ export interface IReportDefinition {
   columns: IDbColumn[]
   groupByColumns: string[]
   descriptionMap?: TTranslationMap
+  hasProductFields?: boolean
 }
 export type IReportDefinitionsResponse = { [key in string]?: IReportDefinition[] }
 
