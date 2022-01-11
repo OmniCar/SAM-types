@@ -2,7 +2,7 @@ import { IContractOptionResponse } from './contractOption'
 import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfService'
 import { PriceSpecification } from './priceSpecification'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten'
+export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
