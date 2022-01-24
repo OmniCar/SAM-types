@@ -12,11 +12,13 @@ export interface IContractListRecord {
   contractTemplateDescription: string
   customerName: string
   customerCompanyName: string
-  registrationNumber: string
+  registrationNumber?: string
+  serialNumber?: string
   sellerName: string
   health: IContractHealth[]
 }
 
+// **TODO: identifingNumber for reg and item num?
 export type ContractListOrderByType =
   | 'prettyIdentifier'
   | 'brand'
@@ -28,6 +30,7 @@ export type ContractListOrderByType =
   | 'contractTemplateName'
   | 'customerName'
   | 'registrationNumber'
+  | 'serialNumber'
   | 'sellerName'
   | 'createdByProvider'
 

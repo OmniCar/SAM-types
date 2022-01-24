@@ -8,6 +8,7 @@ import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
 import { PriceSpecification } from './../../priceSpecification'
 import { ITermsOfServiceResponse } from '../../termsOfService'
+import { Other } from '../../product'
 
 export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
@@ -87,7 +88,7 @@ interface IPaymentInformationResponse {
   publicKey: string
   contractProvider: IContractProviderInfo
   customer: IAdminCustomer
-  vehicle: Vehicle
+  product: Vehicle | Other
   contract: IContractInfo
   totalAmount: PriceSpecification | null
   minimumTotalAmount: PriceSpecification | null
@@ -108,7 +109,7 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
-  vehicle: Vehicle
+  product: Vehicle | Other
   paymentGateway: PaymentGateway
   customerId?: number
   customer?: IAdminCustomer
@@ -235,7 +236,7 @@ export interface IAdminContractActivationResponse {
 
 export interface IAdminContractResponse {
   type: ContractType
-  vehicle: Vehicle
+  product: Vehicle | Other
   contractTemplate: IContractTemplateResponse
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]
