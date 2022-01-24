@@ -1,1 +1,2 @@
-export type TServiceType = 'Economy' | 'Standard' | 'Premium'
+export type TVehicleServiceType = 'Economy' | 'Standard' | 'Premium'
+export type TVehicleUsageType = 'Normal' | 'High' | 'Taxi'  

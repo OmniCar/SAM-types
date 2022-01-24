@@ -1,7 +1,7 @@
 import { IContractOptionResponse } from './contractOption'
 import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfService'
 import { PriceSpecification } from './priceSpecification'
-import { TCurrency, TServiceType, } from '../types'
+import { TCurrency, TVehicleServiceType, TVehicleUsageType } from '../types'
 
 export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
 
@@ -84,13 +84,13 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
   maxEndServices?: number
 }
 
-// new
 export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
-  serviceType: TServiceType
+  vehicleServiceType: TVehicleServiceType //update
+  vehicleUsageType: TVehicleUsageType //new
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
-  euroToLocalCurrencyRateInTenthCents: number | null
-  totalPriceFactorInTenthCents: number | null
+  euroToLocalCurrencyRateInTenthOfCents: number | null
+  totalPriceFactorInTenthOfCents: number | null
   // currencyOilPrice: TCurrency | null
   // currencyLabourCost: TCurrency | null
   currencyPartsPrice: TCurrency | null
