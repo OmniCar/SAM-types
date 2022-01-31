@@ -1,5 +1,9 @@
-export enum OutageSeverityLevel {
-    Low = 1,
-    Medium = 2,
-    High = 3,
+import { OutageSeverityLevel } from "index";
+
+export interface IOutageResponse {
+    headerText: string | null
+    message: string | null
+    date: Date
+    disabledPaths: string[] | null
+    severityLevel: OutageSeverityLevel | null
 }
