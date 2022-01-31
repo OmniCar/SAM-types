@@ -5,4 +5,4 @@ export enum OutageSeverityLevel {
 }
 
 // Represents the actions that can be disabled
-export type Action = 'Reports' | 'ServiceContracts' | 'ContractCreation'
+export type Action = '/reports' | 'ServiceContracts' | 'ContractCreation'
