@@ -141,7 +141,6 @@ export * from './model'
 export * from './payment'
 export * from './priceCalculation'
 export * from './priceSpecification'
-export * from './product';
 export * from './providerBranding'
 export * from './queryParams'
 export * from './reports/reports'

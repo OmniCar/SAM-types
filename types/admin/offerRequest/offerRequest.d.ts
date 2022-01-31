@@ -11,7 +11,7 @@ export interface IOfferRequestResponse {
     fuelTypeName?: string
     vin?: string
     registrationNumber?: string
-    dateProductFirstRegistered?: string
+    dateVehicleFirstRegistered?: string
   }
   duration?: number
   mileage?: number

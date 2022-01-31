@@ -21,19 +21,19 @@ export interface IContractCalculationRequest {
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
   brandId: number
-  productModelId: number
+  vehicleModelId: number
   fuelTypeId: number
 }
 
 export interface IStandardAxContractCalculationRequest extends IContractCalculationRequest {
   brandName: string
-  productModelName: string
+  vehicleModelName: string
   fuelTypeName: string
 }
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   amountPerPayment: number
   brandName: string
-  productModelName: string
+  vehicleModelName: string
   fuelTypeName: string
 }
 
