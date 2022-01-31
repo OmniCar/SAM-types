@@ -1,4 +1,4 @@
-import { OutageSeverityLevel } from "index";
+import { OutageSeverityLevel } from "./index";
 
 export interface IOutageResponse {
     headerText: string | null
