@@ -75,3 +75,7 @@ export type TVehicleDriveType =
   | 'Front Wheel Drive'
   | 'Rear Wheel Drive'
   | 'All Wheel Drive'
+
+export interface VehicleUpdateResponse extends Vehicle {
+  extSysRegNumberUpdateMessage?: string
+}
