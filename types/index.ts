@@ -92,6 +92,12 @@ export enum WarrantyOnboardingConfig {
   interdan = 'Interdan',
 }
 
+export enum OutageSeverityLevel {
+  Low = 1,
+  Medium = 2,
+  High = 3,
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'
@@ -118,6 +124,7 @@ export * from './invoice'
 export * from './locale'
 export * from './localizationData'
 export * from './model'
+export * from './outage'
 export * from './payment'
 export * from './priceCalculation'
 export * from './priceSpecification'

@@ -23,7 +23,7 @@ export interface IContractFilterOptions {
   sellers: IContractFilterOption[]
   created: IContractFilterDate
   expired: IContractFilterDate
-  activeTypes: ContractProductType[]
+  activeTypes: ProductType[]
 }
 
 export interface IContractStatusCount {
@@ -31,22 +31,19 @@ export interface IContractStatusCount {
   count: number
 }
 
-export interface IContractProductTypeCount {
-  type: ProductType
-  count: number
+export interface IContractProductTypeCountResponse {
+  [productType: string]: number
 }
-
-export type ContractProductType = ProductType
 
 export interface IContractFilterParams {
   contractStates: ContractState[]
-  contractProduct: ContractProductType
+  contractProduct: ProductType
   templates: number[]
   options: number[]
   sellers: number[]
   created: IContractFilterDate
   expired: IContractFilterDate
-  activeTypes: ContractProductType[]
+  activeTypes: ProductType[]
 }
 
 export interface IWarrantyFilterParams {
