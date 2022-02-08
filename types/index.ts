@@ -74,6 +74,7 @@ export enum ContractActionType {
   suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
   successfulInvoicePayment = 690, // Successful invoice payment. Contract soon to be re-activated.
   reactivate = 700, // Who unsuspended the contract
+  extending = 710, // Who extended the contract (the contract which extended)
   pauseSubscription = 720, // The subscription is paused because of contract paid off
   terminate = 800, // Who terminated the contract
   registerCashPayment = 810, // Registered cash payment. Helps to solve balance issues on a contract
