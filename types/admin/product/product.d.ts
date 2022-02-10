@@ -16,9 +16,9 @@ export interface IApiOtherWithContracts {
     modelName: string
     fuelTypeName: string
     contracts: IApiOtherContract[]
-  }
+}
   
-  export interface IApiOtherContract {
+export interface IApiOtherContract {
     serviceContractId: number
     amount: PriceSpecification
     contractStartDate: Date | string
@@ -35,4 +35,4 @@ export interface IApiOtherWithContracts {
     reference?: string
     activationUrl?: string
     extendedFrom?: number
-  }
+}
