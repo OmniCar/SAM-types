@@ -1,0 +1,1 @@
+export type RateLimitErrors = 'TOO_MANY_REQUESTS'
