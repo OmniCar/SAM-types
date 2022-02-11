@@ -1,3 +1,5 @@
+import { TCurrency } from "../types"
+
 /**
  * Note: If priceWith3Decimals has a value then use this value as price (possible value in price
  * may be ignored), while if priceWith3Decimals is undefined then use the value in price.
@@ -12,5 +14,5 @@ export interface PriceSpecification {
   priceWith3Decimals?: number // Price with upto 3 decimals (should have been mapped from tenth of cents).
   priceInclVat: number
   vatShare: number
-  currency: string
+  currency: TCurrency
 }

@@ -1,3 +1,5 @@
+import { TCurrency } from '../types/currency'
+
 /**
  * ISO 3166-1 two letter (Alpha-2) codes for all supported countries.
  *
@@ -14,4 +16,6 @@ export interface ICountryResponse {
   isoName: string
   countryName?: string
   localeName?: string
+  currency: TCurrency
+  vatPct: number
 }
