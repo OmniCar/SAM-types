@@ -1,4 +1,4 @@
-import { TCurrency } from "../types"
+// import { TCurrency } from "../types"
 
 /**
  * Note: If priceWith3Decimals has a value then use this value as price (possible value in price
@@ -9,10 +9,12 @@ import { TCurrency } from "../types"
  * calculations at least for euros to get rid of some rounding issues in
  * combination with VAT in some cases).
  */
+// TODO: Switch type of currency to TCurrency
 export interface PriceSpecification {
   price: number     // Price with max 2 decimals (should have been mapped from cents).
   priceWith3Decimals?: number // Price with upto 3 decimals (should have been mapped from tenth of cents).
   priceInclVat: number
   vatShare: number
-  currency: TCurrency
+  currency: string
+  // currency: TCurrency
 }

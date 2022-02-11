@@ -1,11 +1,11 @@
-import { ICountryRequest, ICountryResponse } from './country'
+import { ICountryRequest, ICountry } from './country'
 
 export interface IAddressRequest {
   address1: string
   address2?: string
   city: string
   postalCode: string
-  country: ICountryRequest
+  country: ICountry
 }
 
 export interface IAddressResponse {
@@ -14,5 +14,5 @@ export interface IAddressResponse {
   address2?: string
   city: string
   postalCode: string
-  country: ICountryResponse
+  country: ICountry
 }

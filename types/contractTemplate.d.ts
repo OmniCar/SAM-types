@@ -1,7 +1,8 @@
 import { IContractOptionResponse } from './contractOption'
 import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfService'
 import { PriceSpecification } from './priceSpecification'
-import { TCurrency, TVehicleServiceType, TVehicleUsageType } from '../types'
+import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
+import { TCurrency } from '../types/currency'
 
 export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
 

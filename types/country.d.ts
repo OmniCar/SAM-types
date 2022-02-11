@@ -11,11 +11,15 @@ export interface ICountryRequest {
   isoName: string
 }
 
-export interface ICountryResponse {
-  countryId: number
-  isoName: string
-  countryName?: string
+export interface ICountryResponse extends ICountry {
+  // countryName?: string
   localeName?: string
   currency: TCurrency
   vatPct: number
+}
+
+export interface ICountry {
+  countryId?: number
+  isoName: string
+  countryName?: string
 }
