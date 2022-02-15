@@ -5,9 +5,9 @@ Typescript interfaces for all types used to communicate between SAM client(s) an
 NOTICE:
 Since we have many environments (`develop`, `staging`, `releasetest`, etc) that all should need to be synched with sam-types's master branch. But there WAS only one `master`, so one environments had taken the sam-types's master and the other environments took some random branch and/or a branch with a release number based on some other random branch.. The situation was a kind of western-cowboy sope-orera situation.. To get rid of this, and (try) to get some order...Here in this repo. has been created additional "master" branches, one master for the top develop branch/environments named master-for-develop, and one master for staging and so on... So, now we have at least these three "master" branches:
 
-    * `master-for-develop`
-    * `master-for-staging`
-    * `master-for-releasetest`
+- `master-for-develop`
+- `master-for-staging`
+- `master-for-releasetest`
 
 In future, please merge your (finished and tested) PR's into one the "master" branches above (`master-for-develop`, `master-for-staging`, `master-for-releasetest`), and base new releases on one of these master branches (however, does not apply if you make a pre-releases of sam-types, then you may base your release on your own choosing).
 
