@@ -1,6 +1,6 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryResponse, ICountryRequest } from './country'
-import { WarrantyOnboardingConfig } from './index'
+import { TCurrency, WarrantyOnboardingConfig } from './index'
 
 export interface IContractProviderRequest {
   administrativeName: string
@@ -36,6 +36,7 @@ export interface IContractProviderResponse {
   administrativeName: string
   cvrCode: string
   country: ICountryResponse
+  currency?: TCurrency
   postmarkFromEmail: string
   omnicarFee: number
   hoursToReminder1: number

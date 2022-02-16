@@ -44,6 +44,18 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
   defaultYearlyServices: number
 }
 
+export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
+  vehicleServiceType: TVehicleServiceType //update
+  vehicleUsageType: TVehicleUsageType //new
+  oilLiterPrice: null | PriceSpecification
+  labourHourCost: null | PriceSpecification
+  euroToLocalCurrencyRateInTenthOfCents: number | null
+  totalPriceFactorInTenthOfCents: number | null
+  // currencyOilPrice: TCurrency | null
+  // currencyLabourCost: TCurrency | null
+  currencyPartsPrice: TCurrency | null
+}
+
 export interface IGenericContractTemplateResponse {
   id: number
   name: string // Internal name (used in price files etc)
