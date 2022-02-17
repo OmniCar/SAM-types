@@ -31,9 +31,8 @@ export interface IContractStatusCount {
   count: number
 }
 
-export interface IContractProductTypeCount {
-  type: ProductType
-  count: number
+export interface IContractProductTypeCountResponse {
+  [productType: string]: number
 }
 
 export interface IContractFilterParams {
