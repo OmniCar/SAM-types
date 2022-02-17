@@ -27,6 +27,8 @@ export interface IContractProviderRequest {
   webLogoSquare: string | null
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
+  productsEnabled: boolean
+  justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
 }
@@ -62,6 +64,7 @@ export interface IContractProviderResponse {
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
+  justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
 }
