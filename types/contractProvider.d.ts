@@ -20,6 +20,8 @@ export interface IContractProviderRequest {
   contactPerson: IContactPersonRequest
   termsOfTradeRef: string
   webCalcEnabled: boolean
+  productsEnabled: boolean
+  justGOContractsEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
   isShowLogoOnWeb: boolean
