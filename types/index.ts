@@ -8,8 +8,6 @@ export enum ContractState {
   ActivePrePaid = 210,
   Suspended = 400,
   Terminated = 500,
-  Extended = 510,
-  Expired = 600,
   Completed = 800, // not used
   Settled = 900,
 }
@@ -64,9 +62,7 @@ export enum ContractActionType {
   acceptOffer = 180, // The customer accepted the offer
   approveOffer = 200, // Who approved it? that would be the customer
   activate = 300, // The contract was activated by either the customer or the seller
-  expire = 400, // The contract offer expired and archived
-  expireContract = 410, // The contract expired
-  sendContractExpiredMail = 411, // A expired mail was sent to the customer
+  expire = 400, // The contract expired
   changeVehicleData = 420, // Meta data for the vehicle was changed
   changeCustomerData = 440, // Meta data for the customer was changed
   changePaymentData = 460, // Information about payment was changed
@@ -77,13 +73,6 @@ export enum ContractActionType {
   extending = 710, // Who extended the contract (the contract which extended)
   pauseSubscription = 720, // The subscription is paused because of contract paid off
   terminate = 800, // Who terminated the contract
-  registerCashPayment = 810, // Registered cash payment. Helps to solve balance issues on a contract
-  registerCashPayout = 820, // Registered cash payout. Helps to solve balance issues on a contract
-  registerProviderPayment = 830, // Registered provider payment. It means that provider forgive some amount. Helps to solve balance issues on a contract
-  createStripeRefund = 840, // Created stripe refund
-  registerRefundedCharge = 850, // Registered refunded charge. Create new 'refund' invoice (charge.refunded webhook)
-  createStripeInvoice = 860, // Created stripe invoice for settlement
-  registerPaidInvoice = 870, // Registered paid invoice. Create new 'settle charge' invoice (invoice.payment_succeeded webhook)
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
   archive = 1000, // Archive contract
 }
@@ -105,13 +94,8 @@ export enum WarrantyOnboardingConfig {
   interdan = 'Interdan',
 }
 
-export enum SettlementPaymentType {
-  cashPayout = 1,
-  cashPayment,
-  stripeRefund,
-  stripePayment,
-  providerPayment,
-}
+export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
+export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefined
 
 export * from './address'
 export * from './admin'
@@ -142,6 +126,7 @@ export * from './model'
 export * from './payment'
 export * from './priceCalculation'
 export * from './priceSpecification'
+export * from './product';
 export * from './providerBranding'
 export * from './queryParams'
 export * from './reports/reports'

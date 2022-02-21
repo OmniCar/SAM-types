@@ -8,6 +8,7 @@ import { VatLookupResponseErrors } from './vatLookupResponseErrors'
 import { WorkshopImportErrors } from './workshopResponseErrors'
 import { paymentResponseErrors } from './paymentResponseErrors'
 import { AdjustmentRequestResponseErrors } from './adjustmentRequestResponseErrors'
+import { InvalidProductTypeErrors } from './invalidProductTypeErrors'
 
 export type ResponseErrors =
   | AdminPaymentErrors
@@ -20,3 +21,4 @@ export type ResponseErrors =
   | OfferRequestResponseErrors
   | paymentResponseErrors
   | AdjustmentRequestResponseErrors
+  | InvalidProductTypeErrors

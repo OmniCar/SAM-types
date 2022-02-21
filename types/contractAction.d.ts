@@ -1,6 +1,5 @@
 import { ContractActionType } from './index'
 import { IUserResponse } from './user'
-import { PriceSpecification } from './priceSpecification'
 
 export type ActionOrderBy = 'id' | 'created' | 'type' | 'userName' | 'comment'
 
@@ -10,20 +9,4 @@ export interface IContractActionResponse {
   type: ContractActionType
   userName: string
   comment: string
-}
-
-export interface ISettlementActionRequest {
-  id: number
-  settlementComment: string
-  shareComment: boolean
-}
-
-export interface ISettlementActionResponse {
-  id: number
-  created: Date | string
-  type: ContractActionType
-  userName: string
-  settlementComment: string
-  shareComment: boolean
-  amount: PriceSpecification
 }
