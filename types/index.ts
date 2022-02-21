@@ -94,6 +94,9 @@ export enum WarrantyOnboardingConfig {
   interdan = 'Interdan',
 }
 
+export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
+export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefined
+
 export * from './address'
 export * from './admin'
 export * from './app'
