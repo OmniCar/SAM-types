@@ -1,6 +1,6 @@
 import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
-import { IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
+import { IContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
@@ -8,7 +8,6 @@ import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
 import { PriceSpecification } from './../../priceSpecification'
 import { ITermsOfServiceResponse } from '../../termsOfService'
-import { Other } from '../../product'
 
 export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
@@ -21,16 +20,8 @@ export interface IContractCreationData {
   externalWarrantiesShowComponent?: boolean
   externalWarrantiesShowButton?: boolean
   cars: ICarCollection
-  templates: IGenericContractTemplateResponse[]
+  templates: IContractTemplateResponse[]
   templatesAllDisabled?: boolean
-}
-
-export interface IProviderHasAccessToProductsRequest {
-  providerId: number | string
-}
-
-export interface IProviderHasAccessToProductsResponse {
-  hasAccess: boolean
 }
 
 export interface IContractCreationPayment {
@@ -38,24 +29,17 @@ export interface IContractCreationPayment {
   paymentGateways: PaymentGateway[]
 }
 
-export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
-export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefined
-
 interface ICommonContractUpdateRequest {
   contractTemplateId: number
   serviceVariantId: string
   serviceVariantName: string
-  value?: number
-  valueType: ContractValueType
   duration: number
-  mileage?: number
+  mileage: number
   optionIds: number[]
   providerPayments: number
   providerShare: number
   reference?: string
   startMileage?: number
-  startValue?: number
-  startValueType: ContractValueType
   type: ContractType
 }
 
@@ -80,15 +64,11 @@ interface IContractInfo {
   termsUrl: string
   duration: number
   mileage: number
-  value: number | undefined
   startMileage: number
   startDate: Date
   endDate: Date
   includedOptions: IOptionInfo[]
   additionalOptions: IOptionInfo[]
-  startValue: number | undefined
-  startValueType: ContractValueType | undefined
-  valueType: ContractValueType | undefined
 }
 
 interface IContractProviderInfo {
@@ -107,7 +87,7 @@ interface IPaymentInformationResponse {
   publicKey: string
   contractProvider: IContractProviderInfo
   customer: IAdminCustomer
-  product: Vehicle | Other
+  vehicle: Vehicle
   contract: IContractInfo
   totalAmount: PriceSpecification | null
   minimumTotalAmount: PriceSpecification | null
@@ -128,7 +108,7 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
-  product: Vehicle | Other
+  vehicle: Vehicle
   paymentGateway: PaymentGateway
   customerId?: number
   customer?: IAdminCustomer
@@ -181,7 +161,7 @@ export interface ICreateFreeWarrantyResponse {
 }
 
 export interface IAvailableFreeWarrantyRequest {
-  vehicleId?: number // Vehicle or OtherProduct id
+  vehicleId?: number
   vin: string
   regNumber: string
   regDate: string
@@ -230,16 +210,11 @@ export interface IAvailableFreeWarranty {
   calculationMethod: 100 | 200
   maxStartMileage: number
   maxEndMileage: number // The absolute maximum End-Mileage Odometer reading for this product.
-  maxStartHours?: number
-  maxEndHours?: number
-  maxStartServices?: number
-  maxEndServices?: number
   warrantyTermsRef: string
   contractStartDate: Date
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
   weight: number
   warrantyColor: string
-  warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
 }
 
@@ -260,7 +235,7 @@ export interface IAdminContractActivationResponse {
 
 export interface IAdminContractResponse {
   type: ContractType
-  product: Vehicle | Other
+  vehicle: Vehicle
   contractTemplate: IContractTemplateResponse
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]
@@ -268,10 +243,6 @@ export interface IAdminContractResponse {
   duration: number
   mileage: number
   startMileage: number
-  value: number | undefined
-  valueType: ContractValueType
-  startValue: number | undefined
-  startValueType: ContractValueType
   paymentGateway: PaymentGateway
   customerId: number
   customer: IAdminCustomer

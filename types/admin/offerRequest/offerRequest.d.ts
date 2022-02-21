@@ -1,4 +1,3 @@
-import { ContractValueType } from '../../admin';
 import { IContactPersonResponse, IContractTemplateResponse, OfferRequestState, PriceSpecification } from '../..'
 
 export interface IOfferRequestResponse {
@@ -6,21 +5,16 @@ export interface IOfferRequestResponse {
   prettyIdentifier: string
   contactPerson: IContactPersonResponse
   requestPrice: PriceSpecification
-  product: {
+  vehicle: {
     brandName?: string
     modelName?: string
     fuelTypeName?: string
     vin?: string
-    serialNumber?: string
-    serialNumber2?: string
-    itemNumber?: string
-    itemNumber2?: string
     registrationNumber?: string
-    dateProductFirstRegistered?: string
+    dateVehicleFirstRegistered?: string
   }
   duration?: number
   mileage?: number
-  value?: { val: number, type: ContractValueType}
   contractTemplate?: IContractTemplateResponse
   state: OfferRequestState
   stateChanged: Date | string

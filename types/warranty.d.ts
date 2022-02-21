@@ -1,5 +1,7 @@
-import { ICountryResponse } from "./country";
+import { ICountryRequest, ICountryResponse } from "./country";
 import { ITermsOfServiceRequest, ITermsOfServiceResponse } from "./termsOfService";
+
+
 
 export interface IWarrantyRequest {
   warrantyId: number

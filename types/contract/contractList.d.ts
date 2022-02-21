@@ -12,32 +12,24 @@ export interface IContractListRecord {
   contractTemplateDescription: string
   customerName: string
   customerCompanyName: string
-  registrationNumber?: string
-  serialNumber?: string
-  itemNumber?: string
-  itemNumber2?: string
+  registrationNumber: string
   sellerName: string
   health: IContractHealth[]
 }
 
 export type ContractListOrderByType =
-| 'prettyIdentifier'
-| 'brand'
-| 'productBrand'
-| 'contractEndDate'
-| 'contractCreationDate'
-| 'contractState'
-| 'customerCompanyName'
-| 'contractTemplateDescription'
-| 'contractTemplateName'
-| 'customerName'
-| 'registrationNumber'
-| 'sellerName'
-| 'serialNumber'
-| 'serialNumber2'
-| 'itemNumber'
-| 'itemNumber2'
-| 'createdByProvider'
+  | 'prettyIdentifier'
+  | 'brand'
+  | 'contractEndDate'
+  | 'contractCreationDate'
+  | 'contractState'
+  | 'customerCompanyName'
+  | 'contractTemplateDescription'
+  | 'contractTemplateName'
+  | 'customerName'
+  | 'registrationNumber'
+  | 'sellerName'
+  | 'createdByProvider'
 
 export interface IWarrantyListRecord {
   prettyIdentifier: string
