@@ -1,5 +1,4 @@
 import { OrderDirection } from '../queryParams'
-import { ProductType } from '../admin/product'
 
 export interface IColumnUserConfiguration {
   enabled: boolean
@@ -13,4 +12,4 @@ export interface ITableUserConfiguration<OrderBy> {
   rowCount: number
 }
 
-export type TableConfigurationType = 'serviceContract' | 'productServiceContract' | 'warranty' 
+export type TableConfigurationType = 'serviceContract' | 'warranty'

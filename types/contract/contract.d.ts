@@ -2,22 +2,17 @@ import { IContractTemplateResponse } from '../contractTemplate'
 import { IContractOptionResponse } from '../contractOption'
 import { Customer } from '../customer'
 import { Vehicle } from '../vehicle'
-import { Other } from '../product'
 import { ICalculationResponse } from '../priceCalculation'
-import { ContractValueType, ContractState, PaymentGateway } from '../index'
+import { ContractState, PaymentGateway } from '../index'
 import { IContractProviderResponse } from '../contractProvider'
 
 export interface IContractResponse {
   id: number
   customer: Customer
-  product: Vehicle | Other
+  vehicle: Vehicle
   duration: string
   mileage: string
-  value?: string
-  valueType?: ContractValueType
   startMileage: number
-  startValue?: number
-  startValueType?: ContractValueType
   template: IContractTemplateResponse
   options: IContractOptionResponse[]
   payment: ICalculationResponse
