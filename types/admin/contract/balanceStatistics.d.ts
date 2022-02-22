@@ -20,6 +20,7 @@ export interface IContractBalanceStatistics {
   subscriptionPaidTotalSum: PriceSpecification
   shouldPaid: PriceSpecification
   underOverMileage?: IUnderOverMileageInfo
+  shouldPaidByEnd?: PriceSpecification
 }
 
 export interface IUnderOverMileageInfo {
