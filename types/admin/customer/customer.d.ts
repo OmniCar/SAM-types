@@ -19,6 +19,10 @@ export interface IAdminCustomer {
   vatLookup?: VatLookup
 }
 
+export interface CustomerUpdateResponse extends IAdminCustomer {
+  extSysCustomerUpdateMessage?: string
+}
+
 export type CustomerType = 'PRIVATE' | 'BUSINESS'
 
 export type VatLookup = 'INTERNAL' | 'REMOTE'
