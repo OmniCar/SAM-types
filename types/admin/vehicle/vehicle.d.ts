@@ -1,4 +1,4 @@
-import { ContractState, IIncludedContractOption } from './../../index'
+import { ContractState, ContractValueType, IIncludedContractOption } from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
@@ -31,6 +31,8 @@ export interface IApiVehicleContract {
   reference?: string
   activationUrl?: string
   extendedFrom?: number
+  value?: number
+  valueType?: ContractValueType
 }
 
 export interface IApiVehicleIncludedContractOption {
