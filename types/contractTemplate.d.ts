@@ -80,6 +80,7 @@ export interface IGenericContractTemplateResponse {
   serviceVariantId: string
   isProductTemplate?: boolean
   templateAutoDAPId?: number | null
+  maxEndMileage?: number
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
@@ -87,7 +88,6 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
   underDrivenCharge: PriceSpecification
   overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean
-  maxEndMileage?: number
 }
 
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
@@ -95,6 +95,7 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
   defaultYearlyServices: number
   maxEndHours?: number
   maxEndServices?: number
+  maxEndMileage?: number
 }
 
 export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
