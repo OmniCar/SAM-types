@@ -2,6 +2,8 @@ export type LicensePlateLookupResponseErrors =
   | 'REGNO_VEHICLE_NOT_FOUND'
   | 'REGNO_ACTIVE_CONTRACT_EXISTS'
   | 'REGNO_NO_CONTRACTS_AVAILABLE'
+  | 'REGNO_LOOKUP_SERVICE_TIMEOUT'  // Ex, timeout of vehicle lookup service.
+  | 'REGNO_LOOKUP_SERVICE2_TIMEOUT' // Ex, timeout of 2nd vehicle lookup service (like AutoDAP).
 
 type ModelsLookupResponseErrors = 'MODELS_NO_MODELS'
 type BrandsLookupResponseErrors = 'BRANDS_NO_BRANDS'
