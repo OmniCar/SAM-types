@@ -1,5 +1,6 @@
 export type LicensePlateLookupResponseErrors =
   | 'REGNO_VEHICLE_NOT_FOUND'
+  | 'REGNO_VEHICLE_NOT_FOUND2'    // For possible second lookup service in same api call.
   | 'REGNO_ACTIVE_CONTRACT_EXISTS'
   | 'REGNO_NO_CONTRACTS_AVAILABLE'
   | 'REGNO_LOOKUP_SERVICE_TIMEOUT'  // Ex, timeout of vehicle lookup service.
