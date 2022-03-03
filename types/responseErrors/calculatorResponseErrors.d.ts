@@ -11,7 +11,7 @@ type BrandsLookupResponseErrors = 'BRANDS_NO_BRANDS'
 type FuelTypeLookupResponseErrors = 'FUELTYPES_NO_FUELTYPES'
 type OptionsLookupResponseErrors = 'OPTIONS_NO_OPTIONS'
 type ContractsLookupResponseErrors = 'CONTRACTS_NO_CONTRACTS' | 'INVALID_REGISTRATION_DATE'
-type PriceLookupResponseErrors = 'PRICE_TEMPLATE_NOT_FOUND' | 'PRICE_MODEL_NOT_FOUND' | 'PRICE_PRICE_NOT_FOUND'
+type PriceLookupResponseErrors = 'PRICE_TEMPLATE_NOT_FOUND' | 'PRICE_MODEL_NOT_FOUND' | 'PRICE_LINE_NOT_FOUND'
 type PaymentPlanResponseErrors = 'UNSUPPORTED_CONTRACT_TYPE' | 'CONTRACT_ENDS_BEFORE_START'
 
 export type CalculatorResponseErrors =
