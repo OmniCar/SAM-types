@@ -3,3 +3,8 @@ node_modules/
 .vscode/
 .DS_Store
 gitignore/
+
+
+**.js
+**.js.map
+
