@@ -5,7 +5,7 @@ export type ContractResponseErrors =
   | WarrantyCheckErrors
 
 type ContractUpdateErrors = 'CONTRACT_TRANSITION_INVALID_OR_ILLEGAL'
-type PostContractResponseErrors = 'CONTRACT_MISSING_OR_INVALID_INFORMATION'
+type PostContractResponseErrors = 'CONTRACT_MISSING_OR_INVALID_INFORMATION' | 'ITEM_SERIALNO_ACTIVE_CONTRACT_EXISTS'
 
 // In some situations StakeHolder (eg: CEO in Finland) wants to prevent the user from knowing exacly WHY a contract
 // cannot be activated, ONLY that the system prevents it from beeing activated.

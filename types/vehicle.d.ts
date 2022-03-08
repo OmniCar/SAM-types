@@ -77,5 +77,6 @@ export type TVehicleDriveType =
   | 'All Wheel Drive'
 
 export interface VehicleUpdateResponse extends Vehicle {
+  extSysRegNumberUpdateMessage?: string
   v4RegNumberUpdated?: boolean
 }

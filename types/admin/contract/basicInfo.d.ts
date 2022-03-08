@@ -9,6 +9,7 @@ export interface IBasicContractInfo {
   templateDescription: string
   additionalOptions: IIncludedContractOption[]
   health: IContractHealth[]
-  vehicleCanAddWarranty: boolean
-  vehicleHasWarranty: boolean
+  productCanAddWarranty: boolean
+  productHasWarranty: boolean
+  productContract: boolean
 }

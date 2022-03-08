@@ -10,7 +10,8 @@ export interface IWorkshopOperationCollection {
 export interface IWorkshopOperation {
   id?: number
   price: PriceSpecification | number
-  mileage: number
+  value: number
+  mileage?: number
   date: Date | string
   description: string
   contractPrettyIdentifier?: string
