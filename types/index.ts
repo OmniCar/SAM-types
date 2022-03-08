@@ -105,7 +105,12 @@ export enum WarrantyOnboardingConfig {
   interdan = 'Interdan',
 }
 
+export enum OutageSeverityLevel {
+  Low = 1,
   Medium = 2,
+  High = 3,
+}
+
 export enum SettlementPaymentType {
   cashPayout = 1,
   cashPayment,
