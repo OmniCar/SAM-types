@@ -1,5 +1,5 @@
 import { PriceSpecification } from '../../priceSpecification'
-import { ContractType } from './contractCreation'
+import { ContractValueType, ContractType } from './contractCreation'
 
 export interface IContractCalculationRequest {
   type: ContractType
@@ -9,6 +9,8 @@ export interface IContractCalculationRequest {
   serviceVariantId: string
   duration: number
   mileage: number
+  value?: number
+  valueType: ContractValueType
   registrationDate: string
   optionIds: number[]
   providerPayments: number
@@ -17,23 +19,25 @@ export interface IContractCalculationRequest {
   adjustedFrom?: string
   isDownpaymentDistributed: boolean
   startMileage?: number
+  startValue?: number
+  startValueType?: ContractValueType
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
   brandId: number
-  vehicleModelId: number
+  productModelId: number
   fuelTypeId: number
 }
 
 export interface IStandardAxContractCalculationRequest extends IContractCalculationRequest {
   brandName: string
-  vehicleModelName: string
+  productModelName: string
   fuelTypeName: string
 }
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   amountPerPayment: number
   brandName: string
-  vehicleModelName: string
+  productModelName: string
   fuelTypeName: string
 }
 

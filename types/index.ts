@@ -105,6 +105,7 @@ export enum WarrantyOnboardingConfig {
   interdan = 'Interdan',
 }
 
+  Medium = 2,
 export enum SettlementPaymentType {
   cashPayout = 1,
   cashPayment,
@@ -139,9 +140,11 @@ export * from './invoice'
 export * from './locale'
 export * from './localizationData'
 export * from './model'
+export * from './outage'
 export * from './payment'
 export * from './priceCalculation'
 export * from './priceSpecification'
+export * from './product';
 export * from './providerBranding'
 export * from './queryParams'
 export * from './reports/reports'

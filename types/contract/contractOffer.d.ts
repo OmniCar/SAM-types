@@ -1,16 +1,22 @@
+import { ProductAlongItsContracts } from '../product'
 import { Customer } from '../customer'
 import { VehicleAlongItsContracts } from '../vehicle'
 import { IContractOptionResponse } from './../contractOption'
 import { IContractTemplateResponse } from './../contractTemplate'
 import { PaymentGateway } from './../payment'
+import { ContractValueType } from '../admin'
 
-export interface IContractOfferRequest {
+export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
   userId?: number
   customer?: Customer
-  vehicle?: VehicleAlongItsContracts
+  product?: TProduct
   duration: number
   mileage: number
   startMileage: number
+  value?: number
+  valueType?: ContractValueType
+  startValue?: number
+  startValueType?: ContractValueType
   template?: IContractTemplateResponse
   options: IContractOptionResponse[]
   paymentGateway: PaymentGateway
@@ -22,3 +28,5 @@ export interface IContractOfferResponse {
   paymentGateway: PaymentGateway
   prettyIdentifier: string
 }
+
+type ProductTypeContract = VehicleAlongItsContracts | ProductAlongItsContracts

@@ -18,7 +18,7 @@ export interface IContractOptionRequest {
   calculationMethod: number | null
 }
 
-export interface IContractOptionResponse {
+export interface IGenericContractOptionResponse {
   id: number
   price: PriceSpecification
   description: string
@@ -28,10 +28,18 @@ export interface IContractOptionResponse {
   abbreviation: string
   optionGroup: number | null
   internalName: string
-  showOnWebcalc: boolean
   warranty: number | null | undefined
   calculationMethod: number | null
   termsOfService?: ITermsOfServiceResponse | null
-  maxEndMileage?: number
   maxEndAge?: number
+}
+
+export interface IContractOptionResponse extends IGenericContractOptionResponse {
+  showOnWebcalc: boolean
+  maxEndMileage?: number
+}
+
+export interface IProductContractOptionResponse extends IGenericContractOptionResponse {
+  maxEndServices?: number
+  maxEndHours?: number
 }
