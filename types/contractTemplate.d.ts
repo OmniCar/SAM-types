@@ -27,6 +27,8 @@ export interface IGenericContractTemplateRequest {
   archived?: boolean
   formattedDescription: string | null
   weight: number
+  underdrivenCharge: PriceSpecification
+  overdrivenCharge: PriceSpecification
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
