@@ -1,1 +1,4 @@
 export type WorkshopImportErrors = 'INVALID_IMPORT_FILE'
+  | 'TOO_MANY_RECORDS'
+  | 'INVALID_COLUMN_COUNT'  
+  | 'INVALID_HEADER'

@@ -19,6 +19,7 @@ export interface IContractProviderRequest {
   providerIdentifier: string
   contactPerson: IContactPersonRequest
   termsOfTradeRef: string
+  visibleToOtherChildren: boolean
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
@@ -53,6 +54,7 @@ export interface IContractProviderResponse {
   providerIdentifier: string
   contactPerson: IContactPersonResponse
   termsOfTradeRef: string
+  visibleToOtherChildren: boolean
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
