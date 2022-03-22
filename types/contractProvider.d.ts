@@ -1,6 +1,6 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryResponse, ICountryRequest } from './country'
-import { WarrantyOnboardingConfig } from './index'
+import { TCurrency, WarrantyOnboardingConfig } from './index'
 
 export interface IContractProviderRequest {
   administrativeName: string
@@ -19,6 +19,7 @@ export interface IContractProviderRequest {
   providerIdentifier: string
   contactPerson: IContactPersonRequest
   termsOfTradeRef: string
+  visibleToOtherChildren: boolean
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
@@ -27,6 +28,8 @@ export interface IContractProviderRequest {
   webLogoSquare: string | null
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
+  productsEnabled: boolean
+  justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
 }
@@ -36,6 +39,7 @@ export interface IContractProviderResponse {
   administrativeName: string
   cvrCode: string
   country: ICountryResponse
+  currency?: TCurrency
   postmarkFromEmail: string
   omnicarFee: number
   hoursToReminder1: number
@@ -50,6 +54,7 @@ export interface IContractProviderResponse {
   providerIdentifier: string
   contactPerson: IContactPersonResponse
   termsOfTradeRef: string
+  visibleToOtherChildren: boolean
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
@@ -61,6 +66,7 @@ export interface IContractProviderResponse {
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
+  justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
