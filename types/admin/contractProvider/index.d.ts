@@ -19,6 +19,7 @@ export interface IContractProvider {
   isShowLogoOnWeb?: boolean
   webLogoBanner?: string | null
   webLogoSquare?: string | null
+  inactive: boolean
 }
 
 export interface ICreateTestContractProvider {

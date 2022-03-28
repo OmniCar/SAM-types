@@ -69,4 +69,7 @@ export interface IContractProviderResponse {
   justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
+  state: ProviderState
 }
+
+export type ProviderState = 'Active' | 'Inactive'
