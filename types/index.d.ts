@@ -124,6 +124,7 @@ export * from './contractOption';
 export * from './contractProvider';
 export * from './contractTemplate';
 export * from './country';
+export * from './currency';
 export * from './customer';
 export * from './durationOptions';
 export * from './errorResponse';
