@@ -20,6 +20,8 @@ export interface IContractCalculationRequest {
   isDownpaymentDistributed: boolean
   startMileage?: number
   startValue?: number
+  startValueType?: ContractValueType
+  vin?: string
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
@@ -59,4 +61,5 @@ export interface IContractCalculationResponse {
   adjustedAmount?: PriceSpecification
   adjustedContractFullCost?: PriceSpecification
   adjustedPaymentsLeft?: number
+  adapDebugData?: any
 }

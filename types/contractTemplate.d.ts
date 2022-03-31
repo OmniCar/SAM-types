@@ -1,8 +1,10 @@
 import { IContractOptionResponse } from './contractOption'
 import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfService'
 import { PriceSpecification } from './priceSpecification'
+import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
+import { TCurrency } from '../types/currency'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten'
+export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
@@ -18,6 +20,7 @@ export interface IGenericContractTemplateRequest {
   minAge: number
   maxAge: number
   defaultDuration: number
+  defaultMileage: number
   minimumPaymentsCount: number | null
   properties: IContractOptionResponse[]
   options: IContractOptionResponse[]
@@ -30,7 +33,7 @@ export interface IGenericContractTemplateRequest {
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
-  defaultMileage: number
+  // defaultMileage: number
   underDrivenCharge: PriceSpecification
   overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean
@@ -39,6 +42,18 @@ export interface IContractTemplateRequest extends IGenericContractTemplateReques
 export interface IProductContractTemplateRequest extends IGenericContractTemplateRequest {
   defaultHours: number
   defaultYearlyServices: number
+}
+
+export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
+  vehicleServiceType: TVehicleServiceType //update
+  vehicleUsageType: TVehicleUsageType //new
+  oilLiterPrice: null | PriceSpecification
+  labourHourCost: null | PriceSpecification
+  euroToLocalCurrencyRateInTenthOfCents: number | null
+  totalPriceFactorInTenthOfCents: number | null
+  // currencyOilPrice: TCurrency | null
+  // currencyLabourCost: TCurrency | null
+  currencyPartsPrice: TCurrency | null
 }
 
 export interface IGenericContractTemplateResponse {
@@ -54,6 +69,7 @@ export interface IGenericContractTemplateResponse {
   minAge: number
   maxAge: number
   defaultDuration: number
+  defaultMileage: number | null
   minimumPaymentsCount: number | null
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
@@ -63,14 +79,15 @@ export interface IGenericContractTemplateResponse {
   serviceVariantName: string
   serviceVariantId: string
   isProductTemplate?: boolean
+  templateAutoDAPId?: number | null
+  maxEndMileage?: number
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
-  defaultMileage: number
+  // defaultMileage: number
   underDrivenCharge: PriceSpecification
   overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean
-  maxEndMileage?: number
 }
 
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
@@ -78,4 +95,17 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
   defaultYearlyServices: number
   maxEndHours?: number
   maxEndServices?: number
+  maxEndMileage?: number
+}
+
+export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
+  vehicleServiceType: TVehicleServiceType //update
+  vehicleUsageType: TVehicleUsageType //new
+  oilLiterPrice: null | PriceSpecification
+  labourHourCost: null | PriceSpecification
+  euroToLocalCurrencyRateInTenthOfCents: number | null
+  totalPriceFactorInTenthOfCents: number | null
+  // currencyOilPrice: TCurrency | null
+  // currencyLabourCost: TCurrency | null
+  currencyPartsPrice: TCurrency | null
 }

@@ -5,5 +5,6 @@ export interface UserRoleRecord {
   contractProvider: {
     id: number
     administrativeName: string
+    inactive?: boolean
   }
 }
