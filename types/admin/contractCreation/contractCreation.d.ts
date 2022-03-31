@@ -55,6 +55,7 @@ interface ICommonContractUpdateRequest {
   reference?: string
   startMileage?: number
   startValue?: number
+  startValueType: ContractValueType
   type: ContractType
 }
 
@@ -86,6 +87,7 @@ interface IContractInfo {
   includedOptions: IOptionInfo[]
   additionalOptions: IOptionInfo[]
   startValue: number | undefined
+  startValueType: ContractValueType | undefined
   valueType: ContractValueType | undefined
 }
 
@@ -135,7 +137,7 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest { }
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
@@ -204,12 +206,12 @@ export interface IAvailableFreeWarrantyResponse {
 export interface IAvailableFreeWarrantyDurationPrice {
   allowedDistanceMileage: undefined | number // Allowed driving limit/distance during this Warranty duration.
   allowedPowerV4Interval:
-    | undefined
-    | {
-        lookedUpEngineMaxPower: number
-        minEngineMaxPower: number
-        maxEngineMaxPower: number
-      }
+  | undefined
+  | {
+    lookedUpEngineMaxPower: number
+    minEngineMaxPower: number
+    maxEngineMaxPower: number
+  }
   customerPrice: PriceSpecification | null
   durationMonths: number
   finlandPriceId?: number
@@ -269,6 +271,7 @@ export interface IAdminContractResponse {
   value: number | undefined
   valueType: ContractValueType
   startValue: number | undefined
+  startValueType: ContractValueType
   paymentGateway: PaymentGateway
   customerId: number
   customer: IAdminCustomer

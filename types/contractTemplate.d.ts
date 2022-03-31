@@ -4,7 +4,7 @@ import { PriceSpecification } from './priceSpecification'
 import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
 import { TCurrency } from '../types/currency'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
+export type PriceSource = 'Pricelist' | 'Autoexperten'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
@@ -33,9 +33,9 @@ export interface IGenericContractTemplateRequest {
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
-//  defaultMileage: number //
-  underDrivenCharge: PriceSpecification
-  overDrivenCharge: PriceSpecification
+  //  defaultMileage: number //
+  underdrivenCharge: PriceSpecification //chaned
+  overdrivenCharge: PriceSpecification //chaned
   showOnWebcalc: boolean
 }
 
@@ -85,8 +85,8 @@ export interface IGenericContractTemplateResponse {
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
   // defaultMileage: number
-  underDrivenCharge: PriceSpecification
-  overDrivenCharge: PriceSpecification
+  underdrivenCharge: PriceSpecification //upda
+  overdrivenCharge: PriceSpecification  //upda
   showOnWebcalc: boolean
 }
 

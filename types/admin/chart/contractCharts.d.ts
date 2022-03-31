@@ -42,6 +42,7 @@ export interface IValueChart {
   totalBalance: number // summary.
   contractStartDate: Date | string // chart legend.
   contractEndDate: Date | string // chart legend.
+  contractEndValue?: number
   duration: {
     // chart legend.
     total: number

@@ -29,7 +29,7 @@ export interface IContractProviderRequest {
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
-  justGOContractsEnabled: boolean
+  // justGOContractsEnabled: boolean  //no
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
@@ -67,7 +67,7 @@ export interface IContractProviderResponse {
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
-  justGOContractsEnabled: boolean
+  // justGOContractsEnabled: boolean  //no
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
