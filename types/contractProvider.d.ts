@@ -31,6 +31,7 @@ export interface IContractProviderRequest {
   productsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
+  autoSettlement: boolean
 }
 
 export interface IContractProviderResponse {
@@ -66,4 +67,5 @@ export interface IContractProviderResponse {
   productsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
+  autoSettlement: boolean
 }
