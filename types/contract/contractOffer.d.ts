@@ -14,9 +14,8 @@ export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
   mileage: number
   startMileage: number
   value?: number
-  valueType?: ContractValueType
   startValue?: number
-  startValueType?: ContractValueType
+  valueType?: ContractValueType
   template?: IContractTemplateResponse
   options: IContractOptionResponse[]
   paymentGateway: PaymentGateway

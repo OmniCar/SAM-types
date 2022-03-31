@@ -20,7 +20,6 @@ export interface IContractCalculationRequest {
   isDownpaymentDistributed: boolean
   startMileage?: number
   startValue?: number
-  startValueType?: ContractValueType
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {

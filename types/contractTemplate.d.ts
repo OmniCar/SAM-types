@@ -27,14 +27,12 @@ export interface IGenericContractTemplateRequest {
   archived?: boolean
   formattedDescription: string | null
   weight: number
-  underdrivenCharge: PriceSpecification
-  overdrivenCharge: PriceSpecification
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
   defaultMileage: number
-  underdrivenCharge: PriceSpecification
-  overdrivenCharge: PriceSpecification
+  underDrivenCharge: PriceSpecification
+  overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean
 }
 
@@ -69,8 +67,8 @@ export interface IGenericContractTemplateResponse {
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
   defaultMileage: number
-  underdrivenCharge: PriceSpecification
-  overdrivenCharge: PriceSpecification
+  underDrivenCharge: PriceSpecification
+  overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean
   maxEndMileage?: number
 }

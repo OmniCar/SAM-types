@@ -55,7 +55,6 @@ interface ICommonContractUpdateRequest {
   reference?: string
   startMileage?: number
   startValue?: number
-  startValueType: ContractValueType
   type: ContractType
 }
 
@@ -87,7 +86,6 @@ interface IContractInfo {
   includedOptions: IOptionInfo[]
   additionalOptions: IOptionInfo[]
   startValue: number | undefined
-  startValueType: ContractValueType | undefined
   valueType: ContractValueType | undefined
 }
 
@@ -271,7 +269,6 @@ export interface IAdminContractResponse {
   value: number | undefined
   valueType: ContractValueType
   startValue: number | undefined
-  startValueType: ContractValueType
   paymentGateway: PaymentGateway
   customerId: number
   customer: IAdminCustomer
