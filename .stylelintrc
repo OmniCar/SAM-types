@@ -1,0 +1,20 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "color-hex-case": "lower",
+    "color-named": null,
+    "max-nesting-depth": 3,
+    "number-leading-zero": null,
+    "order/properties-alphabetical-order": null,
+    "property-no-vendor-prefix": null,
+    "rule-empty-line-before": null,
+    "scss/at-import-no-partial-leading-underscore": null,
+    "scss/at-import-partial-extension-blacklist": null,
+    "selector-class-pattern": "([A-Z][a-z0-9]+)+",
+    "selector-max-id": 1,
+    "string-quotes": "single"
+  }
+}

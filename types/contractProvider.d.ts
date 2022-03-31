@@ -1,6 +1,6 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryResponse, ICountryRequest } from './country'
-import { WarrantyOnboardingConfig } from './index'
+import { TCurrency, WarrantyOnboardingConfig } from './index'
 
 export interface IContractProviderRequest {
   administrativeName: string
@@ -29,6 +29,7 @@ export interface IContractProviderRequest {
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
+  justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
@@ -39,6 +40,7 @@ export interface IContractProviderResponse {
   administrativeName: string
   cvrCode: string
   country: ICountryResponse
+  currency?: TCurrency
   postmarkFromEmail: string
   omnicarFee: number
   hoursToReminder1: number
@@ -65,7 +67,11 @@ export interface IContractProviderResponse {
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
+  justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
+  state: ProviderState
 }
+
+export type ProviderState = 'Active' | 'Inactive'
