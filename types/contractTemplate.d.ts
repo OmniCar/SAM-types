@@ -33,9 +33,8 @@ export interface IGenericContractTemplateRequest {
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
-  //  defaultMileage: number //
-  underdrivenCharge: PriceSpecification //chaned
-  overdrivenCharge: PriceSpecification //chaned
+  underdrivenCharge: PriceSpecification
+  overdrivenCharge: PriceSpecification
   showOnWebcalc: boolean
 }
 
@@ -45,14 +44,12 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
 }
 
 export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
-  vehicleServiceType: TVehicleServiceType //update
-  vehicleUsageType: TVehicleUsageType //new
+  vehicleServiceType: TVehicleServiceType
+  vehicleUsageType: TVehicleUsageType
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
   totalPriceFactorInTenthOfCents: number | null
-  // currencyOilPrice: TCurrency | null
-  // currencyLabourCost: TCurrency | null
   currencyPartsPrice: TCurrency | null
 }
 
@@ -84,9 +81,8 @@ export interface IGenericContractTemplateResponse {
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
-  // defaultMileage: number
-  underdrivenCharge: PriceSpecification //upda
-  overdrivenCharge: PriceSpecification  //upda
+  underdrivenCharge: PriceSpecification
+  overdrivenCharge: PriceSpecification
   showOnWebcalc: boolean
 }
 
@@ -99,13 +95,11 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
 }
 
 export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
-  vehicleServiceType: TVehicleServiceType //update
-  vehicleUsageType: TVehicleUsageType //new
+  vehicleServiceType: TVehicleServiceType
+  vehicleUsageType: TVehicleUsageType
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
   totalPriceFactorInTenthOfCents: number | null
-  // currencyOilPrice: TCurrency | null
-  // currencyLabourCost: TCurrency | null
   currencyPartsPrice: TCurrency | null
 }
