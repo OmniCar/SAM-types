@@ -33,7 +33,7 @@ export interface IGenericContractTemplateRequest {
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
-  // defaultMileage: number
+//  defaultMileage: number //
   underDrivenCharge: PriceSpecification
   overDrivenCharge: PriceSpecification
   showOnWebcalc: boolean

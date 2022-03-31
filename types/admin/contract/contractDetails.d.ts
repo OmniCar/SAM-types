@@ -12,7 +12,6 @@ export interface IContractDetailsRecord {
   startMileage?: number // Current meter/odometer-reading [km].
   mileage: number // Allowed mileage/distance [km] to drive during contract duration [months].
   startValue?: number
-  startValueType: ContractValueType
   endValue?: number
   maxEndValue?: number
   endMileage: number // End-mileage [km] at end of duration [months].

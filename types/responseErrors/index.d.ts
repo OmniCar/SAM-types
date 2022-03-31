@@ -9,7 +9,6 @@ import { WorkshopImportErrors } from './workshopResponseErrors'
 import { paymentResponseErrors } from './paymentResponseErrors'
 import { AdjustmentRequestResponseErrors } from './adjustmentRequestResponseErrors'
 import { InvalidProductTypeErrors } from './invalidProductTypeErrors'
-import { RateLimitErrors } from './rateLimitErrors'
 
 export type ResponseErrors =
   | AdminPaymentErrors
@@ -23,4 +22,3 @@ export type ResponseErrors =
   | paymentResponseErrors
   | AdjustmentRequestResponseErrors
   | InvalidProductTypeErrors
-  | RateLimitErrors
