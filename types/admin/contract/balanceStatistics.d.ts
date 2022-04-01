@@ -19,12 +19,12 @@ export interface IContractBalanceStatistics {
   settlementInfo?: ISettlementInfo
   subscriptionPaidTotalSum: PriceSpecification
   shouldPaid: PriceSpecification
-  underOverMileage?: IUnderOverMileageInfo
+  underOverUnits?: IUnderOverUnitsInfo
   shouldPaidByEnd?: PriceSpecification
 }
 
-export interface IUnderOverMileageInfo {
-  mileage: number
+export interface IUnderOverUnitsInfo {
+  units: number
   cost: PriceSpecification
 }
 

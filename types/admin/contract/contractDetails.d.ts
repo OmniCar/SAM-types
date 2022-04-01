@@ -58,7 +58,7 @@ export interface IAdminCustomTermsRecord {
   customTerms: string
 }
 
-export interface IMileageListResponse {
-  mileage: number
+export interface IUnitsListResponse {
+  units: number
   date: Date | string
 }
