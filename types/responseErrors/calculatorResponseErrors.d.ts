@@ -13,6 +13,7 @@ type OptionsLookupResponseErrors = 'OPTIONS_NO_OPTIONS'
 type ContractsLookupResponseErrors = 'CONTRACTS_NO_CONTRACTS' | 'INVALID_REGISTRATION_DATE'
 type PriceLookupResponseErrors = 'PRICE_TEMPLATE_NOT_FOUND' | 'PRICE_MODEL_NOT_FOUND' | 'PRICE_LINE_NOT_FOUND'
 type PaymentPlanResponseErrors = 'UNSUPPORTED_CONTRACT_TYPE' | 'CONTRACT_ENDS_BEFORE_START'
+type ContractTemplateResponseErrors = 'NUMBER_OF_CONTRACT_TEMPLATES_NOT_ONE'
 
 export type CalculatorResponseErrors =
   | LicensePlateLookupResponseErrors
@@ -23,3 +24,4 @@ export type CalculatorResponseErrors =
   | ContractsLookupResponseErrors
   | PriceLookupResponseErrors
   | PaymentPlanResponseErrors
+  | ContractTemplateResponseErrors
