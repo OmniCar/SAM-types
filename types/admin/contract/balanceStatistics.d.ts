@@ -9,23 +9,26 @@ export interface ISettlementInvoicesBalance {
 }
 
 export interface IContractBalanceStatistics {
-  workshopBalance: PriceSpecification
+  calculatedUnits: number
+  calculationMethod: number
+  closingDate: string
+  monthsAtClosing: number
+  remainingMonths: number
+  remainingCharge: PriceSpecification
   workshopCosts: PriceSpecification
-  paymentBalance: PriceSpecification
   paidInvoicesTotalSum: PriceSpecification
+  contractBalance: PriceSpecification
   settlementInvoices: ISettlementInvoicesBalance
-  providerTotalCost: PriceSpecification
   settlementInvoicesTotalSum: PriceSpecification
   settlementInfo?: ISettlementInfo
-  subscriptionPaidTotalSum: PriceSpecification
-  shouldPaid: PriceSpecification
-  underOverUnits?: IUnderOverUnitsInfo
-  shouldPaidByEnd?: PriceSpecification
+  underOverUnitsBalance?: IUnderOverUnitsInfo
+  pendingInvoicesTotalSum?: PriceSpecification
 }
 
 export interface IUnderOverUnitsInfo {
   units: number
   cost: PriceSpecification
+  underUnitsLimit: number
 }
 
 export interface ISettlementInfo {
