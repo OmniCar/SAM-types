@@ -21,7 +21,6 @@ export interface IContractCalculationRequest {
   startMileage?: number
   startValue?: number
   startValueType?: ContractValueType
-  vin?: string
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
@@ -35,6 +34,12 @@ export interface IStandardAxContractCalculationRequest extends IContractCalculat
   productModelName: string
   fuelTypeName: string
 }
+
+export interface IStandardADAPContractCalculationRequest extends IContractCalculationRequest {
+  vin: string
+  fuelTypeName: string
+}
+
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   amountPerPayment: number
   brandName: string
@@ -61,4 +66,5 @@ export interface IContractCalculationResponse {
   adjustedAmount?: PriceSpecification
   adjustedContractFullCost?: PriceSpecification
   adjustedPaymentsLeft?: number
+  adapDebugData?: any
 }
