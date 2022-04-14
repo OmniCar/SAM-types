@@ -47,6 +47,9 @@ export enum ContractActionType {
   buyNow = 130, // Customer visited payment page
   createOffer = 140, // An offer was created
   sendOfferReminderMail = 150, // A reminder about offer was sent to the customer
+  softBounce = 1510, // Email soft bounced, temporary issues preventing email delivery (mailbox is full, delays on client side, spam/reputation related exc)
+  hardBounce = 1512, // Email hard bounced, permanent issues preventing email delivery (address doesn't exist, email not complying with sending domain auth policy, spam/reputation related exc)
+  DNSError = 1513, // A type of soft bounce, can occur during domain migration and change of email provider
   sendContractTerminationMail = 151, // A termination mail was sent to the customer
   sendOfferReminderMail2 = 152, // A reminder about offer was sent to the customer
   sendContractActivationMail = 153, // A contract activation mail was sent to the customer
@@ -73,9 +76,6 @@ export enum ContractActionType {
   terminate = 800, // Who terminated the contract
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
   archive = 1000, // Archive contract
-  softBounce = 1100, // Email soft bounced, temporary issues preventing email delivery (mailbox is full, delays on client side, spam/reputation related exc)
-  hardBounce = 1110, // Email hard bounced, permanent issues preventing email delivery (address doesn't exist, email not complying with sending domain auth policy, spam/reputation related exc)
-  DNSError = 1120, // A type of soft bounce, can occur during domain migration and change of email provider
 }
 
 export enum OfferRequestState {
