@@ -23,6 +23,10 @@ export interface IContractBalanceStatistics {
   settlementInfo?: ISettlementInfo
   underOverUnitsBalance?: IUnderOverUnitsInfo
   pendingInvoicesTotalSum?: PriceSpecification
+  subscriptionPaidTotalSum: PriceSpecification
+  shouldPaid: PriceSpecification
+  underOverUnits?: IUnderOverUnitsInfo
+  shouldPaidByEnd?: PriceSpecification
 }
 
 export interface IUnderOverUnitsInfo {

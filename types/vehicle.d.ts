@@ -31,10 +31,6 @@ export interface IRegistrationNumberResponse {
       lookupCacheStatus?: string // Free text, for debugging purposes - Hint with info if vehicle was fetched from cache or via fresh lookup.
     }
   }
-  serviceDataStatus?: {
-    hasFoundAnyServiceData: boolean | null
-    hasRequiredServiceValues: boolean | null
-  }
   contracts?: VehicleContracts
   hasActiveWarranty?: boolean
 }

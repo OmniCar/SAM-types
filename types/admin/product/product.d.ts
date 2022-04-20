@@ -1,3 +1,4 @@
+
 import { ContractState, IIncludedContractOption } from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
@@ -17,7 +18,7 @@ export interface IApiOtherWithContracts {
     fuelTypeName: string
     contracts: IApiOtherContract[]
 }
-  
+
 export interface IApiOtherContract {
     serviceContractId: number
     amount: PriceSpecification

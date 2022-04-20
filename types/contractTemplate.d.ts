@@ -4,7 +4,7 @@ import { PriceSpecification } from './priceSpecification'
 import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
 import { TCurrency } from '../types/currency'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
+export type PriceSource = 'Pricelist' | 'Autoexperten'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
