@@ -2,9 +2,7 @@ import { PriceSpecification } from '../../index'
 
 export interface ISettlementInvoicesBalance {
   stripePayment: PriceSpecification
-  stripeRefund: PriceSpecification
   cashPayment: PriceSpecification
-  cashPayout: PriceSpecification
   providerPayment: PriceSpecification
 }
 
@@ -15,6 +13,7 @@ export interface IContractBalanceStatistics {
   monthsAtClosing: number
   remainingMonths: number
   remainingCharge: PriceSpecification
+  customerCredit: number
   workshopCosts: PriceSpecification
   paidInvoicesTotalSum: PriceSpecification
   contractBalance: PriceSpecification
