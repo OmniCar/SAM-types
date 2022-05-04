@@ -35,9 +35,6 @@ jobs:
       #    username: _json_key
       #    password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
       - image: cimg/node:16.15.0
-        auth:
-          username: _json_key
-          password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
     steps:
       - checkout
       - attach_workspace:
