@@ -79,6 +79,7 @@ export declare enum ContractActionType {
     registerRefundedCharge = 850,
     createStripeInvoice = 860,
     registerPaidInvoice = 870,
+    registerCredit = 880,
     settle = 900,
     archive = 1000
 }
@@ -105,7 +106,8 @@ export declare enum SettlementPaymentType {
     cashPayment = 2,
     stripeRefund = 3,
     stripePayment = 4,
-    providerPayment = 5
+    providerPayment = 5,
+    customerCredit = 6
 }
 export * from './address';
 export * from './admin';
