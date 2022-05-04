@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  node: circleci/node@5.0
 jobs:
   build-test:
     working_directory: '~/sam-types'
@@ -6,9 +8,10 @@ jobs:
       - image: eu.gcr.io/sam-non-production/circle-gsdk-firebase-node-v2
         auth:
           username: _json_key
-          password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY 
+          password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
     steps:
       - checkout
+      - run: node --version
       - run:
           name: tsc
           command: |
@@ -26,11 +29,12 @@ jobs:
       - image: eu.gcr.io/sam-non-production/circle-gsdk-firebase-node-v2
         auth:
           username: _json_key
-          password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY 
+          password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
     steps:
       - checkout
       - attach_workspace:
           at: .
+      - run: node --version
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/sam-types/.npmrc
@@ -44,7 +48,6 @@ jobs:
             echo "Update NPM"
             npm publish --access public .
 workflows:
-  version: 2
   build-deploy:
     jobs:
       - build-test:
