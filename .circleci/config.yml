@@ -12,6 +12,9 @@ jobs:
       - image: cimg/node:16.15.0
     steps:
       - checkout
+      - node/install:
+          install-yarn: true
+          node-version: '16.15'
       - run: node --version
       - run:
           name: tsc
@@ -27,7 +30,11 @@ jobs:
   deploy:
     working_directory: '~/sam-types'
     docker:
-      - image: eu.gcr.io/sam-non-production/circle-gsdk-firebase-node-v2
+      #- image: eu.gcr.io/sam-non-production/circle-gsdk-firebase-node-v2
+      #  auth:
+      #    username: _json_key
+      #    password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
+      - image: cimg/node:16.15.0
         auth:
           username: _json_key
           password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
@@ -35,6 +42,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
+      - node/install:
+          install-yarn: true
+          node-version: '16.15'
       - run: node --version
       - run:
           name: Authenticate with registry
