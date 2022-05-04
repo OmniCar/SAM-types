@@ -38,6 +38,7 @@ export interface IContractDetailsRecord {
   contractTemplateId: number
   contractTemplateName: string
   contractTemplateDescription: string
+  contractTemplateMinPaymentsCount: number | null
   contractTemplateIsArchived: boolean
   isProduct: boolean
   serviceVariantId: string
