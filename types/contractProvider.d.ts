@@ -32,6 +32,7 @@ export interface IContractProviderRequest {
   justGOContractsEnabled: boolean
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
+  autoSettlement: boolean
 }
 
 export interface IContractProviderResponse {
@@ -70,6 +71,7 @@ export interface IContractProviderResponse {
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
+  autoSettlement: boolean
 }
 
 export type ProviderState = 'Active' | 'Inactive'
