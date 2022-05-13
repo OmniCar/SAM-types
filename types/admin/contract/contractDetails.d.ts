@@ -49,6 +49,7 @@ export interface IContractDetailsRecord {
   adjustedFrom?: string
   createdByProvider?: string
   provider?: string
+  settledUnits?: number | null
   settledMileage?: number | null
   overdrivenCharge?: number
   underdrivenCharge?: number
