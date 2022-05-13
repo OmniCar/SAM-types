@@ -54,6 +54,10 @@ export interface IContractDetailsRecord {
   overdrivenCharge?: number
   underdrivenCharge?: number
   calculationMethod?: number
+  overHoursCharge?: number
+  underHoursCharge?: number
+  overServicesCharge?: number
+  underServicesCharge?: number
 }
 
 export interface IAdminCustomTermsRecord {
