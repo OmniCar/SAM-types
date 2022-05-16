@@ -87,6 +87,7 @@ export enum ContractActionType {
   registerRefundedCharge = 850, // Registered refunded charge. Create new 'refund' invoice (charge.refunded webhook)
   createStripeInvoice = 860, // Created stripe invoice for settlement
   registerPaidInvoice = 870, // Registered paid invoice. Create new 'settle charge' invoice (invoice.payment_succeeded webhook)
+  registerCredit = 880, // // Registered stripe credit for the customer (type of refund). Helps to solve balance issues on a contract
   settle = 900, // Who Settled the contract, any settlement comments will be in the details
   archive = 1000, // Archive contract
 }
@@ -154,7 +155,7 @@ export * from './outage'
 export * from './payment'
 export * from './priceCalculation'
 export * from './priceSpecification'
-export * from './product';
+export * from './product'
 export * from './providerBranding'
 export * from './queryParams'
 export * from './reports/reports'

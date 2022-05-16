@@ -2,30 +2,32 @@ import { PriceSpecification } from '../../index'
 
 export interface ISettlementInvoicesBalance {
   stripePayment: PriceSpecification
-  stripeRefund: PriceSpecification
   cashPayment: PriceSpecification
-  cashPayout: PriceSpecification
   providerPayment: PriceSpecification
 }
 
 export interface IContractBalanceStatistics {
-  workshopBalance: PriceSpecification
+  calculatedUnits: number
+  calculationMethod: number
+  closingDate: string
+  monthsAtClosing: number
+  remainingMonths: number
+  remainingCharge: PriceSpecification
+  customerCredit: number
   workshopCosts: PriceSpecification
-  paymentBalance: PriceSpecification
   paidInvoicesTotalSum: PriceSpecification
+  contractBalance: PriceSpecification
   settlementInvoices: ISettlementInvoicesBalance
-  providerTotalCost: PriceSpecification
   settlementInvoicesTotalSum: PriceSpecification
   settlementInfo?: ISettlementInfo
-  subscriptionPaidTotalSum: PriceSpecification
-  shouldPaid: PriceSpecification
-  underOverMileage?: IUnderOverMileageInfo
-  shouldPaidByEnd?: PriceSpecification
+  underOverUnitsBalance?: IUnderOverUnitsInfo
+  pendingInvoicesTotalSum?: PriceSpecification
 }
 
-export interface IUnderOverMileageInfo {
-  mileage: number
+export interface IUnderOverUnitsInfo {
+  units: number
   cost: PriceSpecification
+  underUnitsLimit: number
 }
 
 export interface ISettlementInfo {
