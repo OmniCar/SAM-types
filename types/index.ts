@@ -121,6 +121,7 @@ export enum SettlementPaymentType {
   stripeRefund,
   stripePayment,
   providerPayment,
+  customerCredit,
 }
 
 export * from './address'

@@ -90,6 +90,7 @@ var ContractActionType;
     ContractActionType[ContractActionType["registerRefundedCharge"] = 850] = "registerRefundedCharge";
     ContractActionType[ContractActionType["createStripeInvoice"] = 860] = "createStripeInvoice";
     ContractActionType[ContractActionType["registerPaidInvoice"] = 870] = "registerPaidInvoice";
+    ContractActionType[ContractActionType["registerCredit"] = 880] = "registerCredit";
     ContractActionType[ContractActionType["settle"] = 900] = "settle";
     ContractActionType[ContractActionType["archive"] = 1000] = "archive";
 })(ContractActionType = exports.ContractActionType || (exports.ContractActionType = {}));
@@ -121,5 +122,6 @@ var SettlementPaymentType;
     SettlementPaymentType[SettlementPaymentType["stripeRefund"] = 3] = "stripeRefund";
     SettlementPaymentType[SettlementPaymentType["stripePayment"] = 4] = "stripePayment";
     SettlementPaymentType[SettlementPaymentType["providerPayment"] = 5] = "providerPayment";
+    SettlementPaymentType[SettlementPaymentType["customerCredit"] = 6] = "customerCredit";
 })(SettlementPaymentType = exports.SettlementPaymentType || (exports.SettlementPaymentType = {}));
 //# sourceMappingURL=index.js.map
