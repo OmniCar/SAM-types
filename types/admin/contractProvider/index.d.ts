@@ -19,7 +19,13 @@ export interface IContractProvider {
   isShowLogoOnWeb?: boolean
   webLogoBanner?: string | null
   webLogoSquare?: string | null
+  vatPct: number
   inactive: boolean
+}
+
+export interface ICreateTestContractProvider {
+  administrativeName: string
+  countryIsoCode: string
 }
 
 export interface ICreateTestContractProvider {

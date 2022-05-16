@@ -82,4 +82,5 @@ export type TVehicleDriveType =
 
 export interface VehicleUpdateResponse extends Vehicle {
   extSysRegNumberUpdateMessage?: string
+  v4RegNumberUpdated?: boolean
 }
