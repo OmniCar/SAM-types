@@ -112,15 +112,6 @@ export enum OutageSeverityLevel {
   High = 3,
 }
 
-export enum SettlementPaymentType {
-  cashPayout = 1,
-  cashPayment,
-  stripeRefund,
-  stripePayment,
-  providerPayment,
-  customerCredit,
-}
-
 export * from './address'
 export * from './admin'
 export * from './app'

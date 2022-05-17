@@ -21,7 +21,6 @@ export interface IContractCalculationRequest {
   startMileage?: number
   startValue?: number
   startValueType?: ContractValueType
-  vin?: string
 }
 
 export interface IStandardContractCalculationRequest extends IContractCalculationRequest {
