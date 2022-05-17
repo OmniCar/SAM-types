@@ -20,7 +20,6 @@ export interface IGenericContractTemplateRequest {
   minAge: number
   maxAge: number
   defaultDuration: number
-  // defaultMileage: number
   minimumPaymentsCount: number | null
   properties: IContractOptionResponse[]
   options: IContractOptionResponse[]
@@ -68,7 +67,6 @@ export interface IGenericContractTemplateResponse {
   minAge: number
   maxAge: number
   defaultDuration: number
-  // defaultMileage: number | null
   minimumPaymentsCount: number | null
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
@@ -90,10 +88,7 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
 }
 
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
-  // defaultMileage: number
-  // underdrivenCharge: PriceSpecification
-  // overdrivenCharge: PriceSpecification
-  // showOnWebcalc: boolean
+  defaultMileage: number
   defaultHours: number
   defaultYearlyServices: number
   maxEndHours?: number
