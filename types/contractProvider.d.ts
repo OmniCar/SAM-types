@@ -69,7 +69,4 @@ export interface IContractProviderResponse {
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
-  state: ProviderState
 }
-
-export type ProviderState = 'Active' | 'Inactive'
