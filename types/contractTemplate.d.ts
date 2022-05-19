@@ -88,20 +88,9 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
 }
 
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
-  defaultMileage: number
   defaultHours: number
   defaultYearlyServices: number
   maxEndHours?: number
   maxEndServices?: number
   maxEndMileage?: number
-}
-
-export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
-  vehicleServiceType: TVehicleServiceType
-  vehicleUsageType: TVehicleUsageType
-  oilLiterPrice: null | PriceSpecification
-  labourHourCost: null | PriceSpecification
-  euroToLocalCurrencyRateInTenthOfCents: number | null
-  totalPriceFactorInTenthOfCents: number | null
-  currencyPartsPrice: TCurrency | null
 }
