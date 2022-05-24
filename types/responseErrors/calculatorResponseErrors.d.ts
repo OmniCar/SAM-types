@@ -17,6 +17,7 @@ type PaymentPlanResponseErrors = 'UNSUPPORTED_CONTRACT_TYPE' | 'CONTRACT_ENDS_BE
 type ContractTemplateResponseErrors =
   | 'TEMPLATE: NUMBER_OF_CONTRACT_TEMPLATES_NOT_ONE'
   | 'TEMPLATE: ONLY_CALCULATION_METHOD_200_is_SUPPORTED'
+type AutoexpertenResponseErrors = 'VEHICLE_TOO_OLD' | 'BRAND_NO_CONTRACTS_AVAILABLE'
 
 export type CalculatorResponseErrors =
   | LicensePlateLookupResponseErrors
@@ -28,3 +29,4 @@ export type CalculatorResponseErrors =
   | PriceLookupResponseErrors
   | PaymentPlanResponseErrors
   | ContractTemplateResponseErrors
+  | AutoexpertenResponseErrors

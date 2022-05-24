@@ -6,6 +6,7 @@ export interface ApiError {
   errorCode?: number
   debug?: object
   params?: INoContractsAvailableErrorParams
+  messageReplacements?: { [key in string]: string }
 }
 
 export interface INoContractsAvailableErrorParams {
