@@ -41,3 +41,8 @@ export interface IStripeResponse extends IStripe {
 export interface IStripeRequest extends IStripe {
   contractProviderId: number
 }
+
+export interface IStripeRefund<StripeRefund> {
+  refund: StripeRefund | undefined
+  invoiceId: string
+}

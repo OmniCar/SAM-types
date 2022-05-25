@@ -48,8 +48,21 @@ export interface IContractDetailsRecord {
   adjustedFrom?: string
   createdByProvider?: string
   provider?: string
+  settledUnits?: number | null
+  overdrivenCharge?: number
+  underdrivenCharge?: number
+  calculationMethod?: number
+  overHoursCharge?: number
+  underHoursCharge?: number
+  overServicesCharge?: number
+  underServicesCharge?: number
 }
 
 export interface IAdminCustomTermsRecord {
   customTerms: string
+}
+
+export interface IUnitsListResponse {
+  units: number
+  date: Date | string
 }

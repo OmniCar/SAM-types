@@ -1,8 +1,10 @@
 node_modules/
-types/index.d.ts
-*.js
-*.js.map
 *.lock
 .vscode/
 .DS_Store
 gitignore/
+
+
+**.js
+**.js.map
+
