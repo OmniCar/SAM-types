@@ -30,6 +30,7 @@ export interface IGenericContractTemplateRequest {
   archived?: boolean
   formattedDescription: string | null
   weight: number
+  priceReductionFactorInTenthOfCents?: number
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
