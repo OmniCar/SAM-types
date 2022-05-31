@@ -8,6 +8,7 @@ export interface IAdminCustomer {
   prettyIdentifier?: string
   name: string
   email: string
+  emailBounceType?: string | undefined
   phone: string
   address: string
   city: string

@@ -4,7 +4,7 @@ import { PriceSpecification } from './priceSpecification'
 import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
 import { TCurrency } from '../types/currency'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten'
+export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
@@ -30,6 +30,8 @@ export interface IGenericContractTemplateRequest {
   archived?: boolean
   formattedDescription: string | null
   weight: number
+  underdrivenCharge: PriceSpecification
+  overdrivenCharge: PriceSpecification
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
@@ -44,8 +46,8 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
 }
 
 export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
-  vehicleServiceType: TVehicleServiceType
-  vehicleUsageType: TVehicleUsageType
+  vehicleServiceType: TVehicleServiceType //update
+  vehicleUsageType: TVehicleUsageType //new
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
@@ -85,7 +87,6 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
   overdrivenCharge: PriceSpecification
   showOnWebcalc: boolean
 }
-
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
   defaultHours: number
   defaultYearlyServices: number
@@ -95,8 +96,8 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
 }
 
 export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
-  vehicleServiceType: TVehicleServiceType
-  vehicleUsageType: TVehicleUsageType
+  vehicleServiceType: TVehicleServiceType //update
+  vehicleUsageType: TVehicleUsageType //new
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null

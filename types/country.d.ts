@@ -14,6 +14,8 @@ export interface ICountryRequest {
 export interface ICountryResponse extends ICountry {
   localeName?: string
   locale?: string | undefined
+  currency: TCurrency
+  vatPct: number
 }
 
 export interface ICountry {
