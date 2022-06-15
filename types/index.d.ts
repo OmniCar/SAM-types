@@ -44,6 +44,9 @@ export declare enum ContractActionType {
     buyNow = 130,
     createOffer = 140,
     sendOfferReminderMail = 150,
+    softBounce = 1510,
+    hardBounce = 1512,
+    dnsError = 1513,
     sendContractTerminationMail = 151,
     sendOfferReminderMail2 = 152,
     sendContractActivationMail = 153,
@@ -112,6 +115,7 @@ export declare enum SettlementPaymentType {
 export * from './address';
 export * from './admin';
 export * from './app';
+export * from './autoDAP';
 export * from './brand';
 export * from './chart';
 export * from './contactPerson';
