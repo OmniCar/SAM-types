@@ -30,7 +30,7 @@ export interface IGenericContractTemplateRequest {
   archived?: boolean
   formattedDescription: string | null
   weight: number
-  priceReductionFactorInTenthOfCents?: number
+  priceFactorOnChildren?: IChildPriceFactorResponse[]
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
@@ -79,6 +79,15 @@ export interface IGenericContractTemplateResponse {
   isProductTemplate?: boolean
   templateAutoDAPId?: number | null
   maxEndMileage?: number
+  priceFactorInTenthOfCents?: number
+  priceFactorOnChildren?: IChildPriceFactorResponse[]
+}
+
+export interface IChildPriceFactorResponse {
+  id?: number
+  providerId: number
+  administrativeName: string
+  priceFactor: number
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
