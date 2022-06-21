@@ -241,6 +241,7 @@ export interface IAvailableFreeWarranty {
   warrantyColor: string
   warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
+  isForbidDealerPaid: boolean
 }
 
 export interface IContractCreationResponse {

@@ -12,6 +12,7 @@ export enum ContractState {
   Expired = 600,
   Completed = 800, // not used
   Settled = 900,
+  SettledPrePaid = 950,
 }
 
 export enum WarrantyState {

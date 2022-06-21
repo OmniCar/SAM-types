@@ -52,8 +52,6 @@ export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplat
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
   totalPriceFactorInTenthOfCents: number | null
-  // currencyOilPrice: TCurrency | null
-  // currencyLabourCost: TCurrency | null
   currencyPartsPrice: TCurrency | null
 }
 
@@ -88,7 +86,6 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
   showOnWebcalc: boolean
-  maxEndMileage?: number
 }
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
   defaultHours: number
@@ -105,7 +102,5 @@ export interface IAutoDAPContractTemplateResponse extends IGenericContractTempla
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
   totalPriceFactorInTenthOfCents: number | null
-  // currencyOilPrice: TCurrency | null
-  // currencyLabourCost: TCurrency | null
   currencyPartsPrice: TCurrency | null
 }
