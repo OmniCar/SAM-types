@@ -34,6 +34,7 @@ export interface IRegistrationNumberResponse {
   serviceDataStatus?: {
     hasFoundAnyServiceData: boolean | null
     hasRequiredServiceValues: boolean | null
+    hasRequiredSparePartPrices: boolean | null
   }
   contracts?: VehicleContracts
   hasActiveWarranty?: boolean
