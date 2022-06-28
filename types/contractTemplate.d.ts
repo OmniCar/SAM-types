@@ -32,7 +32,7 @@ export interface IGenericContractTemplateRequest {
   weight: number
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
-  priceFactorOnChildren?: IChildPriceFactorResponse[]
+  priceFactorForChildren?: IChildPriceFactorResponse[]
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
@@ -81,15 +81,14 @@ export interface IGenericContractTemplateResponse {
   isProductTemplate?: boolean
   templateAutoDAPId?: number | null
   maxEndMileage?: number
-  priceFactorInTenthOfCents?: number
-  priceFactorOnChildren?: IChildPriceFactorResponse[]
+  priceFactorForChildren?: IChildPriceFactorResponse[]
 }
 
 export interface IChildPriceFactorResponse {
   id?: number
   providerId: number
   administrativeName: string
-  priceFactor: number
+  priceFactorInCents: number
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
