@@ -32,6 +32,7 @@ export interface IGenericContractTemplateRequest {
   weight: number
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
+  totalPriceFactorInTenthOfCents: number | null
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
@@ -51,7 +52,6 @@ export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplat
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
-  totalPriceFactorInTenthOfCents: number | null
   currencyPartsPrice: TCurrency | null
 }
 
@@ -80,6 +80,7 @@ export interface IGenericContractTemplateResponse {
   isProductTemplate?: boolean
   templateAutoDAPId?: number | null
   maxEndMileage?: number
+  totalPriceFactorInTenthOfCents: number | null
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
@@ -101,6 +102,5 @@ export interface IAutoDAPContractTemplateResponse extends IGenericContractTempla
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
-  totalPriceFactorInTenthOfCents: number | null
   currencyPartsPrice: TCurrency | null
 }
