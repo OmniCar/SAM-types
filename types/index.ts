@@ -125,6 +125,19 @@ export enum SettlementPaymentType {
   customerCredit,
 }
 
+export enum ReleaseSystem {
+  Admin = 1,
+  Superadmin,
+  Api,
+  WebShop,
+}
+
+export enum ReleaseType {
+  Major = 1,
+  Minor,
+  Emergency,
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'
@@ -185,3 +198,4 @@ export * from './vehiclePartial'
 export * from './vehicleContracts'
 export * from './webcalc'
 export * from './workshopOperation'
+export * from './releaseNotes'
