@@ -5,7 +5,7 @@ export interface IInternalContractNoteResponse {
     note: string
     date: Date
     pinnedToTop: boolean
-    writtenByUser: IAdminUserInfo | undefined
+    writtenByUser: string | undefined
     fromOldContract: boolean | undefined
     writtenByCurrentUser: boolean | undefined
 }
