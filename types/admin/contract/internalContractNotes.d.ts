@@ -12,7 +12,7 @@ export interface IInternalContractNoteRequest {
     internalContractNoteId?: number
     note: string
     date?: Date
-    attachments?: File[]
+    attachments?: Attachment[]
 }
 
 export interface Attachment {
