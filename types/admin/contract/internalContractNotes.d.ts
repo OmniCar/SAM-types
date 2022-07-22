@@ -1,18 +1,23 @@
-import { IAdminUserInfo } from "../user"
-
 export interface IInternalContractNoteResponse {
     internalContractNoteId: number
     note: string
     date: Date
-    pinnedToTop: boolean
-    writtenByUser: string | undefined
-    fromOldContract: boolean | undefined
-    writtenByCurrentUser: boolean | undefined
+    writtenByUser?: string
+    contractPrettyIdentifier?: string
+    writtenByCurrentUser?: boolean
+    attachments: Attachment[]
 }
 
 export interface IInternalContractNoteRequest {
     internalContractNoteId?: number
     note: string
-    date: Date
-    pinnedToTop: boolean
+    date?: Date
+    attachments?: File[]
+}
+
+export interface Attachment {
+    fileName: string
+    originalFileName: string
+    url: string
+    fileType: string
 }
