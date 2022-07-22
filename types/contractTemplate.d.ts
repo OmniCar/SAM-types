@@ -32,6 +32,7 @@ export interface IGenericContractTemplateRequest {
   weight: number
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
+  totalPriceFactorInTenthOfCents: number | null
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
@@ -80,6 +81,7 @@ export interface IGenericContractTemplateResponse {
   isProductTemplate?: boolean
   templateAutoDAPId?: number | null
   maxEndMileage?: number
+  totalPriceFactorInTenthOfCents: number | null
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
