@@ -15,6 +15,7 @@ var ContractState;
     ContractState[ContractState["Expired"] = 600] = "Expired";
     ContractState[ContractState["Completed"] = 800] = "Completed";
     ContractState[ContractState["Settled"] = 900] = "Settled";
+    ContractState[ContractState["SettledPrePaid"] = 950] = "SettledPrePaid";
 })(ContractState = exports.ContractState || (exports.ContractState = {}));
 var WarrantyState;
 (function (WarrantyState) {
@@ -124,4 +125,17 @@ var SettlementPaymentType;
     SettlementPaymentType[SettlementPaymentType["providerPayment"] = 5] = "providerPayment";
     SettlementPaymentType[SettlementPaymentType["customerCredit"] = 6] = "customerCredit";
 })(SettlementPaymentType = exports.SettlementPaymentType || (exports.SettlementPaymentType = {}));
+var ReleaseSystem;
+(function (ReleaseSystem) {
+    ReleaseSystem[ReleaseSystem["Admin"] = 1] = "Admin";
+    ReleaseSystem[ReleaseSystem["Superadmin"] = 2] = "Superadmin";
+    ReleaseSystem[ReleaseSystem["Api"] = 3] = "Api";
+    ReleaseSystem[ReleaseSystem["WebShop"] = 4] = "WebShop";
+})(ReleaseSystem = exports.ReleaseSystem || (exports.ReleaseSystem = {}));
+var ReleaseType;
+(function (ReleaseType) {
+    ReleaseType[ReleaseType["Major"] = 1] = "Major";
+    ReleaseType[ReleaseType["Minor"] = 2] = "Minor";
+    ReleaseType[ReleaseType["Emergency"] = 3] = "Emergency";
+})(ReleaseType = exports.ReleaseType || (exports.ReleaseType = {}));
 //# sourceMappingURL=index.js.map
