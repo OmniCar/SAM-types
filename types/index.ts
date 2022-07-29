@@ -93,6 +93,23 @@ export enum ContractActionType {
   archive = 1000, // Archive contract
 }
 
+export enum PaymentFailureReason {
+  expiredCard = 10, // The card has expired.
+  authenticationRequired = 20, // The card was declined as the transaction requires authentication.
+  insufficientFunds = 30, // The card has insufficient funds to complete the purchase.
+  withdrawalCountLimitExceeded = 40, // The customer has exceeded the balance or credit limit available on their card.
+  invalidAmount = 50, // The payment amount is invalid, or exceeds the amount that's allowed.
+  // If the amount appears to be correct, the customer needs to check with their card issuer.
+  fraudLostStolen = 60, // Payment matches a value on the Stripe user's block list. Stripe suspects that it's fraudulent.
+  // The card is reported lost or stolen. The specific reason for the decline shouldn't be reported to the customer.
+  // Instead, it needs to be presented as a generic_decline.
+  attemptPaymentAgain = 70, // Attempt the payment again. If you still can't process it, the customer needs to contact their card issuer.
+  // Recommended you not retry charges more than four times.
+  incorrectData = 80, // The customer needs try again using the correct card/payment data.
+  contactCardIssuer = 90, // The customer needs to contact their card issuer for more information.
+  unknownReason = 100, // Unknown Stripe reasons or reasons which shouldn't happen.
+}
+
 export enum OfferRequestState {
   Pending = 100,
   Approved = 200,
@@ -199,3 +216,4 @@ export * from './vehicleContracts'
 export * from './webcalc'
 export * from './workshopOperation'
 export * from './releaseNotes'
+export * from './paymentFailureReason'

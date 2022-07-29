@@ -95,6 +95,23 @@ var ContractActionType;
     ContractActionType[ContractActionType["settle"] = 900] = "settle";
     ContractActionType[ContractActionType["archive"] = 1000] = "archive";
 })(ContractActionType = exports.ContractActionType || (exports.ContractActionType = {}));
+var PaymentFailureReason;
+(function (PaymentFailureReason) {
+    PaymentFailureReason[PaymentFailureReason["expiredCard"] = 10] = "expiredCard";
+    PaymentFailureReason[PaymentFailureReason["authenticationRequired"] = 20] = "authenticationRequired";
+    PaymentFailureReason[PaymentFailureReason["insufficientFunds"] = 30] = "insufficientFunds";
+    PaymentFailureReason[PaymentFailureReason["withdrawalCountLimitExceeded"] = 40] = "withdrawalCountLimitExceeded";
+    PaymentFailureReason[PaymentFailureReason["invalidAmount"] = 50] = "invalidAmount";
+    // If the amount appears to be correct, the customer needs to check with their card issuer.
+    PaymentFailureReason[PaymentFailureReason["fraudLostStolen"] = 60] = "fraudLostStolen";
+    // The card is reported lost or stolen. The specific reason for the decline shouldn't be reported to the customer.
+    // Instead, it needs to be presented as a generic_decline.
+    PaymentFailureReason[PaymentFailureReason["attemptPaymentAgain"] = 70] = "attemptPaymentAgain";
+    // Recommended you not retry charges more than four times.
+    PaymentFailureReason[PaymentFailureReason["incorrectData"] = 80] = "incorrectData";
+    PaymentFailureReason[PaymentFailureReason["contactCardIssuer"] = 90] = "contactCardIssuer";
+    PaymentFailureReason[PaymentFailureReason["unknownReason"] = 100] = "unknownReason";
+})(PaymentFailureReason = exports.PaymentFailureReason || (exports.PaymentFailureReason = {}));
 var OfferRequestState;
 (function (OfferRequestState) {
     OfferRequestState[OfferRequestState["Pending"] = 100] = "Pending";
