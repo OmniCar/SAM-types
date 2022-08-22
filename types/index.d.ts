@@ -87,6 +87,18 @@ export declare enum ContractActionType {
   settle = 900,
   archive = 1000,
 }
+export declare enum PaymentFailureReason {
+  expiredCard = 10,
+  authenticationRequired = 20,
+  insufficientFunds = 30,
+  withdrawalCountLimitExceeded = 40,
+  invalidAmount = 50,
+  fraudLostStolen = 60,
+  attemptPaymentAgain = 70,
+  incorrectData = 80,
+  contactCardIssuer = 90,
+  unknownReason = 100,
+}
 export declare enum OfferRequestState {
   Pending = 100,
   Approved = 200,
@@ -112,6 +124,17 @@ export declare enum SettlementPaymentType {
   stripePayment = 4,
   providerPayment = 5,
   customerCredit = 6,
+}
+export declare enum ReleaseSystem {
+  Admin = 1,
+  Superadmin = 2,
+  Api = 3,
+  WebShop = 4,
+}
+export declare enum ReleaseType {
+  Major = 1,
+  Minor = 2,
+  Emergency = 3,
 }
 export * from './address'
 export * from './admin'
@@ -173,3 +196,5 @@ export * from './vehiclePartial'
 export * from './vehicleContracts'
 export * from './webcalc'
 export * from './workshopOperation'
+export * from './releaseNotes'
+export * from './paymentFailureReason'

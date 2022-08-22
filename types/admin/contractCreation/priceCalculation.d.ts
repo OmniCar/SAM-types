@@ -2,25 +2,25 @@ import { PriceSpecification } from '../../priceSpecification'
 import { ContractValueType, ContractType } from './contractCreation'
 
 export interface IContractCalculationRequest {
-  type: ContractType
   contractTemplateId: number
-  registrationNumber: string
-  modelYear: number
-  serviceVariantId: string
   duration: number
+  isAdjustment: boolean
+  isDownpaymentDistributed: boolean
   mileage: number
-  value?: number
-  valueType: ContractValueType
-  registrationDate: string
+  modelYear: number
   optionIds: number[]
   providerPayments: number
   providerShare: number
-  isAdjustment: boolean
+  registrationDate: string
+  registrationNumber: string
+  serviceVariantId: string
+  type: ContractType
+  valueType: ContractValueType
   adjustedFrom?: string
-  isDownpaymentDistributed: boolean
   startMileage?: number
   startValue?: number
   startValueType?: ContractValueType
+  value?: number
   vin?: string
 }
 
@@ -50,22 +50,22 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
 
 // The type returned by a price calculation
 export interface IContractCalculationResponse {
-  amountPrPayment: PriceSpecification
-  downpayment: PriceSpecification
-  isDownpaymentDistributed: boolean
-  distributedAmount: PriceSpecification
-  providerShare: PriceSpecification
-  customerShare: PriceSpecification
-  providerPayments: number
-  customerPayments: number
-  providerCost: PriceSpecification
-  customerCost: PriceSpecification
-  contractCost: PriceSpecification
-  firstPaymentDate: string
-  contractStartDate: string
-  contractEndDate: string
   adjustedAmount?: PriceSpecification
   adjustedContractFullCost?: PriceSpecification
   adjustedPaymentsLeft?: number
-  adapDebugData?: any
+  amountPrPayment: PriceSpecification
+  contractCost: PriceSpecification
+  contractEndDate: string
+  contractStartDate: string
+  customerCost: PriceSpecification
+  customerPayments: number
+  customerShare: PriceSpecification
+  distributedAmount: PriceSpecification
+  downpayment: PriceSpecification
+  firstPaymentDate: string
+  isDownpaymentDistributed: boolean
+  providerCost: PriceSpecification
+  providerPayments: number
+  providerShare: PriceSpecification
+  x_adapDebugData?: any
 }
