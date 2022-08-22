@@ -67,5 +67,5 @@ export interface IContractCalculationResponse {
   adjustedAmount?: PriceSpecification
   adjustedContractFullCost?: PriceSpecification
   adjustedPaymentsLeft?: number
-  adapDebugData?: any
+  x_adapDebugData?: any
 }
