@@ -24,7 +24,8 @@ export interface IApiVehicleContract {
   prettyIdentifier: string
   pdfUrl: string
   includedOptions: IIncludedContractOption[]
-  contractTemplateName: string
+  contractTemplateInternalName: string // Name used internally (in pricefile etc.)
+  contractTemplateExternalName: string // The name shown to end-users.
   duration: number
   mileage: number
   paymentGateway?: PaymentGateway
