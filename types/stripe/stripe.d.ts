@@ -1,3 +1,4 @@
+import { TIsoCountry } from '../country'
 import { IStripeDeclineChargeOn } from './stripeDeclineChargeOn'
 import { IStripeExternalAccountResponse } from './stripeExternalAccount'
 import { IStripeLegalEntity } from './stripeLegalEntity'
@@ -5,7 +6,8 @@ import { IStripeVerification } from './stripeVerification'
 
 // @TODO - Export these out into some more generic place for others to use!!
 export type StripeGenderType = 'male' | 'female'
-export type StripeCountryType = 'DK' | 'SE' | 'FI' // Should go into apiTypes/country.d.ts
+// export type StripeCountryType = 'DK' | 'SE' | 'FI' // Should (maybe) go into apiTypes/country.d.ts
+export type StripeCountryType = TIsoCountry
 export type StripeCurrencyType = 'dkk' | 'sek' | 'eur' // Should go into apiTypes/currency.d.ts
 export type StripeEntityType = 'company' | 'individual'
 
