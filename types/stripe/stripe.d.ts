@@ -8,7 +8,7 @@ import { IStripeVerification } from './stripeVerification'
 export type StripeGenderType = 'male' | 'female'
 // export type StripeCountryType = 'DK' | 'SE' | 'FI' // Should (maybe) go into apiTypes/country.d.ts
 export type StripeCountryType = TIsoCountry
-export type StripeCurrencyType = 'dkk' | 'sek' | 'eur' // Should go into apiTypes/currency.d.ts
+export type StripeCurrencyType = 'dkk' | 'sek' | 'eur' | 'nok' // Should go into apiTypes/currency.d.ts
 export type StripeEntityType = 'company' | 'individual'
 
 export interface IStripe {

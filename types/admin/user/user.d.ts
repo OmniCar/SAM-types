@@ -12,6 +12,10 @@ export interface IUserPasswordChangeRequest {
   newPassword: string
 }
 
+export interface ICustomerPasswordChangeRequest {
+  newPassword: string
+}
+
 export interface IUserRoleChangeRequest {
   roleId: number
   contractProviderId: number

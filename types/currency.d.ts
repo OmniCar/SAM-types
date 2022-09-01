@@ -1,1 +1,1 @@
-export type TCurrency = 'DKK' | 'SEK' | 'EUR'
+export type TCurrency = 'DKK' | 'SEK' | 'EUR' | 'NOK'
