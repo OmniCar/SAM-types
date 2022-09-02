@@ -5,6 +5,7 @@ export interface IBasicContractInfo {
   contractState: ContractState
   contractType: ContractType
   extendedFromId: number | null
+  extendedToId: number | null
   paymentGateway: PaymentGateway
   templateDescription: string
   additionalOptions: IIncludedContractOption[]
