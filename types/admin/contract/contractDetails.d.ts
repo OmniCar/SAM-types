@@ -47,6 +47,7 @@ export interface IContractDetailsRecord {
   stripeSubscriptionLink: string | null
   customTerms?: string
   adjustedFrom?: string
+  adjustedTo?: string
   createdByProvider?: string
   provider?: string
   settledUnits?: number | null
