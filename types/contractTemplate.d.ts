@@ -47,8 +47,9 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
 }
 
 export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
-  vehicleServiceType: TVehicleServiceType //update
-  vehicleUsageType: TVehicleUsageType //new
+  vehicleServiceType: TVehicleServiceType
+  vehicleUsageType: TVehicleUsageType
+  isUseCustomOilPrice: boolean
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
@@ -98,8 +99,9 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
 }
 
 export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
-  vehicleServiceType: TVehicleServiceType //update
-  vehicleUsageType: TVehicleUsageType //new
+  vehicleServiceType: TVehicleServiceType
+  vehicleUsageType: TVehicleUsageType
+  isUseCustomOilPrice: boolean
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
