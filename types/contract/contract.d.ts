@@ -29,5 +29,6 @@ export interface IContractResponse {
   contractProvider: IContractProviderResponse
   templateImage: string
   termsRef: string
+  termsOfTradeRef?: string
   paymentGateway: PaymentGateway
 }
