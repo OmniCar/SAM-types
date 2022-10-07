@@ -33,6 +33,7 @@ export interface IContractDetailsRecord {
   seller?: IContactPersonResponse
   startDate: Date | string
   termsPdfUrl: string
+  termsOfTradePdfUrl: string
   totalPrice: PriceSpecification
   contractType: ContractType
   contractTemplateId: number
