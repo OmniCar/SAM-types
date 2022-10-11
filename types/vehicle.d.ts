@@ -2,6 +2,7 @@ import { Model } from './model'
 import { Brand } from './brand'
 import { FuelType } from './fuelType'
 import { VehicleContracts } from './vehicleContracts'
+import { TIsoCountry } from './country'
 
 /**
  * @note To dev: Are you looking for contracts here? - Please use VehicleAlongItsContracts instead!
@@ -27,6 +28,7 @@ export interface Vehicle {
 export interface IRegistrationNumberResponse {
   lookup: {
     vehicle: Vehicle
+    lookupCountry: TIsoCountry
     debug?: {
       lookupCacheStatus?: string // Free text, for debugging purposes - Hint with info if vehicle was fetched from cache or via fresh lookup.
     }
