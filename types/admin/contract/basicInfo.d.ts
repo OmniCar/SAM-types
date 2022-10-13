@@ -13,5 +13,5 @@ export interface IBasicContractInfo {
   productCanAddWarranty: boolean
   productHasWarranty: boolean
   productContract: boolean
-  offerExpirationDate?: Date
+  offerExpirationDate?: string
 }
