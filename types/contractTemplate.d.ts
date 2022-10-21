@@ -52,6 +52,7 @@ export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplat
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
+  totalPriceFactorInTenthOfCents: number | null
   currencyPartsPrice: TCurrency | null
 }
 
@@ -102,5 +103,6 @@ export interface IAutoDAPContractTemplateResponse extends IGenericContractTempla
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
+  totalPriceFactorInTenthOfCents: number | null
   currencyPartsPrice: TCurrency | null
 }
