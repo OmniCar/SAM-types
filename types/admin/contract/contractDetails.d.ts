@@ -33,6 +33,7 @@ export interface IContractDetailsRecord {
   seller?: IContactPersonResponse
   startDate: Date | string
   termsPdfUrl: string
+  termsOfTradePdfUrl: string
   totalPrice: PriceSpecification
   contractType: ContractType
   contractTemplateId: number
@@ -47,6 +48,7 @@ export interface IContractDetailsRecord {
   stripeSubscriptionLink: string | null
   customTerms?: string
   adjustedFrom?: string
+  adjustedTo?: string
   createdByProvider?: string
   provider?: string
   settledUnits?: number | null

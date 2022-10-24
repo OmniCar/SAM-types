@@ -20,6 +20,7 @@ export interface IApiVehicleContract {
   contractStartDate: Date | string
   contractEndDate: Date | string
   tosUrl: string
+  totUrl: string
   contractState: ContractState
   prettyIdentifier: string
   pdfUrl: string
