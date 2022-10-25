@@ -1,5 +1,5 @@
-import { IApiOtherWithContracts } from 'admin/product'
-import { IApiVehicleWithContracts } from 'admin/vehicle'
+import { IApiOtherWithContracts } from '../../admin/product'
+import { IApiVehicleWithContracts } from '../../admin/vehicle'
 import { IsoLocale } from '../../locale'
 
 export interface IContractProvider {
