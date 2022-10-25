@@ -1,3 +1,5 @@
+import { IApiOtherWithContracts } from 'admin/product'
+import { IApiVehicleWithContracts } from 'admin/vehicle'
 import { IsoLocale } from '../../locale'
 
 export interface IContractProvider {
@@ -31,4 +33,10 @@ export interface ICreateTestContractProvider {
 export interface ICreateTestContractProvider {
   administrativeName: string
   countryIsoCode: string
+}
+
+export interface IProviderWithContracts {
+  provider: IContractProvider
+  vehicles?: IApiVehicleWithContracts[]
+  products?: IApiOtherWithContracts[]
 }
