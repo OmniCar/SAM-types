@@ -72,6 +72,7 @@ export interface IContractProviderResponse {
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
   autoSettlement: boolean
+  isAllowContractsWithoutVehiclePriceModel: boolean
 }
 
 export type ProviderState = 'Active' | 'Inactive'

@@ -91,7 +91,7 @@ interface IContractInfo {
   valueType: ContractValueType | undefined
 }
 
-interface IContractProviderInfo {
+interface IContractProviderPaymentInfo {
   administrativeName: string
   address: string
   postal_code: string
@@ -105,7 +105,7 @@ interface IPublicKeyResponse {
 }
 interface IPaymentInformationResponse {
   publicKey: string
-  contractProvider: IContractProviderInfo
+  contractProvider: IContractProviderPaymentInfo
   customer: IAdminCustomer
   product: Vehicle | Other
   contract: IContractInfo
