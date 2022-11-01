@@ -2,6 +2,8 @@ import { IApiOtherWithContracts } from '../../admin/product'
 import { IApiVehicleWithContracts } from '../../admin/vehicle'
 import { IsoLocale } from '../../locale'
 
+export type ContractProviderOrderBy = 'providerId' | 'administrativeName' | 'inactive'
+
 export interface IContractProvider {
   providerId: number
   parentProviderId: number | null
