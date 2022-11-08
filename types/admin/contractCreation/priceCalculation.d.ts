@@ -1,12 +1,15 @@
 import { PriceSpecification } from '../../priceSpecification'
 import { ContractValueType, ContractType } from './contractCreation'
+import { IVehicleInfo } from 'vehicle'
+import { PriceSource } from '../../'
 
 export interface IContractCalculationRequest {
+  priceSource?: PriceSource
   contractTemplateId: number
-  duration: number
+  duration: number // AKA durationMonths, in months.
   isAdjustment: boolean
   isDownpaymentDistributed: boolean
-  mileage: number
+  mileage: number // AKA distance, in km.
   modelYear: number
   optionIds: number[]
   providerPayments: number
@@ -48,7 +51,15 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
   fuelTypeName: string
 }
 
-// The type returned by a price calculation
+// For V4PricingTool.
+export interface IV4PricingToolContractCalculationRequest extends IContractCalculationRequest {
+  vehicleInfo: IVehicleInfo
+  productId: number // V4 product / "template" id.
+}
+
+/**
+ * The type returned by a price calculation.
+ */
 export interface IContractCalculationResponse {
   adjustedAmount?: PriceSpecification
   adjustedContractFullCost?: PriceSpecification
@@ -67,5 +78,6 @@ export interface IContractCalculationResponse {
   providerCost: PriceSpecification
   providerPayments: number
   providerShare: PriceSpecification
-  x_adapDebugData?: any
+  x_adapDebugData?: any // For debugging purposes.
+  x_debugData?: any // For debugging purposes.
 }

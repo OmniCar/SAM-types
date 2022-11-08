@@ -25,6 +25,31 @@ export interface Vehicle {
   hasFourWheelDrive?: boolean // Aka 4x4 ("four by four" or 4WD).
 }
 
+export interface IVehicleInfo {
+  // Here we implement based on a lookup on BG64770
+  vehicleRegistryId?: number
+  registration: string // registration: 'BG64770',
+  vin: string // vin: 'VF3CCHMZ6GT105374',
+  // type: string // NOTE: Not same as vehicleType, this is vehicle type description like 'GTE Plug-In Hybrid 150 kW (204 hv) DSG-automaatti 4-ovinen'.
+  // @note param "type" renamed to "versionModelType" to avoid confusion with vehicleType
+  versionModelType: string // NOTE: Not same as vehicleType, this is vehicle type description like 'GTE Plug-In Hybrid 150 kW (204 hv) DSG-automaatti 4-ovinen'.
+  brand: string // brand: 'Peugeot',
+  model: string // model: '208',
+  fuel_type: string // fuel_type: 'Benzin',
+  first_registration_date: string | Date // first_registration_date: '2016-10-31',
+  expire_date: string | null // null,
+  model_year: number
+  engineMaxPower: number | null // Maximum power in kW, integer or decimal number like 115.5 or 132. NOTE: For now, engineMaxPower is the highest power of any of the engines on a multi-engine vehicle.
+  vehicleType: TVehicleType // Note: Not same as type (now versionModelType).
+  cylinderVolume?: number // Engine size in cc or cm3.
+  transmissionType?: TVehicleTransmissionType
+  driveType?: TVehicleDriveType // Front, rear, or all wheel drive.
+  hasFourWheelDrive?: boolean
+
+  // lookupCacheStatus?: string | 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
+  lookupCacheStatus?: 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
+}
+
 export interface IRegistrationNumberResponse {
   lookup: {
     vehicle: Vehicle
@@ -79,9 +104,9 @@ export type TVehicleTransmissionType =
 
 export type TVehicleDriveType =
   | '' // Unknown drive type.
-  | 'Front Wheel Drive'
-  | 'Rear Wheel Drive'
-  | 'All Wheel Drive'
+  | 'FWD' // Front Wheel Drive.
+  | 'RWD' // Rear Wheel Drive.
+  | 'AWD' // All Wheel Drive.
 
 export interface VehicleUpdateResponse extends Vehicle {
   extSysRegNumberUpdateMessage?: string
