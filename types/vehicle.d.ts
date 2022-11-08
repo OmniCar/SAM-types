@@ -104,9 +104,9 @@ export type TVehicleTransmissionType =
 
 export type TVehicleDriveType =
   | '' // Unknown drive type.
-  | 'FWD' // Front Wheel Drive.
-  | 'RWD' // Rear Wheel Drive.
-  | 'AWD' // All Wheel Drive.
+  | 'Front Wheel Drive'
+  | 'Rear Wheel Drive'
+  | 'All Wheel Drive'
 
 export interface VehicleUpdateResponse extends Vehicle {
   extSysRegNumberUpdateMessage?: string
