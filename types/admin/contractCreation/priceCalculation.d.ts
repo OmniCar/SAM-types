@@ -51,7 +51,9 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
   fuelTypeName: string
 }
 
-// For V4PricingTool.
+/**
+ *  For V4PricingTool.
+ */
 export interface IV4PricingToolContractCalculationRequest extends IContractCalculationRequest {
   vehicleInfo: IVehicleInfo
   productId: number // V4 product / "template" id.
