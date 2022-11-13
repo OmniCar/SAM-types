@@ -52,11 +52,12 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
 }
 
 /**
- *  For V4PricingTool.
+ * For V4PricingTool.
+ * @note The product in v4ProductId, not to be confused with product that is either a Vehicle or Other.
  */
 export interface IV4PricingToolContractCalculationRequest extends IContractCalculationRequest {
   vehicleInfo: IVehicleInfo
-  productId: number // V4 product / "template" id.
+  v4ProductId: number // V4 contract product / "template" id.
 }
 
 /**

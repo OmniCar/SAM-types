@@ -1,6 +1,6 @@
 import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
-import { IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
+import { PriceSource, IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
@@ -128,6 +128,7 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
+  priceSource?: PriceSource
   product: Vehicle | Other
   paymentGateway: PaymentGateway
   customerId?: number
@@ -148,6 +149,11 @@ export interface ICustomContractCreationRequest extends ICommonContractCreationR
 
 export interface IStandardContractCreationRequest extends ICommonContractCreationRequest {
   type: 'STANDARD'
+}
+
+export interface IV4PricingToolStandardContractCreationRequest extends IStandardContractCreationRequest {
+  v4ProviderId: number
+  v4ProductId: number
 }
 
 export interface IContractPrintCreationRequest extends ICommonContractCreationRequest {
