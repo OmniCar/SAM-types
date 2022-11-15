@@ -128,7 +128,7 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
-  priceSource?: PriceSource
+  contractTemplateName: string
   product: Vehicle | Other
   paymentGateway: PaymentGateway
   customerId?: number
@@ -136,6 +136,7 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   invoiceCustomerId?: number
   invoiceCustomer?: IAdminCustomer
   isDownpaymentDistributed: boolean
+  priceSource?: PriceSource
 }
 
 export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
