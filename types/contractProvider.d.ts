@@ -23,6 +23,7 @@ export interface IContractProviderRequest {
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
+  isForceEnableCustomContract: boolean
   isShowLogoOnWeb: boolean
   webLogoBanner: string | null
   webLogoSquare: string | null
@@ -59,6 +60,7 @@ export interface IContractProviderResponse {
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
+  isForceEnableCustomContract: boolean
   isShowLogoOnWeb: boolean
   webLogoBanner: string | null
   webLogoBannerUrl?: string | null

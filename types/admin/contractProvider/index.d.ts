@@ -21,6 +21,7 @@ export interface IContractProviderInfo {
   webTitle?: string | null
   isUseWhiteBGOnWeb?: boolean
   isShowLogoOnWeb?: boolean
+  isForceEnableCustomContracts?: boolean
   webLogoBanner?: string | null
   webLogoSquare?: string | null
   vatPct: number
