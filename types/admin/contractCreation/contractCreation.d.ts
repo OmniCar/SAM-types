@@ -153,7 +153,7 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
   type: 'STANDARD'
 }
 
-export interface IV4PricingToolStandardContractCreationRequest extends IStandardContractCreationRequest {
+export interface IStandardV4PricingToolContractCreationRequest extends IStandardContractCreationRequest {
   vehicleInfo: IVehicleInfo
   v4ProviderId: number
   v4ProductId: number
