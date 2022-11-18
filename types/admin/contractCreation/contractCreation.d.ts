@@ -2,7 +2,7 @@ import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
 import { PriceSource, IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
-import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
+import { Vehicle, VehicleAlongItsContracts, IVehicleInfo } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
@@ -42,6 +42,8 @@ export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
 export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefined
 
 interface ICommonContractUpdateRequest {
+  priceSource?: PriceSource
+  contractProviderId: number
   contractTemplateId: number
   serviceVariantId: string
   serviceVariantName: string
@@ -136,7 +138,6 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   invoiceCustomerId?: number
   invoiceCustomer?: IAdminCustomer
   isDownpaymentDistributed: boolean
-  priceSource?: PriceSource
 }
 
 export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
@@ -153,6 +154,7 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
 }
 
 export interface IV4PricingToolStandardContractCreationRequest extends IStandardContractCreationRequest {
+  vehicleInfo: IVehicleInfo
   v4ProviderId: number
   v4ProductId: number
 }

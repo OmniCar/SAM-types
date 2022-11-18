@@ -5,8 +5,12 @@ import { VehicleContracts } from './vehicleContracts'
 import { TIsoCountry } from './country'
 
 /**
+ * Vehicle object wit properties of strings and types with id keys to database related rows.
+ *
  * @note To dev: Are you looking for contracts here? - Please use VehicleAlongItsContracts instead!
  */
+// TODO: In future (as of 2022 Nov) when on a stable build on API and Admin, rename this
+// Vehicle to IVehicle, to avoid mix-up/confusion with Vehicle (same name!) entity. /marko
 export interface Vehicle {
   id?: number
   vin?: string
@@ -25,6 +29,10 @@ export interface Vehicle {
   hasFourWheelDrive?: boolean // Aka 4x4 ("four by four" or 4WD).
 }
 
+/**
+ * Vehicle object with properties of strings or related types, has no
+ * types with id keys to database rows etc.
+ */
 export interface IVehicleInfo {
   // Here we implement based on a lookup on BG64770
   vehicleRegistryId?: number

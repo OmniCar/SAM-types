@@ -75,6 +75,7 @@ export interface IGenericContractTemplateResponse {
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
   v4ProviderId?: number
+  v4ProductId?: number
   formattedDescription: string | null
   weight: number
   maxEndAge?: number
