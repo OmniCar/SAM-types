@@ -2,7 +2,9 @@ import { IApiOtherWithContracts } from '../../admin/product'
 import { IApiVehicleWithContracts } from '../../admin/vehicle'
 import { IsoLocale } from '../../locale'
 
-export interface IContractProvider {
+export type ContractProviderOrderBy = 'providerId' | 'administrativeName' | 'inactive'
+
+export interface IContractProviderInfo {
   providerId: number
   parentProviderId: number | null
   administrativeName: string
@@ -19,11 +21,12 @@ export interface IContractProvider {
   webTitle?: string | null
   isUseWhiteBGOnWeb?: boolean
   isShowLogoOnWeb?: boolean
-  isForceEnableCustomContracts?: boolean
+  isForceEnableCustomContract?: boolean
   webLogoBanner?: string | null
   webLogoSquare?: string | null
   vatPct: number
   inactive: boolean
+  isUsingV4PricingTool: boolean
 }
 
 export interface ICreateTestContractProvider {
@@ -37,7 +40,7 @@ export interface ICreateTestContractProvider {
 }
 
 export interface IProviderWithContracts {
-  provider: IContractProvider
+  provider: IContractProviderInfo
   vehicles?: IApiVehicleWithContracts[]
   products?: IApiOtherWithContracts[]
 }

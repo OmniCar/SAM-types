@@ -36,7 +36,7 @@ export interface IContractDetailsRecord {
   termsOfTradePdfUrl: string
   totalPrice: PriceSpecification
   contractType: ContractType
-  contractTemplateId: number
+  contractTemplateId: null | number
   contractName: string // Contract (template) name.
   contractTemplateDescription: string
   contractTemplateMinPaymentsCount: number | null

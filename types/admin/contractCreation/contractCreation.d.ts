@@ -1,8 +1,8 @@
 import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
-import { IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
+import { PriceSource, IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
-import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
+import { Vehicle, VehicleAlongItsContracts, IVehicleInfo } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
@@ -42,6 +42,8 @@ export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
 export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefined
 
 interface ICommonContractUpdateRequest {
+  priceSource?: PriceSource
+  contractProviderId: number
   contractTemplateId: number
   serviceVariantId: string
   serviceVariantName: string
@@ -91,7 +93,7 @@ interface IContractInfo {
   valueType: ContractValueType | undefined
 }
 
-interface IContractProviderInfo {
+interface IContractProviderPaymentInfo {
   administrativeName: string
   address: string
   postal_code: string
@@ -105,7 +107,7 @@ interface IPublicKeyResponse {
 }
 interface IPaymentInformationResponse {
   publicKey: string
-  contractProvider: IContractProviderInfo
+  contractProvider: IContractProviderPaymentInfo
   customer: IAdminCustomer
   product: Vehicle | Other
   contract: IContractInfo
@@ -128,6 +130,7 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
+  contractTemplateName: string
   product: Vehicle | Other
   paymentGateway: PaymentGateway
   customerId?: number
@@ -148,6 +151,12 @@ export interface ICustomContractCreationRequest extends ICommonContractCreationR
 
 export interface IStandardContractCreationRequest extends ICommonContractCreationRequest {
   type: 'STANDARD'
+}
+
+export interface IStandardV4PricingToolContractCreationRequest extends IStandardContractCreationRequest {
+  vehicleInfo: IVehicleInfo
+  v4ProviderId: number
+  v4ProductId: number
 }
 
 export interface IContractPrintCreationRequest extends ICommonContractCreationRequest {
