@@ -37,7 +37,7 @@ export interface IContractDetailsRecord {
   totalPrice: PriceSpecification
   contractType: ContractType
   contractTemplateId: number
-  contractTemplateName: string
+  contractName: string // Contract (template) name.
   contractTemplateDescription: string
   contractTemplateMinPaymentsCount: number | null
   contractTemplateIsArchived: boolean
