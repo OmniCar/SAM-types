@@ -18,7 +18,7 @@ export interface IContractResponse {
   startMileage: number
   startValue?: number
   startValueType?: ContractValueType
-  template: IContractTemplateResponse
+  template: null | IContractTemplateResponse
   options: IContractOptionResponse[]
   payment: ICalculationResponse
   prettyIdentifier: string
