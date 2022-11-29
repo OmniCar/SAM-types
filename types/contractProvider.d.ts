@@ -76,4 +76,21 @@ export interface IContractProviderResponse {
   autoSettlement: boolean
 }
 
+export interface IContractProviderListItemResponse {
+  contractProviderId: number
+  administrativeName: string
+  cvrCode: string
+  country: ICountryResponse
+  omnicarFee: number
+  webCalcEnabled: boolean
+  freeWarrantiesButton: boolean
+  disableContractTemplates: boolean
+  productsEnabled: boolean
+  isForceEnableCustomContract: boolean
+  justGOContractsEnabled: boolean
+  parentProviderId: number | null,
+  autoSettlement: boolean
+  state: ProviderState
+}
+
 export type ProviderState = 'Active' | 'Inactive'

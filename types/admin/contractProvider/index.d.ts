@@ -22,6 +22,7 @@ export interface IContractProvider {
   isUseWhiteBGOnWeb?: boolean
   isShowLogoOnWeb?: boolean
   isForceEnableCustomContracts?: boolean
+  productsEnabled?: boolean
   webLogoBanner?: string | null
   webLogoSquare?: string | null
   vatPct: number
