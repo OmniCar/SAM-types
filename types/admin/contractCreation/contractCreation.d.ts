@@ -44,7 +44,7 @@ export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefin
 interface ICommonContractUpdateRequest {
   priceSource?: PriceSource
   contractProviderId: number
-  contractTemplateId: number
+  contractTemplateId: number | null
   serviceVariantId: string
   serviceVariantName: string
   value?: number
