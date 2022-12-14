@@ -19,6 +19,7 @@ export interface IContractResponse {
   startValue?: number
   startValueType?: ContractValueType
   template: null | IContractTemplateResponse
+  calculationMethod: number
   options: IContractOptionResponse[]
   payment: ICalculationResponse
   prettyIdentifier: string

@@ -140,7 +140,7 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest { }
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
@@ -157,6 +157,13 @@ export interface IStandardV4PricingToolContractCreationRequest extends IStandard
   vehicleInfo: IVehicleInfo
   v4ProviderId: number
   v4ProductId: number
+}
+
+export interface IStandardV4PricingToolContractPrintCreationRequest extends IStandardV4PricingToolContractCreationRequest {
+  type: 'STANDARD'
+  amountPerPayment?: number
+  adjustedFrom?: string
+  isAdjustment?: boolean
 }
 
 export interface IContractPrintCreationRequest extends ICommonContractCreationRequest {
@@ -215,12 +222,12 @@ export interface IAvailableFreeWarrantyResponse {
 export interface IAvailableFreeWarrantyDurationPrice {
   allowedDistanceMileage: undefined | number // Allowed driving limit/distance during this Warranty duration.
   allowedPowerV4Interval:
-    | undefined
-    | {
-        lookedUpEngineMaxPower: number
-        minEngineMaxPower: number
-        maxEngineMaxPower: number
-      }
+  | undefined
+  | {
+    lookedUpEngineMaxPower: number
+    minEngineMaxPower: number
+    maxEngineMaxPower: number
+  }
   customerPrice: PriceSpecification | null
   durationMonths: number
   finlandPriceId?: number
