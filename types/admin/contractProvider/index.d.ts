@@ -4,7 +4,7 @@ import { IsoLocale } from '../../locale'
 
 export type ContractProviderOrderBy = 'providerId' | 'administrativeName' | 'inactive'
 
-export interface IContractProvider {
+export interface IContractProviderInfo {
   providerId: number
   parentProviderId: number | null
   administrativeName: string
@@ -22,10 +22,12 @@ export interface IContractProvider {
   isUseWhiteBGOnWeb?: boolean
   isShowLogoOnWeb?: boolean
   isForceEnableCustomContracts?: boolean
+  productsEnabled?: boolean
   webLogoBanner?: string | null
   webLogoSquare?: string | null
   vatPct: number
   inactive: boolean
+  isUsingV4PricingTool: boolean
 }
 
 export interface ICreateTestContractProvider {
@@ -39,7 +41,7 @@ export interface ICreateTestContractProvider {
 }
 
 export interface IProviderWithContracts {
-  provider: IContractProvider
+  provider: IContractProviderInfo
   vehicles?: IApiVehicleWithContracts[]
   products?: IApiOtherWithContracts[]
 }

@@ -1,4 +1,4 @@
-import { IContractProvider } from '../contractProvider'
+import { IContractProviderInfo } from '../contractProvider'
 import { IAdminCustomer } from '../customer'
 import { IAdminUserInfo } from '../user/user'
 import { UserRole, UserRoleRecord } from './roles'
@@ -16,7 +16,7 @@ export interface ILoginResponse {
   token?: string
   userInfo?: IAdminUserInfo
   customerInfo?: IAdminCustomer
-  providerInfo?: IContractProvider
+  providerInfo?: IContractProviderInfo
   stripePublicKey?: string
   webCalcEnabled?: boolean
   offerRequestsEnabled?: boolean
