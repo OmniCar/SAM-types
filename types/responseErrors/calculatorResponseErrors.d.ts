@@ -8,6 +8,7 @@ export type LicensePlateLookupResponseErrors =
   | 'REGNO_NO_CONTRACTS_AVAILABLE_FUELTYPE_NOT_SUPPORTED'
   | 'REGNO_VEHICLE_DATA_LOOKUP_TIMEOUT' // Ex, timeout of "normal" vehicle lookup.
   | 'REGNO_SERVICE_DATA_LOOKUP_TIMEOUT' // Ex, timeout of service data lookup (like AutoDAP).
+  | 'REGNO_NO_CONTRACTS_AVAILABLE_BLACKLISTED'
 
 type ModelsLookupResponseErrors = 'MODELS_NO_MODELS'
 type BrandsLookupResponseErrors = 'BRANDS_NO_BRANDS'

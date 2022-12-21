@@ -10,6 +10,7 @@ export interface IBlacklistedVehicleResponse {
     brand: string
     model: string
     fuelType: string
+    parentRecord?: boolean
 }
 
 export type BlacklistedVehicleOrderByType = keyof IBlacklistedVehicleRequest
