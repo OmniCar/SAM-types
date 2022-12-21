@@ -45,6 +45,7 @@ export enum FormattingLocale {
 }
 
 export enum ContractActionType {
+  createAndActivateInV4 = 90, // Contract was created in V4 (and activated there), this (mirror) contract is based on that contract in V4. See also sendAndActivateInV4.
   create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
   sendDraft = 120, // A draft was sent to the customer
   buyNow = 130, // Customer visited payment page
@@ -68,6 +69,7 @@ export enum ContractActionType {
   acceptOffer = 180, // The customer accepted the offer
   approveOffer = 200, // Who approved it? that would be the customer
   activate = 300, // The contract was activated by either the customer or the seller
+  sendAndActivateInV4 = 1300, // A (mirror) of this contract was sent to V4 (and activated there). See also createAndActivateInV4.
   expire = 400, // The contract offer expired and archived
   expireContract = 410, // The contract expired
   sendContractExpiredMail = 411, // A expired mail was sent to the customer

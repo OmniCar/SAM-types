@@ -23,7 +23,7 @@ export interface IContractProviderRequest {
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
-  isForceEnableCustomContract: boolean
+  isForceAllowCustomContracts: boolean
   isShowLogoOnWeb: boolean
   webLogoBanner: string | null
   webLogoSquare: string | null
@@ -60,7 +60,7 @@ export interface IContractProviderResponse {
   webCalcEnabled: boolean
   webTitle: string | null
   isUseWhiteBGOnWeb: boolean
-  isForceEnableCustomContract: boolean
+  isForceAllowCustomContracts: boolean
   isShowLogoOnWeb: boolean
   webLogoBanner: string | null
   webLogoBannerUrl?: string | null
@@ -74,6 +74,24 @@ export interface IContractProviderResponse {
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
   autoSettlement: boolean
+  isAllowContractsWithoutVehiclePriceModel: boolean
+}
+
+export interface IContractProviderListItemResponse {
+  contractProviderId: number
+  administrativeName: string
+  cvrCode: string
+  country: ICountryResponse
+  omnicarFee: number
+  webCalcEnabled: boolean
+  freeWarrantiesButton: boolean
+  disableContractTemplates: boolean
+  productsEnabled: boolean
+  isForceEnableCustomContract: boolean
+  justGOContractsEnabled: boolean
+  parentProviderId: number | null,
+  autoSettlement: boolean
+  state: ProviderState
 }
 
 export type ProviderState = 'Active' | 'Inactive'

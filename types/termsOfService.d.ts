@@ -4,8 +4,8 @@ export interface ITermsOfServiceRequest {
 }
 
 export interface ITermsOfServiceResponse {
-  id: number
   name: string
-  globalBucket: boolean
   ref: string
+  id?: number
+  globalBucket?: boolean
 }

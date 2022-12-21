@@ -40,6 +40,7 @@ export declare enum FormattingLocale {
   'en-US' = 5,
 }
 export declare enum ContractActionType {
+  createAndActivateInV4 = 90,
   create = 100,
   sendDraft = 120,
   buyNow = 130,
@@ -63,6 +64,7 @@ export declare enum ContractActionType {
   acceptOffer = 180,
   approveOffer = 200,
   activate = 300,
+  sendAndActivateInV4 = 1300,
   expire = 400,
   expireContract = 410,
   sendContractExpiredMail = 411,

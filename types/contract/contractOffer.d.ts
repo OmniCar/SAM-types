@@ -7,6 +7,7 @@ import { PaymentGateway } from './../payment'
 import { ContractValueType } from '../admin'
 
 export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
+  contractProviderId: number
   userId?: number
   customer?: Customer
   product?: TProduct
