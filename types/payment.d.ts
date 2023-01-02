@@ -1,13 +1,13 @@
 import { PriceSpecification } from './priceSpecification'
 import { SettlementPaymentType } from './index'
 
-/** supported payment gateways */
-export type PaymentGateway = 'Stripe' | 'B2B' | 'NONE' | 'Mock'
+/** Supported payment gateways. */
+export type PaymentGateway = 'Stripe' | 'B2B' | 'V4' | 'NONE' | 'Mock'
 
-/** supported payment types */
+/** Supported payment types. */
 export type PaymentType = 'automatic' | 'manual'
 
-/** credit card */
+/** Credit card. */
 export interface PaymentCard {
   cardType: string
   last4: string
@@ -15,7 +15,7 @@ export interface PaymentCard {
   expYear: number
 }
 
-/** payment plan */
+/** Payment plan. */
 export interface PaymentPlan {
   amountPrPayment: PriceSpecification
   downpayment: PriceSpecification
@@ -23,7 +23,7 @@ export interface PaymentPlan {
 }
 
 /**
- * Payload to Initialize a Stripe Checkout Session
+ * Payload to Initialize a Stripe Checkout Session.
  */
 export interface IPreparePaymentRequest {
   contractId?: number
@@ -33,7 +33,7 @@ export interface IPreparePaymentRequest {
 }
 
 /**
- * Response payload from from a Stripe Checkout Session initialization request
+ * Response payload from from a Stripe Checkout Session initialization request.
  */
 export interface IPreparePaymentResponse {
   contractId: number
@@ -45,7 +45,7 @@ export interface IPreparePaymentResponse {
 }
 
 /**
- * Payload to create settlement payments
+ * Payload to create settlement payments.
  */
 export interface ISettlementPaymentRequest {
   paymentAmount: number
