@@ -11,9 +11,14 @@ export interface ITranslationValueResponse extends ITranslationValueRequest {
   id: number
 }
 
+export interface ITranslationApplication {
+  id: number
+  name: TTranslationApplication
+}
+
 export interface ITranslationRequest {
   key: string
-  app: TTranslationApplication
+  applications: ITranslationApplication[]
 }
 
 export interface ITranslationResponse extends ITranslationRequest {
