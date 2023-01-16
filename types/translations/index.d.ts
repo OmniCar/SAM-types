@@ -19,6 +19,7 @@ export interface ITranslationApplication {
 export interface ITranslationRequest {
   key: string
   applications: ITranslationApplication[]
+  comment?: string
 }
 
 export interface ITranslationResponse extends ITranslationRequest {
