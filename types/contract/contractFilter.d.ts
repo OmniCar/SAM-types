@@ -21,6 +21,7 @@ export interface IContractFilterOptions {
   templates: IContractFilterOption[]
   options: IContractFilterOption[]
   sellers: IContractFilterOption[]
+  subProviders: IContractFilterOption[]
   created: IContractFilterDate
   expired: IContractFilterDate
   activeTypes: ProductType[]
@@ -41,6 +42,7 @@ export interface IContractFilterParams {
   templates: number[]
   options: number[]
   sellers: number[]
+  subProviders: number[]
   created: IContractFilterDate
   expired: IContractFilterDate
   activeTypes: ProductType[]
