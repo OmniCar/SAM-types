@@ -115,6 +115,7 @@ interface IPaymentInformationResponse {
   minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
   subscriptions: ISubscription[]
+  paymentGateway: PaymentGateway // new
 }
 
 interface ISetupIntentResponse {
@@ -140,7 +141,7 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest { }
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
@@ -159,7 +160,8 @@ export interface IStandardV4PricingToolContractCreationRequest extends IStandard
   v4ProductId: number
 }
 
-export interface IStandardV4PricingToolContractPrintCreationRequest extends IStandardV4PricingToolContractCreationRequest {
+export interface IStandardV4PricingToolContractPrintCreationRequest
+  extends IStandardV4PricingToolContractCreationRequest {
   type: 'STANDARD'
   amountPerPayment?: number
   adjustedFrom?: string
@@ -222,12 +224,12 @@ export interface IAvailableFreeWarrantyResponse {
 export interface IAvailableFreeWarrantyDurationPrice {
   allowedDistanceMileage: undefined | number // Allowed driving limit/distance during this Warranty duration.
   allowedPowerV4Interval:
-  | undefined
-  | {
-    lookedUpEngineMaxPower: number
-    minEngineMaxPower: number
-    maxEngineMaxPower: number
-  }
+    | undefined
+    | {
+        lookedUpEngineMaxPower: number
+        minEngineMaxPower: number
+        maxEngineMaxPower: number
+      }
   customerPrice: PriceSpecification | null
   durationMonths: number
   finlandPriceId?: number
