@@ -179,7 +179,7 @@ export interface ICreateFreeWarrantyRequest {
   warrantyId: number
   warrantyLengthMonths: number
   modelModelId?: number
-  vehicleAlongItsContracts: VehicleAlongItsContracts
+  vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
