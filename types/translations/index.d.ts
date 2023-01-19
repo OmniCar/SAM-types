@@ -1,6 +1,6 @@
 import { IsoLocale } from '../locale'
 
-export type TTranslationApplication = 'system' | 'admin' | 'frontend' | 'emailtemplates'
+export type TTranslationApplication = 'API' | 'Admin' | 'WebCalc' | 'EmailTemplates'
 
 export interface ITranslationValueRequest {
   locale: IsoLocale
