@@ -1,45 +1,46 @@
 export declare enum ContractState {
-  Draft = 1,
-  Offer = 100,
-  OfferExpired = 110,
-  OfferRevoked = 120,
-  OfferRejected = 130,
-  Active = 200,
-  ActivePrePaid = 210,
-  Suspended = 400,
-  Terminated = 500,
-  Extended = 510,
-  Expired = 600,
-  Completed = 800,
-  Settled = 900,
-  SettledPrePaid = 950,
+    Draft = 1,
+    Offer = 100,
+    OfferExpired = 110,
+    OfferRevoked = 120,
+    OfferRejected = 130,
+    Active = 200,
+    ActivePrePaid = 210,
+    Suspended = 400,
+    Terminated = 500,
+    Extended = 510,
+    Expired = 600,
+    Completed = 800,
+    Settled = 900,
+    SettledPrePaid = 950
 }
 export declare enum WarrantyState {
-  Active = 200,
-  Rejected = 300,
-  Terminated = 500,
+    Active = 200,
+    Rejected = 300,
+    Terminated = 500
 }
 export declare enum DbType {
-  int = 1,
-  text = 2,
-  date = 3,
-  monetary = 4,
-  mileage = 5,
+    int = 1,
+    text = 2,
+    date = 3,
+    monetary = 4,
+    mileage = 5
 }
 export declare enum AggregateType {
-  sum = 1,
-  concat = 2,
-  count = 3,
+    sum = 1,
+    concat = 2,
+    count = 3
 }
 export declare enum FormattingLocale {
-  'sv-SE' = 0,
-  'uk-UA' = 1,
-  'da-DK' = 2,
-  'en-GB' = 3,
-  'fi-FI' = 4,
-  'en-US' = 5,
+    'sv-SE' = 0,
+    'uk-UA' = 1,
+    'da-DK' = 2,
+    'en-GB' = 3,
+    'fi-FI' = 4,
+    'en-US' = 5
 }
 export declare enum ContractActionType {
+  createAndActivateInV4 = 90,
   create = 100,
   sendDraft = 120,
   buyNow = 130,
@@ -63,6 +64,7 @@ export declare enum ContractActionType {
   acceptOffer = 180,
   approveOffer = 200,
   activate = 300,
+  sendAndActivateInV4 = 1300,
   expire = 400,
   expireContract = 410,
   sendContractExpiredMail = 411,
@@ -88,53 +90,53 @@ export declare enum ContractActionType {
   archive = 1000,
 }
 export declare enum PaymentFailureReason {
-  expiredCard = 10,
-  authenticationRequired = 20,
-  insufficientFunds = 30,
-  withdrawalCountLimitExceeded = 40,
-  invalidAmount = 50,
-  fraudLostStolen = 60,
-  attemptPaymentAgain = 70,
-  incorrectData = 80,
-  contactCardIssuer = 90,
-  unknownReason = 100,
+    expiredCard = 10,
+    authenticationRequired = 20,
+    insufficientFunds = 30,
+    withdrawalCountLimitExceeded = 40,
+    invalidAmount = 50,
+    fraudLostStolen = 60,
+    attemptPaymentAgain = 70,
+    incorrectData = 80,
+    contactCardIssuer = 90,
+    unknownReason = 100
 }
 export declare enum OfferRequestState {
-  Pending = 100,
-  Approved = 200,
-  Rejected = 300,
-  Expired = 400,
+    Pending = 100,
+    Approved = 200,
+    Rejected = 300,
+    Expired = 400
 }
 export declare enum ResponseWarnings {
-  GenericWarning = 499,
+    GenericWarning = 499
 }
-export declare type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage'
+export declare type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage';
 export declare enum WarrantyOnboardingConfig {
-  interdan = 'Interdan',
+    interdan = "Interdan"
 }
 export declare enum OutageSeverityLevel {
-  Low = 1,
-  Medium = 2,
-  High = 3,
+    Low = 1,
+    Medium = 2,
+    High = 3
 }
 export declare enum SettlementPaymentType {
-  cashPayout = 1,
-  cashPayment = 2,
-  stripeRefund = 3,
-  stripePayment = 4,
-  providerPayment = 5,
-  customerCredit = 6,
+    cashPayout = 1,
+    cashPayment = 2,
+    stripeRefund = 3,
+    stripePayment = 4,
+    providerPayment = 5,
+    customerCredit = 6
 }
 export declare enum ReleaseSystem {
-  Admin = 1,
-  Superadmin = 2,
-  Api = 3,
-  WebShop = 4,
+    Admin = 1,
+    Superadmin = 2,
+    Api = 3,
+    WebShop = 4
 }
 export declare enum ReleaseType {
-  Major = 1,
-  Minor = 2,
-  Emergency = 3,
+    Major = 1,
+    Minor = 2,
+    Emergency = 3
 }
 export * from './address'
 export * from './admin'
