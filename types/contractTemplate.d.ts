@@ -33,6 +33,7 @@ export interface IGenericContractTemplateRequest {
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
   totalPriceFactorInTenthOfCents: number | null
+  disableServiceInfoFile: boolean | null
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
@@ -85,6 +86,7 @@ export interface IGenericContractTemplateResponse {
   templateAutoDAPId?: number | null
   maxEndMileage?: number
   totalPriceFactorInTenthOfCents: number | null
+  disableServiceInfoFile: boolean | null
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
