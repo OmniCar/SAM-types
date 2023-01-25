@@ -5,11 +5,12 @@ import { GenericResponseErrors } from './genericResponseTypes'
 import { OfferRequestResponseErrors } from './offerRequestResponseErrors'
 import { PasswordErrors } from './passwordResponseErrors'
 import { VatLookupResponseErrors } from './vatLookupResponseErrors'
-import { WorkshopImportErrors } from './workshopResponseErrors'
+import { ImportErrors } from './importErrors'
 import { paymentResponseErrors } from './paymentResponseErrors'
 import { AdjustmentRequestResponseErrors } from './adjustmentRequestResponseErrors'
 import { InvalidProductTypeErrors } from './invalidProductTypeErrors'
 import { RateLimitErrors } from './rateLimitErrors'
+import { VehcileBlacklistErrors } from './vehcileBlacklistErrors'
 
 export type ResponseErrors =
   | AdminPaymentErrors
@@ -17,10 +18,11 @@ export type ResponseErrors =
   | ContractResponseErrors
   | GenericResponseErrors
   | VatLookupResponseErrors
-  | WorkshopImportErrors
+  | ImportErrors
   | PasswordErrors
   | OfferRequestResponseErrors
   | paymentResponseErrors
   | AdjustmentRequestResponseErrors
   | InvalidProductTypeErrors
   | RateLimitErrors
+  | VehcileBlacklistErrors
