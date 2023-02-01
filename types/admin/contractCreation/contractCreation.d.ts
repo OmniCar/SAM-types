@@ -189,6 +189,7 @@ export interface ICreateFreeWarrantyRequest {
   startDate?: Date
   finlandPriceId?: number
   endMileage?: number // For debugging.
+  reference?: string
 }
 
 export interface ICreateFreeWarrantyResponse {

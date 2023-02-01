@@ -75,9 +75,11 @@ export declare enum ContractActionType {
   suspend = 600,
   successfulInvoicePayment = 690,
   reactivate = 700,
+  sendAndReactivateInV4 = 1700,
   extending = 710,
   pauseSubscription = 720,
   terminate = 800,
+  sendAndInactivateInV4 = 1800,
   registerCashPayment = 810,
   registerCashPayout = 820,
   registerProviderPayment = 830,
@@ -200,3 +202,4 @@ export * from './webcalc'
 export * from './workshopOperation'
 export * from './releaseNotes'
 export * from './paymentFailureReason'
+export * from './translations'
