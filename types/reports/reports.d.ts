@@ -1,5 +1,5 @@
 import { IsoLocale } from '../locale'
-import { DbType, AggregateType, ProductType } from '../index'
+import { DbType, AggregateType, ProductType, TTranslationApplication } from '../index'
 
 export interface IDbColumn {
   name: string
@@ -50,7 +50,7 @@ export interface IReportSearchResponseArrays {
 }
 
 export interface ICheckTranslationsRequest {
-  url: string
+  application: TTranslationApplication
   keys: string[]
 }
 

@@ -26,6 +26,13 @@ export interface ITranslationResponse extends ITranslationRequest {
   id: number
   userEmail: string
   entityUpdated: string
-  published: boolean
   missedValues: boolean
+}
+
+export interface ILocaleTranslation {
+  [key: string]: ITranslation
+}
+
+export interface ITranslation {
+  [key: string]: string
 }
