@@ -95,7 +95,7 @@ export interface IContractProviderListItemResponse {
   productsEnabled: boolean
   isForceEnableCustomContract: boolean
   justGOContractsEnabled: boolean
-  parentProviderId: number | null
+  parentProviderId: number | null,
   autoSettlement: boolean
   state: ProviderState
   fragusContactPersonName: string | null

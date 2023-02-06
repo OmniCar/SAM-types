@@ -115,6 +115,7 @@ interface IPaymentInformationResponse {
   minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
   subscriptions: ISubscription[]
+  paymentGateway: PaymentGateway // new
 }
 
 interface ISetupIntentResponse {
@@ -174,11 +175,14 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   isAdjustment?: boolean
 }
 
+// TODO: In future rename perhaps to ICreateDelaerPaidContractRequest -2023-01-31 /marko
 export interface ICreateFreeWarrantyRequest {
-  warrantyId: number
+  prettyIdentifier: string | null
+  warrantyId: number | null // SAM Warranty ID.
+  v4ProductId: number | null
   warrantyLengthMonths: number
   modelModelId?: number
-  vehicleAlongItsContracts: VehicleAlongItsContracts
+  vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
