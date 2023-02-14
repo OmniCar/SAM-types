@@ -34,6 +34,9 @@ export interface IContractProviderRequest {
   parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
+  fragusContactPersonName: string | null
+  providerGroup: string | null
+  providerCategory: string | null
 }
 
 export interface IContractProviderResponse {
@@ -75,6 +78,9 @@ export interface IContractProviderResponse {
   state: ProviderState
   autoSettlement: boolean
   isAllowContractsWithoutVehiclePriceModel: boolean
+  fragusContactPersonName: string | null
+  providerGroup: string | null
+  providerCategory: string | null
 }
 
 export interface IContractProviderListItemResponse {
@@ -92,6 +98,9 @@ export interface IContractProviderListItemResponse {
   parentProviderId: number | null,
   autoSettlement: boolean
   state: ProviderState
+  fragusContactPersonName: string | null
+  providerGroup: string | null
+  providerCategory: string | null
 }
 
 export type ProviderState = 'Active' | 'Inactive'

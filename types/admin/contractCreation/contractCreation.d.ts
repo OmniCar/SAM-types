@@ -115,6 +115,7 @@ interface IPaymentInformationResponse {
   minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
   subscriptions: ISubscription[]
+  paymentGateway: PaymentGateway // new
 }
 
 interface ISetupIntentResponse {
@@ -140,7 +141,9 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest { }
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {
+  amountPerPayment?: number
+}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
@@ -159,7 +162,8 @@ export interface IStandardV4PricingToolContractCreationRequest extends IStandard
   v4ProductId: number
 }
 
-export interface IStandardV4PricingToolContractPrintCreationRequest extends IStandardV4PricingToolContractCreationRequest {
+export interface IStandardV4PricingToolContractPrintCreationRequest
+  extends IStandardV4PricingToolContractCreationRequest {
   type: 'STANDARD'
   amountPerPayment?: number
   adjustedFrom?: string
@@ -173,17 +177,21 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   isAdjustment?: boolean
 }
 
+// TODO: In future rename perhaps to ICreateDelaerPaidContractRequest -2023-01-31 /marko
 export interface ICreateFreeWarrantyRequest {
-  warrantyId: number
+  prettyIdentifier: string | null
+  warrantyId: number | null // SAM Warranty ID.
+  v4ProductId: number | null
   warrantyLengthMonths: number
   modelModelId?: number
-  vehicleAlongItsContracts: VehicleAlongItsContracts
+  vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
   startDate?: Date
   finlandPriceId?: number
   endMileage?: number // For debugging.
+  reference?: string
 }
 
 export interface ICreateFreeWarrantyResponse {
@@ -222,12 +230,12 @@ export interface IAvailableFreeWarrantyResponse {
 export interface IAvailableFreeWarrantyDurationPrice {
   allowedDistanceMileage: undefined | number // Allowed driving limit/distance during this Warranty duration.
   allowedPowerV4Interval:
-  | undefined
-  | {
-    lookedUpEngineMaxPower: number
-    minEngineMaxPower: number
-    maxEngineMaxPower: number
-  }
+    | undefined
+    | {
+        lookedUpEngineMaxPower: number
+        minEngineMaxPower: number
+        maxEngineMaxPower: number
+      }
   customerPrice: PriceSpecification | null
   durationMonths: number
   finlandPriceId?: number
