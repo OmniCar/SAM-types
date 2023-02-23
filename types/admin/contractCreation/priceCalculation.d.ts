@@ -83,5 +83,5 @@ export interface IContractCalculationResponse {
   providerShare: PriceSpecification
   x_adapDebugData?: any // For debugging purposes.
   x_debugData?: any // For debugging purposes.
-  serviceInfo?: string // Service information, mainly for ax.
+  serviceInfo?: string[] // Service information, mainly for ax.
 }
