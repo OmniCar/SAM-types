@@ -4,6 +4,7 @@ export interface ISettlementInvoicesBalance {
   stripePayment: PriceSpecification
   cashPayment: PriceSpecification
   providerPayment: PriceSpecification
+  cashPayout: PriceSpecification
 }
 
 export interface IContractBalanceStatistics {
