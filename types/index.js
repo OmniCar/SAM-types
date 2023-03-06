@@ -82,6 +82,7 @@ var ContractActionType
   ContractActionType[(ContractActionType['changePaymentData'] = 460)] = 'changePaymentData'
   ContractActionType[(ContractActionType['modify'] = 500)] = 'modify'
   ContractActionType[(ContractActionType['createPendingTermination'] = 550)] = 'createPendingTermination'
+  ContractActionType[(ContractActionType['cancelPendingTermination'] = 560)] = 'cancelPendingTermination'
   ContractActionType[(ContractActionType['suspend'] = 600)] = 'suspend'
   ContractActionType[(ContractActionType['successfulInvoicePayment'] = 690)] = 'successfulInvoicePayment'
   ContractActionType[(ContractActionType['reactivate'] = 700)] = 'reactivate'

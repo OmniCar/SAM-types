@@ -79,6 +79,7 @@ export enum ContractActionType {
   changePaymentData = 460, // Information about payment was changed
   modify = 500, // (extended) The contract was changed in a way that changes the financial agreement, if a new contract was created as a sideeffect, information about the new contract is in the details
   createPendingTermination = 550, // Registers the creation of a pending termination and indicates that the contract's status has changed from Active to ActivePendingTermination.
+  cancelPendingTermination = 560, // Registers the cancellation of a pending termination and indicates that the contract's status has changed from ActivePendingTermination to Active.
   suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
   successfulInvoicePayment = 690, // Successful invoice payment. Contract soon to be re-activated.
   reactivate = 700, // Who unsuspended the contract

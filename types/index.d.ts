@@ -74,6 +74,7 @@ export declare enum ContractActionType {
   changePaymentData = 460,
   modify = 500,
   createPendingTermination = 550,
+  cancelPendingTermination = 560,
   suspend = 600,
   successfulInvoicePayment = 690,
   reactivate = 700,
