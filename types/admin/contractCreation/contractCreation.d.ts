@@ -141,7 +141,9 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {
+  amountPerPayment?: number
+}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
