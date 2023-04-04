@@ -15,7 +15,7 @@
     "tsc-win": "npm run clean-js-win && npx tsc -p ./tsconfig.json"
   },
   "lint-staged": {
-    "*.{js,json,ts,tsx}": [
+    "**/*.{js,json,ts,tsx}": [
       "prettier --write",
       "git add"
     ]
