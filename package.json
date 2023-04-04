@@ -13,19 +13,13 @@
     "clean-js-win": "sh tools/npm-scripts.sh cleanJS",
     "tsc": "npm run clean-js && npx tsc -p ./tsconfig.json",
     "tsc-win": "npm run clean-js-win && npx tsc -p ./tsconfig.json",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "pre-commit": "lint-staged"
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
   "lint-staged": {
-    "types/**/*.{js,json,ts,tsx}": [
+    "**/*.{js,json,ts,tsx}": [
       "npm run format",
       "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "devDependencies": {
     "husky": "^8.0.3",
