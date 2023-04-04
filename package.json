@@ -17,10 +17,15 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "**/*.{js,json,ts,tsx}": [
+    "types/**/*.{js,json,ts,tsx}": [
       "npm run format",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "devDependencies": {
     "husky": "^8.0.3",
