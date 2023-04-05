@@ -33,12 +33,12 @@ jobs:
       - run: node --version
         shell: bash
       - run: |
-        npm ci
-        npm run tsc-win
+          npm ci
+          npm run tsc-win
       - run: |
-        npm ci -g yarn
-        yarn
-        yarn tsc-win
+          npm ci -g yarn
+          yarn
+          yarn tsc-win
 
 
 
