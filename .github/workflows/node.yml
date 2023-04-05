@@ -26,17 +26,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install and TS compile in ${{ matrix.node-version }} on ${{ matrix.os }}
+      - name: Install and TS compile in Node ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - run: node --version
         shell: bash
       - run: |
-          npm ci
+          npm i
           npm run tsc-win
       - run: |
-          npm ci -g yarn
+          npm i -g yarn
           yarn
           yarn tsc-win
 
