@@ -1,0 +1,44 @@
+name: Install and TS compile on all OSes
+
+on:
+  push:
+    branches: [ "master", "master-for-develop", "master-for-staging" ]
+  pull_request:
+    branches: [ "master", "master-for-develop", "master-for-staging" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    
+    strategy:
+      matrix:
+        # Available GitHub-hosted runner types see:
+        # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners
+        os: [windows-latest, ubuntu-latest, macos-latest, windows-2019, ubuntu-20.04, macos-11]
+#        os: [ubuntu-latest, macos-latest, ubuntu-20.04, macos-11]
+        node-version: [15.x, 16.x]
+    runs-on: ${{ matrix.os }}
+    
+#    defaults:
+#      run:
+#        shell: bash
+#        working-directory: Source
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install and TS compile in ${{ matrix.node-version }} on ${{ matrix.os }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: node --version
+        shell: bash
+      - run: |
+          npm ci
+          npm run tsc-win
+      - run: |
+          npm ci -g yarn
+          yarn
+          yarn tsc-win
+
+
+
