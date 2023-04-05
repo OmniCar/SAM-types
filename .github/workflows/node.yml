@@ -2,7 +2,7 @@ name: Install and TS compile on all OSes
 
 on:
   push:
-    branches: [ "feature/add-build-actions", "master", "master-for-develop", "master-for-staging" ]
+    branches: [ "master", "master-for-develop", "master-for-staging" ]
   pull_request:
     branches: [ "master", "master-for-develop", "master-for-staging" ]
   workflow_dispatch:
@@ -33,9 +33,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: node --version
         shell: bash
+      # Test installing with npm
       - run: |
           npm i
           npm run tsc-win
+      # Test installing with yarn
       - run: |
           npm i -g yarn
           yarn
