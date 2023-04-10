@@ -22,7 +22,6 @@ export interface IReleaseVersionRequest {
 export interface IReleaseNoteRequest {
   releaseVersionId: number
   descriptions: IReleaseDescription[]
-  releaseDate: string
   releaseTag: ReleaseTag
 }
 
