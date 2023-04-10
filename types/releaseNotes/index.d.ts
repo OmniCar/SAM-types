@@ -1,5 +1,6 @@
 import {
   ReleaseSystem,
+  ReleaseTag,
   // ReleaseType
 } from '../index'
 import { IsoLocale } from '../locale'
@@ -21,6 +22,8 @@ export interface IReleaseVersionRequest {
 export interface IReleaseNoteRequest {
   releaseVersionId: number
   descriptions: IReleaseDescription[]
+  releaseDate: string
+  releaseTag: ReleaseTag
 }
 
 export interface IReleaseVersionResponse extends IReleaseVersionRequest {

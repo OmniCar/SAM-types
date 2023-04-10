@@ -138,10 +138,13 @@ export declare enum ReleaseSystem {
   Api = 3,
   WebShop = 4,
 }
-export declare enum ReleaseType {
-  Major = 1,
-  Minor = 2,
-  Emergency = 3,
+export declare enum ReleaseTag {
+  ADDED = 1,
+  FIXED = 2,
+  NEW = 3,
+  REMOVED = 4,
+  UPDATED = 5,
+  IMPROVED = 6,
 }
 export * from './address'
 export * from './admin'

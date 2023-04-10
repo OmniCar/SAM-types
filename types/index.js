@@ -156,10 +156,18 @@ var ReleaseSystem
   ReleaseSystem[(ReleaseSystem['Api'] = 3)] = 'Api'
   ReleaseSystem[(ReleaseSystem['WebShop'] = 4)] = 'WebShop'
 })((ReleaseSystem = exports.ReleaseSystem || (exports.ReleaseSystem = {})))
-var ReleaseType
-;(function (ReleaseType) {
-  ReleaseType[(ReleaseType['Major'] = 1)] = 'Major'
-  ReleaseType[(ReleaseType['Minor'] = 2)] = 'Minor'
-  ReleaseType[(ReleaseType['Emergency'] = 3)] = 'Emergency'
-})((ReleaseType = exports.ReleaseType || (exports.ReleaseType = {})))
+// export enum ReleaseType {
+//   Major = 1,
+//   Minor,
+//   Emergency,
+// }
+var ReleaseTag
+;(function (ReleaseTag) {
+  ReleaseTag[(ReleaseTag['ADDED'] = 1)] = 'ADDED'
+  ReleaseTag[(ReleaseTag['FIXED'] = 2)] = 'FIXED'
+  ReleaseTag[(ReleaseTag['NEW'] = 3)] = 'NEW'
+  ReleaseTag[(ReleaseTag['REMOVED'] = 4)] = 'REMOVED'
+  ReleaseTag[(ReleaseTag['UPDATED'] = 5)] = 'UPDATED'
+  ReleaseTag[(ReleaseTag['IMPROVED'] = 6)] = 'IMPROVED'
+})((ReleaseTag = exports.ReleaseTag || (exports.ReleaseTag = {})))
 //# sourceMappingURL=index.js.map
