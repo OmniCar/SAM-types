@@ -1,4 +1,7 @@
-import { ReleaseSystem, ReleaseType } from '../index'
+import {
+  ReleaseSystem,
+  // ReleaseType
+} from '../index'
 import { IsoLocale } from '../locale'
 
 export interface IReleaseDescription {
@@ -9,9 +12,9 @@ export interface IReleaseDescription {
 
 export interface IReleaseVersionRequest {
   version: string
-  descriptions: IReleaseDescription[]
+  // descriptions: IReleaseDescription[]
   releaseSystem: ReleaseSystem
-  releaseType: ReleaseType
+  // releaseType: ReleaseType
   releaseDate: string
 }
 
@@ -29,9 +32,9 @@ export interface IReleaseNoteResponse extends IReleaseNoteRequest {
   releaseNoteId: number
 }
 
-export interface IReleaseNoteImageResponse {
-  releaseNoteImageId: number
-  fileName: string
-  publicUrl: string
-  releaseNoteId: number
-}
+// export interface IReleaseNoteImageResponse {
+//   releaseNoteImageId: number
+//   fileName: string
+//   publicUrl: string
+//   releaseNoteId: number
+// }
