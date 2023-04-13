@@ -156,11 +156,6 @@ var ReleaseSystem
   ReleaseSystem[(ReleaseSystem['Api'] = 3)] = 'Api'
   ReleaseSystem[(ReleaseSystem['WebShop'] = 4)] = 'WebShop'
 })((ReleaseSystem = exports.ReleaseSystem || (exports.ReleaseSystem = {})))
-// export enum ReleaseType {
-//   Major = 1,
-//   Minor,
-//   Emergency,
-// }
 var ReleaseTag
 ;(function (ReleaseTag) {
   ReleaseTag[(ReleaseTag['ADDED'] = 1)] = 'ADDED'

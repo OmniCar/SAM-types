@@ -156,12 +156,6 @@ export enum ReleaseSystem {
   WebShop,
 }
 
-// export enum ReleaseType {
-//   Major = 1,
-//   Minor,
-//   Emergency,
-// }
-
 export enum ReleaseTag {
   ADDED = 1,
   FIXED,
