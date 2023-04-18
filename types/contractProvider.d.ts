@@ -83,6 +83,7 @@ export interface IContractProviderResponse {
   providerGroup: string | null
   providerCategory: string | null
   additionalEmails: string | null
+  isUsingV4PricingTool: boolean
 }
 
 export interface IContractProviderListItemResponse {
