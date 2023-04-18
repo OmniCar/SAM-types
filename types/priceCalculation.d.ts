@@ -10,6 +10,8 @@ export interface ICalculationRequest {
   registrationDate?: string
   optionIds: number[]
   startMileage?: number
+  modelYear: number
+  registrationNumber: string
 }
 
 /**
