@@ -38,6 +38,7 @@ export interface IContractProviderRequest {
   providerGroup: string | null
   providerCategory: string | null
   additionalEmails: string | null
+  isUsingV4PricingTool: boolean
 }
 
 export interface IContractProviderResponse {
@@ -83,6 +84,7 @@ export interface IContractProviderResponse {
   providerGroup: string | null
   providerCategory: string | null
   additionalEmails: string | null
+  isUsingV4PricingTool: boolean
 }
 
 export interface IContractProviderListItemResponse {
@@ -103,6 +105,7 @@ export interface IContractProviderListItemResponse {
   fragusContactPersonName: string | null
   providerGroup: string | null
   providerCategory: string | null
+  isUsingV4PricingTool: boolean
 }
 
 export type ProviderState = 'Active' | 'Inactive'
