@@ -23,4 +23,5 @@ export interface ICalculationResponse {
   firstPaymentDate: string
   contractStartDate: string
   contractEndDate: string
+  serviceInfo?: string[] // use for AX templates
 }
