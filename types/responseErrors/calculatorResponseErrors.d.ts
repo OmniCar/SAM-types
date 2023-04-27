@@ -5,8 +5,10 @@ export type LicensePlateLookupResponseErrors =
   | 'REGNO_ALL_REQUIRED_SERVICE_SPARE_PART_PRICES_NOT_FOUND' // Not all (except oil price) spare part prices found.
   | 'REGNO_ACTIVE_CONTRACT_EXISTS'
   | 'REGNO_NO_CONTRACTS_AVAILABLE'
+  | 'REGNO_NO_CONTRACTS_AVAILABLE_FUELTYPE_NOT_SUPPORTED'
   | 'REGNO_VEHICLE_DATA_LOOKUP_TIMEOUT' // Ex, timeout of "normal" vehicle lookup.
   | 'REGNO_SERVICE_DATA_LOOKUP_TIMEOUT' // Ex, timeout of service data lookup (like AutoDAP).
+  | 'REGNO_NO_CONTRACTS_AVAILABLE_BLACKLISTED'
 
 type ModelsLookupResponseErrors = 'MODELS_NO_MODELS'
 type BrandsLookupResponseErrors = 'BRANDS_NO_BRANDS'
