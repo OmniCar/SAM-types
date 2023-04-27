@@ -9,6 +9,9 @@ export interface ICalculationRequest {
   mileage: number
   registrationDate?: string
   optionIds: number[]
+  startMileage?: number
+  modelYear: number
+  registrationNumber: string
 }
 
 /**
@@ -20,4 +23,5 @@ export interface ICalculationResponse {
   firstPaymentDate: string
   contractStartDate: string
   contractEndDate: string
+  serviceInfo?: string[] // use for AX templates
 }

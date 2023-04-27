@@ -4,7 +4,7 @@ import { PriceSpecification } from './priceSpecification'
 import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
 import { TCurrency } from '../types/currency'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP'
+export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP' | 'V4PricingTool'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
@@ -33,6 +33,7 @@ export interface IGenericContractTemplateRequest {
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
   totalPriceFactorInTenthOfCents: number | null
+  disableServiceInfoFile: boolean | null
 }
 
 export interface IContractTemplateRequest extends IGenericContractTemplateRequest {
@@ -47,8 +48,9 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
 }
 
 export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
-  vehicleServiceType: TVehicleServiceType //update
-  vehicleUsageType: TVehicleUsageType //new
+  vehicleServiceType: TVehicleServiceType
+  vehicleUsageType: TVehicleUsageType
+  isUseCustomOilPrice: boolean
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null
@@ -68,11 +70,13 @@ export interface IGenericContractTemplateResponse {
   priceSource: PriceSource
   minAge: number
   maxAge: number
-  defaultDuration: number
+  defaultDuration: number | null
   defaultMileage: number | null
   minimumPaymentsCount: number | null
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
+  v4ProviderId?: number
+  v4ProductId?: number
   formattedDescription: string | null
   weight: number
   maxEndAge?: number
@@ -82,6 +86,7 @@ export interface IGenericContractTemplateResponse {
   templateAutoDAPId?: number | null
   maxEndMileage?: number
   totalPriceFactorInTenthOfCents: number | null
+  disableServiceInfoFile: boolean | null
 }
 
 export interface IContractTemplateResponse extends IGenericContractTemplateResponse {
@@ -98,8 +103,9 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
 }
 
 export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
-  vehicleServiceType: TVehicleServiceType //update
-  vehicleUsageType: TVehicleUsageType //new
+  vehicleServiceType: TVehicleServiceType
+  vehicleUsageType: TVehicleUsageType
+  isUseCustomOilPrice: boolean
   oilLiterPrice: null | PriceSpecification
   labourHourCost: null | PriceSpecification
   euroToLocalCurrencyRateInTenthOfCents: number | null

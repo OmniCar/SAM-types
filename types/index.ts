@@ -6,6 +6,7 @@ export enum ContractState {
   OfferRejected = 130, // not used
   Active = 200,
   ActivePrePaid = 210,
+  ActivePendingTermination = 250,
   Suspended = 400,
   Terminated = 500,
   Extended = 510,
@@ -45,6 +46,7 @@ export enum FormattingLocale {
 }
 
 export enum ContractActionType {
+  createAndActivateInV4 = 90, // Contract was created in V4 (and activated there), this (mirror) contract is based on that contract in V4. See also sendAndActivateInV4.
   create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
   sendDraft = 120, // A draft was sent to the customer
   buyNow = 130, // Customer visited payment page
@@ -68,6 +70,7 @@ export enum ContractActionType {
   acceptOffer = 180, // The customer accepted the offer
   approveOffer = 200, // Who approved it? that would be the customer
   activate = 300, // The contract was activated by either the customer or the seller
+  sendAndActivateInV4 = 1300, // A (mirror) of this contract was sent to V4 (and activated there). See also createAndActivateInV4.
   expire = 400, // The contract offer expired and archived
   expireContract = 410, // The contract expired
   sendContractExpiredMail = 411, // A expired mail was sent to the customer
@@ -75,12 +78,16 @@ export enum ContractActionType {
   changeCustomerData = 440, // Meta data for the customer was changed
   changePaymentData = 460, // Information about payment was changed
   modify = 500, // (extended) The contract was changed in a way that changes the financial agreement, if a new contract was created as a sideeffect, information about the new contract is in the details
+  createPendingTermination = 550, // Registers the creation of a pending termination and indicates that the contract's status has changed from Active to ActivePendingTermination.
+  cancelPendingTermination = 560, // Registers the cancellation of a pending termination and indicates that the contract's status has changed from ActivePendingTermination to Active.
   suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
   successfulInvoicePayment = 690, // Successful invoice payment. Contract soon to be re-activated.
   reactivate = 700, // Who unsuspended the contract
+  sendAndReactivateInV4 = 1700, // Sent reactivate request to V4.
   extending = 710, // Who extended the contract (the contract which extended)
   pauseSubscription = 720, // The subscription is paused because of contract paid off
   terminate = 800, // Who terminated the contract
+  sendAndInactivateInV4 = 1800, // Sent inactivate request to V4.
   registerCashPayment = 810, // Registered cash payment. Helps to solve balance issues on a contract
   registerCashPayout = 820, // Registered cash payout. Helps to solve balance issues on a contract
   registerProviderPayment = 830, // Registered provider payment. It means that provider forgive some amount. Helps to solve balance issues on a contract
@@ -217,3 +224,4 @@ export * from './webcalc'
 export * from './workshopOperation'
 export * from './releaseNotes'
 export * from './paymentFailureReason'
+export * from './translations'

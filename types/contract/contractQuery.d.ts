@@ -5,7 +5,7 @@ import { PaymentGateway } from './../payment'
 
 export type ContractOrderBy =
   | 'prettyIdentifier'
-  | 'contractTemplateName'
+  | 'contractName'
   | 'registrationNumber'
   | 'serialNumber'
   | 'serialNumber2'
@@ -20,7 +20,7 @@ export type ContractOrderBy =
 
 export type WarrantyOrderBy =
   | 'prettyIdentifier'
-  | 'contractTemplateName'
+  | 'contractName'
   | 'registrationNumber'
   | 'serialNumber'
   | 'serialNumber2'

@@ -1,8 +1,8 @@
 import { IContractDetailsRecord } from '..'
 import { DurationOptions, IContractOptionResponse } from '../..'
-import { IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
+import { PriceSource, IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
-import { Vehicle, VehicleAlongItsContracts } from '../../vehicle'
+import { Vehicle, VehicleAlongItsContracts, IVehicleInfo } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
@@ -42,7 +42,9 @@ export type ContractValueTypeEnum = 'Mileage' | 'Hours' | 'Services' | 'None'
 export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefined
 
 interface ICommonContractUpdateRequest {
-  contractTemplateId: number
+  priceSource?: PriceSource
+  contractProviderId: number
+  contractTemplateId: number | null
   serviceVariantId: string
   serviceVariantName: string
   value?: number
@@ -91,7 +93,7 @@ interface IContractInfo {
   valueType: ContractValueType | undefined
 }
 
-interface IContractProviderInfo {
+interface IContractProviderPaymentInfo {
   administrativeName: string
   address: string
   postal_code: string
@@ -105,7 +107,7 @@ interface IPublicKeyResponse {
 }
 interface IPaymentInformationResponse {
   publicKey: string
-  contractProvider: IContractProviderInfo
+  contractProvider: IContractProviderPaymentInfo
   customer: IAdminCustomer
   product: Vehicle | Other
   contract: IContractInfo
@@ -113,6 +115,7 @@ interface IPaymentInformationResponse {
   minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
   subscriptions: ISubscription[]
+  paymentGateway: PaymentGateway // new
 }
 
 interface ISetupIntentResponse {
@@ -128,6 +131,7 @@ interface ISetPaymentMethodResponse {
 }
 
 interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
+  contractTemplateName: string
   product: Vehicle | Other
   paymentGateway: PaymentGateway
   customerId?: number
@@ -137,7 +141,9 @@ interface ICommonContractCreationRequest extends ICommonContractUpdateRequest {
   isDownpaymentDistributed: boolean
 }
 
-export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {}
+export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest {
+  amountPerPayment?: number
+}
 
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
@@ -150,6 +156,20 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
   type: 'STANDARD'
 }
 
+export interface IStandardV4PricingToolContractCreationRequest extends IStandardContractCreationRequest {
+  vehicleInfo: IVehicleInfo
+  v4ProviderId: number
+  v4ProductId: number
+}
+
+export interface IStandardV4PricingToolContractPrintCreationRequest
+  extends IStandardV4PricingToolContractCreationRequest {
+  type: 'STANDARD'
+  amountPerPayment?: number
+  adjustedFrom?: string
+  isAdjustment?: boolean
+}
+
 export interface IContractPrintCreationRequest extends ICommonContractCreationRequest {
   type: 'STANDARD' | 'CUSTOM'
   amountPerPayment?: number
@@ -157,17 +177,21 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   isAdjustment?: boolean
 }
 
+// TODO: In future rename perhaps to ICreateDelaerPaidContractRequest -2023-01-31 /marko
 export interface ICreateFreeWarrantyRequest {
-  warrantyId: number
+  prettyIdentifier: string | null
+  warrantyId: number | null // SAM Warranty ID.
+  v4ProductId: number | null
   warrantyLengthMonths: number
   modelModelId?: number
-  vehicleAlongItsContracts: VehicleAlongItsContracts
+  vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
   startDate?: Date
   finlandPriceId?: number
   endMileage?: number // For debugging.
+  reference?: string
 }
 
 export interface ICreateFreeWarrantyResponse {

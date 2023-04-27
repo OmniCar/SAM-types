@@ -4,6 +4,7 @@ import { IIncludedContractOption } from './../../includedContractOption'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 import { ServiceContractFlag, ContractType, ContractValueType } from './../../admin/contractCreation'
+import { PriceSource } from './../../contractTemplate'
 
 export interface IContractDetailsRecord {
   serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
@@ -33,10 +34,12 @@ export interface IContractDetailsRecord {
   seller?: IContactPersonResponse
   startDate: Date | string
   termsPdfUrl: string
+  termsOfTradePdfUrl: string
   totalPrice: PriceSpecification
   contractType: ContractType
-  contractTemplateId: number
-  contractTemplateName: string
+  contractTemplateId: null | number
+  contractName: string // Contract (template) name.
+  priceSource: null | PriceSource
   contractTemplateDescription: string
   contractTemplateMinPaymentsCount: number | null
   contractTemplateIsArchived: boolean
@@ -47,6 +50,7 @@ export interface IContractDetailsRecord {
   stripeSubscriptionLink: string | null
   customTerms?: string
   adjustedFrom?: string
+  adjustedTo?: string
   createdByProvider?: string
   provider?: string
   settledUnits?: number | null
@@ -57,6 +61,7 @@ export interface IContractDetailsRecord {
   underHoursCharge?: number
   overServicesCharge?: number
   underServicesCharge?: number
+  warrantyReference?: string
 }
 
 export interface IAdminCustomTermsRecord {

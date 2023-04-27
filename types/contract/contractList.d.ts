@@ -8,7 +8,7 @@ export interface IContractListRecord {
   contractEndDate: Date | string
   contractCreationDate: Date | string
   contractState: ContractState
-  contractTemplateName: string
+  contractName: string
   contractTemplateDescription: string
   customerName: string
   customerCompanyName: string
@@ -21,23 +21,23 @@ export interface IContractListRecord {
 }
 
 export type ContractListOrderByType =
-| 'prettyIdentifier'
-| 'brand'
-| 'productBrand'
-| 'contractEndDate'
-| 'contractCreationDate'
-| 'contractState'
-| 'customerCompanyName'
-| 'contractTemplateDescription'
-| 'contractTemplateName'
-| 'customerName'
-| 'registrationNumber'
-| 'sellerName'
-| 'serialNumber'
-| 'serialNumber2'
-| 'itemNumber'
-| 'itemNumber2'
-| 'createdByProvider'
+  | 'prettyIdentifier'
+  | 'brand'
+  | 'productBrand'
+  | 'contractEndDate'
+  | 'contractCreationDate'
+  | 'contractState'
+  | 'customerCompanyName'
+  | 'contractTemplateDescription'
+  | 'contractName'
+  | 'customerName'
+  | 'registrationNumber'
+  | 'sellerName'
+  | 'serialNumber'
+  | 'serialNumber2'
+  | 'itemNumber'
+  | 'itemNumber2'
+  | 'createdByProvider'
 
 export interface IWarrantyListRecord {
   prettyIdentifier: string

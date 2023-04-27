@@ -1,0 +1,7 @@
+export type ImportErrors = 'INVALID_IMPORT_FILE'
+  | 'TOO_MANY_RECORDS'
+  | 'INVALID_COLUMN_COUNT'
+  | 'INVALID_HEADER'
+  | 'INVALID_DATE'
+  | 'NO_DATA'
+  | 'NO_SHEETS'
