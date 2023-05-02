@@ -7,7 +7,7 @@ export interface IBrandingPayloadResponse {
   providerBranding: IProviderBrandingResponse[]
   providerStyling: IProviderStylingResponse
   providerCustomization?: IProviderCustomizationResponse
-  parentProviderId?: number | null // NEW
+  parentProviderId?: number | null
 }
 
 export interface IStripeInformationResponse {
@@ -40,5 +40,5 @@ export interface IProviderCustomizationResponse {
   applyWebcalcSkorstensgaardFix: boolean
   webCalcTrackingPixelOrderConfirmationUrl: string
   webCalcTrackingPixelOrderConfirmationLastUpdated: string
-  inheritParentStylingWebcalc: boolean // NEW
+  inheritParentStylingWebcalc: boolean
 }

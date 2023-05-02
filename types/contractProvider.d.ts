@@ -40,8 +40,8 @@ export interface IContractProviderRequest {
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
-  isLoadOptionalProviderCustomization: boolean // NEW
-  providerCustomization: null | IProviderCustomizationResponse // NEW
+  isLoadOptionalProviderCustomization: boolean
+  providerCustomization: null | IProviderCustomizationResponse
 }
 
 export interface IContractProviderResponse {
@@ -88,9 +88,8 @@ export interface IContractProviderResponse {
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
-  // inheritParentStylingWebcalc: boolean // NEW
-  isLoadOptionalProviderCustomization: boolean // NEW // Is do load (optional) providerCustomization?
-  providerCustomization: null | IProviderCustomizationResponse // NEW // (Optional) provider settings, if null then it either hasn't been loaded or has none.
+  isLoadOptionalProviderCustomization: boolean // Is do load (optional) providerCustomization?
+  providerCustomization: null | IProviderCustomizationResponse // (Optional) provider settings, if null then it either hasn't been loaded or has none.
 }
 
 export interface IContractProviderListItemResponse {
