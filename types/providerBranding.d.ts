@@ -7,7 +7,7 @@ export interface IBrandingPayloadResponse {
   providerBranding: IProviderBrandingResponse[]
   providerStyling: IProviderStylingResponse
   providerCustomization?: IProviderCustomizationResponse
-  parentProviderId?: number | null // NEW
+  parentProviderId?: number | null
 }
 
 export interface IStripeInformationResponse {
@@ -37,8 +37,8 @@ export interface IProviderStylingResponse {
 }
 
 export interface IProviderCustomizationResponse {
-  applyWebcalcSkorstensgaardFix: boolean
-  webCalcTrackingPixelOrderConfirmationUrl: string
-  webCalcTrackingPixelOrderConfirmationLastUpdated: string
-  inheritParentStylingWebcalc: boolean // NEW
+  applyWebcalcSkorstensgaardFix: boolean | undefined // Set undefined if this setting is not loaded.
+  webCalcTrackingPixelOrderConfirmationUrl: string | undefined // Set undefined if this setting is not loaded.
+  webCalcTrackingPixelOrderConfirmationLastUpdated: string | undefined // Set undefined if this setting is not loaded.
+  inheritParentStylingWebcalc: boolean | undefined // Set undefined if this setting is not loaded.
 }

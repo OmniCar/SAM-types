@@ -40,7 +40,7 @@ export interface IContractProviderRequest extends IProviderCustomizationResponse
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
-  isLoadOptionalProviderCustomization: boolean // NEW
+  isLoadOptionalProviderCustomization: boolean
 }
 
 export interface IContractProviderResponse extends IProviderCustomizationResponse {
@@ -87,7 +87,7 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
-  isLoadOptionalProviderCustomization: boolean // NEW // Has providerCustomizationLoaded been loaded?
+  isLoadOptionalProviderCustomization: boolean // Has providerCustomizationLoaded been loaded?
 }
 
 export interface IContractProviderListItemResponse {
@@ -99,9 +99,9 @@ export interface IContractProviderListItemResponse {
   disableContractTemplates: boolean
   fragusContactPersonName: string | null
   freeWarrantiesButton: boolean
-  isAllowContractsWithoutVehiclePriceModel: boolean // NEW
-  isForceEnableCustomContract: boolean // NEW
-  isShowLogoOnWeb: boolean // NEW
+  isAllowContractsWithoutVehiclePriceModel: boolean
+  isForceEnableCustomContract: boolean
+  isShowLogoOnWeb: boolean
   isUseWhiteBGOnWeb: boolean
   isUsingV4PricingTool: boolean
   justGOContractsEnabled: boolean
