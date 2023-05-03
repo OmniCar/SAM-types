@@ -115,7 +115,7 @@ interface IPaymentInformationResponse {
   minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
   subscriptions: ISubscription[]
-  paymentGateway: PaymentGateway // new
+  paymentGateway: PaymentGateway
 }
 
 interface ISetupIntentResponse {
@@ -285,7 +285,7 @@ export interface IAdminContractActivationResponse {
 
 export interface IAdminContractResponse {
   type: ContractType
-  contractName: string // new
+  contractName: string
   product: Vehicle | Other
   contractTemplate: IContractTemplateResponse
   additionalOptions: IContractOptionResponse[]
