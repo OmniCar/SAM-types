@@ -25,6 +25,7 @@ export interface IProviderInformationResponse {
   termsOfTradeRef: string
   webCalcEnabled: boolean
   offerRequestsEnabled: boolean
+  hasAxTemplates: boolean // Autoexperten.
 }
 
 export interface IProviderBrandingResponse {
