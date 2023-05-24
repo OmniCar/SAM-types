@@ -182,10 +182,15 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   isAdjustment?: boolean
 }
 
+/**
+ * @deprecated warrantyId Not needed, if using the "NEW WAY" and V4PT, this will be loaded from the already saved contract.
+ * @deprecated modelModelId
+ * @deprecated finlandPriceId
+ */
 export interface ICreateDelaerPaidContractRequest {
   prettyIdentifier: string | null
   warrantyId: number | null // SAM Warranty ID.
-  v4ProductId: number | null
+  // v4ProductId: number | null
   warrantyLengthMonths: number
   modelModelId?: number
   vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
