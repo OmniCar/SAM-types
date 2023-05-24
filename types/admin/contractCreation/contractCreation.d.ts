@@ -105,6 +105,11 @@ interface IPublicKeyResponse {
   publicKey: string
   stripeAccount: string
 }
+/*
+ * The folling info is only what the paying "customer" needs to know
+ * when presenting this info. For more specific and sensitive info,
+ * it is already saved on the database.
+ */
 interface IPaymentInformationResponse {
   publicKey: string
   contractProvider: IContractProviderPaymentInfo
@@ -114,8 +119,10 @@ interface IPaymentInformationResponse {
   totalAmount: PriceSpecification | null
   minimumTotalAmount: PriceSpecification | null
   downpayment: PriceSpecification
+  // providerTotalCost: PriceSpecification | null
   subscriptions: ISubscription[]
   paymentGateway: PaymentGateway
+  // v4ProductId: number | null
 }
 
 interface ISetupIntentResponse {
@@ -178,7 +185,8 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
 }
 
 // TODO: In future rename perhaps to ICreateDelaerPaidContractRequest -2023-01-31 /marko
-export interface ICreateFreeWarrantyRequest {
+// export interface ICreateFreeWarrantyRequest {
+export interface ICreateDelaerPaidContractRequest {
   prettyIdentifier: string | null
   warrantyId: number | null // SAM Warranty ID.
   v4ProductId: number | null
@@ -186,6 +194,9 @@ export interface ICreateFreeWarrantyRequest {
   modelModelId?: number
   vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
   startMileage: number
+  // templateName: string // IS IT INTERNAL NAME??? Set to '' if there isn't none.
+  // priceSource: PriceSource
+  // priceInTenthOfCentsWithoutVAT: number | null
   customerId?: number
   customer?: IAdminCustomer
   startDate?: Date
@@ -194,8 +205,8 @@ export interface ICreateFreeWarrantyRequest {
   reference?: string
 }
 
-export interface ICreateFreeWarrantyResponse {
-  req: ICreateFreeWarrantyRequest
+export interface ICreateDelaerPaidContractResponse {
+  req: ICreateDelaerPaidContractRequest
   success: boolean
   error: string
   startDate: Date
