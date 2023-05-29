@@ -105,6 +105,11 @@ interface IPublicKeyResponse {
   publicKey: string
   stripeAccount: string
 }
+/*
+ * The folling info is only what the paying "customer" needs to know
+ * when presenting this info. For more specific and sensitive info,
+ * it is already saved on the database.
+ */
 interface IPaymentInformationResponse {
   publicKey: string
   contractProvider: IContractProviderPaymentInfo
@@ -177,11 +182,15 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
   isAdjustment?: boolean
 }
 
-// TODO: In future rename perhaps to ICreateDelaerPaidContractRequest -2023-01-31 /marko
-export interface ICreateFreeWarrantyRequest {
+/**
+ * @deprecated warrantyId Not needed, if using the "NEW WAY" and V4PT, this will be loaded from the already saved contract.
+ * @deprecated modelModelId
+ * @deprecated finlandPriceId
+ */
+export interface ICreateDelaerPaidContractRequest {
   prettyIdentifier: string | null
   warrantyId: number | null // SAM Warranty ID.
-  v4ProductId: number | null
+  // v4ProductId: number | null
   warrantyLengthMonths: number
   modelModelId?: number
   vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
@@ -194,8 +203,8 @@ export interface ICreateFreeWarrantyRequest {
   reference?: string
 }
 
-export interface ICreateFreeWarrantyResponse {
-  req: ICreateFreeWarrantyRequest
+export interface ICreateDelaerPaidContractResponse {
+  req: ICreateDelaerPaidContractRequest
   success: boolean
   error: string
   startDate: Date

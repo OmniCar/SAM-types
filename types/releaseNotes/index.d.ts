@@ -27,3 +27,7 @@ export interface IReleaseVersionResponse extends IReleaseVersionRequest {
 export interface IReleaseNoteResponse extends IReleaseNoteRequest {
   releaseNoteId: number
 }
+
+export interface IReleaseNotesResponse extends IReleaseVersionResponse {
+  releaseNotes: IReleaseNoteResponse[]
+}
