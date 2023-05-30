@@ -28,6 +28,7 @@ export interface IContractProviderInfo {
   vatPct: number
   inactive: boolean
   isUsingV4PricingTool: boolean
+  isUseV4PTOnlyForSigning: boolean
 }
 
 export interface ICreateTestContractProvider {
