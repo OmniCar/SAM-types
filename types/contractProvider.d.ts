@@ -47,7 +47,7 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   contractProviderId: number
   administrativeName: string
   parentProviderId: number | null
-  v4ProviderId: number | null //NEW
+  v4ProviderId: number | null
   cvrCode: string
   country: ICountryResponse
   currency?: TCurrency
