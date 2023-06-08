@@ -22,7 +22,6 @@ export interface IConnectProviderToV4RequestFromClient {
 
 export interface IDisconnectV4DealerFromProviderRequestFromClient {
   isoCountry: TIsoCountry
-  providerId: number
   v4DealerId: number
 }
 
