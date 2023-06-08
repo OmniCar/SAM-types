@@ -185,7 +185,6 @@ export interface IContractPrintCreationRequest extends ICommonContractCreationRe
 export interface ICreateDelaerPaidContractRequest {
   prettyIdentifier: string | null
   warrantyId: number | null // SAM Warranty ID.
-  v4ProductId: number | null
   warrantyLengthMonths: number
   modelModelId?: number
   vehicleAlongItsContracts: Vehicle | VehicleAlongItsContracts
