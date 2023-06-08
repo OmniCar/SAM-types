@@ -46,6 +46,8 @@ export interface IContractProviderRequest extends IProviderCustomizationResponse
 export interface IContractProviderResponse extends IProviderCustomizationResponse {
   contractProviderId: number
   administrativeName: string
+  parentProviderId: number | null
+  v4ProviderId: number | null
   cvrCode: string
   country: ICountryResponse
   currency?: TCurrency
@@ -77,7 +79,6 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   disableContractTemplates: boolean
   productsEnabled: boolean
   justGOContractsEnabled: boolean
-  parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
   autoSettlement: boolean
