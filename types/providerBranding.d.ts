@@ -1,5 +1,5 @@
-import { TIsoCountry } from 'country'
-import { IsoLocale } from 'locale'
+import { TIsoCountry } from './country'
+import { IsoLocale } from './locale'
 
 export interface IBrandingPayloadResponse {
   countryCode: TIsoCountry
