@@ -1,6 +1,8 @@
-import { IsoLocale } from './locale'
+import { TIsoCountry } from 'country'
+import { IsoLocale } from 'locale'
 
 export interface IBrandingPayloadResponse {
+  countryCode: TIsoCountry
   locale: IsoLocale
   paymentInformation: IStripeInformationResponse
   providerInformation: IProviderInformationResponse
