@@ -1,6 +1,8 @@
+import { TIsoCountry } from './country'
 import { IsoLocale } from './locale'
 
 export interface IBrandingPayloadResponse {
+  countryCode: TIsoCountry
   locale: IsoLocale
   paymentInformation: IStripeInformationResponse
   providerInformation: IProviderInformationResponse
@@ -17,6 +19,7 @@ export interface IStripeInformationResponse {
 export interface IProviderInformationResponse {
   contractProviderId: number
   administrativeName: string
+  countryCode: TIsoCountry
   cvrCode: string
   logo: string
   contactFormUrl: string
