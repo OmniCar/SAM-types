@@ -5,7 +5,7 @@ import { UserRole, UserRoleRecord } from './roles'
 
 export interface ILoginRequest {
   username: string
-  password?: string
+  password: string
 }
 
 export interface ILoginResponse {
@@ -23,4 +23,5 @@ export interface ILoginResponse {
   disableContractTemplates?: boolean
   isSuperAdmin?: boolean
   isDev?: boolean
+  refreshToken?: string
 }
