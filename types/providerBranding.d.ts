@@ -19,6 +19,7 @@ export interface IStripeInformationResponse {
 export interface IProviderInformationResponse {
   contractProviderId: number
   administrativeName: string
+  countryCode: TIsoCountry
   cvrCode: string
   logo: string
   contactFormUrl: string
