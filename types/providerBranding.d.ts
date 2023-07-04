@@ -1,3 +1,4 @@
+import { TCurrency } from 'currency'
 import { TIsoCountry } from './country'
 import { IsoLocale } from './locale'
 
@@ -20,6 +21,7 @@ export interface IProviderInformationResponse {
   contractProviderId: number
   administrativeName: string
   countryCode: TIsoCountry
+  currency: TCurrency
   cvrCode: string
   logo: string
   contactFormUrl: string
