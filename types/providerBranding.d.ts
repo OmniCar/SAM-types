@@ -1,4 +1,4 @@
-import { TCurrency } from 'currency'
+import { TCurrency } from './currency'
 import { TIsoCountry } from './country'
 import { IsoLocale } from './locale'
 
