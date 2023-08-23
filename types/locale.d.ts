@@ -19,5 +19,6 @@ export interface Locale {
  * https://lingohub.com/developers/supported-locales/language-designators-with-regions
  *
  * @note 'en-GB' is deprecated, please use 'en' for common English instead if possible.
+ * @deprecated 'en-GB'
  */
 export type IsoLocale = 'da-DK' | 'sv-SE' | 'fi-FI' | 'nb-NO' | 'en' | 'en-GB' // NOTE: 'en-GB' is deprecated.
