@@ -110,21 +110,30 @@ export interface VehicleAlongItsContracts extends Vehicle {
   hasActiveWarranty: boolean | undefined
 }
 
+/*
+  WIP: Might need to add another vehicle type for Husbil.
+  sv: Husbil
+  en-US: Motor Home
+  en-UK: Camper Van
+  fi: Matkailuauto
+  nb-NO: Bobil
+*/
 export type TVehicleType =
   | '' // Unknown vehicle type.
-  | 'Trailer' // sv: Släp.
-  | 'Bus'
-  | 'Truck' // sv: Lastbil.
-  | 'Special Vehicle'
-  | 'Van' // sv: Skåpbil/Paketbil/Varubil.
   | 'Car'
+  | 'Trailer' // sv: Släp, sv: Släpvagn(?), da: Påhængsvogn(p), fi: Perävaunu, nb-NO: Tilhenger.
+  | 'Caravan' // (NOTE: Without engine!) sv: Husvagn, da: Campingvogn, fi: Asuntovaunu, nb-NO: Campingvogn.
+  | 'Van' // sv: Skåpbil/Paketbil/Varubil, en: Small Truck/Lorry, Delivery Truck/Lorry.
+  | 'Truck' // sv: Lastbil, en-UK: Lorry, fi: Kuorma-auto, nb-NO: Lastebil.
+  | 'Bus'
+  | 'Forklift' // sv: Truck.
+  | 'Special Vehicle'
   | 'Tractor'
   | 'Mobile Machinery'
   | 'Off-road Vehicle'
   | 'Motorcycle'
   | 'L5' // Motor-vehicle with three wheels, sv: Trehjuligt motorfordon.
   | 'Moped'
-  | 'Forklift' // sv: Truck.
   | 'Other'
 
 export type TVehicleTransmissionType =
