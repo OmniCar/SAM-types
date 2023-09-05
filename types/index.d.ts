@@ -209,3 +209,4 @@ export * from './workshopOperation';
 export * from './releaseNotes';
 export * from './paymentFailureReason';
 export * from './translations';
+export * from './v4PricingTool';
