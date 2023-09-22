@@ -1,5 +1,5 @@
 import { IContractDetailsRecord } from '..'
-import { DurationOptions, IContractOptionResponse } from '../..'
+import { DurationOptions, TMileageDurationsMap, IContractOptionResponse } from '../..'
 import { PriceSource, IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Vehicle, VehicleAlongItsContracts, IVehicleInfo } from '../../vehicle'
@@ -299,6 +299,7 @@ export interface IAdminContractResponse {
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]
   durations: DurationOptions[]
+  mileageDurationsMap: TMileageDurationsMap | null // Structure for ContractFlowDurationMileageVer2 for V4PricingTool contracts.
   duration: number
   mileage: number
   startMileage: number

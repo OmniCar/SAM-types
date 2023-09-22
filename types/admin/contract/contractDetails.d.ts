@@ -35,6 +35,7 @@ export interface IContractDetailsRecord {
   startDate: Date | string
   termsPdfUrl: string
   termsOfTradePdfUrl: string
+  filesContainerAlongContract: null | IFileItem[] // Optional extra files, except the TOS file.
   totalPrice: PriceSpecification
   contractType: ContractType
   contractTemplateId: null | number
@@ -71,4 +72,9 @@ export interface IAdminCustomTermsRecord {
 export interface IUnitsListResponse {
   units: number
   date: Date | string
+}
+
+export interface IFileItem {
+  name: string
+  v4URL: string
 }
