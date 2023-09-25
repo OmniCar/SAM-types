@@ -47,7 +47,6 @@ export enum FormattingLocale {
 }
 
 export enum ContractActionType {
-  // createAndActivateInV4 = 90, // Contract was created in V4 (and activated there), this (mirror) contract is based on that contract in V4. See also sendAndActivateInV4.
   createInV4AndActivate = 90, // Contract was created in V4 (and activated there), this (mirror) contract in JustGO is based on that contract in V4. See also sendMirrorAndActivateInV4.
   create = 100, // Who created the contract? a customer or a seller? if the contract was created as an extentioon information about the parent must be in the details
   sendDraft = 120, // A draft was sent to the customer
@@ -72,7 +71,6 @@ export enum ContractActionType {
   acceptOffer = 180, // The customer accepted the offer
   approveOffer = 200, // Who approved it? that would be the customer
   activate = 300, // The contract was activated by either the customer or the seller
-  // sendAndActivateInV4 = 1300, // A (mirror) of this contract was sent to V4 (and activated there). See also createAndActivateInV4.
   sendMirrorAndActivateInV4 = 1300, // A (copy/mirror) of this (already created in JustGO) contract was sent to V4 (and activated there in V4). See also createInV4AndActivate.
   expire = 400, // The contract offer expired and archived
   expireContract = 410, // The contract expired

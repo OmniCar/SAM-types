@@ -7,8 +7,6 @@ export const SYSTEM_USER_ID = 1
 export type TActionSeverityType = 'Info' | 'Warning' | 'Error'
 export type TActionOrderBy = 'id' | 'created' | 'action' | 'userName' | 'comment'
 
-// IContractActionParams => IContractActionRequest
-// export interface IContractActionParams {
 export interface IContractActionRequest {
   severityType?: TActionSeverityType
   action: ContractActionType
@@ -25,7 +23,6 @@ export interface IContractActionResponse {
   userName: string
   comment: string
   severityType: TActionSeverityType | null
-  // details?: string //|object
   details?: object
 }
 
