@@ -1,5 +1,5 @@
 import { ContractActionType } from './index'
-import { IUserResponse } from './user'
+// import { IUserResponse } from './user'
 import { PriceSpecification } from './priceSpecification'
 
 export const SYSTEM_USER_ID = 1

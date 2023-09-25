@@ -1,4 +1,7 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
 var ContractState;
 (function (ContractState) {
@@ -50,7 +53,7 @@ var FormattingLocale;
 })(FormattingLocale = exports.FormattingLocale || (exports.FormattingLocale = {}));
 var ContractActionType;
 (function (ContractActionType) {
-    ContractActionType[ContractActionType["createAndActivateInV4"] = 90] = "createAndActivateInV4";
+    ContractActionType[ContractActionType["createInV4AndActivate"] = 90] = "createInV4AndActivate";
     ContractActionType[ContractActionType["create"] = 100] = "create";
     ContractActionType[ContractActionType["sendDraft"] = 120] = "sendDraft";
     ContractActionType[ContractActionType["buyNow"] = 130] = "buyNow";
@@ -74,7 +77,7 @@ var ContractActionType;
     ContractActionType[ContractActionType["acceptOffer"] = 180] = "acceptOffer";
     ContractActionType[ContractActionType["approveOffer"] = 200] = "approveOffer";
     ContractActionType[ContractActionType["activate"] = 300] = "activate";
-    ContractActionType[ContractActionType["sendAndActivateInV4"] = 1300] = "sendAndActivateInV4";
+    ContractActionType[ContractActionType["sendMirrorAndActivateInV4"] = 1300] = "sendMirrorAndActivateInV4";
     ContractActionType[ContractActionType["expire"] = 400] = "expire";
     ContractActionType[ContractActionType["expireContract"] = 410] = "expireContract";
     ContractActionType[ContractActionType["sendContractExpiredMail"] = 411] = "sendContractExpiredMail";
@@ -167,4 +170,5 @@ var ReleaseTag;
     ReleaseTag[ReleaseTag["UPDATED"] = 5] = "UPDATED";
     ReleaseTag[ReleaseTag["IMPROVED"] = 6] = "IMPROVED";
 })(ReleaseTag = exports.ReleaseTag || (exports.ReleaseTag = {}));
+__export(require("./contractAction"));
 //# sourceMappingURL=index.js.map
