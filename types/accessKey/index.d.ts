@@ -8,4 +8,5 @@ export interface IAccessKey {
   createdByUserEmail?: string
   representativeUserEmail?: string
   contractProviderIds: number[]
+  allProvidersAllowed: boolean
 }
