@@ -1,4 +1,7 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
 var ContractState;
 (function (ContractState) {
@@ -168,4 +171,5 @@ var ReleaseTag;
     ReleaseTag[ReleaseTag["UPDATED"] = 5] = "UPDATED";
     ReleaseTag[ReleaseTag["IMPROVED"] = 6] = "IMPROVED";
 })(ReleaseTag = exports.ReleaseTag || (exports.ReleaseTag = {}));
+__export(require("./contractAction"));
 //# sourceMappingURL=index.js.map
