@@ -94,7 +94,8 @@ export declare enum ContractActionType {
     registerPaidInvoice = 870,
     registerCredit = 880,
     settle = 900,
-    archive = 1000
+    archive = 1000,
+    other = 9999
 }
 export declare enum PaymentFailureReason {
     expiredCard = 10,

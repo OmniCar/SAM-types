@@ -1,7 +1,7 @@
 import { ContractActionType } from './index'
 import { PriceSpecification } from './priceSpecification'
 
-// export const SYSTEM_USER_ID = 1  // (!) Commented this due to it might cause issues!!
+export const SYSTEM_USER_ID = 1
 
 export type TActionSeverityType = 'Info' | 'Warning' | 'Error'
 export type TActionOrderBy = 'id' | 'created' | 'action' | 'userName' | 'comment'
@@ -22,7 +22,7 @@ export interface IContractActionResponse {
   userName: string
   comment: string
   severityType: TActionSeverityType | null
-  details?: object
+  details?: string
 }
 
 export interface ISettlementActionRequest {

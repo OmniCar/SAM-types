@@ -1,4 +1,7 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
 var ContractState;
 (function (ContractState) {
@@ -103,6 +106,7 @@ var ContractActionType;
     ContractActionType[ContractActionType["registerCredit"] = 880] = "registerCredit";
     ContractActionType[ContractActionType["settle"] = 900] = "settle";
     ContractActionType[ContractActionType["archive"] = 1000] = "archive";
+    ContractActionType[ContractActionType["other"] = 9999] = "other";
 })(ContractActionType = exports.ContractActionType || (exports.ContractActionType = {}));
 var PaymentFailureReason;
 (function (PaymentFailureReason) {
@@ -167,4 +171,5 @@ var ReleaseTag;
     ReleaseTag[ReleaseTag["UPDATED"] = 5] = "UPDATED";
     ReleaseTag[ReleaseTag["IMPROVED"] = 6] = "IMPROVED";
 })(ReleaseTag = exports.ReleaseTag || (exports.ReleaseTag = {}));
+__export(require("./contractAction"));
 //# sourceMappingURL=index.js.map
