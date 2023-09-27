@@ -50,7 +50,7 @@ var FormattingLocale
 })((FormattingLocale = exports.FormattingLocale || (exports.FormattingLocale = {})))
 var ContractActionType
 ;(function (ContractActionType) {
-  ContractActionType[(ContractActionType['createAndActivateInV4'] = 90)] = 'createAndActivateInV4'
+  ContractActionType[(ContractActionType['createInV4AndActivate'] = 90)] = 'createInV4AndActivate'
   ContractActionType[(ContractActionType['create'] = 100)] = 'create'
   ContractActionType[(ContractActionType['sendDraft'] = 120)] = 'sendDraft'
   ContractActionType[(ContractActionType['buyNow'] = 130)] = 'buyNow'
@@ -74,7 +74,7 @@ var ContractActionType
   ContractActionType[(ContractActionType['acceptOffer'] = 180)] = 'acceptOffer'
   ContractActionType[(ContractActionType['approveOffer'] = 200)] = 'approveOffer'
   ContractActionType[(ContractActionType['activate'] = 300)] = 'activate'
-  ContractActionType[(ContractActionType['sendAndActivateInV4'] = 1300)] = 'sendAndActivateInV4'
+  ContractActionType[(ContractActionType['sendMirrorAndActivateInV4'] = 1300)] = 'sendMirrorAndActivateInV4'
   ContractActionType[(ContractActionType['expire'] = 400)] = 'expire'
   ContractActionType[(ContractActionType['expireContract'] = 410)] = 'expireContract'
   ContractActionType[(ContractActionType['sendContractExpiredMail'] = 411)] = 'sendContractExpiredMail'
@@ -103,6 +103,7 @@ var ContractActionType
   ContractActionType[(ContractActionType['registerCredit'] = 880)] = 'registerCredit'
   ContractActionType[(ContractActionType['settle'] = 900)] = 'settle'
   ContractActionType[(ContractActionType['archive'] = 1000)] = 'archive'
+  ContractActionType[(ContractActionType['other'] = 9999)] = 'other'
 })((ContractActionType = exports.ContractActionType || (exports.ContractActionType = {})))
 var PaymentFailureReason
 ;(function (PaymentFailureReason) {
