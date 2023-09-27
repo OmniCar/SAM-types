@@ -168,6 +168,17 @@ export enum ReleaseTag {
   IMPROVED,
 }
 
+export enum AccessKeyPermission {
+  Read = 1,
+  Write,
+  ReadWrite,
+}
+
+export enum AccessKeyService {
+  WorkshopOperation = 1,
+  Report,
+}
+
 export * from './address'
 export * from './admin'
 export * from './app'
@@ -232,3 +243,4 @@ export * from './releaseNotes'
 export * from './paymentFailureReason'
 export * from './translations'
 export * from './v4PricingTool'
+export * from './accessKey'
