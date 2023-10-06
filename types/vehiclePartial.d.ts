@@ -1,7 +1,7 @@
-import { Model } from './model'
 import { Brand } from './brand'
 import { FuelType } from './fuelType'
-import { TVehicleType, TVehicleTransmissionType, TVehicleDriveType } from './vehicle'
+import { Model } from './model'
+import { TVehicleDriveType, TVehicleTransmissionType, TVehicleType } from './vehicle'
 
 // Note: Only vin is required, rest are optional.
 export interface VehiclePartial {

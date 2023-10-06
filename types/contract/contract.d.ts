@@ -1,11 +1,11 @@
-import { IContractTemplateResponse } from '../contractTemplate'
 import { IContractOptionResponse } from '../contractOption'
-import { Customer } from '../customer'
-import { Vehicle } from '../vehicle'
-import { Other } from '../product'
-import { ICalculationResponse } from '../priceCalculation'
-import { ContractValueType, ContractState, PaymentGateway } from '../index'
 import { IContractProviderResponse } from '../contractProvider'
+import { IContractTemplateResponse } from '../contractTemplate'
+import { Customer } from '../customer'
+import { ContractState, ContractValueType, PaymentGateway } from '../index'
+import { ICalculationResponse } from '../priceCalculation'
+import { Other } from '../product'
+import { Vehicle } from '../vehicle'
 
 export interface IContractResponse {
   id: number

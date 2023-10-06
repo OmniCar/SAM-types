@@ -1,8 +1,8 @@
-import { Model } from './model'
 import { Brand } from './brand'
-import { FuelType } from './fuelType'
-import { VehicleContracts } from './vehicleContracts'
 import { TIsoCountry } from './country'
+import { FuelType } from './fuelType'
+import { Model } from './model'
+import { VehicleContracts } from './vehicleContracts'
 
 /**
  * Vehicle object wit properties of strings and types with id keys to database related rows.

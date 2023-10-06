@@ -1,4 +1,4 @@
-import { ContractType, TVehicleType, TVehicleTransmissionType, TVehicleDriveType } from '../../../types'
+import { ContractType, TVehicleDriveType, TVehicleTransmissionType, TVehicleType } from '../../../types'
 
 // TODO: To be switched over to the line below (extending IVehicleInfo)
 // export interface ITemplateLookupRequest extends IVehicleInfo{

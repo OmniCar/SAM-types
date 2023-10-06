@@ -1,10 +1,10 @@
-import { ProductAlongItsContracts } from '../product'
+import { ContractValueType } from '../admin'
 import { Customer } from '../customer'
+import { ProductAlongItsContracts } from '../product'
 import { VehicleAlongItsContracts } from '../vehicle'
 import { IContractOptionResponse } from './../contractOption'
 import { IContractTemplateResponse } from './../contractTemplate'
 import { PaymentGateway } from './../payment'
-import { ContractValueType } from '../admin'
 
 export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
   contractProviderId: number

@@ -1,7 +1,7 @@
-import { PriceSpecification } from '../../priceSpecification'
-import { ContractValueType, ContractType } from './contractCreation'
-import { IVehicleInfo } from '../../vehicle'
 import { PriceSource } from '../../'
+import { PriceSpecification } from '../../priceSpecification'
+import { IVehicleInfo } from '../../vehicle'
+import { ContractType, ContractValueType } from './contractCreation'
 
 export interface IContractCalculationRequest {
   priceSource?: PriceSource

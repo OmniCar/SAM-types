@@ -1,5 +1,5 @@
-import { TCurrency } from './currency'
 import { TIsoCountry } from './country'
+import { TCurrency } from './currency'
 import { IsoLocale } from './locale'
 
 export interface IBrandingPayloadResponse {
