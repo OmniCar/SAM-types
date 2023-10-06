@@ -1,7 +1,7 @@
-import { StripeGenderType, StripeEntityType } from './stripe'
+import { StripeEntityType, StripeGenderType } from './stripe'
 import { IStripeAddress } from './stripeAddress'
-import { IStripeOwner } from './stripeOwner'
 import { IStripeDateOfBirth } from './stripeDateOfBirth'
+import { IStripeOwner } from './stripeOwner'
 
 export interface IStripeLegalEntity {
   type: StripeEntityType // Either "individual" or "company", for what kind of legal entity the account owner is for

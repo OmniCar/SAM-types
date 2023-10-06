@@ -1,4 +1,4 @@
-import { TableConfigurationType, ITableUserConfiguration } from './tableUserConfiguration.d'
+import { ITableUserConfiguration, TableConfigurationType } from './tableUserConfiguration.d'
 
 export type UserConfigurationType = TableConfigurationType
 export type UserConfiguration<OrderBy = string> = ITableUserConfiguration<OrderBy>

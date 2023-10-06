@@ -1,5 +1,5 @@
+import { AggregateType, DbType, ProductType, TTranslationApplication } from '../index'
 import { IsoLocale } from '../locale'
-import { DbType, AggregateType, ProductType, TTranslationApplication } from '../index'
 
 export interface IDbColumn {
   name: string

@@ -1,5 +1,5 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
-import { ICountryResponse, ICountryRequest } from './country'
+import { ICountryRequest, ICountryResponse } from './country'
 import { TCurrency, WarrantyOnboardingConfig } from './index'
 import { IProviderCustomizationResponse } from './providerBranding'
 

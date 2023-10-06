@@ -1,4 +1,4 @@
-import { IContractFilterDate } from '../..';
+import { IContractFilterDate } from '../..'
 import { IChartDateValue, ITopSellerChart } from '../../chart'
 
 export interface IChartCollection {
