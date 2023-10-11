@@ -40,6 +40,7 @@ export interface IContractProviderRequest extends IProviderCustomizationResponse
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
+  isUseV4PTOnlyForSigning: boolean
   isLoadOptionalProviderCustomization: boolean
 }
 
@@ -88,6 +89,7 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
+  isUseV4PTOnlyForSigning: boolean
   isLoadOptionalProviderCustomization: boolean // Has providerCustomizationLoaded been loaded?
 }
 
@@ -105,6 +107,7 @@ export interface IContractProviderListItemResponse {
   isShowLogoOnWeb: boolean
   isUseWhiteBGOnWeb: boolean
   isUsingV4PricingTool: boolean
+  isUseV4PTOnlyForSigning: boolean
   justGOContractsEnabled: boolean
   omnicarFee: number
   parentProviderId: number | null
