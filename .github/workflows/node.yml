@@ -26,7 +26,7 @@ jobs:
 #        working-directory: Source
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install and TS compile in Node ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@v3
         with:
