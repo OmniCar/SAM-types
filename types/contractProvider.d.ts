@@ -1,14 +1,16 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryRequest, ICountryResponse } from './country'
 import { TCurrency, WarrantyOnboardingConfig } from './index'
+import { PaymentGateway } from './payment'
 import { IProviderCustomizationResponse } from './providerBranding'
 
 export interface IContractProviderRequest extends IProviderCustomizationResponse {
   administrativeName: string
   cvrCode: string
   country: ICountryRequest
-  postmarkFromEmail: string
   omnicarFee: number
+  paymentGateways: PaymentGateway[]
+  postmarkFromEmail: string
   hoursToReminder1: number
   hoursToReminder2: number
   hoursToReminder3: number
@@ -52,8 +54,9 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   cvrCode: string
   country: ICountryResponse
   currency?: TCurrency
-  postmarkFromEmail: string
   omnicarFee: number
+  paymentGateways: PaymentGateway[]
+  postmarkFromEmail: string
   hoursToReminder1: number
   hoursToReminder2: number
   hoursToReminder3: number
