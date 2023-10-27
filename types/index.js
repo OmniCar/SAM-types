@@ -133,10 +133,6 @@ var ResponseWarnings;
 (function (ResponseWarnings) {
     ResponseWarnings[ResponseWarnings["GenericWarning"] = 499] = "GenericWarning";
 })(ResponseWarnings = exports.ResponseWarnings || (exports.ResponseWarnings = {}));
-var WarrantyOnboardingConfig;
-(function (WarrantyOnboardingConfig) {
-    WarrantyOnboardingConfig["interdan"] = "Interdan";
-})(WarrantyOnboardingConfig = exports.WarrantyOnboardingConfig || (exports.WarrantyOnboardingConfig = {}));
 var OutageSeverityLevel;
 (function (OutageSeverityLevel) {
     OutageSeverityLevel[OutageSeverityLevel["Low"] = 1] = "Low";

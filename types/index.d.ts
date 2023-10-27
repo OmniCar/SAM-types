@@ -119,9 +119,6 @@ export declare enum ResponseWarnings {
     GenericWarning = 499
 }
 export declare type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage';
-export declare enum WarrantyOnboardingConfig {
-    interdan = "Interdan"
-}
 export declare enum OutageSeverityLevel {
     Low = 1,
     Medium = 2,
