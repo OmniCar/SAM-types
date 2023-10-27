@@ -133,10 +133,6 @@ export enum ResponseWarnings {
 
 export type FileUploadToStorageType = 'General-Storage' | 'Logo-Banner-Storage' | 'Logo-Square-Storage'
 
-export enum WarrantyOnboardingConfig {
-  interdan = 'Interdan',
-}
-
 export enum OutageSeverityLevel {
   Low = 1,
   Medium = 2,
