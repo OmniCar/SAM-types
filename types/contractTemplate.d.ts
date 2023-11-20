@@ -6,7 +6,7 @@ import { PriceSpecification } from './priceSpecification'
 import { ITermsOfServiceRequest, ITermsOfServiceResponse } from './termsOfService'
 import { TV4PTPaymentType, TV4PTProductType } from './v4PricingTool'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP' | 'V4PricingTool'
+export type PriceSource = 'Pricelist' | 'Autoexperten' | 'V4PricingTool' | 'AutoDAP'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
