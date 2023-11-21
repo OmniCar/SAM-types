@@ -98,7 +98,6 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
   v4SupportedPaymentTypes: TV4PTPaymentType[]
   v4FilesForCustomerAtActivation: { name: string; url: string }[] // Files attached in activation email to end-customer.
 }
-
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
   defaultHours: number
   defaultYearlyServices: number
