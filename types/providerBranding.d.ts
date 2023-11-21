@@ -1,12 +1,16 @@
+import { TCurrency } from './currency'
+import { TIsoCountry } from './country'
 import { IsoLocale } from './locale'
 
 export interface IBrandingPayloadResponse {
+  countryCode: TIsoCountry
   locale: IsoLocale
   paymentInformation: IStripeInformationResponse
   providerInformation: IProviderInformationResponse
   providerBranding: IProviderBrandingResponse[]
   providerStyling: IProviderStylingResponse
   providerCustomization?: IProviderCustomizationResponse
+  parentProviderId?: number | null
 }
 
 export interface IStripeInformationResponse {
@@ -16,6 +20,8 @@ export interface IStripeInformationResponse {
 export interface IProviderInformationResponse {
   contractProviderId: number
   administrativeName: string
+  countryCode: TIsoCountry
+  currency: TCurrency
   cvrCode: string
   logo: string
   contactFormUrl: string
@@ -24,8 +30,7 @@ export interface IProviderInformationResponse {
   termsOfTradeRef: string
   webCalcEnabled: boolean
   offerRequestsEnabled: boolean
-  // Autoexperten
-  hasAxTemplates: boolean
+  hasAxTemplates: boolean // Autoexperten.
 }
 
 export interface IProviderBrandingResponse {
@@ -38,7 +43,8 @@ export interface IProviderStylingResponse {
 }
 
 export interface IProviderCustomizationResponse {
-  applyWebcalcSkorstensgaardFix: boolean
-  webCalcTrackingPixelOrderConfirmationUrl: string
-  webCalcTrackingPixelOrderConfirmationLastUpdated: string
+  applyWebcalcSkorstensgaardFix: boolean | undefined // Set undefined if this setting is not loaded.
+  webCalcTrackingPixelOrderConfirmationUrl: string | undefined // Set undefined if this setting is not loaded.
+  webCalcTrackingPixelOrderConfirmationLastUpdated: string | undefined // Set undefined if this setting is not loaded.
+  inheritParentStylingWebcalc: boolean | undefined // Set undefined if this setting is not loaded.
 }

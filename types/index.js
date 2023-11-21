@@ -11,6 +11,7 @@ var ContractState;
     ContractState[ContractState["ActivePrePaid"] = 210] = "ActivePrePaid";
     ContractState[ContractState["ActivePendingTermination"] = 250] = "ActivePendingTermination";
     ContractState[ContractState["Suspended"] = 400] = "Suspended";
+    ContractState[ContractState["CancelledSubscription"] = 450] = "CancelledSubscription";
     ContractState[ContractState["Terminated"] = 500] = "Terminated";
     ContractState[ContractState["Extended"] = 510] = "Extended";
     ContractState[ContractState["Expired"] = 600] = "Expired";
@@ -84,6 +85,7 @@ var ContractActionType;
     ContractActionType[ContractActionType["createPendingTermination"] = 550] = "createPendingTermination";
     ContractActionType[ContractActionType["cancelPendingTermination"] = 560] = "cancelPendingTermination";
     ContractActionType[ContractActionType["suspend"] = 600] = "suspend";
+    ContractActionType[ContractActionType["cancelSubscription"] = 650] = "cancelSubscription";
     ContractActionType[ContractActionType["successfulInvoicePayment"] = 690] = "successfulInvoicePayment";
     ContractActionType[ContractActionType["reactivate"] = 700] = "reactivate";
     ContractActionType[ContractActionType["sendAndReactivateInV4"] = 1700] = "sendAndReactivateInV4";
@@ -156,10 +158,13 @@ var ReleaseSystem;
     ReleaseSystem[ReleaseSystem["Api"] = 3] = "Api";
     ReleaseSystem[ReleaseSystem["WebShop"] = 4] = "WebShop";
 })(ReleaseSystem = exports.ReleaseSystem || (exports.ReleaseSystem = {}));
-var ReleaseType;
-(function (ReleaseType) {
-    ReleaseType[ReleaseType["Major"] = 1] = "Major";
-    ReleaseType[ReleaseType["Minor"] = 2] = "Minor";
-    ReleaseType[ReleaseType["Emergency"] = 3] = "Emergency";
-})(ReleaseType = exports.ReleaseType || (exports.ReleaseType = {}));
+var ReleaseTag;
+(function (ReleaseTag) {
+    ReleaseTag[ReleaseTag["ADDED"] = 1] = "ADDED";
+    ReleaseTag[ReleaseTag["FIXED"] = 2] = "FIXED";
+    ReleaseTag[ReleaseTag["NEW"] = 3] = "NEW";
+    ReleaseTag[ReleaseTag["REMOVED"] = 4] = "REMOVED";
+    ReleaseTag[ReleaseTag["UPDATED"] = 5] = "UPDATED";
+    ReleaseTag[ReleaseTag["IMPROVED"] = 6] = "IMPROVED";
+})(ReleaseTag = exports.ReleaseTag || (exports.ReleaseTag = {}));
 //# sourceMappingURL=index.js.map

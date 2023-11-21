@@ -8,6 +8,7 @@ export declare enum ContractState {
     ActivePrePaid = 210,
     ActivePendingTermination = 250,
     Suspended = 400,
+    CancelledSubscription = 450,
     Terminated = 500,
     Extended = 510,
     Expired = 600,
@@ -76,6 +77,7 @@ export declare enum ContractActionType {
     createPendingTermination = 550,
     cancelPendingTermination = 560,
     suspend = 600,
+    cancelSubscription = 650,
     successfulInvoicePayment = 690,
     reactivate = 700,
     sendAndReactivateInV4 = 1700,
@@ -138,10 +140,13 @@ export declare enum ReleaseSystem {
     Api = 3,
     WebShop = 4
 }
-export declare enum ReleaseType {
-    Major = 1,
-    Minor = 2,
-    Emergency = 3
+export declare enum ReleaseTag {
+    ADDED = 1,
+    FIXED = 2,
+    NEW = 3,
+    REMOVED = 4,
+    UPDATED = 5,
+    IMPROVED = 6
 }
 export * from './address';
 export * from './admin';
@@ -206,3 +211,4 @@ export * from './workshopOperation';
 export * from './releaseNotes';
 export * from './paymentFailureReason';
 export * from './translations';
+export * from './v4PricingTool';

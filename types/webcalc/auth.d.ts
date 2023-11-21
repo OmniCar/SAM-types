@@ -1,13 +1,17 @@
 import { CustomerType, IsoLocale, PaymentCard, PaymentGateway, UserRole } from '..'
-
+// TODO: remove
 export interface IWebcalcLoginRequest {
   providerId: number
   username: string
   password: string
 }
-
+// TODO: remove
 export interface IWebcalcCustomerIdResponse {
   id: number
+}
+
+export interface IWebcalcUserLookupResponse {
+  exists: boolean
 }
 
 export interface IWebcalcLoginResponse {

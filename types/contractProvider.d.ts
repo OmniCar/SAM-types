@@ -1,8 +1,9 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryResponse, ICountryRequest } from './country'
 import { TCurrency, WarrantyOnboardingConfig } from './index'
+import { IProviderCustomizationResponse } from './providerBranding'
 
-export interface IContractProviderRequest {
+export interface IContractProviderRequest extends IProviderCustomizationResponse {
   administrativeName: string
   cvrCode: string
   country: ICountryRequest
@@ -37,11 +38,16 @@ export interface IContractProviderRequest {
   fragusContactPersonName: string | null
   providerGroup: string | null
   providerCategory: string | null
+  additionalEmails: string | null
+  isUsingV4PricingTool: boolean
+  isLoadOptionalProviderCustomization: boolean
 }
 
-export interface IContractProviderResponse {
+export interface IContractProviderResponse extends IProviderCustomizationResponse {
   contractProviderId: number
   administrativeName: string
+  parentProviderId: number | null
+  v4ProviderId: number | null
   cvrCode: string
   country: ICountryResponse
   currency?: TCurrency
@@ -73,7 +79,6 @@ export interface IContractProviderResponse {
   disableContractTemplates: boolean
   productsEnabled: boolean
   justGOContractsEnabled: boolean
-  parentProviderId: number | null
   warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
   autoSettlement: boolean
@@ -81,26 +86,33 @@ export interface IContractProviderResponse {
   fragusContactPersonName: string | null
   providerGroup: string | null
   providerCategory: string | null
+  additionalEmails: string | null
+  isUsingV4PricingTool: boolean
+  isLoadOptionalProviderCustomization: boolean // Has providerCustomizationLoaded been loaded?
 }
 
 export interface IContractProviderListItemResponse {
-  contractProviderId: number
   administrativeName: string
-  cvrCode: string
-  country: ICountryResponse
-  omnicarFee: number
-  webCalcEnabled: boolean
-  freeWarrantiesButton: boolean
-  disableContractTemplates: boolean
-  productsEnabled: boolean
-  isForceEnableCustomContract: boolean
-  justGOContractsEnabled: boolean
-  parentProviderId: number | null,
   autoSettlement: boolean
-  state: ProviderState
+  contractProviderId: number
+  country: ICountryResponse
+  cvrCode: string
+  disableContractTemplates: boolean
   fragusContactPersonName: string | null
-  providerGroup: string | null
+  freeWarrantiesButton: boolean
+  isAllowContractsWithoutVehiclePriceModel: boolean
+  isForceEnableCustomContract: boolean
+  isShowLogoOnWeb: boolean
+  isUseWhiteBGOnWeb: boolean
+  isUsingV4PricingTool: boolean
+  justGOContractsEnabled: boolean
+  omnicarFee: number
+  parentProviderId: number | null
+  productsEnabled: boolean
   providerCategory: string | null
+  providerGroup: string | null
+  state: ProviderState
+  webCalcEnabled: boolean
 }
 
 export type ProviderState = 'Active' | 'Inactive'

@@ -13,6 +13,7 @@ export interface IUserListRecord {
   email: string
   phone: string
   role?: UserRole
-  roles?:  INullableRole[]
+  roles?: INullableRole[]
   localeCode?: string
+  departmentName?: string
 }

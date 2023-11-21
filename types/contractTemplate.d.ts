@@ -3,6 +3,7 @@ import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfServic
 import { PriceSpecification } from './priceSpecification'
 import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
 import { TCurrency } from '../types/currency'
+import { TV4PTProductType, TV4PTPaymentType } from './v4PricingTool'
 
 export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP' | 'V4PricingTool'
 
@@ -93,6 +94,9 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
   showOnWebcalc: boolean
+  v4ProductType: null | TV4PTProductType
+  v4SupportedPaymentTypes: TV4PTPaymentType[]
+  v4FilesForCustomerAtActivation: { name: string; url: string }[] // Files attached in activation email to end-customer.
 }
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
   defaultHours: number

@@ -110,21 +110,30 @@ export interface VehicleAlongItsContracts extends Vehicle {
   hasActiveWarranty: boolean | undefined
 }
 
+/**  
+  Motorhome - A caravan-like living unit built on top of an existing chassis.
+              Compared to a regular van, the body is much taller and wider.
+ 
+  Campervan - Campervans are generally shorter, thinner and have much less
+              headroom than motorhome.
+*/
 export type TVehicleType =
   | '' // Unknown vehicle type.
-  | 'Trailer' // sv: Släp.
-  | 'Bus'
-  | 'Truck' // sv: Lastbil.
-  | 'Special Vehicle'
-  | 'Van' // sv: Skåpbil/Paketbil/Varubil.
+  | 'Trailer' // sv: Släp, sv: Släpvagn, da: Påhængsvogn(p), fi: Perävaunu, nb-NO: Tilhenger.
+  | 'Caravan' // (NOTE: Without engine!) sv: Husvagn, da: Campingvogn, fi: Asuntovaunu, nb-NO: Campingvogn.
+  | 'Motorhome/Campervan' // (NOTE: Legally as Car) sv: Husbil, da: Autocamper, fi: Matkailuauto, nb-NO: Bobil
   | 'Car'
+  | 'Van' // sv: Skåpbil/Paketbil/Varubil, en: Small Truck/Lorry, Delivery Truck/Lorry.
+  | 'Truck' // sv: Lastbil, en-UK: Lorry, fi: Kuorma-auto, nb-NO: Lastebil.
+  | 'Bus'
+  | 'Forklift' // sv: Truck.
+  | 'Special Vehicle'
   | 'Tractor'
   | 'Mobile Machinery'
   | 'Off-road Vehicle'
   | 'Motorcycle'
   | 'L5' // Motor-vehicle with three wheels, sv: Trehjuligt motorfordon.
   | 'Moped'
-  | 'Forklift' // sv: Truck.
   | 'Other'
 
 export type TVehicleTransmissionType =

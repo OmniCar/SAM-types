@@ -8,6 +8,7 @@ export enum ContractState {
   ActivePrePaid = 210,
   ActivePendingTermination = 250,
   Suspended = 400,
+  CancelledSubscription = 450,
   Terminated = 500,
   Extended = 510,
   Expired = 600,
@@ -81,6 +82,7 @@ export enum ContractActionType {
   createPendingTermination = 550, // Registers the creation of a pending termination and indicates that the contract's status has changed from Active to ActivePendingTermination.
   cancelPendingTermination = 560, // Registers the cancellation of a pending termination and indicates that the contract's status has changed from ActivePendingTermination to Active.
   suspend = 600, // Who suspended the contract, if the system did this automatically that will be described in the details
+  cancelSubscription = 650, // When Stripe subscription is cancelled without the request (automatically because of failed payments).
   successfulInvoicePayment = 690, // Successful invoice payment. Contract soon to be re-activated.
   reactivate = 700, // Who unsuspended the contract
   sendAndReactivateInV4 = 1700, // Sent reactivate request to V4.
@@ -156,10 +158,13 @@ export enum ReleaseSystem {
   WebShop,
 }
 
-export enum ReleaseType {
-  Major = 1,
-  Minor,
-  Emergency,
+export enum ReleaseTag {
+  ADDED = 1,
+  FIXED,
+  NEW,
+  REMOVED,
+  UPDATED,
+  IMPROVED,
 }
 
 export * from './address'
@@ -225,3 +230,4 @@ export * from './workshopOperation'
 export * from './releaseNotes'
 export * from './paymentFailureReason'
 export * from './translations'
+export * from './v4PricingTool'
