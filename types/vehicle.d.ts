@@ -3,6 +3,7 @@ import { TIsoCountry } from './country'
 import { FuelType } from './fuelType'
 import { Model } from './model'
 import { VehicleContracts } from './vehicleContracts'
+import { TIsoCountry } from './country'
 
 /**
  * Vehicle object wit properties of strings and types with id keys to database related rows.

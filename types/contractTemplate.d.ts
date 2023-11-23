@@ -100,7 +100,6 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
   // v4FilesForCustomerAtActivation: { name: string; url: string }[] // Files attached in activation email to end-customer.
   filesContainerAlongContract: null | IFileItem[] // Optional extra files, except the TOS file.
 }
-
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
   defaultHours: number
   defaultYearlyServices: number

@@ -227,6 +227,7 @@ export interface IAvailableFreeWarrantyRequest {
   fuelTypeName: string
   fuelTypeId?: number
   startMileage: number
+  vehicleType: TVehicleType
 }
 
 export interface IAvailableFreeWarrantyResponse {
