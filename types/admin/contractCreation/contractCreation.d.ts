@@ -274,6 +274,7 @@ export interface IAvailableFreeWarranty {
   warrantyColor: string
   warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
+  vehicleTypes: null | TVehicleType[] // Only available for these vehicleTypes, null means all vehicleTypes.
   isForbidDealerPaid: boolean
 }
 
