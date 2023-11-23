@@ -1,4 +1,3 @@
-import { PriceSource } from '../../contractTemplate'
 import { ContractState, ContractType, IIncludedContractOption, PaymentGateway } from '../../index'
 import { IContractHealth } from './health'
 import { PriceSource } from '../../contractTemplate'

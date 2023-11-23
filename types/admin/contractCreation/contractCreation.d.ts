@@ -4,7 +4,7 @@ import { IContractTemplateResponse, IGenericContractTemplateResponse, PriceSourc
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Other } from '../../product'
 import { ITermsOfServiceResponse } from '../../termsOfService'
-import { IVehicleInfo, Vehicle, VehicleAlongItsContracts } from '../../vehicle'
+import { IVehicleInfo, Vehicle, VehicleAlongItsContracts, TVehicleType } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { PriceSpecification } from './../../priceSpecification'
 import { ICarCollection } from './carData'

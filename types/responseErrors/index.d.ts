@@ -10,11 +10,6 @@ import { PasswordErrors } from './passwordResponseErrors'
 import { paymentResponseErrors } from './paymentResponseErrors'
 import { RateLimitErrors } from './rateLimitErrors'
 import { VatLookupResponseErrors } from './vatLookupResponseErrors'
-import { ImportErrors } from './importErrors'
-import { paymentResponseErrors } from './paymentResponseErrors'
-import { AdjustmentRequestResponseErrors } from './adjustmentRequestResponseErrors'
-import { InvalidProductTypeErrors } from './invalidProductTypeErrors'
-import { RateLimitErrors } from './rateLimitErrors'
 import { VehcileBlacklistErrors } from './vehcileBlacklistErrors'
 
 export type ResponseErrors =
