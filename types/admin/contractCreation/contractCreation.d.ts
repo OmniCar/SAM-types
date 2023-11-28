@@ -4,7 +4,7 @@ import { IContractTemplateResponse, IGenericContractTemplateResponse, PriceSourc
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Other } from '../../product'
 import { ITermsOfServiceResponse } from '../../termsOfService'
-import { IVehicleInfo, Vehicle, VehicleAlongItsContracts } from '../../vehicle'
+import { IVehicleInfo, Vehicle, VehicleAlongItsContracts, TVehicleType } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
 import { PriceSpecification } from './../../priceSpecification'
 import { ICarCollection } from './carData'
@@ -227,6 +227,7 @@ export interface IAvailableFreeWarrantyRequest {
   fuelTypeName: string
   fuelTypeId?: number
   startMileage: number
+  vehicleType: TVehicleType
 }
 
 export interface IAvailableFreeWarrantyResponse {
@@ -273,6 +274,7 @@ export interface IAvailableFreeWarranty {
   warrantyColor: string
   warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
+  vehicleTypes: null | TVehicleType[] // Only available for these vehicleTypes, null means all vehicleTypes.
   isForbidDealerPaid: boolean
 }
 

@@ -1,6 +1,6 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryRequest, ICountryResponse } from './country'
-import { TCurrency, WarrantyOnboardingConfig } from './index'
+import { TCurrency } from './index'
 import { PaymentGateway } from './payment'
 import { IProviderCustomizationResponse } from './providerBranding'
 
@@ -35,7 +35,6 @@ export interface IContractProviderRequest extends IProviderCustomizationResponse
   productsEnabled: boolean
   justGOContractsEnabled: boolean
   parentProviderId: number | null
-  warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
   fragusContactPersonName: string | null
   providerGroup: string | null
@@ -83,7 +82,6 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   disableContractTemplates: boolean
   productsEnabled: boolean
   justGOContractsEnabled: boolean
-  warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
   autoSettlement: boolean
   isAllowContractsWithoutVehiclePriceModel: boolean
