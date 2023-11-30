@@ -1,3 +1,4 @@
+import { IsoLocale } from '../../locale'
 import { IContractProviderInfo } from '../contractProvider'
 import { IAdminCustomer } from '../customer'
 import { IAdminUserInfo } from '../user/user'
@@ -24,4 +25,5 @@ export interface ILoginResponse {
   isSuperAdmin?: boolean
   isDev?: boolean
   refreshToken?: string
+  defaultLocale?: IsoLocale
 }
