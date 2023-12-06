@@ -5,7 +5,7 @@ import { Model } from './model'
 import { VehicleContracts } from './vehicleContracts'
 
 /**
- * Vehicle object wit properties of strings and types with id keys to database related rows.
+ * Vehicle object with properties of strings and types with id keys to database related rows.
  *
  * @note To dev: Are you looking for contracts here? - Please use VehicleAlongItsContracts instead!
  */
@@ -86,6 +86,8 @@ export interface IRegistrationNumberResponse {
   lookup: {
     vehicle: Vehicle
     lookupCountry: TIsoCountry
+    isDetectedAsPossibleHybrid: boolean | null // If the vehicle has been detected (by parsing or other means) as a hybrid, set this to true AND hasClearedAsPossibleHybrid to false.
+    isClearedAsPossibleHybrid: boolean | null // When cleared (by prompting a dialog or other means) set this to true, AND hasDetectedAsPossibleHybrid to null.
     debug?: {
       lookupCacheStatus?: string // Free text, for debugging purposes - Hint with info if vehicle was fetched from cache or via fresh lookup.
     }
