@@ -77,8 +77,9 @@ export interface IVehicleInfo {
   driveType?: TVehicleDriveType // Front, rear, or all wheel drive.
   hasFourWheelDrive?: boolean
 
-  // lookupCacheStatus?: string | 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
   lookupCacheStatus?: 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
+  isDetectedAsPossibleHybrid?: boolean | null // If the vehicle has been detected (by parsing or other means) as a hybrid, set this to true AND hasClearedAsPossibleHybrid to false.
+  isClearedAsPossibleHybrid?: boolean | null // When cleared (by prompting a dialog or other means) set this to true, AND hasDetectedAsPossibleHybrid to null.
 }
 
 export interface IRegistrationNumberResponse {
