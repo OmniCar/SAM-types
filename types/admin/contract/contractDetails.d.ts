@@ -1,3 +1,4 @@
+import { TV4PTProductType } from '../../v4PricingTool'
 import { ContractType, ContractValueType, ServiceContractFlag } from './../../admin/contractCreation'
 import { IContactPersonResponse } from './../../contactPerson'
 import { IContractResponse } from './../../contract/contract'
@@ -8,6 +9,8 @@ import { PriceSpecification } from './../../priceSpecification'
 
 export interface IContractDetailsRecord {
   serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
+  contractType: ContractType
+  contractProductType: null | TV4PTProductType
   contractPdfUrl: string
   duration: number // Duration [months].
   startMileage?: number // Current meter/odometer-reading [km].
@@ -37,7 +40,6 @@ export interface IContractDetailsRecord {
   termsOfTradePdfUrl: string
   filesContainerAlongContract: null | IFileItem[] // Optional extra files, except the TOS file.
   totalPrice: PriceSpecification
-  contractType: ContractType
   contractTemplateId: null | number
   contractName: string // Contract (template) name.
   priceSource: null | PriceSource

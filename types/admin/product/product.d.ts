@@ -2,7 +2,7 @@ import { ContractState, IIncludedContractOption } from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
-export type ProductType = 'Product' | 'Vehicle'
+export type TContractObject = 'Product' | 'Vehicle' // Renamed from: export type ProductType = 'Product' | 'Vehicle'
 
 export interface IApiOtherWithContracts {
   otherId: number
