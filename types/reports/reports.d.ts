@@ -23,7 +23,7 @@ export interface IReportSearchRequest {
   name: string
   search: { col: string; search: string }[]
   groupBy: string[]
-  productType?: TContractObject
+  contractObjectType?: TContractObject
 }
 
 export type TTranslationMap = { [key in IsoLocale]?: string }
