@@ -1,4 +1,4 @@
-import { AggregateType, DbType, ProductType, TTranslationApplication } from '../index'
+import { AggregateType, DbType, TContractObject, TTranslationApplication } from '../index'
 import { IsoLocale } from '../locale'
 
 export interface IDbColumn {
@@ -23,7 +23,7 @@ export interface IReportSearchRequest {
   name: string
   search: { col: string; search: string }[]
   groupBy: string[]
-  productType?: ProductType
+  productType?: TContractObject
 }
 
 export type TTranslationMap = { [key in IsoLocale]?: string }

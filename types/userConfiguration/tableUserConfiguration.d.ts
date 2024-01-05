@@ -1,4 +1,3 @@
-import { ProductType } from '../admin/product'
 import { OrderDirection } from '../queryParams'
 
 export interface IColumnUserConfiguration {
