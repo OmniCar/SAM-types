@@ -1,4 +1,4 @@
-import { ContractState, IIncludedContractOption } from './../../index'
+import { ContractState, IIncludedContractOption, TV4PTProductType } from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
@@ -37,4 +37,5 @@ export interface IApiOtherContract {
   reference?: string
   activationUrl?: string
   extendedFrom?: number
+  contractProductType: null | TV4PTProductType
 }

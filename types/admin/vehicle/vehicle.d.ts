@@ -1,4 +1,4 @@
-import { ContractState, ContractValueType, IIncludedContractOption } from './../../index'
+import { ContractState, ContractValueType, IIncludedContractOption, TV4PTProductType } from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
@@ -36,6 +36,7 @@ export interface IApiVehicleContract {
   extendedFrom?: number
   value?: number
   valueType?: ContractValueType
+  contractProductType: null | TV4PTProductType
 }
 
 export interface IApiVehicleIncludedContractOption {
