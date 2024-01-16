@@ -110,11 +110,9 @@ interface IPublicKeyResponse {
  * when presenting this info. For more specific and sensitive info,
  * it is already saved on the database.
  */
-interface IPaymentInformationResponse {
+interface IBasicPaymentInformationResponse {
   publicKey: string
   contractProvider: IContractProviderPaymentInfo
-  customer: IAdminCustomer
-  product: Vehicle | Other
   contract: IContractInfo
   totalAmount: PriceSpecification | null
   minimumTotalAmount: PriceSpecification | null
@@ -122,7 +120,15 @@ interface IPaymentInformationResponse {
   subscriptions: ISubscription[]
   paymentGateway: PaymentGateway
 }
-
+/*
+ * The folling info is only what the paying "customer" needs to know
+ * when presenting this info. For more specific and sensitive info,
+ * it is already saved on the database.
+ */
+interface IPaymentInformationResponse extends IBasicPaymentInformationResponse {
+  customer: IAdminCustomer
+  product: Vehicle | Other
+}
 interface ISetupIntentResponse {
   clientSecret: string
 }
