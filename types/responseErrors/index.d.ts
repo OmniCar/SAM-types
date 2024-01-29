@@ -9,20 +9,22 @@ import { OfferRequestResponseErrors } from './offerRequestResponseErrors'
 import { PasswordErrors } from './passwordResponseErrors'
 import { paymentResponseErrors } from './paymentResponseErrors'
 import { RateLimitErrors } from './rateLimitErrors'
+import { UserAndCustomerErrors } from './userAndCustomerErrors'
 import { VatLookupResponseErrors } from './vatLookupResponseErrors'
 import { VehcileBlacklistErrors } from './vehcileBlacklistErrors'
 
 export type ResponseErrors =
+  | AdjustmentRequestResponseErrors
   | AdminPaymentErrors
   | CalculatorResponseErrors
   | ContractResponseErrors
   | GenericResponseErrors
-  | VatLookupResponseErrors
   | ImportErrors
-  | PasswordErrors
-  | OfferRequestResponseErrors
-  | paymentResponseErrors
-  | AdjustmentRequestResponseErrors
   | InvalidProductTypeErrors
+  | OfferRequestResponseErrors
+  | PasswordErrors
+  | paymentResponseErrors
   | RateLimitErrors
+  | UserAndCustomerErrors
+  | VatLookupResponseErrors
   | VehcileBlacklistErrors
