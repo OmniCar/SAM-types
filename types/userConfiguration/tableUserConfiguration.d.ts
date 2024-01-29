@@ -1,5 +1,4 @@
 import { OrderDirection } from '../queryParams'
-import { ProductType } from '../admin/product'
 
 export interface IColumnUserConfiguration {
   enabled: boolean
