@@ -159,8 +159,6 @@ export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
   amountPerPayment: number
-  offerRequestId?: number
-  offerRequestApprovalMessage?: string
 }
 
 export interface IStandardContractCreationRequest extends ICommonContractCreationRequest {

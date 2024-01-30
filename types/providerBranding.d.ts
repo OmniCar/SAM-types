@@ -29,7 +29,6 @@ export interface IProviderInformationResponse {
   email: string
   termsOfTradeRef: string
   webCalcEnabled: boolean
-  offerRequestsEnabled: boolean
   hasAxTemplates: boolean // Autoexperten.
 }
 
@@ -43,7 +42,6 @@ export interface IProviderStylingResponse {
 }
 
 export interface IProviderCustomizationResponse {
-  applyWebcalcSkorstensgaardFix: boolean | undefined // Set undefined if this setting is not loaded.
   webCalcTrackingPixelOrderConfirmationUrl: string | undefined // Set undefined if this setting is not loaded.
   webCalcTrackingPixelOrderConfirmationLastUpdated: string | undefined // Set undefined if this setting is not loaded.
   inheritParentStylingWebcalc: boolean | undefined // Set undefined if this setting is not loaded.
