@@ -120,13 +120,6 @@ export enum PaymentFailureReason {
   unknownReason = 100, // Unknown Stripe reasons or reasons which shouldn't happen.
 }
 
-export enum OfferRequestState {
-  Pending = 100,
-  Approved = 200,
-  Rejected = 300,
-  Expired = 400,
-}
-
 export enum ResponseWarnings {
   GenericWarning = 499,
 }
