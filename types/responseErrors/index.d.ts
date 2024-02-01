@@ -8,19 +8,21 @@ import { InvalidProductTypeErrors } from './invalidProductTypeErrors'
 import { PasswordErrors } from './passwordResponseErrors'
 import { paymentResponseErrors } from './paymentResponseErrors'
 import { RateLimitErrors } from './rateLimitErrors'
+import { UserAndCustomerErrors } from './userAndCustomerErrors'
 import { VatLookupResponseErrors } from './vatLookupResponseErrors'
 import { VehcileBlacklistErrors } from './vehcileBlacklistErrors'
 
 export type ResponseErrors =
+  | AdjustmentRequestResponseErrors
   | AdminPaymentErrors
   | CalculatorResponseErrors
   | ContractResponseErrors
   | GenericResponseErrors
-  | VatLookupResponseErrors
   | ImportErrors
+  | InvalidProductTypeErrors
   | PasswordErrors
   | paymentResponseErrors
-  | AdjustmentRequestResponseErrors
-  | InvalidProductTypeErrors
   | RateLimitErrors
+  | UserAndCustomerErrors
+  | VatLookupResponseErrors
   | VehcileBlacklistErrors
