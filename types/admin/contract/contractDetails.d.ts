@@ -1,13 +1,16 @@
+import { TV4PTProductType } from '../../v4PricingTool'
+import { ContractType, ContractValueType, ServiceContractFlag } from './../../admin/contractCreation'
 import { IContactPersonResponse } from './../../contactPerson'
 import { IContractResponse } from './../../contract/contract'
+import { PriceSource } from './../../contractTemplate'
 import { IIncludedContractOption } from './../../includedContractOption'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
-import { ServiceContractFlag, ContractType, ContractValueType } from './../../admin/contractCreation'
-import { PriceSource } from './../../contractTemplate'
 
 export interface IContractDetailsRecord {
   serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
+  contractType: ContractType
+  contractProductType: null | TV4PTProductType
   contractPdfUrl: string
   duration: number // Duration [months].
   startMileage?: number // Current meter/odometer-reading [km].
@@ -35,8 +38,8 @@ export interface IContractDetailsRecord {
   startDate: Date | string
   termsPdfUrl: string
   termsOfTradePdfUrl: string
+  filesContainerAlongContract: null | IFileItem[] // Optional extra files, except the TOS file.
   totalPrice: PriceSpecification
-  contractType: ContractType
   contractTemplateId: null | number
   contractName: string // Contract (template) name.
   priceSource: null | PriceSource
@@ -71,4 +74,9 @@ export interface IAdminCustomTermsRecord {
 export interface IUnitsListResponse {
   units: number
   date: Date | string
+}
+
+export interface IFileItem {
+  name: string
+  v4URL: string
 }

@@ -1,5 +1,5 @@
-import { PriceSpecification } from './priceSpecification'
 import { IContractResponse } from './contract/contract'
+import { PriceSpecification } from './priceSpecification'
 import { ITermsOfServiceResponse } from './termsOfService'
 
 export interface IIncludedContractOption {

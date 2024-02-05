@@ -1,7 +1,7 @@
 // @NOTE - Deprecate this file
 import { ISearchQuery, OrderDirection } from '../queryParams'
-import { IContractFilterOptions } from './contractFilter'
 import { PaymentGateway } from './../payment'
+import { IContractFilterOptions } from './contractFilter'
 
 export type ContractOrderBy =
   | 'prettyIdentifier'

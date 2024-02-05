@@ -17,14 +17,16 @@ export interface ICountryRequest {
 }
 
 export interface ICountryResponse extends ICountry {
-  localeName?: string
-  locale?: string | undefined
   currency: TCurrency
   vatPct: number
+  locale?: string | undefined
+  languageName?: string // Eg. 'Swedish'.
+  languageNameLocal?: string // Eg. 'Svenska'.
 }
 
 export interface ICountry {
   countryId?: number
   isoName: string
-  countryName?: string
+  countryName?: string // Country name in English, eg. 'Finland'.
+  countryNameLocal?: string // Country name in local language, eg. 'Suomi'.
 }

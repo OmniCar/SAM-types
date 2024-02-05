@@ -1,14 +1,16 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
-import { ICountryResponse, ICountryRequest } from './country'
-import { TCurrency, WarrantyOnboardingConfig } from './index'
+import { ICountryRequest, ICountryResponse } from './country'
+import { TCurrency } from './index'
+import { PaymentGateway } from './payment'
 import { IProviderCustomizationResponse } from './providerBranding'
 
 export interface IContractProviderRequest extends IProviderCustomizationResponse {
   administrativeName: string
   cvrCode: string
   country: ICountryRequest
-  postmarkFromEmail: string
   omnicarFee: number
+  paymentGateways: PaymentGateway[]
+  postmarkFromEmail: string
   hoursToReminder1: number
   hoursToReminder2: number
   hoursToReminder3: number
@@ -33,13 +35,13 @@ export interface IContractProviderRequest extends IProviderCustomizationResponse
   productsEnabled: boolean
   justGOContractsEnabled: boolean
   parentProviderId: number | null
-  warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   autoSettlement: boolean
   fragusContactPersonName: string | null
   providerGroup: string | null
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
+  isUseV4PTOnlyForSigning: boolean
   isLoadOptionalProviderCustomization: boolean
 }
 
@@ -51,8 +53,9 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   cvrCode: string
   country: ICountryResponse
   currency?: TCurrency
-  postmarkFromEmail: string
   omnicarFee: number
+  paymentGateways: PaymentGateway[]
+  postmarkFromEmail: string
   hoursToReminder1: number
   hoursToReminder2: number
   hoursToReminder3: number
@@ -79,7 +82,6 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   disableContractTemplates: boolean
   productsEnabled: boolean
   justGOContractsEnabled: boolean
-  warrantyOnboardingConfig: WarrantyOnboardingConfig | null
   state: ProviderState
   autoSettlement: boolean
   isAllowContractsWithoutVehiclePriceModel: boolean
@@ -88,6 +90,7 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   providerCategory: string | null
   additionalEmails: string | null
   isUsingV4PricingTool: boolean
+  isUseV4PTOnlyForSigning: boolean
   isLoadOptionalProviderCustomization: boolean // Has providerCustomizationLoaded been loaded?
 }
 
@@ -105,6 +108,7 @@ export interface IContractProviderListItemResponse {
   isShowLogoOnWeb: boolean
   isUseWhiteBGOnWeb: boolean
   isUsingV4PricingTool: boolean
+  isUseV4PTOnlyForSigning: boolean
   justGOContractsEnabled: boolean
   omnicarFee: number
   parentProviderId: number | null

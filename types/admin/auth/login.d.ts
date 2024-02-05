@@ -1,3 +1,4 @@
+import { IsoLocale } from '../../locale'
 import { IContractProviderInfo } from '../contractProvider'
 import { IAdminCustomer } from '../customer'
 import { IAdminUserInfo } from '../user/user'
@@ -19,9 +20,9 @@ export interface ILoginResponse {
   providerInfo?: IContractProviderInfo
   stripePublicKey?: string
   webCalcEnabled?: boolean
-  offerRequestsEnabled?: boolean
   disableContractTemplates?: boolean
   isSuperAdmin?: boolean
   isDev?: boolean
   refreshToken?: string
+  defaultLocale?: IsoLocale
 }

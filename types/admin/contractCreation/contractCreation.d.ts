@@ -1,14 +1,14 @@
 import { IContractDetailsRecord } from '..'
-import { DurationOptions, IContractOptionResponse } from '../..'
-import { PriceSource, IContractTemplateResponse, IGenericContractTemplateResponse } from '../../contractTemplate'
+import { DurationOptions, IContractOptionResponse, TMileageDurationsMap } from '../..'
+import { IContractTemplateResponse, IGenericContractTemplateResponse, PriceSource } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
-import { Vehicle, VehicleAlongItsContracts, IVehicleInfo, TVehicleType } from '../../vehicle'
+import { Other } from '../../product'
+import { ITermsOfServiceResponse } from '../../termsOfService'
+import { IVehicleInfo, TVehicleType, Vehicle, VehicleAlongItsContracts } from '../../vehicle'
 import { IAdminCustomer } from '../customer/customer'
+import { PriceSpecification } from './../../priceSpecification'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
-import { PriceSpecification } from './../../priceSpecification'
-import { ITermsOfServiceResponse } from '../../termsOfService'
-import { Other } from '../../product'
 
 export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
@@ -110,11 +110,9 @@ interface IPublicKeyResponse {
  * when presenting this info. For more specific and sensitive info,
  * it is already saved on the database.
  */
-interface IPaymentInformationResponse {
+interface IBasicPaymentInformationResponse {
   publicKey: string
   contractProvider: IContractProviderPaymentInfo
-  customer: IAdminCustomer
-  product: Vehicle | Other
   contract: IContractInfo
   totalAmount: PriceSpecification | null
   minimumTotalAmount: PriceSpecification | null
@@ -122,7 +120,15 @@ interface IPaymentInformationResponse {
   subscriptions: ISubscription[]
   paymentGateway: PaymentGateway
 }
-
+/*
+ * The folling info is only what the paying "customer" needs to know
+ * when presenting this info. For more specific and sensitive info,
+ * it is already saved on the database.
+ */
+interface IPaymentInformationResponse extends IBasicPaymentInformationResponse {
+  customer: IAdminCustomer
+  product: Vehicle | Other
+}
 interface ISetupIntentResponse {
   clientSecret: string
 }
@@ -153,8 +159,6 @@ export interface IContractAdjustmentRequest extends ICommonContractUpdateRequest
 export interface ICustomContractCreationRequest extends ICommonContractCreationRequest {
   type: 'CUSTOM'
   amountPerPayment: number
-  offerRequestId?: number
-  offerRequestApprovalMessage?: string
 }
 
 export interface IStandardContractCreationRequest extends ICommonContractCreationRequest {
@@ -301,6 +305,7 @@ export interface IAdminContractResponse {
   additionalOptions: IContractOptionResponse[]
   includedAdditionalOptions: IContractOptionResponse[]
   durations: DurationOptions[]
+  mileageDurationsMap: TMileageDurationsMap | null // Structure for ContractFlowDurationMileageVer2 for V4PricingTool contracts.
   duration: number
   mileage: number
   startMileage: number

@@ -1,4 +1,4 @@
-import { ICountryRequest, ICountry } from './country'
+import { ICountry, ICountryRequest } from './country'
 
 export interface IAddressRequest {
   address1: string

@@ -1,9 +1,10 @@
-import { IContractOptionResponse } from './contractOption'
-import { ITermsOfServiceResponse, ITermsOfServiceRequest } from './termsOfService'
-import { PriceSpecification } from './priceSpecification'
 import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
 import { TCurrency } from '../types/currency'
-import { TV4PTProductType, TV4PTPaymentType } from './v4PricingTool'
+import { IFileItem } from './admin/contract/contractDetails'
+import { IContractOptionResponse } from './contractOption'
+import { PriceSpecification } from './priceSpecification'
+import { ITermsOfServiceRequest, ITermsOfServiceResponse } from './termsOfService'
+import { TV4PTPaymentType, TV4PTProductType } from './v4PricingTool'
 
 export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP' | 'V4PricingTool'
 
@@ -96,7 +97,8 @@ export interface IContractTemplateResponse extends IGenericContractTemplateRespo
   showOnWebcalc: boolean
   v4ProductType: null | TV4PTProductType
   v4SupportedPaymentTypes: TV4PTPaymentType[]
-  v4FilesForCustomerAtActivation: { name: string; url: string }[] // Files attached in activation email to end-customer.
+  // v4FilesForCustomerAtActivation: { name: string; url: string }[] // Files attached in activation email to end-customer.
+  filesContainerAlongContract: null | IFileItem[] // Optional extra files, except the TOS file.
 }
 export interface IProductContractTemplateResponse extends IGenericContractTemplateResponse {
   defaultHours: number

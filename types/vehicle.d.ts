@@ -1,11 +1,11 @@
-import { Model } from './model'
 import { Brand } from './brand'
-import { FuelType } from './fuelType'
-import { VehicleContracts } from './vehicleContracts'
 import { TIsoCountry } from './country'
+import { FuelType } from './fuelType'
+import { Model } from './model'
+import { VehicleContracts } from './vehicleContracts'
 
 /**
- * Vehicle object wit properties of strings and types with id keys to database related rows.
+ * Vehicle object with properties of strings and types with id keys to database related rows.
  *
  * @note To dev: Are you looking for contracts here? - Please use VehicleAlongItsContracts instead!
  */
@@ -77,14 +77,17 @@ export interface IVehicleInfo {
   driveType?: TVehicleDriveType // Front, rear, or all wheel drive.
   hasFourWheelDrive?: boolean
 
-  // lookupCacheStatus?: string | 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
   lookupCacheStatus?: 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
+  isDetectedAsPossibleHybrid?: boolean | null // If the vehicle has been detected (by parsing or other means) as a hybrid, set this to true AND hasClearedAsPossibleHybrid to false.
+  isClearedAsPossibleHybrid?: boolean | null // When cleared (by prompting a dialog or other means) set this to true, AND hasDetectedAsPossibleHybrid to null.
 }
 
 export interface IRegistrationNumberResponse {
   lookup: {
     vehicle: Vehicle
     lookupCountry: TIsoCountry
+    isDetectedAsPossibleHybrid: boolean | null // If the vehicle has been detected (by parsing or other means) as a hybrid, set this to true AND hasClearedAsPossibleHybrid to false.
+    isClearedAsPossibleHybrid: boolean | null // When cleared (by prompting a dialog or other means) set this to true, AND hasDetectedAsPossibleHybrid to null.
     debug?: {
       lookupCacheStatus?: string // Free text, for debugging purposes - Hint with info if vehicle was fetched from cache or via fresh lookup.
     }

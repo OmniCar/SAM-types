@@ -1,5 +1,5 @@
-import { PriceSpecification } from './priceSpecification'
 import { SettlementPaymentType } from './index'
+import { PriceSpecification } from './priceSpecification'
 
 /** Supported payment gateways. */
 export type PaymentGateway = 'Stripe' | 'B2B' | 'V4' | 'NONE' | 'Mock'
