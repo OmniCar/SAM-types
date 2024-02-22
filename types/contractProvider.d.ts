@@ -1,6 +1,6 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryRequest, ICountryResponse } from './country'
-import { TCurrency } from './index'
+import { ContractState, TCurrency, TV4PTProductType } from './index'
 import { PaymentGateway } from './payment'
 import { IProviderCustomizationResponse } from './providerBranding'
 
@@ -117,6 +117,15 @@ export interface IContractProviderListItemResponse {
   providerGroup: string | null
   state: ProviderState
   webCalcEnabled: boolean
+}
+
+export interface IEssentialContract {
+  prettyIdentifier: string
+  contractState: ContractState
+  contractStartDate: Date | string
+  contractEndDate: Date | string
+  contractName: string
+  contractProductType: null | TV4PTProductType
 }
 
 export type ProviderState = 'Active' | 'Inactive'

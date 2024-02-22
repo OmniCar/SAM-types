@@ -1,4 +1,10 @@
-import { ContractState, ContractValueType, IIncludedContractOption, TV4PTProductType } from './../../index'
+import {
+  ContractState,
+  ContractValueType,
+  IEssentialContract,
+  IIncludedContractOption,
+  TV4PTProductType,
+} from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
@@ -12,6 +18,10 @@ export interface IApiVehicleWithContracts {
   modelName: string
   fuelTypeName: string
   contracts: IApiVehicleContract[]
+}
+
+export interface IApiVehicleWithEssentialContracts extends Omit<IApiVehicleWithContracts, 'vehicleId' | 'contracts'> {
+  contracts: IEssentialContract[]
 }
 
 export interface IApiVehicleContract {
