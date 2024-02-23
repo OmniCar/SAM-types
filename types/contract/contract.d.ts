@@ -1,4 +1,5 @@
-import { IEssentialContractProviderInfo, IEssentialVehicle } from 'admin'
+import { IEssentialContractProviderInfo } from '../admin/contractProvider'
+import { IEssentialVehicle } from '../admin/vehicle'
 import { IContractOptionResponse } from '../contractOption'
 import { IContractProviderResponse } from '../contractProvider'
 import { IContractTemplateResponse } from '../contractTemplate'
