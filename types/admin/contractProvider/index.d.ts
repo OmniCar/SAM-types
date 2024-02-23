@@ -4,13 +4,16 @@ import { IsoLocale } from '../../locale'
 
 export type ContractProviderOrderBy = 'providerId' | 'administrativeName' | 'inactive'
 
-export interface IContractProviderInfo {
-  providerId: number
-  parentProviderId: number | null
+export interface IEssentialContractProviderInfo {
   administrativeName: string
-  logo: string
   email: string
   phone: string
+}
+
+export interface IContractProviderInfo extends IEssentialContractProviderInfo {
+  providerId: number
+  parentProviderId: number | null
+  logo: string
   address1: string
   address2?: string
   city: string
@@ -29,11 +32,6 @@ export interface IContractProviderInfo {
   inactive: boolean
   isUsingV4PricingTool: boolean
   isUseV4PTOnlyForSigning: boolean
-}
-
-export interface ICreateTestContractProvider {
-  administrativeName: string
-  countryIsoCode: string
 }
 
 export interface ICreateTestContractProvider {

@@ -8,7 +8,7 @@ import {
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
-export interface IApiEssentialVehicle {
+export interface IEssentialVehicle {
   registrationDate: Date | string
   modelYear: number
   vin: string
@@ -18,12 +18,12 @@ export interface IApiEssentialVehicle {
   fuelTypeName: string
 }
 
-export interface IApiVehicleWithContracts extends IApiEssentialVehicle {
+export interface IApiVehicleWithContracts extends IEssentialVehicle {
   vehicleId: number
   contracts: IApiVehicleContract[]
 }
 
-export interface IApiVehicleWithEssentialContracts extends IApiEssentialVehicle {
+export interface IApiVehicleWithEssentialContracts extends IEssentialVehicle {
   contracts: IEssentialContract[]
 }
 

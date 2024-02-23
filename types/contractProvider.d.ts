@@ -119,13 +119,4 @@ export interface IContractProviderListItemResponse {
   webCalcEnabled: boolean
 }
 
-export interface IEssentialContract {
-  prettyIdentifier: string
-  contractState: ContractState
-  contractStartDate: Date | string
-  contractEndDate: Date | string
-  contractName: string
-  contractProductType: null | TV4PTProductType
-}
-
 export type ProviderState = 'Active' | 'Inactive'
