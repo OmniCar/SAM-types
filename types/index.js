@@ -122,13 +122,6 @@ var PaymentFailureReason;
     PaymentFailureReason[PaymentFailureReason["contactCardIssuer"] = 90] = "contactCardIssuer";
     PaymentFailureReason[PaymentFailureReason["unknownReason"] = 100] = "unknownReason";
 })(PaymentFailureReason = exports.PaymentFailureReason || (exports.PaymentFailureReason = {}));
-var OfferRequestState;
-(function (OfferRequestState) {
-    OfferRequestState[OfferRequestState["Pending"] = 100] = "Pending";
-    OfferRequestState[OfferRequestState["Approved"] = 200] = "Approved";
-    OfferRequestState[OfferRequestState["Rejected"] = 300] = "Rejected";
-    OfferRequestState[OfferRequestState["Expired"] = 400] = "Expired";
-})(OfferRequestState = exports.OfferRequestState || (exports.OfferRequestState = {}));
 var ResponseWarnings;
 (function (ResponseWarnings) {
     ResponseWarnings[ResponseWarnings["GenericWarning"] = 499] = "GenericWarning";
