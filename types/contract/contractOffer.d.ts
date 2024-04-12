@@ -13,6 +13,7 @@ export interface IContractOfferRequest<TProduct = VehicleAlongItsContracts> {
   product?: TProduct
   duration: number
   mileage: number
+  startDateISOString: string
   startMileage: number
   value?: number
   valueType?: ContractValueType

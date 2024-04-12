@@ -51,6 +51,7 @@ interface ICommonContractUpdateRequest {
   valueType: ContractValueType
   duration: number
   mileage?: number
+  startDateISOString: string
   optionIds: number[]
   providerPayments: number
   providerShare: number
@@ -200,7 +201,7 @@ export interface ICreateDelaerPaidContractRequest {
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
-  startDate?: Date
+  startDate: Date|null
   finlandPriceId?: number
   endMileage?: number // For debugging.
   reference?: string
@@ -309,6 +310,7 @@ export interface IAdminContractResponse {
   duration: number
   mileage: number
   startMileage: number
+  contractStartDateISO: null | Date 
   value: number | undefined
   valueType: ContractValueType
   startValue: number | undefined

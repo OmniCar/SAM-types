@@ -7,6 +7,7 @@ export interface IContractCalculationRequest {
   priceSource?: PriceSource
   contractTemplateId: number
   duration: number // AKA durationMonths, in months.
+  startDateISOString: string
   isAdjustment: boolean
   isDownpaymentDistributed: boolean
   mileage: number // AKA distance, in km.
