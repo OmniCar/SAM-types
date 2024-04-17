@@ -2,7 +2,7 @@ export type TV4PTProductType = 'ServiceAgreement' | 'Warranty' | 'WarrantyAndSer
 
 // V4PricingTool Payment Type.
 export type TV4PTPaymentType =
-  | 'DealerPaid' // One-time dealer payment.
+  | 'DealerPaid' // One-time dealer payment via V4.
   | 'CustomerSubscription' // Customer monthly subscription.
 // | 'CustomerPaymentCard' // Deprecated, use 'CustomerSubscription' instead. /2023-01-01
 // | 'Subscription' // Deprecated, use 'CustomerSubscription' instead. /2023-01-01
