@@ -201,7 +201,7 @@ export interface ICreateDelaerPaidContractRequest {
   startMileage: number
   customerId?: number
   customer?: IAdminCustomer
-  startDate: Date|null
+  startDate: Date | null
   finlandPriceId?: number
   endMileage?: number // For debugging.
   reference?: string
@@ -310,7 +310,7 @@ export interface IAdminContractResponse {
   duration: number
   mileage: number
   startMileage: number
-  contractStartDateISO: null | Date 
+  contractStartDateISO: null | Date
   value: number | undefined
   valueType: ContractValueType
   startValue: number | undefined

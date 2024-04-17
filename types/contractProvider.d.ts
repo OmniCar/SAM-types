@@ -1,6 +1,6 @@
 import { IContactPersonRequest, IContactPersonResponse } from './contactPerson'
 import { ICountryRequest, ICountryResponse } from './country'
-import { TCurrency } from './index'
+import { ContractState, TCurrency, TV4PTProductType } from './index'
 import { PaymentGateway } from './payment'
 import { IProviderCustomizationResponse } from './providerBranding'
 

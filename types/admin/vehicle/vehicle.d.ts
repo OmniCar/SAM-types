@@ -1,9 +1,14 @@
-import { ContractState, ContractValueType, IIncludedContractOption, TV4PTProductType } from './../../index'
+import {
+  ContractState,
+  ContractValueType,
+  IEssentialContract,
+  IIncludedContractOption,
+  TV4PTProductType,
+} from './../../index'
 import { PaymentGateway } from './../../payment'
 import { PriceSpecification } from './../../priceSpecification'
 
-export interface IApiVehicleWithContracts {
-  vehicleId: number
+export interface IEssentialVehicle {
   registrationDate: Date | string
   modelYear: number
   vin: string
@@ -11,7 +16,15 @@ export interface IApiVehicleWithContracts {
   brandName: string
   modelName: string
   fuelTypeName: string
+}
+
+export interface IApiVehicleWithContracts extends IEssentialVehicle {
+  vehicleId: number
   contracts: IApiVehicleContract[]
+}
+
+export interface IApiVehicleWithEssentialContracts extends IEssentialVehicle {
+  contracts: IEssentialContract[]
 }
 
 export interface IApiVehicleContract {
