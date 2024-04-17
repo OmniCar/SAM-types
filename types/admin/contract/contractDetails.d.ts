@@ -1,3 +1,4 @@
+import { ContractState } from 'index'
 import { TV4PTProductType } from '../../v4PricingTool'
 import { ContractType, ContractValueType, ServiceContractFlag } from './../../admin/contractCreation'
 import { IContactPersonResponse } from './../../contactPerson'
@@ -11,6 +12,8 @@ export interface IContractDetailsRecord {
   serviceContractId?: number // Note: Do not expose this id for non-Devs/normal users, use the pretty-id for those. For debugging purposes, etc.
   contractType: ContractType
   contractProductType: null | TV4PTProductType
+  contractStateCode: null | ContractState
+  contractStateName: string
   contractPdfUrl: string
   duration: number // Duration [months].
   startMileage?: number // Current meter/odometer-reading [km].
