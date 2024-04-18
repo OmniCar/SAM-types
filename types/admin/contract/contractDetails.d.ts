@@ -34,6 +34,7 @@ export interface IContractDetailsRecord {
   providerPayments: number
   providerShare: PriceSpecification
   reference: string
+  warrantyReference?: string
   seller?: IContactPersonResponse
   startDate: Date | string
   termsPdfUrl: string
@@ -64,7 +65,6 @@ export interface IContractDetailsRecord {
   underHoursCharge?: number
   overServicesCharge?: number
   underServicesCharge?: number
-  warrantyReference?: string
 }
 
 export interface IAdminCustomTermsRecord {
