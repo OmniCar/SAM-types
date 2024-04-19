@@ -8,6 +8,7 @@ export interface IEssentialContractProviderInfo {
   administrativeName: string
   email: string
   phone: string
+  country: string
 }
 
 export interface IContractProviderInfo extends IEssentialContractProviderInfo {
@@ -19,7 +20,6 @@ export interface IContractProviderInfo extends IEssentialContractProviderInfo {
   city: string
   zipcode: string
   locale: IsoLocale
-  country: string
   currency: string
   webTitle?: string | null
   isUseWhiteBGOnWeb?: boolean
