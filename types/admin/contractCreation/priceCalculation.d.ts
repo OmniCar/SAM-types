@@ -5,9 +5,9 @@ import { ContractType, ContractValueType } from './contractCreation'
 
 export interface IContractCalculationRequest {
   priceSource?: PriceSource
+  adjustedFrom?: string
   contractTemplateId: number
   duration: number // AKA durationMonths, in months.
-  startDateISOString: string
   isAdjustment: boolean
   isDownpaymentDistributed: boolean
   mileage: number // AKA distance, in km.
@@ -18,13 +18,14 @@ export interface IContractCalculationRequest {
   registrationDate: string
   registrationNumber: string
   serviceVariantId: string
-  type: ContractType
-  valueType: ContractValueType
-  adjustedFrom?: string
+  startDateISOString: string
   startMileage?: number
   startValue?: number
   startValueType?: ContractValueType
+  type: ContractType
+  v4ProductId: 0 | number // V4 contract product / "template" id.
   value?: number
+  valueType: ContractValueType
   vin?: string
 }
 
@@ -45,6 +46,7 @@ export interface IStandardADAPContractCalculationRequest extends IContractCalcul
   fuelTypeName: string
 }
 
+// NOTE: V4PT does not use this interface!
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   amountPerPayment: number
   brandName: string
@@ -59,6 +61,7 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
 export interface IStandardV4PricingToolContractCalculationRequest extends IContractCalculationRequest {
   vehicleInfo: IVehicleInfo
   v4ProductId: number // V4 contract product / "template" id.
+  amountPerPayment: null | number
 }
 
 /**

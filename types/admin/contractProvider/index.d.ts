@@ -32,6 +32,7 @@ export interface IContractProviderInfo extends IEssentialContractProviderInfo {
   inactive: boolean
   isUsingV4PricingTool: boolean
   isUseV4PTOnlyForSigning: boolean
+  noCustomV4PTContracts: boolean
 }
 
 export interface ICreateTestContractProvider {
