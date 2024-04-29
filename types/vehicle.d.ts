@@ -72,7 +72,7 @@ export interface IVehicleInfo {
   expire_date: string | null // null,
   model_year: number
   engineMaxPower: number | null // Maximum power in kW, integer or decimal number like 115.5 or 132. NOTE: For now, engineMaxPower is the highest power of any of the engines on a multi-engine vehicle.
-  originalEnginePowerKWFromLookup?: number | null // Since engineMaxPower can be overriden, this param originalEnginePowerKWFromLookup should contain the original from the lookup service.
+  originalEnginePowerKWFromLookup?: number // Since engineMaxPower can be overriden, this param originalEnginePowerKWFromLookup should contain the original from the lookup service.
   vehicleType: TVehicleType // Note: Not same as type (now versionModelType).
   cylinderVolume?: number // Engine size in cc or cm3.
   transmissionType?: TVehicleTransmissionType
