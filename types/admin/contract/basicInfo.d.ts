@@ -1,10 +1,13 @@
-import { ContractState, ContractType, IIncludedContractOption, PaymentGateway } from '../../index'
+import { PriceSource } from '../../contractTemplate'
+import { ContractState, ContractType, IIncludedContractOption, PaymentGateway, TV4PTProductType } from '../../index'
 import { IContractHealth } from './health'
 import { PriceSource } from '../../contractTemplate'
 
 export interface IBasicContractInfo {
   contractState: ContractState
+  contractStateName: string
   contractType: ContractType
+  contractProductType: null | TV4PTProductType
   priceSource: PriceSource | null
   extendedFromId: number | null
   extendedToId: number | null

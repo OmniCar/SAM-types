@@ -34,6 +34,7 @@ export interface IContractDetailsRecord {
   providerPayments: number
   providerShare: PriceSpecification
   reference: string
+  warrantyReference?: string
   seller?: IContactPersonResponse
   startDate: Date | string
   termsPdfUrl: string
