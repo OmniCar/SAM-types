@@ -1,7 +1,6 @@
 import { PriceSource } from '../../contractTemplate'
 import { ContractState, ContractType, IIncludedContractOption, PaymentGateway, TV4PTProductType } from '../../index'
 import { IContractHealth } from './health'
-import { PriceSource } from '../../contractTemplate'
 
 export interface IBasicContractInfo {
   contractState: ContractState

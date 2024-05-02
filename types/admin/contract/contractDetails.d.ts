@@ -65,7 +65,6 @@ export interface IContractDetailsRecord {
   underHoursCharge?: number
   overServicesCharge?: number
   underServicesCharge?: number
-  warrantyReference?: string
 }
 
 export interface IAdminCustomTermsRecord {
