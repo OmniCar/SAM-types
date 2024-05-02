@@ -72,15 +72,20 @@ export interface IVehicleInfo {
   expire_date: string | null // null,
   model_year: number
   engineMaxPower: number | null // Maximum power in kW, integer or decimal number like 115.5 or 132. NOTE: For now, engineMaxPower is the highest power of any of the engines on a multi-engine vehicle.
+  originalEnginePowerKWFromLookup?: number // Since engineMaxPower can be overriden, this param originalEnginePowerKWFromLookup should contain the original from the lookup service.
   vehicleType: TVehicleType // Note: Not same as type (now versionModelType).
   cylinderVolume?: number // Engine size in cc or cm3.
   transmissionType?: TVehicleTransmissionType
   driveType?: TVehicleDriveType // Front, rear, or all wheel drive.
   hasFourWheelDrive?: boolean
 
-  lookupCacheStatus?: 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
+  lookupCacheStatus?: 'vehicleInfo fetched from cache' | 'vehicleInfo fetched via fresh lookup' | 'Mocked vehicleInfo' // @note For debugging purposes. Hint with info if vehicle was fetched from cache or via fresh lookup.
   isDetectedAsPossibleHybrid?: boolean | null // If the vehicle has been detected (by parsing or other means) as a hybrid, set this to true AND hasClearedAsPossibleHybrid to false.
   isClearedAsPossibleHybrid?: boolean | null // When cleared (by prompting a dialog or other means) set this to true, AND hasDetectedAsPossibleHybrid to null.
+}
+
+export interface ITemplatesVehicleLookupRequest {
+  overridingEnginePowerKW?: null | number
 }
 
 export interface IRegistrationNumberResponse {
