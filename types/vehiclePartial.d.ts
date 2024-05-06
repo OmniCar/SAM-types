@@ -16,6 +16,7 @@ export interface VehiclePartial {
   versionModelType?: string
   vehicleType?: TVehicleType // Note: Not same as type (now versionModelType).
   engineMaxPower?: number // Maximum power in kW, integer or decimal number like 115.5 or 132. NOTE: For now, engineMaxPower is the highest power of any of the engines on a multi-engine vehicle.
+  originalEnginePowerKWFromLookup?: number // Since engineMaxPower can be overriden, this param originalEnginePowerKWFromLookup should contain the original from the lookup service.
   cylinderVolume?: number // Engine size in cc or cm3.
   transmissionType?: TVehicleTransmissionType
   driveType?: TVehicleDriveType // Front, rear, or all wheel drive.

@@ -9,12 +9,12 @@ jobs:
       #  auth:
       #    username: _json_key
       #    password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
-      - image: cimg/node:18.20.1
+      - image: cimg/node:16.15.0
     steps:
       - checkout
       - node/install:
           install-yarn: true
-          node-version: '18.20'
+          node-version: '16.15'
       - run: node --version
       - run:
           name: tsc
@@ -34,14 +34,14 @@ jobs:
       #  auth:
       #    username: _json_key
       #    password: $GCLOUD_CONTAINER_REGISTRY_SERVICE_KEY
-      - image: cimg/node:18.20.1
+      - image: cimg/node:16.15.0
     steps:
       - checkout
       - attach_workspace:
           at: .
       - node/install:
           install-yarn: true
-          node-version: '18.20'
+          node-version: '16.15'
       - run: node --version
       - run:
           name: Authenticate with registry
