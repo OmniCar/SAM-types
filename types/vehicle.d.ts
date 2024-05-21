@@ -84,8 +84,6 @@ export interface IVehicleInfo {
   isClearedAsPossibleHybrid?: boolean | null // When cleared (by prompting a dialog or other means) set this to true, AND hasDetectedAsPossibleHybrid to null.
 }
 
-//
-
 export interface ITemplatesVehicleLookupRequest {
   overridingEnginePowerKW?: null | number
 }
