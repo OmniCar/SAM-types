@@ -10,7 +10,7 @@ import { PriceSpecification } from './../../priceSpecification'
 import { ICarCollection } from './carData'
 import { IContractCalculationResponse } from './priceCalculation'
 
-/** @deprecated 'EXTERNAL' has lost it's meaning when it comes to V4PT contracts. */
+/** @deprecated 'EXTERNAL' has lost it's meaning when it comes to V4PT contracts (since all V4PT contract can be considered as "external"). */
 export type ContractType = 'STANDARD' | 'CUSTOM' | 'EXTERNAL'
 
 export type ServiceContractFlag = 'DISTRIBUTE_DOWNPAYMENT' | 'NULLIFY_DOWNPAYMENT'

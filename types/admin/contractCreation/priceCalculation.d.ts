@@ -23,7 +23,6 @@ export interface IContractCalculationRequest {
   startValue?: number
   startValueType?: ContractValueType
   type: ContractType
-  // v4ProductId: 0 | number // V4 contract product / "template" id.
   value?: number
   valueType: ContractValueType
   vin?: string

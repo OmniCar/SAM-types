@@ -6,6 +6,7 @@ import { PriceSpecification } from './priceSpecification'
 import { ITermsOfServiceRequest, ITermsOfServiceResponse } from './termsOfService'
 import { TV4PTPaymentType, TV4PTProductType } from './v4PricingTool'
 
+/** @deprecated 'AutoDAP' will not be supported in future. */
 export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP' | 'V4PricingTool'
 
 export interface IContractTemplateCloneRequest {
@@ -49,6 +50,7 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
   defaultYearlyServices: number
 }
 
+/** @deprecated AutoDAP will not be supported in future. */
 export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
   vehicleServiceType: TVehicleServiceType
   vehicleUsageType: TVehicleUsageType
@@ -60,6 +62,7 @@ export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplat
   currencyPartsPrice: TCurrency | null
 }
 
+/** @deprecated 'templateAutoDAPId' will not be supported in future. */
 export interface IGenericContractTemplateResponse {
   id: number
   name: string // Internal name (used in price files etc)
@@ -108,6 +111,7 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
   maxEndMileage?: number
 }
 
+/** @deprecated AutoDAP will not be supported in future. */
 export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
   vehicleServiceType: TVehicleServiceType
   vehicleUsageType: TVehicleUsageType
