@@ -1,8 +1,5 @@
 export type LicensePlateLookupResponseErrors =
   | 'REGNO_VEHICLE_NOT_FOUND'
-  | 'REGNO_SERVICE_DATA_NOT_FOUND' // No service data found.
-  | 'REGNO_ALL_REQUIRED_SERVICE_DATA_NOT_FOUND' // Not all (except spare part prices) required service data found.
-  | 'REGNO_ALL_REQUIRED_SERVICE_SPARE_PART_PRICES_NOT_FOUND' // Not all (except oil price) spare part prices found.
   | 'REGNO_ACTIVE_CONTRACT_EXISTS'
   | 'REGNO_NO_CONTRACTS_AVAILABLE'
   | 'REGNO_NO_CONTRACTS_AVAILABLE_FUELTYPE_NOT_SUPPORTED'
