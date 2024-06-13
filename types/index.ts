@@ -168,7 +168,6 @@ export enum AccessKeyService {
 export * from './address'
 export * from './admin'
 export * from './app'
-export * from './autoDAP'
 export * from './brand'
 export * from './chart'
 export * from './contactPerson'
