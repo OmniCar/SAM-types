@@ -12,7 +12,6 @@ export enum ContractState {
   Terminated = 500,
   Extended = 510,
   Expired = 600,
-  Completed = 800, // not used
   Settled = 900,
   SettledPrePaid = 950,
 }
@@ -135,10 +134,8 @@ export enum OutageSeverityLevel {
 export enum SettlementPaymentType {
   cashPayout = 1,
   cashPayment,
-  stripeRefund,
   stripePayment,
   providerPayment,
-  customerCredit,
 }
 
 export enum ReleaseSystem {
