@@ -40,11 +40,6 @@ export interface IStandardAxContractCalculationRequest extends IContractCalculat
   fuelTypeName: string
 }
 
-export interface IStandardADAPContractCalculationRequest extends IContractCalculationRequest {
-  vin: string
-  fuelTypeName: string
-}
-
 export interface ICustomContractCalculationRequest extends IContractCalculationRequest {
   amountPerPayment: number
   brandName: string
@@ -82,7 +77,6 @@ export interface IContractCalculationResponse {
   providerCost: PriceSpecification
   providerPayments: number
   providerShare: PriceSpecification
-  x_adapDebugData?: any // For debugging purposes.
   x_debugData?: any // For debugging purposes.
   serviceInfo?: string[] // Service information, mainly for ax.
 }
