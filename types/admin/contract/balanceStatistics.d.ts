@@ -14,7 +14,6 @@ export interface IContractBalanceStatistics {
   monthsAtClosing: number
   remainingMonths: number
   remainingCharge: PriceSpecification
-  customerCredit: number
   workshopCosts: PriceSpecification
   paidInvoicesTotalSum: PriceSpecification
   contractBalance: PriceSpecification

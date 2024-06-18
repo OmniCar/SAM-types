@@ -12,7 +12,6 @@ export declare enum ContractState {
   Terminated = 500,
   Extended = 510,
   Expired = 600,
-  Completed = 800,
   Settled = 900,
   SettledPrePaid = 950,
 }
@@ -88,11 +87,8 @@ export declare enum ContractActionType {
   registerCashPayment = 810,
   registerCashPayout = 820,
   registerProviderPayment = 830,
-  createStripeRefund = 840,
-  registerRefundedCharge = 850,
   createStripeInvoice = 860,
   registerPaidInvoice = 870,
-  registerCredit = 880,
   settle = 900,
   archive = 1000,
   other = 9999,
@@ -121,10 +117,8 @@ export declare enum OutageSeverityLevel {
 export declare enum SettlementPaymentType {
   cashPayout = 1,
   cashPayment = 2,
-  stripeRefund = 3,
-  stripePayment = 4,
-  providerPayment = 5,
-  customerCredit = 6,
+  stripePayment = 3,
+  providerPayment = 4,
 }
 export declare enum ReleaseSystem {
   Admin = 1,

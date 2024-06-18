@@ -12,7 +12,6 @@ export enum ContractState {
   Terminated = 500,
   Extended = 510,
   Expired = 600,
-  Completed = 800, // not used
   Settled = 900,
   SettledPrePaid = 950,
 }
@@ -93,11 +92,8 @@ export enum ContractActionType {
   registerCashPayment = 810, // Registered cash payment. Helps to solve balance issues on a contract.
   registerCashPayout = 820, // Registered cash payout. Helps to solve balance issues on a contract.
   registerProviderPayment = 830, // Registered provider payment. It means that provider forgive some amount. Helps to solve balance issues on a contract.
-  createStripeRefund = 840, // Created stripe refund.
-  registerRefundedCharge = 850, // Registered refunded charge. Create new 'refund' invoice (charge.refunded webhook).
   createStripeInvoice = 860, // Created stripe invoice for settlement.
   registerPaidInvoice = 870, // Registered paid invoice. Create new 'settle charge' invoice (invoice.payment_succeeded webhook).
-  registerCredit = 880, // // Registered stripe credit for the customer (type of refund). Helps to solve balance issues on a contract.
   settle = 900, // Who Settled the contract, any settlement comments will be in the details.
   archive = 1000, // Archive contract.
   other = 9999, // Other action not applicable (yet) by any other action, information about the new and old contract is in the details.
@@ -135,10 +131,8 @@ export enum OutageSeverityLevel {
 export enum SettlementPaymentType {
   cashPayout = 1,
   cashPayment,
-  stripeRefund,
   stripePayment,
   providerPayment,
-  customerCredit,
 }
 
 export enum ReleaseSystem {
