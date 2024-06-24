@@ -33,7 +33,6 @@ export interface IContractProviderRequest extends IProviderCustomizationResponse
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
-  justGOContractsEnabled: boolean
   parentProviderId: number | null
   autoSettlement: boolean
   fragusContactPersonName: string | null
@@ -82,7 +81,6 @@ export interface IContractProviderResponse extends IProviderCustomizationRespons
   freeWarrantiesButton: boolean
   disableContractTemplates: boolean
   productsEnabled: boolean
-  justGOContractsEnabled: boolean
   state: ProviderState
   autoSettlement: boolean
   isAllowContractsWithoutVehiclePriceModel: boolean
@@ -110,7 +108,6 @@ export interface IContractProviderListItemResponse {
   isUseWhiteBGOnWeb: boolean
   isUsingV4PricingTool: boolean
   isUseV4PTOnlyForSigning: boolean
-  justGOContractsEnabled: boolean
   omnicarFee: number
   parentProviderId: number | null
   productsEnabled: boolean

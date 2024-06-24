@@ -1,4 +1,3 @@
-import { TVehicleServiceType, TVehicleUsageType } from '../types/autoDAP/index'
 import { TCurrency } from '../types/currency'
 import { IFileItem } from './admin/contract/contractDetails'
 import { IContractOptionResponse } from './contractOption'
@@ -6,7 +5,7 @@ import { PriceSpecification } from './priceSpecification'
 import { ITermsOfServiceRequest, ITermsOfServiceResponse } from './termsOfService'
 import { TV4PTPaymentType, TV4PTProductType } from './v4PricingTool'
 
-export type PriceSource = 'Pricelist' | 'Autoexperten' | 'AutoDAP' | 'V4PricingTool'
+export type PriceSource = 'Pricelist' | 'Autoexperten' | 'V4PricingTool'
 
 export interface IContractTemplateCloneRequest {
   templateIds: number[]
@@ -49,17 +48,6 @@ export interface IProductContractTemplateRequest extends IGenericContractTemplat
   defaultYearlyServices: number
 }
 
-export interface IAutoDAPContractTemplateRequest extends IGenericContractTemplateRequest {
-  vehicleServiceType: TVehicleServiceType
-  vehicleUsageType: TVehicleUsageType
-  isUseCustomOilPrice: boolean
-  oilLiterPrice: null | PriceSpecification
-  labourHourCost: null | PriceSpecification
-  euroToLocalCurrencyRateInTenthOfCents: number | null
-  totalPriceFactorInTenthOfCents: number | null
-  currencyPartsPrice: TCurrency | null
-}
-
 export interface IGenericContractTemplateResponse {
   id: number
   name: string // Internal name (used in price files etc)
@@ -86,7 +74,6 @@ export interface IGenericContractTemplateResponse {
   serviceVariantName: string
   serviceVariantId: string
   isProductTemplate?: boolean
-  templateAutoDAPId?: number | null
   maxEndMileage?: number
   totalPriceFactorInTenthOfCents: number | null
   disableServiceInfoFile: boolean | null
@@ -107,15 +94,4 @@ export interface IProductContractTemplateResponse extends IGenericContractTempla
   maxEndHours?: number
   maxEndServices?: number
   maxEndMileage?: number
-}
-
-export interface IAutoDAPContractTemplateResponse extends IGenericContractTemplateResponse {
-  vehicleServiceType: TVehicleServiceType
-  vehicleUsageType: TVehicleUsageType
-  isUseCustomOilPrice: boolean
-  oilLiterPrice: null | PriceSpecification
-  labourHourCost: null | PriceSpecification
-  euroToLocalCurrencyRateInTenthOfCents: number | null
-  totalPriceFactorInTenthOfCents: number | null
-  currencyPartsPrice: TCurrency | null
 }
