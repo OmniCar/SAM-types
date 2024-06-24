@@ -276,7 +276,7 @@ export interface IAvailableFreeWarranty {
   warrantyTermsRef: string
   contractStartDate: Date
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
-  weight: number // (!) Sort order, lowest sorted first.
+  weight: number // (!) Sort order.
   warrantyColor: string
   warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.
