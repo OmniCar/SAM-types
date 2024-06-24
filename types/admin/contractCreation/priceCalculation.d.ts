@@ -54,7 +54,7 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
 export interface IStandardV4PricingToolContractCalculationRequest extends IContractCalculationRequest {
   vehicleInfo: IVehicleInfo
   v4ProductId: number // V4 contract product / "template" id.
-  selectedOptions: IOptionV4PricelistParam[]
+  selectedOptions: null | IOptionV4PricelistParam[]
 }
 
 export interface IOptionV4PricelistParam {

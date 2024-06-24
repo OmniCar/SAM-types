@@ -65,8 +65,7 @@ export interface IGenericContractTemplateResponse {
   minimumPaymentsCount: number | null
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
-  v4ProviderId?: number // @deprecated Renamed to v4PTProviderId, to avoid confusion.
-  v4PTProviderId?: number
+  v4ProviderId?: number
   v4ProductId?: number
   formattedDescription: string | null
   weight: number // (!) Sort order.
