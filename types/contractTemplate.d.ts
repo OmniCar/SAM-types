@@ -31,7 +31,7 @@ export interface IGenericContractTemplateRequest {
   termsOfService: ITermsOfServiceRequest
   archived?: boolean
   formattedDescription: string | null
-  weight: number
+  weight: number // (!) Sort order, lowest sorted first.
   underdrivenCharge: PriceSpecification
   overdrivenCharge: PriceSpecification
   totalPriceFactorInTenthOfCents: number | null
@@ -77,10 +77,11 @@ export interface IGenericContractTemplateResponse {
   minimumPaymentsCount: number | null
   termsOfService: ITermsOfServiceResponse
   providerId: number | null
-  v4ProviderId?: number
+  v4ProviderId?: number // @deprecated Renamed to v4PTProviderId, to avoid confusion.
+  v4PTProviderId?: number
   v4ProductId?: number
   formattedDescription: string | null
-  weight: number
+  weight: number // (!) Sort order, lowest sorted first.
   maxEndAge?: number
   serviceVariantName: string
   serviceVariantId: string

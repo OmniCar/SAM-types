@@ -168,7 +168,8 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
 
 export interface IStandardV4PricingToolContractCreationRequest extends IStandardContractCreationRequest {
   vehicleInfo: IVehicleInfo
-  v4ProviderId: number
+  v4ProviderId: number // @deprecated Renamed to v4PTProviderId, to avoid confusion.
+  v4PTProviderId: number
   v4ProductId: number
 }
 
@@ -275,7 +276,7 @@ export interface IAvailableFreeWarranty {
   warrantyTermsRef: string
   contractStartDate: Date
   durationsPrices: IAvailableFreeWarrantyDurationPrice[]
-  weight: number
+  weight: number // (!) Sort order, lowest sorted first.
   warrantyColor: string
   warrantyBGColor: string | null
   fuelTypes: null | string[] // Only available for these fuelTypes, null means all fuelTypes.

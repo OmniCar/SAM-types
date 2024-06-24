@@ -7,7 +7,7 @@ export interface IIncludedContractOption {
   optionId: number
   description: string
   conditionText: string
-  weight: number
+  weight: number // (!) Sort order, lowest sorted first.
   price: PriceSpecification
   assoc: 'PROPERTY' | 'ADDITIONAL'
   abbreviation: string

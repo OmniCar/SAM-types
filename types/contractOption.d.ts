@@ -21,7 +21,7 @@ export interface IGenericContractOptionResponse {
   price: PriceSpecification
   description: string
   conditionText: string
-  weight: number
+  weight: number // (!) Sort order, lowest sorted first.
   contractProviderId: number | null
   abbreviation: string
   optionGroup: number | null
