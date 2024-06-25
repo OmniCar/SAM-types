@@ -61,6 +61,7 @@ export interface IOptionV4PricelistParam {
   priceListID: number
   parameterID: number
   value: string | number
+  priceInTenthOfCents?: number
 }
 
 /**

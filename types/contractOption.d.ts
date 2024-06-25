@@ -16,16 +16,22 @@ export interface IContractOptionRequest {
   calculationMethod: number | null
 }
 
-export interface IGenericContractOptionResponse {
+export interface IBasicContractOption {
+  internalName: string
+  description: string // External name.
+  v4PriceListID?: number
+  v4ParameterID?: number
+  v4Value?: string | number
+}
+
+export interface IGenericContractOptionResponse extends IBasicContractOption {
   id: number
   price: PriceSpecification
-  description: string
   conditionText: string
   weight: number // (!) Sort order.
   contractProviderId: number | null
   abbreviation: string
   optionGroup: number | null
-  internalName: string
   warranty: number | null | undefined
   calculationMethod: number | null
   termsOfService?: ITermsOfServiceResponse | null
