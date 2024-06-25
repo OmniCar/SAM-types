@@ -1,4 +1,4 @@
-import { PriceSource } from '../../'
+import { IBasicContractOption, PriceSource } from '../../'
 import { PriceSpecification } from '../../priceSpecification'
 import { IVehicleInfo } from '../../vehicle'
 import { ContractType, ContractValueType } from './contractCreation'
@@ -54,15 +54,15 @@ export interface ICustomContractCalculationRequest extends IContractCalculationR
 export interface IStandardV4PricingToolContractCalculationRequest extends IContractCalculationRequest {
   vehicleInfo: IVehicleInfo
   v4ProductId: number // V4 contract product / "template" id.
-  selectedOptions: null | IOptionV4PricelistParam[]
+  // selectedOptions: null | IOptionV4PricelistParam[]
+  selectedOptions: null | IBasicContractOption[]
 }
 
-export interface IOptionV4PricelistParam {
-  priceListID: number
-  parameterID: number
-  value: string | number
-  priceInTenthOfCents?: number
-}
+// export interface IOptionV4PricelistParam {
+//   priceListID: number
+//   parameterID: number
+//   value: string | number
+// }
 
 /**
  * The type returned by a price calculation.
