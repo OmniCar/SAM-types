@@ -1,5 +1,5 @@
 import { IContractDetailsRecord } from '..'
-import { DurationOptions, IContractOptionResponse, TMileageDurationsMap } from '../..'
+import { DurationOptions, IContractOptionResponse, TMileageDurationsMap, TV4PTProductType } from '../..'
 import { IContractTemplateResponse, IGenericContractTemplateResponse, PriceSource } from '../../contractTemplate'
 import { PaymentGateway, PaymentType } from '../../payment'
 import { Other } from '../../product'
@@ -43,6 +43,7 @@ export type ContractValueType = Exclude<ContractValueTypeEnum, 'None'> | undefin
 
 interface ICommonContractUpdateRequest {
   priceSource?: PriceSource
+  contractProductType: TV4PTProductType | null
   contractProviderId: number
   contractTemplateId: number | null
   serviceVariantId: string

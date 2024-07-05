@@ -1,10 +1,11 @@
-import { PriceSource } from '../../'
+import { PriceSource, TV4PTProductType } from '../../'
 import { PriceSpecification } from '../../priceSpecification'
 import { IVehicleInfo } from '../../vehicle'
 import { ContractType, ContractValueType } from './contractCreation'
 
 export interface IContractCalculationRequest {
   priceSource?: PriceSource
+  contractProductType: TV4PTProductType | null
   contractTemplateId: number
   duration: number // AKA durationMonths, in months.
   startDateISOString: string
