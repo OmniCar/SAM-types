@@ -1,13 +1,28 @@
+import { IPaymentFailureReason } from './index'
+
 // Generic charting types, ie. they are not specific to one application but generally usable in most types of charts.
 
-export interface IChartDateValue {
-  x: Date | string
+export interface IChartValue {
+  x: Date | string | number
   y: number
 }
 
-export interface IChartStringValue {
+export interface IChartDateValue extends IChartValue {
+  x: Date | string
+}
+
+export interface IChartInvoiceTooltip {
+  state: number
+  successfulPaymentDate?: Date
+  failureReason?: IPaymentFailureReason
+}
+
+export interface IChartInvoiceValue extends IChartDateValue {
+  tooltipData: IChartInvoiceTooltip
+}
+
+export interface IChartStringValue<TooltipData = undefined> extends IChartValue {
   x: string
-  y: number
 }
 
 export interface IProviderStats {
