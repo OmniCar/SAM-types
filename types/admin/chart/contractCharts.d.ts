@@ -1,10 +1,10 @@
 import { IContractFilterDate, PriceSpecification } from '../..'
-import { IChartDateValue } from '../../chart'
+import { IChartDateValue, IChartInvoiceValue } from '../../chart'
 import { ContractState } from '../../index'
 
 export interface IPaymentChart {
   seriesExpectedEarnings: IChartDateValue[] // chart series.
-  seriesEarnings: IChartDateValue[] // chart series.
+  seriesEarnings: IChartInvoiceValue[] // chart series.
   seriesCosts: IChartDateValue[] // chart series.
   totalExpectedEarnings: PriceSpecification // summary.
   totalEarnings: PriceSpecification // summary.

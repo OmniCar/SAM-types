@@ -1,4 +1,3 @@
-import { TCurrency } from '../types/currency'
 import { IFileItem } from './admin/contract/contractDetails'
 import { IContractOptionResponse } from './contractOption'
 import { PriceSpecification } from './priceSpecification'
