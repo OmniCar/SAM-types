@@ -21,7 +21,7 @@ export interface IBasicContractOption {
   description: string // External name.
   v4FixedPrice?: boolean
   v4PriceListID?: number
-  v4ParameterIndex?: number // Index of PriceList parameter (parameterID).
+  v4ParameterID?: number // Index of PriceList parameter (parameterID).
   v4Value?: string | number
 }
 
