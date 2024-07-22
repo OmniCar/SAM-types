@@ -5,6 +5,7 @@ import { ContractResponseErrors } from './contractResponseErrors'
 import { GenericResponseErrors } from './genericResponseTypes'
 import { ImportErrors } from './importErrors'
 import { InvalidProductTypeErrors } from './invalidProductTypeErrors'
+import { InvoiceErrors } from './invoiceErrors'
 import { PasswordErrors } from './passwordResponseErrors'
 import { paymentResponseErrors } from './paymentResponseErrors'
 import { RateLimitErrors } from './rateLimitErrors'
@@ -26,3 +27,4 @@ export type ResponseErrors =
   | UserAndCustomerErrors
   | VatLookupResponseErrors
   | VehcileBlacklistErrors
+  | InvoiceErrors

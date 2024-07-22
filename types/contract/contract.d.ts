@@ -10,6 +10,7 @@ import {
   IIncludedContractOption,
   PaymentGateway,
   PriceSpecification,
+  TIsoCountry,
   TV4PTProductType,
 } from '../index'
 import { ICalculationResponse } from '../priceCalculation'
@@ -64,4 +65,8 @@ export interface IContractResponse {
   termsRef: string
   termsOfTradeRef?: string
   paymentGateway: PaymentGateway
+}
+
+export interface IBasicContractDetailsResponse extends IEssentialContract {
+  country: TIsoCountry
 }
