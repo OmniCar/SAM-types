@@ -8,6 +8,7 @@ export interface IEssentialContractProviderInfo {
   administrativeName: string
   email: string
   phone: string
+  // TODO: add TIsoCountry type
   country: string
 }
 
