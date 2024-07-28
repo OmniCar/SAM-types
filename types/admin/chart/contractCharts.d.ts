@@ -17,6 +17,12 @@ export interface IPaymentChart {
     total: number
     current: number
   }
+  // number of expected payments to current or closing date
+  expectedPaymentsToDate: number
+  // number of failed/unpaid payments
+  failedPaymentsToDate: number
+  // total sum of failed/unpaid payments
+  totalFailedPayments: PriceSpecification
 }
 
 export interface IMileageChart {
