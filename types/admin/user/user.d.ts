@@ -5,6 +5,7 @@ export interface IAdminUserInfo {
   zip: string
   city: string
   email: string
+  userId: number
 }
 
 export interface IUserPasswordChangeRequest {

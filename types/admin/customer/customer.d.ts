@@ -18,6 +18,7 @@ export interface IAdminCustomer {
   ean?: string
   companyName?: string
   vatLookup?: VatLookup
+  userId?: number
 }
 
 export interface CustomerUpdateResponse extends IAdminCustomer {
