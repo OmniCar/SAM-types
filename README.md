@@ -1,6 +1,8 @@
 # SAM-types
 
-Typescript interfaces for all types used to communicate between SAM client(s) and the SAM API
+SAM types is used to collect and share all interfaces (types) that one or more repositories have in
+common. To facilitate and ensure that repositories use the same types when communicating with each other.
+In most cases, if not all, this is between SAM-api and one or more of the frontend clients like the SAM-admin.
 
 ## Conventions
 
