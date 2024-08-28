@@ -169,7 +169,6 @@ export interface IStandardContractCreationRequest extends ICommonContractCreatio
 
 export interface IStandardV4PricingToolContractCreationRequest extends IStandardContractCreationRequest {
   vehicleInfo: IVehicleInfo
-  v4ProviderId: number
   v4ProductId: number
 }
 
