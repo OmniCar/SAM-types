@@ -10,12 +10,14 @@ export interface IEssentialContractProviderInfo {
   phone: string
   // TODO: add TIsoCountry type
   country: string
+  logo: string
+  isShowLogoOnWeb?: boolean
+  webLogoBanner?: string | null
 }
 
 export interface IContractProviderInfo extends IEssentialContractProviderInfo {
   providerId: number
   parentProviderId: number | null
-  logo: string
   address1: string
   address2?: string
   city: string
@@ -24,10 +26,8 @@ export interface IContractProviderInfo extends IEssentialContractProviderInfo {
   currency: string
   webTitle?: string | null
   isUseWhiteBGOnWeb?: boolean
-  isShowLogoOnWeb?: boolean
   isForceEnableCustomContracts?: boolean
   productsEnabled?: boolean
-  webLogoBanner?: string | null
   webLogoSquare?: string | null
   vatPct: number
   inactive: boolean
