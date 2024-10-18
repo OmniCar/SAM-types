@@ -217,30 +217,6 @@ export interface ICreateDelaerPaidContractResponse {
   customerId: number
 }
 
-export interface IAvailableFreeWarrantyRequest {
-  vehicleId?: number // Vehicle or OtherProduct id
-  vin: string
-  regNumber: string
-  regDate: string
-  modelModelId?: number
-  brandName: string
-  brandId?: number
-  vehicleModelName: string
-  vehicleModelId?: number
-  modelYear: number
-  engineMaxPower?: number // Maximum power in kW, integer or decimal number like 132 or 115.5.
-  fuelTypeName: string
-  fuelTypeId?: number
-  startMileage: number
-  vehicleType: TVehicleType
-}
-
-export interface IAvailableFreeWarrantyResponse {
-  vehicleHasActiveWarranty: boolean
-  minMilageDiffPerYear: number
-  availableWarranties: IAvailableFreeWarranty[]
-}
-
 export interface IAvailableFreeWarrantyDurationPrice {
   allowedDistanceMileage: undefined | number // Allowed driving limit/distance during this Warranty duration.
   allowedPowerV4Interval:
